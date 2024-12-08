@@ -6,44 +6,44 @@ Theme development and modification.
 
 ### Pump Black
 
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/pupm-black/README.md) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/pupm-black)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/README.md) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/pupm-black)
 
 ---
 
 ### TC Budivelnik
 
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/tc_budivelnik/README.md) | [View Theme](https://budmarket.org.ua/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/tc_budivelnik)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/tc_budivelnik/README.md) | [View Theme](https://budmarket.org.ua/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/tc_budivelnik)
 
 ---
 
 ### A&H  
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/ah_theme/README.md) | [View Theme](https://ah.webcomplete.io/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/ah_theme)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/ah_theme/README.md) | [View Theme](https://ah.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/ah_theme)
 
 ---
 
 ### Banasa
 
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/banasa/README.md) | [View Theme](https://banasa.com/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/banasa)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/banasa/README.md) | [View Theme](https://banasa.com/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/banasa)
 
 ---
 
 ### RMA Development
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/rmadevelopment/README.md) | [View Theme](https://rmadevelopment.webcomplete.io/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/rmadevelopment)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment/README.md) | [View Theme](https://rmadevelopment.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment)
 
 ---
 
 ### Crypto Group
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/crypto-group/README.md) | [View Theme](https://crypto-group.webcomplete.io/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/crypto-group)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://crypto-group.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
 
 ---
 
 ### Reway
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/reway/README.md) | [View Theme](https://reway.webcomplete.io/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/reway)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/reway/README.md) | [View Theme](https://reway.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/reway)
 
 ---
 
 ### Vintage Splendor
-[Description](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/vintage-splendor/README.md) | [View Theme](https://vintage-splendor.webcomplete.io/) | [Code - GitHub](https://github.com/DmitriyChiroky/wp-themes-new/tree/main/vintage-splendor)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/README.md) | [View Theme](https://vintage-splendor.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor)
 
 ---
 

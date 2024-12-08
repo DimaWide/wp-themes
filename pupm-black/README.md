@@ -16,9 +16,9 @@
 - Соответствующий "featured_field" становится активным, и начинается отсчёт времени его активности на основе настроек плана.
 - Добавлена Cron-задача для выполнения периодических действий.
 
-![Featured Fields](https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/Featured%20Fields.jpg)
+![Featured Fields](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/Featured%20Fields.jpg)
 
-<img src="https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/order-page.jpg" alt="image" width="49%"> <img src="https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/packages.jpg" alt="image" width="49%">
+<img src="https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/order-page.jpg" alt="image" width="49%"> <img src="https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/packages.jpg" alt="image" width="49%">
 
 
 ### 2. Раздел UPCOMING LAUNCHES
@@ -33,7 +33,7 @@
 - Добавлена кнопка для повторной загрузки данных токена при сбоях внешнего API.
 - Доступна ручная настройка всех полей и времени запуска.
 
-<img src="https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/UPCOMING LAUNCHES.jpg" alt="image"> <img src="https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/UPCOMING LAUNCHES (1).png" alt="image" width="49%"> <img src="https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/UPCOMING LAUNCHES (2).png" alt="image" width="50%">
+<img src="https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/UPCOMING LAUNCHES.jpg" alt="image"> <img src="https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/UPCOMING LAUNCHES (1).png" alt="image" width="49%"> <img src="https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/UPCOMING LAUNCHES (2).png" alt="image" width="50%">
 
 ### 3. Динамические таблицы токенов
 - Таблицы, такие как NEW LIVESTREAM, DEX PAID и BIG BUYS, отображают данные токенов из внешней базы данных и обновляются динамически через WebSocket.
@@ -44,7 +44,7 @@
 - Каждое сообщение WebSocket, содержащее данные токенов в формате JSON, обновляет соответствующую таблицу. Новые строки добавляются через метод `AddRow` класса `TableManager`, который динамически генерирует строки с использованием класса `TableRowBase` и его расширений, таких как `LiveStreamRow`. Такой модульный подход гарантирует масштабируемость и лёгкость обслуживания.
 - Реализована буферизация для таблицы BigBuys, что позволяет пользователям приостановить поток токенов и накопить данные.
 
-![Токен Таблицы](https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/fields-animation.gif)
+![Токен Таблицы](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/fields-animation.gif)
 
 ### 4. Проверка статуса DEXSCREENER PAID
 - Проверка статуса оплаты DEXScreener для токена и отображение соответствующей информации о токене.
@@ -55,7 +55,7 @@
 - После получения данных информация о токене и статус отображаются с анимацией и звуковым сопровождением при положительном статусе Dex Paid.
 - Пользователи могут загрузить информацию о токене в виде изображения с помощью библиотеки `html2canvas.js`.
 
-![Dex Paid Status](https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/dex-paid-status.gif)
+![Dex Paid Status](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/dex-paid-status.gif)
 
 ### 5. Покупка планов с оплатой криптовалютой (nowpayments.io)
 - Пользователи могут покупать планы через оплату криптовалютой на странице **Order**.
@@ -66,7 +66,7 @@
 - После покупки отправляется запрос на API [nowpayments.io](https://nowpayments.io), создавая инвойс. Пользователь затем перенаправляется на страницу оплаты, где он может завершить оплату в Solana (SOL).
 - Администраторам доступна возможность имитации покупки токенов для тестирования.
 
-![Order Plan](https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/gif-1.gif)
+![Order Plan](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/gif-1.gif)
 
 ### 6. Плагин интеграции оплаты через NowPayments.io
 - Был разработан пользовательский плагин для интеграции оплаты через криптовалюты через nowpayments.io.
@@ -80,4 +80,4 @@
 ### 7. Пользовательская админ-страница для управления заказами
 - Создана пользовательская админ-страница для отображения информации о заказах.
 
-![Order Management Page](https://github.com/DmitriyChiroky/wp-themes-new/blob/main/assets-data/pump.black/np-orders-page.jpg)
+![Order Management Page](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/np-orders-page.jpg)

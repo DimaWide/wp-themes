@@ -1,0 +1,217 @@
+.wcl-footer {
+    background-color: $c-white;
+    padding-top: 124px;
+    padding-bottom: 86px;
+    border-top: 1px solid #000;
+
+    .wcl-t1-search {
+        .t1 {
+            &-inner {
+                width: 100%;
+            }
+        }
+
+        input {
+            background-color: $c-white-2;
+        }
+    }
+
+    .data {
+        &-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 67px;
+        }
+
+        &-text {
+            font-family: $f-commuters-sans;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+
+            a {
+                text-decoration: none;
+                color: $c-black;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        &-logo {
+            position: relative;
+            left: -6px;
+
+            img {
+                width: 94.4px;
+            }
+        }
+
+        &-b {
+            &-item {
+                width: auto;
+            }
+        }
+
+        &-a {
+            margin-top: 87px;
+
+            &-inner {
+                display: flex;
+                column-gap: 30px;
+                width: 950px;
+            }
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 30px;
+            }
+
+            &-col {
+                &:first-child {
+                    width: calc(100% - 210px);
+                }
+            }
+
+            &-menu {
+                display: flex;
+                margin-bottom: 0;
+                padding-left: 0;
+
+                li {
+                    list-style: none;
+                    margin-right: 30px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        padding: 2px 19px;
+                        display: flex;
+                        align-items: center;
+                        height: 33px;
+                        border-radius: 16.5px;
+                        background-color: #fef9f0;
+                        border: 0.5px solid #000;
+                        font-weight: 500;
+                        font-size: 14px;
+                        text-align: center;
+                        color: #000;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $c-black;
+                            background-color: #ff927e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .wcl-t1-search {
+            width: auto;
+
+            .t1 {
+                &-inner {
+                    width: 100%;
+
+                    &-b {
+                        width: 100%;
+                        background-color: $c-white-2;
+                    }
+                }
+            }
+        }
+
+        .data {
+            &-a {
+                &-row {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                &-col {
+                    margin-bottom: 25px;
+
+                    &:first-child {
+                        width: 100%;
+                        max-width: 977px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 100%;
+                        max-width: 977px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-b {
+                overflow: visible;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-row {
+                display: block;
+                text-align: center;
+            }
+
+            &-col {
+                margin-bottom: 33px;
+
+                &:nth-child(2) {
+                    margin-bottom: 34px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-logo {
+                left: 0;
+
+                img {
+                    width: 68px;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        padding-top: 87px;
+        padding-bottom: 81px;
+
+        .data {
+            &-a {
+                margin-top: 84px;
+
+                &-menu {
+                    li {
+                        a {
+                            padding: 2px 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

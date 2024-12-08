@@ -1,0 +1,68 @@
+@media (max-width: 767px) {
+    .page-about {
+        .wcl-instagram {
+            margin-bottom: 82px;
+        }
+    }
+}
+
+.wcl-instagram {
+    margin: 74px 0 80px;
+
+    .data {
+        &-src {
+            display: none;
+        }
+
+        &-item {
+            width: 14.285%;
+            height: 149x;
+            position: relative;
+            width: 150px;
+
+            &:hover {
+                .data-item-icon {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                height: 150px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .sbi {
+                &_photo {
+                    display: block;
+                    height: 149px !important;
+                    opacity: 1 !important;
+                }
+
+                &_link {
+                    display: none;
+                }
+
+                &_playbtn{
+                    display: none !important;
+                }
+            }
+
+            .sbi_type_carousel .fa-clone {
+                display: none !important;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-container {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 78px;
+    }
+}

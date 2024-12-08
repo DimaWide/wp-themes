@@ -1,0 +1,120 @@
+//...
+
+
+.wcl-section-2 {
+    background: $c-green;
+    padding: 35px 0 33px;
+    color: $c-black;
+
+    .data {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 -15px;
+            row-gap: 33px;
+        }
+
+        &-col {
+            max-width: 370px;
+            padding: 0 15px;
+        }
+
+        &-item {
+            display: flex;
+            column-gap: 57px;
+
+            &-a {
+                text-align: center;
+                width: 36px;
+
+                &-icon {
+                    margin-bottom: 18px;
+                }
+
+                &-num {
+                    font-weight: 700;
+                    font-size: 45px;
+                    -webkit-text-stroke: 1px $c-black;
+                    color: transparent;
+                }
+            }
+
+            &-b {
+                &-val {
+                    font-weight: 800;
+                    font-size: 55px;
+                    margin-bottom: 15px;
+                }
+
+                &-text {
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 120%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-item {
+                &-a {
+                    &-icon {
+                        margin-bottom: 12px;
+                    }
+
+                    &-num {
+                        font-size: 30px;
+                    }
+                }
+
+                &-b {
+                    &-val {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+
+                    &-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-container {
+                max-width: 600px;
+            }
+
+            &-row {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 50px 0;
+
+        .data {
+            &-container {
+                max-width: 310px;
+            }
+
+            &-row {
+                justify-content: flex-start;
+            }
+
+            &-item {
+                column-gap: 34px;
+
+                &-a {
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+}

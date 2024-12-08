@@ -1,0 +1,113 @@
+.wcl-acf-block-1 {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    background-image: url('../img/acf-1-circle-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include container-full-width;
+
+    .data {
+        &-head {
+            max-width: 931px;
+            margin: 0 auto;
+        }
+
+        &-tagline {
+            color: rgb(29, 46, 59);
+            font-family: Caveat, handwriting;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: normal;
+            line-height: 50.4px;
+
+            margin-bottom: 5px;
+        }
+
+        &-title {
+            line-height: 105.6px;
+            font-size: 96px;
+            font-weight: 900;
+            color: rgb(29, 46, 59);
+            letter-spacing: -2.4px;
+
+            margin-bottom: 10px;
+        }
+
+        &-subtitle {
+            color: rgb(29, 46, 59);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 44.8px;
+
+            max-width: 900px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+
+        &-list {
+            margin-top: 35px;
+            margin-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 15px;
+
+            &-item {
+                color: rgb(29, 46, 59);
+                font-size: 19px;
+                font-weight: 600;
+                letter-spacing: normal;
+                line-height: 26.6px;
+
+                i {
+                    color: rgb(28, 188, 255);
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 19px;
+                    font-weight: 900;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-list {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 30px;
+        margin-bottom: 40px;
+
+        .wcl-cmp-1-cta {
+            display: none;
+        }
+
+        .data {
+            &-tagline {
+                font-size: 19.125px;
+                line-height: 26.775px;
+            }
+
+            &-title {
+                line-height: 40.8px;
+                font-size: 34px;
+                letter-spacing: -0.85px;
+            }
+
+            &-subtitle {
+                font-size: 17px;
+                line-height: 23.8px;
+            }
+
+            &-list {
+                display: none;
+            }
+        }
+    }
+}

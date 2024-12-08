@@ -1,0 +1,196 @@
+/* 
+*  Variables
+*/
+
+$c-white: #fff;
+$c-black: #000;
+
+$c-white-2: #FEF9F0;
+$c-white-3: #FFF9EF;
+$c-green: #dbdd00;
+$c-pink: #FF84D0;
+$c-gray: #707070;
+$c-blue: #284651;
+$c-red: #ff927e;
+$c-red-2:#ff3838;
+
+// t6 - last
+
+
+/* 
+*  Fonts
+*/
+
+$f-inter: 'Inter', sans-serif;
+$f-commuters-sans: 'Commuters Sans', sans-serif;
+$f-lekton: 'Lekton', sans-serif;
+$f-nineties: 'Nineties Display', sans-serif;
+
+@mixin button-submit-mod-black-to-white {
+    background-color: $c-black;
+    color: $c-white;
+
+    &::after {
+        filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+        background-color: $c-white-2;
+        color: $c-black;
+
+        &::after {
+            filter: brightness(1) invert(0);
+        }
+    }
+}
+
+@mixin button-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    height: 33px;
+    padding: 2px 18px;
+    background-color: $c-white-2;
+    border: 0.5px solid $c-black;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $c-black;
+    text-decoration: none;
+    min-width: 139px;
+    padding-right: 44px;
+    transition: all 0.25s ease;
+    position: relative;
+
+    &:hover {
+        background-color: $c-black;
+        color: $c-white;
+
+        &::after {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 18px;
+        top: 11.8px;
+        background-image: url('../img/link_arrow.svg');
+        background-size: cover;
+        background-position: center;
+        width: 16px;
+        height: 8px;
+        transition: all 0.25s ease;
+    }
+
+    @content;
+}
+
+@mixin link-black-tow-white {
+    background-color: $c-black;
+    color: $c-white;
+
+    svg {
+        fill: $c-white;
+    }
+
+    &:hover {
+        background-color: $c-white-2;
+        color: $c-black;
+
+        svg {
+            fill: $c-black;
+        }
+    }
+}
+
+@mixin link {
+    font-family: $f-inter;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    height: 33px;
+    padding: 2px 18px;
+    background-color: $c-white-2;
+    border: 0.5px solid $c-black;
+    border-radius: 28px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: $c-black;
+    text-decoration: none;
+    min-width: 139px;
+    position: relative;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: $c-green;
+    }
+
+    svg {
+        width: 16px;
+        height: auto;
+        transition: all 0.2s ease;
+    }
+}
+
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lekton';
+    src: url('../fonts/Lekton-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('../fonts/CommutersSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nineties Display';
+    src: url('../fonts/NinetiesDisplayRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

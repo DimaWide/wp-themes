@@ -1,0 +1,118 @@
+.wcl-acf-block-1 {
+    margin: 0 -124px;
+    margin-top: 83px;
+    margin-bottom: 86px;
+    text-align: center;
+
+    .data {
+        &-container {
+            max-width: 1248px;
+        }
+
+        &-inner {
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+
+            @media (max-width: 1025px) {
+                max-width: calc(100vw);
+            }
+        }
+
+        &-title {
+            font-family: $f-pinyon-script;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 59px;
+            letter-spacing: 0px;
+            max-width: 700px;
+            margin: 0 auto;
+            margin-bottom: 32px;
+            text-transform: capitalize;
+        }
+
+        &-subtitle {
+            line-height: 20px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        &-img {
+            margin-bottom: 44px;
+
+            img {
+                max-height: 1130px;
+                object-fit: cover;
+            }
+        }
+
+        &-date {
+            font-style: italic;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 1.6px;
+            margin-bottom: 51px;
+        }
+
+        &-logo {
+            max-width: 308px;
+            margin: 0 auto;
+            margin-bottom: 65px;
+        }
+
+        &-desc {
+            max-width: 548px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 -27px;
+        margin-bottom: 65px;
+
+        .data {
+            &-col {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-img {
+                margin: 0 -27px;
+                margin-bottom: 60px;
+            }
+
+            &-title {
+                order: 2;
+                font-size: 45px;
+                margin: 0 auto;
+                margin-bottom: 37px;
+            }
+
+            &-subtitle {
+                order: 3;
+                max-width: 280px;
+                margin: 0 auto;
+                margin-bottom: 32px;
+            }
+
+            &-date {
+                margin-bottom: 45px;
+            }
+
+            &-logo {
+                max-width: 256px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-desc {
+                max-width: 290px;
+            }
+        }
+    }
+}

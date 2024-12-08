@@ -1,0 +1,255 @@
+.woocommerce-page {
+    color: #1D2E3B;
+
+    .woocommerce-orders-table__cell-order-actions {
+        a {
+            margin: 3px 5px !important;
+        }
+    }
+
+    // address
+    address {
+        padding: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        border-radius: 3px;
+    }
+
+    .woocommerce-customer-details address {
+        padding: 15px;
+    }
+
+    // table
+    table {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    table.shop_table {
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        border-left: none;
+        border-right: none;
+
+        color: #1D2E3B;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+
+    }
+
+    table.shop_table th,
+    table.shop_table td {
+        padding: 15px 5px;
+    }
+
+    table.shop_table td {
+        border-top: 1px solid rgba(0, 0, 0, 0.10);
+    }
+
+    table.shop_table th {
+        font-weight: 500;
+    }
+
+    table.shop_table tfoot th,
+    table.shop_table tfoot td {
+        font-weight: 500;
+    }
+
+    // select2
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        justify-content: flex-start;
+        padding: 15px 22px;
+
+        width: 100%;
+        height: 53px;
+        padding: 2px 17px;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, .1);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .08);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .08);
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        color: #1d2e3b;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 26px;
+        position: absolute;
+        top: 52%;
+        right: 7px;
+        width: 20px;
+        transform: translateY(-50%);
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 55px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        border: none;
+    }
+}
+
+
+
+.woocommerce-page .page-content {
+
+    h3,
+    h2 {
+        font-family: Caveat;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+
+
+
+// form
+.woocommerce {
+    form .password-input input {
+        padding-right: 50px !important;
+    }
+
+    form {
+        em {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    }
+
+    form .show-password-input {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+    }
+
+    form.woocommerce-checkout {
+        input {
+            &:focus {
+                &::placeholder {
+                    visibility: hidden;
+                }
+            }
+
+            &::placeholder {
+                transition: none;
+            }
+        }
+    }
+
+
+    //
+    form:not(.mod-not-wc) {
+        legend {
+            color: #1D2E3B;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            display: inline-block;
+
+            span {
+                color: #E74C3C;
+            }
+        }
+
+        label {
+            color: #1D2E3B;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            display: inline-block;
+
+            span {
+                color: #E74C3C;
+            }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"],
+        input[name="password"],
+        textarea,
+        select {
+            width: 100%;
+            height: 53px;
+            padding: 2px 17px;
+
+            border-radius: 10px;
+            background: #FFF;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+
+            color: #1D2E3B;
+            font-family: $f-inter;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+
+            &::placeholder {
+                color: rgba(#1D2E3B, 0.25);
+            }
+
+            &:focus {
+                border: 1px solid rgba(28, 188, 255, 0.30);
+                box-shadow: 0px 0px 15px 0px rgba(28, 188, 255, 0.08);
+
+                &::placeholder {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            &.mod-error {
+                border: 1px solid rgba(231, 76, 60, 0.30);
+                box-shadow: 0px 0px 15px 0px rgba(231, 76, 60, 0.08);
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+
+    .woocommerce-page .page-content h3,
+    .woocommerce-page .page-content h2 {
+        font-size: 32px;
+    }
+}
+
+
+.woocommerce-account.logged-in .woocommerce a {
+    &:nth-child(2) {
+        margin-left: 10px;
+    }
+}
+
+#update_all_subscriptions_addresses_field {
+    margin-top: 15px;
+}
+
+.woocommerce-order-pay {
+    #payment #place_order {
+        margin-top: 15px;
+    }
+}

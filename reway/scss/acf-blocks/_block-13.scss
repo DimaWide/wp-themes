@@ -1,0 +1,201 @@
+.wcl-acf-block-13 {
+    margin-top: 229px;
+    padding-top: 193px;
+    padding-bottom: 738px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -285px;
+
+
+    .data {
+        &-container {
+            max-width: 1689px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &-img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-50%);
+            max-width: 1920px;
+
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: calc(100% + 500px);
+                height: 1130px;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%) translate3d(0, 0, 0);
+                margin-top: -547px;
+
+                z-index: 1;
+                background: #000;
+                filter: blur(150px);
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-title {
+            font-family: $f-kumbh-sans;
+            font-size: 273px;
+            font-style: normal;
+            font-weight: 100;
+            line-height: normal;
+            letter-spacing: -13.65px;
+
+            background: linear-gradient(267deg, #FFF 25.28%, #967360 84.67%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+
+            margin-bottom: -137px;
+            position: relative;
+            z-index: 2;
+            margin-left: -12px;
+        }
+
+        &-info {
+            display: flex;
+            column-gap: 46px;
+            row-gap: 40px;
+            box-shadow: inset 0 0 0 0.3px #fff;
+            background: rgba(0, 0, 0, 0.70);
+            backdrop-filter: blur(15px);
+            transform: translate3d(0, 0, 0); will-change: transform;
+            padding: 138px 92px 104px;
+
+            &-col {
+                width: 50%;
+            }
+        }
+
+        &-title-two {
+            text-align: right;
+            font-family: $f-kumbh-sans;
+            font-size: 80px;
+            font-weight: 100;
+            line-height: 90px;
+            /* 112.5% */
+            letter-spacing: -4px;
+        }
+
+        &-desc {
+            text-align: left;
+            margin-top: 18px;
+            margin-left: 3px;
+        }
+    }
+
+    @media (max-width: 1600px) {
+        .data {
+            &-title {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-title {
+                font-size: 220px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        padding-top: 0;
+        padding-bottom: 590px;
+        margin-bottom: 0;
+
+        .data {
+            &-title {
+                font-size: 130px;
+                margin-bottom: 34px;
+            }
+
+            &-img {
+                top: 200px;
+            }
+
+            &-info {
+                display: block;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 88px 72px 90px;
+                margin-top: 402px;
+
+                &-col {
+                    width: 100%;
+                }
+            }
+
+            &-title-two {
+                text-align: center;
+                margin-bottom: 34px;
+            }
+
+            &-desc {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-title-two {
+                font-size: 60px;
+                line-height: normal;
+                letter-spacing: -3px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 156px;
+        margin-bottom: 138px;
+        padding-bottom: 1px;
+
+        .data {
+            &-title {
+                font-size: 60px;
+                line-height: normal;
+                letter-spacing: -3px;
+            }
+
+            &-img {
+                top: 107px;
+                height: 706px;
+
+                &::after {
+                    margin-top: -300px;
+                }
+            }
+
+            &-info {
+                padding: 53px 20px 45px;
+            }
+
+            &-desc {
+                width: calc(100% - 60px);
+                margin: 0 auto;
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import '../../../scss/defaults/acf-pack';
+
+
+.wcl-acf-block-12 {
+
+    .data {
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            &:first-child {
+                width: calc((1220px / 1800px) * 100%);
+            }
+
+            &:nth-child(2) {
+                padding-top: 36px;
+                margin-left: 60px;
+                flex-shrink: 0;
+                width: calc((520px / 1800px) * 100%);
+            }
+        }
+
+        &-load-more {
+            margin-top: 75px;
+            text-align: center;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            button {
+                width: 148px;
+                padding: 8px 20px 5px;
+            }
+        }
+
+        &-list {
+            margin: 0 -25px;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 75px;
+        }
+
+        &-item {
+            //  margin-bottom: 75px;
+            width: 50%;
+            padding: 0 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-col {
+                &:first-child {
+                    width: calc(100% - (270px + 50px));
+                }
+
+                &:nth-child(2) {
+                    width: 270px;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                margin: 0;
+                row-gap: 80px;
+            }
+
+            &-col {
+                width: 100% !important;
+
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-list {
+                margin: 0;
+                row-gap: 60px;
+            }
+
+            &-item {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}

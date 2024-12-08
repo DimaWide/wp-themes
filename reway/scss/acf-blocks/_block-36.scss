@@ -1,0 +1,194 @@
+.wcl-acf-block-36 {
+    margin-top: 144px;
+    margin-bottom: 132px;
+
+    &.mod-negative-bot-margin {
+        margin-bottom: -87px;
+
+        +div {
+            margin-top: 0;
+        }
+    }
+
+    &.mod-image-right {
+        .data {
+            &-img {
+                img {
+                    left: unset;
+                    right: 0;
+                    width: calc(100% - 560px);
+                }
+            }
+
+            &-block {
+                padding-top: 362px;
+                padding-bottom: 39px;
+                max-width: 901px;
+                margin-left: 58px;
+                min-height: 1206px;
+            }
+
+            &-title {
+                margin-bottom: 44px;
+            }
+
+            &-info {
+                max-width: 839px;
+                padding: 79px 76px 69px;
+            }
+        }
+    }
+
+    .data {
+        &-container {
+            max-width: 1920px;
+            position: relative;
+        }
+
+        &-img {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                width: calc(100% - 551px);
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+                z-index: -1;
+            }
+        }
+
+        &-block {
+            padding-top: 85px;
+            padding-bottom: 200px;
+            max-width: 740px;
+            margin-left: auto;
+            min-height: 1210px;
+            text-align: center;
+            margin-right: 134px;
+        }
+
+        &-title {
+            margin-bottom: 66px;
+        }
+
+        &-info {
+            max-width: 712px;
+            padding: 62px 70px 63px;
+        }
+
+        &-link {
+            max-width: 568px;
+            margin: 0 auto;
+            margin-top: 91px;
+        }
+    }
+
+    @media (max-width: 1400px) {
+
+        &.mod-image-right {
+            .data {
+                &-img {
+                    img {
+                        width: calc(100% - 400px);
+                    }
+                }
+            }
+        }
+
+        .data {
+            &-block {
+                margin-right: 50px;
+            }
+
+            &-img {
+                img {
+                    width: calc(100% - 400px);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        margin-top: 81px !important;
+        margin-bottom: 88px !important;
+
+        .data {
+            &-img {
+                max-width: 480px;
+                margin: 0 auto;
+                margin-bottom: -46px;
+
+                img {
+                    width: 100% !important;
+                    position: static;
+                    height: 482px;
+                }
+            }
+
+            &-block {
+                min-height: unset !important;
+                margin: 0 auto !important;
+                padding: 0 !important;
+            }
+
+            &-title {
+                max-width: 520px;
+                margin: 0 auto !important;
+            }
+
+            &-info {
+                padding: 40px !important;
+                margin-top: 20px;
+                width: auto;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-title {
+                max-width: 300px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .data {
+            &-container {
+                padding: 0 23px;
+            }
+
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+
+            &-link {
+                margin-top: 39px;
+
+                button {
+                    padding: 27px 31px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        &.mod-image-right {
+            .data-img {
+                margin-right: -23px;
+                margin-left: unset;
+            }
+        }
+
+        .data {
+            &-img {
+                max-width: unset;
+                margin-left: -23px;
+            }
+        }
+    }
+}

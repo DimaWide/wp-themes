@@ -1,0 +1,125 @@
+.cmp-1-post {
+    &.mod-image-miss {
+        .cmp1-img-inner {
+            background-color: #f2f2f2;
+        }
+    }
+
+    .cmp1 {
+        &-inner {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            &.mod-image-miss {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 345px;
+                background-image: url('../img/frame-image.svg');
+                background-size: 100% auto;
+                background-position: center top;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+
+            &:hover {
+                .cmp1 {
+                    &-img {
+                        img {
+                            transform: scale(1.15);
+                        }
+                    }
+
+                    &-title {
+                        opacity: 0.6;
+                    }
+
+                    &-arrow {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+
+        &-img {
+            padding: 20px 23px 0;
+
+            &-inner {
+                aspect-ratio: 328.24 / 448.91;
+                background-color: #fff;
+                border-radius: 10.34px;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.3s ease;
+            }
+        }
+
+        &-info {
+            padding: 41px 27px 0 31px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            column-gap: 25px;
+        }
+
+        &-title {
+            max-width: 190.73px;
+            font-size: 24.21px;
+            line-height: 23.28px;
+            margin-bottom: 0;
+            transition: 0.3s ease;
+        }
+
+        &-arrow {
+            flex-shrink: 0;
+            width: 31px;
+            transition: 0.3s ease;
+            line-height: 1.1;
+
+            svg {
+                width: 31px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cmp1 {
+            &-info {
+                padding-top: 30px;
+            }
+
+            &-title {
+                font-size: 18px;
+                line-height: 1.1;
+            }
+
+            &-arrow {
+                width: 25px;
+
+                svg {
+                    width: 21px;
+                }
+            }
+        }
+    }
+}

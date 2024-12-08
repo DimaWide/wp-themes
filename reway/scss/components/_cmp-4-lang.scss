@@ -1,0 +1,45 @@
+.wcl-cmp-4-lang {
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: #C2AE8C;
+    font-family: $f-kumbh-sans;
+    font-size: 12.269px;
+    font-weight: 400;
+
+    &.active {
+        .cmp4 {
+            &-list {
+                display: block;
+            }
+        }
+    }
+
+    .cmp4 {
+        &-selected {
+            width: 20px;
+        }
+
+        &-list {
+            position: absolute;
+            display: none;
+            top: 100%;
+            left: 0;
+            width: 100%;
+        }
+
+        &-item {
+            margin-top: 3px;
+
+            &.active {
+                display: none;
+            }
+
+            a {
+                color: #C2AE8C;
+                text-decoration: none;
+            }
+        }
+    }
+}

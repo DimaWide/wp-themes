@@ -1,0 +1,125 @@
+.wcl-section-4 {
+    padding-top: 60px;
+    padding-bottom: 71px;
+    text-align: center;
+    background: $c-black-b;
+    border: 1px solid $c-gray-d;
+    color: $c-white;
+    position: relative;
+    z-index: 1;
+
+    .data {
+        &-by {
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        &-title {
+            font-family: $f-pinyon-script;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 55px;
+            margin-bottom: 29px;
+        }
+
+        &-subtitle {
+            line-height: 20px;
+            margin-bottom: 51px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+        }
+
+        &-list {
+            display: flex;
+            margin: 0 -8px;
+            margin-bottom: 53px;
+        }
+
+        &-logo {
+            max-width: 377px;
+            margin: 0 auto;
+            margin-bottom: 26px;
+        }
+
+        &-item {
+            padding: 0 8px;
+            width: 20%;
+
+            &-inner {
+                position: relative;
+                display: block;
+
+                &:hover {
+                    .wcl-post-view {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &-img {
+                img {
+                    width: 100%;
+                    height: 308px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-list {
+                margin: 0;
+                margin-bottom: 50px;
+            }
+
+            &-item {
+                padding: 0;
+            }
+
+            &-by {
+                margin-bottom: 30px;
+            }
+
+            &-title {
+                font-size: 35px;
+                line-height: 43px;
+                max-width: 280px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            &-subtitle {
+                line-height: 25px;
+                max-width: 270px;
+                margin: 0 auto;
+                margin-bottom: 55px;
+            }
+
+            &-logo {
+                max-width: 260px;
+                margin: 0 auto;
+                margin-bottom: 47px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 92px;
+        padding-bottom: 107px;
+
+        .data {
+            &-list {
+                margin: 0 -28px;
+                margin-bottom: 50px;
+            }
+
+            &-item {
+                padding: 0;
+                width: 58.66%;
+            }
+        }
+    }
+}

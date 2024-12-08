@@ -1,0 +1,58 @@
+.wcl-acf-block-4 {
+    margin: 0 -100px;
+    margin-top: 124px;
+    margin-bottom: 58px;
+    padding: 0;
+    border-bottom: none;
+
+    .data {
+        &-container {
+            max-width: 1100px;
+        }
+
+        &-inner-2 {
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+
+            @media (max-width: 1025px) {
+                max-width: calc(100vw);
+            }
+        }
+
+        &-inner {
+            padding: 63px 31px;
+        }
+
+        &-a {
+            margin-left: unset;
+            margin-right: auto;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        margin-top: 88px;
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-a {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 -27px;
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 92px;
+
+        .data {
+            &-inner {
+                padding: 0 27px;
+                padding-top: 267px;
+            }
+        }
+    }
+}

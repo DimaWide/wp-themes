@@ -1,0 +1,212 @@
+// ...
+
+.wcl-section-24 {
+    padding: 74px 0 85px;
+    border-top: 2px solid $c-white-c;
+
+    .data {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 -10px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        &-a {
+            padding: 50px 10px;
+        }
+
+        &-title {
+            font-size: 40px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        &-quotes {
+            max-width: 350px;
+
+            &-item {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-text {
+                    font-size: 14px;
+                    margin-bottom: 17px;
+
+                    a {
+                        font-weight: 500;
+                    }
+
+                    p {
+                        line-height: 18px;
+                        margin-bottom: 17px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &-author {
+                    font-size: 10px;
+                    letter-spacing: 0.04em;
+                    color: $c-dark;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-b {
+            position: relative;
+            // padding-top: 36%;
+            height: 386px;
+            margin-top: 35px;
+            margin-bottom: 10px;
+
+            &-img {
+                position: absolute;
+                top: 0;
+                max-width: 301px;
+                width: 50%;
+
+                img {
+                    width: 100%;
+                    height: 386px;
+                    object-fit: cover;
+                }
+
+                &:first-child {
+                    left: 0;
+                    transform: rotate(5deg);
+                }
+
+                &:nth-child(2) {
+                    top: -30px;
+                    right: 40px;
+                    transform: rotate(-4deg);
+                }
+
+                .data-b-note {
+                    display: flex;
+                }
+            }
+
+            &-note {
+                margin-top: 16px;
+                font-size: 10px;
+                letter-spacing: 0.04em;
+                color: $c-dark;
+                text-transform: uppercase;
+                padding-left: 25px;
+                display: none;
+
+                a {
+                    color: $c-dark;
+
+                    &:hover {
+                        color: $c-magenta;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-container {
+                padding: 0 21px;
+            }
+
+            &-row {
+                flex-direction: column-reverse;
+                row-gap: 56px;
+            }
+
+            &-container {
+                max-width: 400px;
+            }
+
+            &-col {
+                width: 100%;
+            }
+
+            &-a {
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            &-b {
+                height: 265px;
+                left: 20px;
+
+                &-img {
+                    img {
+                        height: 209px;
+                    }
+
+                    .data-b-note {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {
+                        top: -20px;
+                    }
+                }
+
+                &-note {
+                    padding-right: 20px;
+                    margin-top: 38px;
+                    text-align: center;
+                    padding-left: 0;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-a {
+                text-align: left;
+            }
+
+            &-b {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                height: 290px;
+                left: 0;
+
+                &-note {
+                    padding-right: 0;
+                }
+
+                &-img {
+                    width: 47%;
+                    margin-top: 22px;
+
+                    &:first-child {
+                        left: 21px;
+                    }
+
+                    &:nth-child(2) {
+                        right: 21px;
+                    }
+                }
+            }
+        }
+    }
+}

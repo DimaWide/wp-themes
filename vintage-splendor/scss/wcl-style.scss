@@ -1,0 +1,93 @@
+
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+
+// Components
+@import 'components/storie';
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/header-nav';
+@import 'sections/footer';
+@import 'sections/instagram';
+@import 'sections/popup';
+@import 'sections/other';
+@import 'sections/section-1'; // Banner
+@import 'sections/section-2'; // About
+@import 'sections/section-3'; // Splendor Collective
+@import 'sections/section-4'; // The Benefits
+@import 'sections/section-5'; // Home - About Author
+@import 'sections/section-6'; // Subscription
+@import 'sections/section-7'; // Splendor Collective Exclusive
+@import 'sections/section-8'; // Vintage Shopping
+@import 'sections/section-9'; // Posts by Category
+@import 'sections/section-10'; // Monthly Picks
+@import 'sections/section-11'; // Voices from the Community
+@import 'sections/section-12'; // Call to Action
+@import 'sections/section-13'; // About - Title & Desc
+@import 'sections/section-14'; // About - Video & Title, Desc
+@import 'sections/section-15'; // About - Slider Brands
+@import 'sections/section-16'; // About - FAQ
+@import 'sections/section-17'; // About - Cards
+@import 'sections/section-18'; // Splendor - Banner
+@import 'sections/section-19'; // Splendor - Benefits Cards
+@import 'sections/section-20'; // Portal - Note from Annette
+@import 'sections/section-21'; // Portal - Shopping Lists Cards
+@import 'sections/section-22'; // Portal - Instagram
+@import 'sections/section-23'; // Portal - Annette’s Vintage Favorites.
+@import 'sections/section-24'; // Portal - Stories Instagram
+@import 'sections/section-25'; 
+
+
+// Sections - Single
+@import 'sections/single/banner';
+@import 'sections/single/end';
+@import 'sections/single/related-posts';
+@import 'sections/single/comments';
+
+
+// Acf Blocks
+@import 'acf-blocks/block-1'; // Text Content
+@import 'acf-blocks/block-2'; // Shop
+@import 'acf-blocks/block-3'; // Latest Favorites
+@import 'acf-blocks/block-4'; // Annette\'s picks
+@import 'acf-blocks/block-5'; // Shop Slider
+
+
+// Pages
+@import 'pages/page';
+@import 'pages/404';
+@import 'pages/splendor-collective';
+@import 'pages/contact';
+@import 'pages/stories';
+@import 'pages/shop';
+@import 'pages/portal';
+@import 'pages/single-post';
+@import 'pages/search';
+@import 'pages/other';
+
+
+// Woocommerce
+@import 'woocommerce/main';
+@import 'woocommerce/fields';
+@import 'woocommerce/single-product';
+@import 'woocommerce/cart';
+@import 'woocommerce/checkout';
+@import 'woocommerce/order-received';
+@import 'woocommerce/login';
+
+@import 'woocommerce/myaccount/account';
+@import 'woocommerce/myaccount/address';
+@import 'woocommerce/myaccount/edit-account';
+@import 'woocommerce/myaccount/orders';
+@import 'woocommerce/myaccount/payment';
+@import 'woocommerce/myaccount/subscriptions';
+
+
+
+

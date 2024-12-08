@@ -1,0 +1,145 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-15 {
+    position: relative;
+    padding-bottom: 60px;
+//    padding-top: calc((316px / 965px) * 100vh);
+    min-height: 100vh;
+    padding-top: 185px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 0px 100px 25px rgba(0, 0, 0, 0.75);
+    //   height: 965px;
+
+    @media (max-height: 700px) and (min-width: 991px) {
+        padding-top: 250px;
+    }
+
+    @media (max-height: 850px) and (min-width: 991px) {
+        padding-top: 22vh;
+    }
+
+    .data {
+        &-container {
+            max-width: 1422px;
+            max-width: unset;
+            margin-right: 0;
+            width: auto;
+        }
+
+        &-info {
+            width: 100%;
+            max-width: 580px;
+            background: rgba(0, 0, 0, 0.60);
+            padding: 35px 48px 48px;
+        }
+
+        &-title {
+            color: #F3BA00;
+            font-size: 64px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 15px;
+        }
+
+        &-desc {
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 155%;
+            max-width: 871px;
+            margin-right: -4px;
+        }
+
+        &-image {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-title {
+                font-size: 50px;
+            }
+
+            &-desc {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-title {
+                font-size: 44px;
+            }
+
+            &-desc {
+                font-size: 18px;
+            }
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+        box-shadow: 0px 0px 70px 5px rgba(0, 0, 0, 0.75);
+
+        .data {
+            &-title {
+                font-size: 44px;
+            }
+
+            &-desc {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 120px;
+        padding-bottom: 50px;
+
+        display: flex;
+        align-items: center;
+
+        .data {
+            &-container {
+                margin-right: auto;
+            }
+
+            &-info {
+                padding: 25px 23px 25px;
+            }
+
+            &-title {
+                font-size: 40px;
+                margin-bottom: 5px;
+            }
+
+            &-desc {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .data {
+            &-title {
+                font-size: 36px;
+            }
+
+            &-desc {
+                font-size: 14px;
+            }
+        }
+    }
+}

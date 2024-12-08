@@ -1,0 +1,119 @@
+.wcl-acf-block-24 {
+    margin-top: 402px;
+    position: relative;
+
+    .data {
+        &-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-img {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            min-height: 700px;
+            position: absolute;
+            top: -62px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: calc(100% + 50px);
+            z-index: -1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: calc(100% + 500px);
+                min-width: 2556px;
+                height: 374px;
+                left: -250px;
+                top: -131px;
+
+                background: #000;
+                filter: blur(150px);
+                transform: translate3d(0, 0, 0); will-change: transform;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        &-title {
+            margin-bottom: 348px;
+        }
+
+        &-info {
+            max-width: 839px;
+            padding: 80px 69px 80px;
+            min-height: 472px;
+        }
+
+        &-desc {
+            max-width: 686px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        margin-top: 208px;
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-title {
+                margin-bottom: 0;
+            }
+
+            &-img {
+                position: relative;
+                transform: none;
+                left: 0;
+                top: 0;
+
+                width: auto;
+                height: 500px;
+                min-height: unset;
+                margin: 0 -35px;
+                margin-bottom: -180px;
+
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-info{
+                padding: 71px 34px 71px;
+            }
+
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-img {
+                &::before {
+                    display: none;
+                }
+            }
+            &-info{
+                width: auto;
+            }
+        }
+    }
+}

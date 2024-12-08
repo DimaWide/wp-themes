@@ -1,0 +1,76 @@
+/*
+Mixin for styling form-placeholders
+@example scss - Usage
+
+   .my-class {
+        background: black(0.15);
+        color: white(0.9);
+   }
+
+*/
+@mixin placeholder {
+   &::-webkit-input-placeholder {
+      @content
+   }
+
+   &::-moz-placeholder {
+      opacity: 1;
+      @content
+   }
+
+   &:-moz-placeholder {
+      @content
+   }
+
+   &:-ms-input-placeholder {
+      @content
+   }
+
+   &.placeholder {
+      @content
+   }
+}
+
+@mixin link_hover($hover-opacity: 0.7) {
+   transition: all 0.25s ease;
+
+   &:hover {
+      opacity: $hover-opacity;
+   }
+}
+
+
+@mixin link {
+   color: #1060c1;
+   text-decoration: underline;
+}
+
+@mixin container-full-width {
+   width: 100vw;
+   margin-left: calc(-50vw + 50%);
+
+   @media (max-width: 1199px) {
+      width: auto;
+      margin-left: unset;
+   }
+}
+
+@mixin button {
+   display: inline-flex;
+   padding: 10px 22px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   background: #1060C1;
+
+   color: #FFF;
+   font-family: Roboto;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: normal;
+   text-decoration: none;
+   min-height: 48px;
+   text-align: center;
+   transition: all 0.25s ease;
+   cursor: pointer;
+}

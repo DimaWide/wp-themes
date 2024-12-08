@@ -1,0 +1,28 @@
+.wcl-section-14 {
+    margin-top: 76px;
+    margin-bottom: 74px;
+    text-align: center;
+
+    .data {
+        &-title {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 5.4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &-name {
+            font-family: $f-pinyon-script;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 59px;
+            letter-spacing: 0px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 37px;
+        margin-bottom: 52px;
+    }
+}

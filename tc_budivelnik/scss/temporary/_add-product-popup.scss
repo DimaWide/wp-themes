@@ -1,0 +1,180 @@
+.wcl-add-product-popup {
+    border-radius: 5px;
+    background: #fff;
+    padding: 32px 43px 34px 39px;
+
+    width: calc(100% - 80px);
+    max-width: 669px;
+
+
+    .data {
+        &-text {
+            color: #272323;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            /* 28.8px */
+        }
+
+        // &-title {
+        //     color: #272323;
+        //     font-size: 24px;
+        //     font-weight: 500;
+        //     line-height: 160%;
+        //     /* 38.4px */
+        // }
+    }
+
+    .cmp6 {
+        &-to-cart {
+            width: 100%;
+        }
+
+        &-form {
+            margin-top: 24px;
+
+            &-submit {
+                margin-top: 30px;
+            }
+
+            &-reset {
+                margin-top: 22px;
+                text-align: center;
+
+                button {
+                    color: #1060C1;
+                    font-size: 16px;
+                    /* 35.2px */
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                }
+
+                span {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-note {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        max-width: 449px;
+        padding: 16px 25px 25px 25px;
+        width: calc(100% - 100px);
+        height: auto;
+
+        .cmp6-form {
+            margin-top: 20px;
+
+            &-submit {
+                margin-top: 23px;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        padding: 18px 25px 25px 25px;
+        width: calc(100% - 40px);
+        min-height: 100%;
+
+        .data {
+            &-title {
+                font-size: 18px;
+            }
+        }
+
+        .cmp6 {
+            &-to-cart {
+                &:hover {
+                    background-color: #fff;
+                    color: #1060c1;
+                }
+            }
+        }
+
+        .cmp6-form {
+            margin-top: 17px;
+
+            input:not([type=submit]) {
+                height: 55px;
+            }
+
+            &-submit {
+                margin-top: 0;
+
+                a {
+                    background-color: #FFF;
+                    color: #1060C1;
+                    min-width: 96px;
+                }
+            }
+
+            &-reset {
+                margin-top: 0;
+
+                button {
+                    @include button;
+                    border: 1px solid #fff;
+                    min-width: 96px;
+                }
+            }
+
+            &-btns {
+                padding: 10px 20px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 84px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 20px;
+                flex-direction: row-reverse;
+                background-color: #1060C1;
+
+                button,
+                input,
+                a {
+                    min-height: 54px;
+                    padding: 10px 18px;
+                }
+
+                span {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+        .cmp6-form-submit {
+           min-width: 50%;
+        }
+
+        .cmp6-form {
+            &-submit {
+                input,
+                a {
+                    max-width: calc(100vw - 154px);
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.wcl-acf-block-2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .data {
+        &-container {
+            max-width: 1208px;
+        }
+
+        &-block {
+            padding: 10px 20px;
+            background: none 0% 0% / auto repeat scroll padding-box border-box rgb(28, 188, 255);
+            color: rgb(96, 96, 107);
+            text-align: center;
+
+            i {
+                margin: 0px 5px 0px 0px;
+                color: rgb(255, 255, 255);
+                font-size: 18px;
+            }
+        }
+
+        &-title {
+            line-height: 21.6px;
+            font-size: 18px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-bottom: 0;
+            display: inline-block;
+
+            &.mod-mobile {
+                display: none;
+            }
+        }
+
+        &-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: calc(623 / 1108 * 100%);
+            cursor: pointer;
+            // aspect-ratio: 1108/623;
+
+            &.mod-pause {
+                .data-video-play-btn {
+                    transform: scale(1) translate(-50%, -50%);
+                    opacity: 1;
+                }
+            }
+
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            &-play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 110px;
+                transform: scale(0) translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.2s ease;
+                transform-origin: left top;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-video {
+                &-play-btn {
+                    width: 8.5vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .data {
+            &-container {
+                padding: 0 15px;
+            }
+
+            &-block {
+                padding: 6px 20px;
+
+                i {
+                    font-size: 13px;
+                    margin-right: 5px;
+                }
+            }
+
+            &-title {
+                line-height: 19.04px;
+                font-size: 13.6px;
+                display: none;
+
+                &.mod-mobile {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

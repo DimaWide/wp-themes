@@ -1,0 +1,59 @@
+.wcl-cmp-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    max-width: 100%;
+    min-height: 77px;
+    padding: 14px 58px;
+
+    border-radius: 100px;
+    border: none;
+    box-shadow: inset 0 0 0 1.5px #c2ae8c;
+    background: transparent;
+
+    color: #C2AE8C;
+    font-family: $f-kumbh-sans;
+    font-size: 19.63px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    z-index: 1;
+    cursor: pointer;
+
+    &.mod-type-1{
+        padding: 12px 20px;
+        width: 225px;
+        max-width: 100%;
+    }
+
+    &.mod-type-2{
+        padding: 26px 58px;
+        min-width: 225px;
+    }
+
+    &:hover {
+        color: #fff;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(101deg, #684419 -18.11%, #C2AE8C 123.84%);
+        opacity: 0;
+        transition: all 0.2s ease;
+        z-index: -1;
+    }
+}

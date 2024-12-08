@@ -1,0 +1,202 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $f-inter;
+    font-size: 16px;
+    line-height: 1;
+    overflow-x: hidden;
+    background-color: $c-black-b;
+    color: $c-white-b;
+}
+
+html.overflow-hidden,
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+input,
+textarea {
+    border-radius: 0; // Prevent IOS add border-radius by default to all input elements
+}
+
+a {
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.wcl-body-inner {
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // min-height: 100vh;
+    // -webkit-box-orient: vertical;
+    // -webkit-box-direction: normal;
+    // -ms-flex-direction: column;
+    // flex-direction: column;
+    // justify-content: space-between
+    overflow-x: hidden;
+}
+
+.wcl-section {
+    position: relative;
+}
+
+.wcl-container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 70px;
+}
+
+
+
+
+
+
+
+
+
+h1,
+.wcl-h1,
+h2,
+.wcl-h2,
+h3,
+.wcl-h3,
+h4,
+.wcl-h4,
+h5,
+.wcl-h5,
+h6,
+.wcl-h6 {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+h1,
+.wcl-h1 {
+    font-size: 42px;
+}
+
+h2,
+.wcl-h2 {
+    font-size: 38px;
+}
+
+h3,
+.wcl-h3 {
+    font-size: 34px;
+}
+
+h4,
+.wcl-h4 {
+    font-size: 30px;
+}
+
+h5,
+.wcl-h5 {
+    font-size: 26px;
+}
+
+h6,
+.wcl-h6 {
+    font-size: 22px;
+}
+
+
+
+.wcl-page-content {
+    
+    padding-bottom: 60px;
+
+    h1,
+    .wcl-h1,
+    h2,
+    .wcl-h2,
+    h3,
+    .wcl-h3,
+    h4,
+    .wcl-h4,
+    h5,
+    .wcl-h5,
+    h6,
+    .wcl-h6 {
+        margin-top: 40px;
+        margin-bottom: 15px;
+    } 
+    p {
+        line-height: 1.5;
+    }
+}
+
+
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: $c-white;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+    padding-left: 0;
+}
+
+
+
+
+
+/*
+* Responsive Design
+*/
+@media (max-width: 991px) {
+    .wcl-container {
+        padding: 0 46px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wcl-container {
+        padding: 0 25px;
+    }
+}

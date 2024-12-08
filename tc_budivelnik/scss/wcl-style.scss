@@ -1,0 +1,74 @@
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/functions';
+@import 'defaults/mixins';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+@import 'defaults/other';
+
+
+// Components
+@import 'components/cmp-title';
+@import 'components/cmp-desc';
+@import 'components/cmp-button';
+@import 'components/cmp-price-range';
+@import 'components/cmp-1-heading';
+@import 'components/cmp-2-social-media';
+@import 'components/cmp-3-product';
+@import 'components/cmp-4-post';
+@import 'components/cmp-5-grid';
+@import 'components/cmp-6-form';
+@import 'components/cmp-7-phone';
+@import 'components/cmp-field-checkbox';
+
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/other-poduct-cat';
+@import 'sections/blog';
+@import 'sections/sidebar';
+@import 'sections/registration';
+@import 'sections/wish-list';
+@import 'sections/popup';
+
+
+// Pages
+@import 'pages/page';
+@import 'pages/shop';
+@import 'pages/woocommerce';
+@import 'pages/single-product';
+@import 'pages/single';
+@import 'pages/404';
+
+
+// ACF Blocks
+@import 'acf-blocks/block-1'; // Acf Block #01 – Слайдер, Банер
+@import 'acf-blocks/block-2'; // Acf Block #02 – Акційні пропозиції
+@import 'acf-blocks/block-3'; // Acf Block #03 – Відгуки наших клієнтів
+@import 'acf-blocks/block-4'; // Acf Block #04 – Інформація про компанію
+@import 'acf-blocks/block-5'; // Acf Block #05 – Останні події
+@import 'acf-blocks/block-6'; // Acf Block #06 – Наші контакти
+
+
+// Temporary
+@import 'temporary/other';
+@import 'temporary/tmp-1-share-post';
+@import 'temporary/contact-info';
+@import 'temporary/contact-info-edit';
+@import 'temporary/change-password';
+@import 'temporary/review-form';
+@import 'temporary/get-call';
+@import 'temporary/add-product-popup';
+
+
+// Woocommerce
+@import 'woocommerce/general';
+@import 'woocommerce/cart';
+@import 'woocommerce/checkout';
+@import 'woocommerce/account';
+@import 'woocommerce/account-area';
+@import 'woocommerce/thankyou';
+// tmp1 - wcl-share-post

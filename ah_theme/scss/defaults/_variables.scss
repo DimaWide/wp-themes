@@ -1,0 +1,156 @@
+
+
+/* 
+
+Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+Color names - http://name-of-color.com/
+
+==============================================
+    CONTENT OF THE FILE
+==============================================
+
+    1. Variables
+    2. Fonts
+
+*/
+
+/* 
+* 1. Variables
+*/
+
+$white: #fff;
+$black: #000;
+
+$btn-color: $white;
+$btn-background: $black;
+
+$animation-speed: 0.3s;
+
+
+$f-br-nebula: 'BR Nebula', sans-serif;
+$f-playfair: 'Playfair Display', sans-serif;
+$f-inter: 'Inter', sans-serif;
+
+
+
+// Unique sections/components
+// wcl-mega-menu - m1
+// wcl-logo - m2
+// wcl-post-item - m3
+// wcl-newsletter - m4
+// wcl-page - m5
+// wcl-page-second - m6
+
+
+
+
+/* 
+* 2. Fonts
+*/
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/InterRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-RegularItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-Medium-Italic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Nebula';
+    src: url('../fonts/BRNebula-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

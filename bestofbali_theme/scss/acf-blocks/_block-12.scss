@@ -1,0 +1,15 @@
+.wcl-acf-block-12 {
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    .data {
+        &-map {
+            width: 100%;
+            height: 550px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 75px;
+    }
+}

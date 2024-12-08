@@ -1,0 +1,26 @@
+.wcl-cmp-1-cta {
+    margin-top: 25px;
+    text-align: center;
+
+    .cmp1 {
+        &-note {
+            margin-top: 10px;
+
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            color: rgb(96, 96, 107);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cmp1 {
+            &-note {
+                font-size: 11.05px;
+                font-weight: 500;
+                line-height: 15.47px;
+                color: rgb(96, 96, 107);
+            }
+        }
+    }
+}

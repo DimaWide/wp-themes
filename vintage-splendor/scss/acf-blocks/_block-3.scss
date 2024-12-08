@@ -1,0 +1,117 @@
+.wcl-section-8 {
+    &.wcl-acf-block-3 {
+        padding-top: 67px;
+        margin-top: 0;
+        margin-bottom: 64px;
+        border-top: 1px solid $c-black;
+
+        &.mod-arrange-column {
+            @media (max-width: 575px) {
+                margin-bottom: 74px;
+                margin-top: 87px;
+                padding-top: 0;
+                border: none;
+
+                .data {
+                    &-list {
+                        &-inner {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            row-gap: 87px;
+                        }
+                    }
+
+                    &-item {
+                        width: 100%;
+                        max-width: 280px;
+
+                        &-inner {
+                            height: auto;
+                            background-color: transparent;
+                            border: none;
+                            display: block;
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        &-a {
+                            height: 326px;
+                            border: 1px solid #000;
+                            border-radius: 10px;
+                            background-color: $c-white;
+                            margin-bottom: 28px;
+                            overflow: hidden;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        &-img {
+                            img {
+                                position: static;
+                                max-height: 326px;
+                            }
+                        }
+
+                        &-b {
+                            position: static;
+                            visibility: visible;
+                            opacity: 1;
+                            background-color: transparent;
+                            padding: 0;
+                        }
+
+                        &-brand {
+                            margin-bottom: 8px;
+                        }
+
+                        &-title {
+                            margin-bottom: 14px;
+                        }
+
+                        &-logo {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .data {
+            &-title {
+                font-size: 25px;
+                margin-right: 22px;
+            }
+
+            &-subtitle {
+                font-size: 23px;
+            }
+
+            &-a {
+                margin-bottom: 28px;
+            }
+
+            &-list {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 78px;
+            margin-bottom: 75px;
+
+            .data {
+                &-title {
+                    font-size: 28px;
+                }
+
+                &-subtitle {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

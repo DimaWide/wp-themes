@@ -1,0 +1,20 @@
+.wcl-splendor-collective {
+    .wcl-t7-bg{
+        background-image: url('../img/sc_18_bg.jpg');
+        border: none;
+    }
+
+    .wcl-header {
+        position: absolute;
+    }
+
+    .wcl-footer {
+        margin-top: 140px;
+    }
+
+    @media (max-width: 767px) {
+        .wcl-footer {
+            margin-top: 76px;
+        }
+    }
+}

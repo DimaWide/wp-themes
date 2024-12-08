@@ -1,0 +1,87 @@
+// ...
+
+.wcl-slider {
+    position: relative;
+    z-index: 1;
+
+    .d3 {
+        &-list {
+            mask-image: url('../img/octagon.svg');
+            //mask-size: 100% 100%;
+            mask-size: cover;
+            mask-position: center;
+            mask-repeat: no-repeat;
+
+            &-out {
+                position: relative;
+                max-width: 261px;
+                background-image: url('../img/octagon-fill.png');
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-image: url('../img/octagon-line.svg');
+                    background-position: center;
+                    background-size: contain;
+                    width: 100%;
+                    height: 100%;
+                    top: -9px;
+                    left: -10px;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &-nav {
+                &-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 18px;
+                    cursor: pointer;
+                    z-index: 1;
+                    transition: all 0.2s ease;
+
+                    &.swiper-button-disabled {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    &.mod-prev {
+                        left: -14px;
+
+                        img {
+                            transform: scale(-1, 1);
+                        }
+                    }
+
+                    &.mod-next {
+                        right: -14px;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            padding: 50px 30px 47px;
+
+            &-inner {
+                transition: none;
+            }
+
+            &-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 243px;
+
+                img {
+                    max-height: 243px;
+                }
+            }
+        }
+    }
+}

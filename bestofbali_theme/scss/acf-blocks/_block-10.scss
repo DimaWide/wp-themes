@@ -1,0 +1,30 @@
+.wcl-acf-block-10 {
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    &.mod-shortcode-mobile {
+        @media (max-width: 575px) {
+            margin-bottom: 75px;
+
+            .data {
+                &-item {
+                    display: none;
+                }
+
+                &-item-2 {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .data {
+        &-item-2 {
+            display: none;
+        }
+    }
+}

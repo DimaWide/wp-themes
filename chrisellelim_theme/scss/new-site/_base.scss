@@ -1,0 +1,288 @@
+// html {
+
+//   overflow-x: hidden;
+
+// }
+
+// html.wf-loading {
+
+//   p,
+//   a,
+//   span,
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   div {
+//     color: transparent !important;
+//   }
+// }
+
+// body {
+//   @include transition (all .2s ease-in-out);
+//   background-color: $white;
+//   color: $text;
+//   //font-family: $sans-serif;
+//   font-weight: normal;
+//   -webkit-font-smoothing: antialiased !important;
+// }
+
+// .site-wrap {
+//   overflow-x: hidden;
+// }
+
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 60px;
+
+  @include breakpoint($max: 960px) {
+
+    padding: 0 38px;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    padding: 0 16px;
+
+  }
+
+} 
+
+// .sprite_hide {
+//   width: 0;
+//   height: 0;
+//   visibility: hidden;
+// }
+
+// img {
+//   max-width: 100%;
+// }
+
+// a {
+//   //@include linkcolor($link, darken);
+//   text-decoration: none;
+//   color: inherit;
+// }
+
+// .whole-click {
+
+//   cursor: pointer;
+
+// }
+
+.post {
+
+  transition: opacity .3s;
+  transition-delay: .3s;
+
+  &.loaded {
+
+    opacity: 0;
+
+  }
+
+  > a {
+
+    position: relative;
+    display: block;
+
+    span {
+
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1;
+
+      svg {
+
+        width: 100%;
+        height: 100%;
+
+      }
+
+    }
+
+  }
+
+  h3 {
+
+    //font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 25px 0 0;
+    text-transform: capitalize;
+
+    a {
+
+      font-weight: $medium;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-right: 18px;
+
+    }
+
+  }
+
+  h2 {
+
+    //font-family: $display;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 32px 0 0;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    @include breakpoint($max: 960px) {
+
+      font-size: 26px;
+      line-height: 26px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 30px;
+      line-height: 30px;
+
+    }
+
+    &:hover {
+
+      opacity: .7;
+
+    }
+
+  }
+
+  p {
+
+    //font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    display: block;
+    display: -webkit-box;
+    max-height: 38px;
+    line-height: 21px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+  }
+
+  img {
+
+    transition: all .3s;
+
+    &:hover {
+
+      opacity: .7;
+
+    }
+
+  }
+
+}
+
+.load-more {
+
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  //font-family: $sans-serif;
+  font-weight: $semi;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2.54px;
+  text-transform: uppercase;
+  //margin-top: 70px;
+
+  svg {
+
+    margin: 0 20px -4px;
+    width: 9px;
+    height: 22px;
+
+  }
+
+}
+
+svg {
+
+  &.arrow-right {
+
+    fill: $white;
+
+  }
+
+  &.arrow-down {
+
+    fill: $black;
+
+  }
+
+}
+
+.pin-wrap {
+
+  position: relative;
+
+  > a.pin-it {
+
+    //font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 14px 30px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    background-color: rgba($black, .3);
+    color: $white;
+    transition: all .3s;
+    opacity: 0;
+
+    &:hover {
+
+      background-color: $black;
+
+    }
+
+    svg {
+
+      fill: $white;
+      height: 16px;
+      width: 16px;
+      margin-right: 12px;
+      margin-bottom: -3px;
+
+    }
+
+  }
+
+  &:hover {
+
+    a {
+
+      opacity: 1;
+
+    }
+
+  }
+
+}

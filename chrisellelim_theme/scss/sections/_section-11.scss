@@ -1,0 +1,54 @@
+// ...
+
+
+.wcl-section-11 {
+    padding: 62px 0 160px;
+    background-color: $c-white-a;
+
+    .data {
+        &-container {
+            max-width: 994px;
+        }
+
+        &-title {
+            font-size: 65px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -42px;
+            row-gap: 72px;
+            margin-top: 160px;
+        }
+
+        &-item {
+            padding: 0 42px;
+            width: 50%;
+
+            &-title {
+                font-weight: 500;
+                font-size: 24px;
+                margin-bottom: 17px;
+            }
+
+            &-subtitle {
+                font-weight: 500;
+                font-size: 13px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
+
+            &-desc {
+                font-size: 14px;
+
+                p {
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}

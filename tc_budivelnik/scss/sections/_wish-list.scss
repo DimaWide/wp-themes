@@ -1,0 +1,214 @@
+.wcl-wish-list {
+    .data {
+        &-b1 {
+            text-align: center;
+
+            &-title {
+                font-size: 21px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 34px;
+            margin: 0 -10px;
+
+            &-out {
+                position: relative;
+                transition: all 0.25s ease;
+
+                &.active {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        &-item {
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        &-load-more {
+            margin-top: 55px;
+            text-align: right;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            button {
+                border: none;
+                column-gap: 10px;
+
+                &:disabled {
+                    opacity: 0.8;
+                }
+
+                img {
+                    width: 12px;
+                    transform: translateY(1px);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 991px) {
+        .data {
+            &-b1 {
+                &-title {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .cmp-3-product {
+            .cmp3 {
+                &-title {
+                    margin-bottom: 9px;
+                }
+
+                &-cart {
+                    width: 39px;
+
+                    &.active {
+                        width: 39px;
+
+                        .cmp3-cart-inner {
+                            width: 39px;
+                            background-color: #1060C1;
+
+                            .cmp3-cart-button {
+                                &-ico {
+                                    svg {
+                                        fill: #fff;
+
+                                        * {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-inner {
+                        background: #FFF;
+
+                        &:focus {
+                            width: 39px;
+                        }
+
+                        &:hover {
+                            width: 39px;
+                            background-color: #1060C1;
+
+                            .cmp3-cart-button {
+                                &-ico {
+                                    svg {
+                                        fill: #fff;
+
+                                        * {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-button {
+                        &-ico {
+                            svg {
+                                fill: #1060C1;
+                                width: 18px;
+
+                                * {
+                                    fill: #1060C1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-title {
+                margin-bottom: 33px;
+            }
+
+            &-item {
+                width: 33.33%;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-list {
+                margin: 0 -15px;
+                row-gap: 26px;
+            }
+
+            &-item {
+                padding: 0 15px;
+            }
+
+            &-load-more {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .data {
+            &-item {
+                width: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .cmp-3-product .cmp3-title {
+            margin-bottom: 8px;
+        }
+
+        .data {
+            &-list {
+                margin: 0 -10px;
+                row-gap: 22px;
+            }
+
+            &-item {
+                padding: 0 10px;
+            }
+
+            &-load-more {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 370px) {
+        .data {
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.wcl-wish-list.mod-v2 {
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+    .woocommerce-breadcrumb {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,294 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-4 {
+    margin-top: 125px;
+    margin-bottom: 150px;
+
+    .data {
+        &-container {
+            position: relative;
+        }
+
+        &-lines {
+            .line-container {
+                &:nth-child(1) {
+                    left: 60px;
+                    top: -150px;
+                }
+
+                &:nth-child(2) {
+                    left: 228px;
+                    top: 240px;
+                }
+            }
+        }
+
+        &-title {
+            text-transform: capitalize;
+            margin-bottom: 75px;
+            text-align: center;
+        }
+
+        &-list {
+            display: flex;
+            row-gap: 20px;
+            margin: 0 -15px;
+        }
+
+        &-item {
+            width: 33.33%;
+            padding: 0 15px;
+
+            @media (min-width: 1850px) {
+                &:nth-child(2) {
+                    transform: translate(26px, 0px);
+                }
+
+                &:nth-child(3) {
+                    transform: translate(47px, 0px);
+                }
+            }
+
+            &:nth-child(3) {
+                @media (min-width: 1700px) {
+                    width: 40%;
+                }
+
+                @media (min-width: 1200px) {
+                    .data-item-info {
+                        margin-right: -40px;
+                    }
+                }
+            }
+
+            &-inner {
+                display: flex;
+                column-gap: 25px;
+            }
+
+            &-img {
+                width: 170px;
+                height: 170px;
+                padding: 0 25px;
+                flex-shrink: 0;
+                background: #F3BA00;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.mod-mobile {
+                    display: none;
+                }
+
+                img {
+                    max-height: 100px;
+                }
+            }
+
+            &-info {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 6px;
+            }
+
+            &-title {
+                font-size: 36px;
+                line-height: 155%;
+                /* 55.8px */
+                line-height: 1.3;
+                margin-bottom: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            &-points {
+                font-family: Sora;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 155%;
+                /* 24.8px */
+                margin-top: 5px;
+                padding-left: 2px;
+                margin-bottom: 11px;
+
+                span {
+                    display: none;
+                }
+
+                * {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1600px) {
+        .data {
+            &-lines {
+                display: none;
+            }
+
+            &-list {
+                column-gap: 100px;
+            }
+
+            &-item {
+                max-width: 640px;
+                justify-content: center;
+                width: auto !important;
+            }
+
+            &-list {
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 50px;
+
+                &-out {
+                    max-width: 1180px;
+                    margin: 0 auto;
+                }
+            }
+
+            &-item {
+                width: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-list {
+                column-gap: 60px;
+            }
+
+            &-item {
+                &-title {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .data {
+            &-list {
+                column-gap: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-item {
+                width: 100% !important;
+                max-width: 570px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 125px;
+        margin-bottom: 110px;
+
+        .data {
+            &-title {
+                margin-bottom: 55px;
+            }
+
+            &-list {
+                row-gap: 45px;
+            }
+
+            &-item {
+                &-title {
+                    font-size: 26px;
+                }
+
+                &-info {
+                    padding-top: 0;
+                }
+
+                &-img {
+                    width: 140px;
+                    height: 140px;
+
+                    img {
+                        max-height: 75px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 110px;
+        margin-bottom: 110px;
+
+        .data {
+            &-title {
+                margin-bottom: 40px;
+            }
+
+            &-item {
+                &-title {
+                    font-size: 22px;
+                }
+
+                &-points {
+                    font-size: 15px;
+                    padding-left: 1px;
+                }
+
+                &-link {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 440px) {
+        .data {
+            &-item {
+                text-align: center;
+
+                &:nth-child(3) {
+                    .data-item-title {
+                        max-width: 230px;
+                        margin: 0 auto;
+                    }
+                }
+
+                &-img {
+                    display: none;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+
+                    &.mod-mobile {
+                        display: flex;
+                    }
+                }
+
+                &-points {
+                    * {
+                        padding-left: 0;
+                    }
+
+                    li {
+                        list-style: none;
+                    }
+
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

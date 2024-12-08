@@ -1,0 +1,20 @@
+.cmp-social-media {
+    @include wcl-reset-list;
+    display: flex;
+    align-items: center;
+    column-gap: 7.2px;
+
+    .cmp {
+        &-item {
+            img {
+                width: 23px;
+                height: 23px;
+            }
+
+            a {
+                @include link_hover(0.6);
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+// ...
+
+.wcl-section-23 {
+    background-color: $c-white-a;
+    padding: 192px 0 108px;
+
+    .data {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-col {
+            width: 50%;
+
+            &:first-child {
+                max-width: 564px;
+            }
+
+            &:last-child {
+                padding: 40px 80px 40px;
+            }
+        }
+
+        &-img {
+            background: $c-beige;
+            border: 0.8px solid $c-beige-b;
+            padding: 9px 7px;
+
+            img {
+                width: 100%;
+                min-height: 356px;
+                object-fit: cover;
+            }
+        }
+
+        &-desc {
+            font-size: 14px;
+            margin-bottom: 49px;
+            max-width: 325px;
+
+            a {
+                font-weight: 500;
+            }
+
+            p {
+                line-height: 18px;
+            }
+        }
+
+        &-title {
+            font-family: $f-greycliff;
+            font-size: 35px;
+            color: $c-olive;
+            text-transform: uppercase;
+            max-width: 390px;
+            margin-left: -101px;
+            font-weight: 600;
+
+            p {
+                line-height: 40px;
+                margin-bottom: 0;
+
+                &:nth-child(even) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 140px;
+
+        .data {
+            &-col {
+                &:last-child {
+                    padding: 40px 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 56px;
+        padding-bottom: 58px;
+
+        .data {
+            &-container {
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            &-row {
+                row-gap: 48px;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:last-child {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+
+            &-img {
+                img {
+                    min-height: unset;
+                }
+            }
+
+            &-desc {
+                margin: 0 auto;
+            }
+
+            &-title {
+                margin: 0 auto;
+                margin-bottom: 38px;
+                font-size: 25px;
+                max-width: 280px;
+
+                p {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-img {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .data {
+            &-title {
+                margin-left: 0;
+            }
+
+            &-desc {
+                margin-left: 0;
+            }
+        }
+    }
+}

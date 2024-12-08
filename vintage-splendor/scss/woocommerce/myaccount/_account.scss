@@ -1,0 +1,285 @@
+.woocommerce-account.logged-in {
+    .wcl-header-e2 .data-btns-sign.wcl-t2-icon {
+        &::after {
+            background-image: unset;
+            background-color: $c-green;
+        }
+    }
+
+    a {
+        color: $c-black;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .woocommerce-Message {
+        font-weight: 700;
+        margin-bottom: 31px;
+    }
+
+    .wcl-page {
+        margin-top: 149px;
+        margin-bottom: 131px;
+
+        .data {
+            &-container {
+                >.data-title {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-b6 {
+            &-links {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 15px;
+                row-gap: 12px;
+                margin-top: 30px;
+            }
+        }
+
+        &-b5 {
+            margin-top: 30px;
+            display: none;
+        }
+
+        &-b1 {
+            display: flex;
+            align-items: center;
+            column-gap: 26px;
+            margin-bottom: 36px;
+
+            &-img {
+                img {
+                    width: 47px;
+                    height: 47px;
+                    border-radius: 100px;
+                    border: 0.5px solid #000;
+                    object-fit: cover;
+                }
+            }
+
+            &-text {
+                font-family: $f-commuters-sans;
+                font-weight: 400;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+
+        &-b2 {
+            margin-bottom: 30px;
+
+            p {
+                margin-bottom: 14px;
+                line-height: 25px;
+
+                &.data-b2-not-jane {
+                    text-decoration: underline;
+                    font-size: 16px;
+                    line-height: 25px;
+                    margin-bottom: 9px;
+                    text-transform: capitalize;
+
+                    +a {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-hello {
+                font-weight: bold;
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 13px;
+            }
+
+            a {
+                margin-bottom: 27px;
+            }
+        }
+    }
+
+    .woocommerce {
+        display: flex;
+        margin: 0 -15px;
+
+        p {
+            line-height: 25px;
+        }
+
+        >div,
+        nav {
+            padding: 0 15px;
+
+            &:first-child {
+                width: 30%;
+            }
+
+            &:nth-child(2) {
+                width: 70%;
+                margin-left: 45px;
+            }
+        }
+    }
+
+    .woocommerce-MyAccount-navigation {
+        padding-left: 0;
+
+        li {
+            margin-bottom: 18px;
+
+            &.is-active {
+                a {
+                    background-color: $c-green;
+
+                    &:hover {
+                        background-color: $c-green !important;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                width: 100%;
+                max-width: 190px;
+                column-gap: 5px;
+
+                &:not(.mod-gradient) {
+                    justify-content: center;
+
+                    &:hover {
+                        background-color: $c-white;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-b5 {
+                display: block;
+            }
+        }
+
+        .woocommerce-MyAccount-navigation {
+            margin-top: 18px;
+            margin-bottom: 80px;
+        }
+
+        .wcl-page {
+            margin-top: 0;
+            margin-bottom: 130px;
+        }
+
+        .woocommerce {
+            flex-wrap: wrap;
+
+            >div,
+            nav {
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+
+            .woocommerce-MyAccount-navigation {
+                text-align: center;
+
+                ul {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.wcl-change-avatar {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    .data {
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        &-img {
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+                border: 0.5px solid #000;
+                object-fit: cover;
+                margin-bottom: 30px;
+                background-image: url('../img/sign.svg');
+                background-position: center;
+                background-size: 30%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &-form {
+            label {
+                position: relative;
+            }
+
+            input[type="file"] {
+                position: absolute;
+                opacity: 0;
+                left: 50%;
+                top: 100%;
+                width: 1px;
+                height: 1px;
+            }
+        }
+
+        &-fields {
+            display: flex;
+            column-gap: 16px;
+            flex-wrap: wrap;
+            row-gap: 15px;
+        }
+
+        &-notify {
+            margin: 15px 0;
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        margin-top: 0;
+
+        .data {
+            &-img {
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+
+            &-notify {
+                margin: 15px 0 15px 26px;
+            }
+        }
+    }
+}

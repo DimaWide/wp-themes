@@ -1,0 +1,129 @@
+.wcl-acf-block-20 {
+    position: relative;
+
+    .data {
+        &-container {
+            max-width: 1540px;
+            position: relative;
+        }
+
+        &-tagline {
+            margin-left: 12px;
+            margin-bottom: 23px;
+        }
+
+        &-title {
+            margin-left: -85px;
+            margin-bottom: -154px;
+        }
+
+        &-block {
+            position: relative;
+        }
+
+        &-img {
+            height: 1499px;
+            position: relative;
+            z-index: -1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2556px;
+                height: 1130px;
+                top: 100%;
+                margin-top: -350px;
+                left: -321px;
+                background: #000;
+                filter: blur(150px);
+                transform: translate3d(0, 0, 0); will-change: transform;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            position: absolute;
+            right: 50px;
+            bottom: 299px;
+            max-width: 536px;
+            padding: 73px 80px 156px;
+            margin-right: 11px;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        .data {
+            &-tagline {
+                margin-left: 0;
+            }
+
+            &-title {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .data {
+            &-img {
+                height: 1300px;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-tagline {
+                margin-bottom: 18px;
+            }
+
+            &-img {
+                height: 920px;
+                margin-bottom: -500px
+            }
+
+            &-info {
+                position: static;
+                margin: 0 auto;
+                padding: 67px 60px 60px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-title {
+                margin-bottom: -110px;
+            }
+
+            &-img {
+                height: 920px;
+                margin: 0 -35px;
+                margin-bottom: -500px
+            }
+
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-info {
+                margin: 0 -11px;
+                width: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+// ...
+
+
+.wcl-section-8 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    .data {
+        &-imgs {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        &-title {
+            text-align: center;
+            position: relative;
+            max-width: 582px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .data {
+            &-title {
+                max-width: 46.6vw;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-imgs {
+                img {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        display: block;
+                    }
+                }
+            }
+
+            &-title {
+                display: none;
+            }
+        }
+    }
+}

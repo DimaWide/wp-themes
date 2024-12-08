@@ -1,0 +1,25 @@
+.wcl-video-symilar {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 100px;
+
+    .data {
+        &-title {
+            color: #1D2E3B;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: -0.64px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-title {
+                font-size: 26px;
+            }
+        }
+    }
+}

@@ -1,0 +1,295 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-5 {
+    overflow: hidden;
+
+    &.mod-section-animate {
+        .data-video video {
+            transform: translate(0, 0) scale(1.25);
+            transform-origin: center;
+            opacity: 0;
+            transition: all 1.2s ease;
+        }
+
+        .data {
+            &-title {
+                transform: translate(50px, 0);
+                opacity: 0;
+                transition: all 1.2s ease;
+            }
+
+            &-desc {
+                transform: translate(50px, 0);
+                opacity: 0;
+                transition: all 1.2s ease;
+            }
+        }
+    }
+
+    &.visible {
+        .data-video video {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+
+
+        .data {
+            &-title {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            &-desc {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+    }
+
+    .data {
+        &-container {
+            max-width: 1920px;
+            padding: 0 126px;
+            padding-right: 128px;
+        }
+
+        &-row {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 0 -37px;
+        }
+
+        &-col {
+            padding: 0 37px;
+            width: 50%;
+
+            &:last-child {
+                width: 59.7%;
+                flex-shrink: 0;
+            }
+
+            &:first-child {
+                width: calc(100% - 59.7%);
+            }
+        }
+
+        &-video {
+            z-index: 2;
+            min-height: 100%;
+            max-width: 100%;
+            position: relative;
+            border-radius: 25.42px;
+            overflow: hidden;
+            background-color: rgba(#000000, 0.05);
+            aspect-ratio: 965 / 542;
+            cursor: pointer;
+
+            &.mod-pause {
+                .data-video-play-btn {
+                    transform: scale(1) translate(-50%, -50%);
+                    opacity: 1;
+                }
+            }
+
+            video {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &-play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 117px;
+                height: 117px;
+                transform: scale(0) translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.2s ease;
+                transform-origin: left top;
+                cursor: pointer;
+                z-index: 3;
+
+                @media (max-height: 700px) and (min-width: 991px) {
+                    width: 15vh;
+                    height: 15vh;
+                    margin-left: -10px;
+                    min-width: 60px;
+                    min-height: 60px;
+                }
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-info {
+            padding: 49px 0 25px;
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 74.05px;
+            line-height: 99.69%;
+            //73.82px;
+            margin-bottom: 75px;
+
+            strong,
+            a {
+                color: #FF002E;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        &-desc {
+            max-width: 641px;
+            font-weight: 500;
+            font-size: 20.27px;
+            line-height: 119%;
+            //24.32px;
+            text-align: left;
+            color: #000;
+
+            @media (min-width: 1200px) {
+                transform: translate(7px, 0px);
+            }
+        }
+    }
+
+    @media (max-width: 1860px) {
+        .data {
+            &-row {
+                margin: 0 get-vw(-37px);
+            }
+
+            &-col {
+                padding: 0 get-vw(37px);
+            }
+
+            &-title {
+                font-size: get-vw(70px);
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-container {
+                padding: 0 80px;
+            }
+
+            &-title {
+                font-size: 50px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-container {
+                padding: 0 50px;
+            }
+
+            &-row {
+                margin: 0 -25px;
+            }
+
+            &-col {
+                padding: 0 25px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-container {
+                padding: 0 25px;
+            }
+
+            &-row {
+                margin: 0 -20px;
+            }
+
+            &-col {
+                padding: 0 20px;
+            }
+
+            &-info {
+                padding: 20px 0;
+            }
+
+            &-title {
+                font-size: 40px;
+                margin-bottom: 36px;
+            }
+
+            &-video {
+                &-play-btn {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 20px;
+
+        .data-video-play-btn {
+            width: 60px;
+            height: 60px;
+        }
+
+        .data {
+            &-container {
+                padding: 0 20px;
+            }
+
+            &-row {
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+                row-gap: 35px;
+                display: block;
+            }
+
+            &-col {
+                &:first-child {
+                    width: auto;
+                    margin-bottom: 35px;
+                }
+
+                &:nth-child(2) {
+                    width: auto;
+                }
+            }
+
+            &-info {
+                padding: 0;
+            }
+
+            &-title {
+                font-size: 34px;
+                margin-bottom: 30px;
+            }
+
+            &-desc {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {
+                font-size: 30px;
+            }
+        }
+    }
+}

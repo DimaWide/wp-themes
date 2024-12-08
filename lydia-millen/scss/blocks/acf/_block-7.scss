@@ -1,0 +1,132 @@
+.wcl-acf-block-7 {
+    margin: 0 -100px;
+    margin-top: 93px;
+    margin-bottom: 93px;
+
+    .data {
+        &-container {
+            max-width: 1100px;
+        }
+
+        &-inner {
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+
+            @media (max-width: 1025px) {
+                max-width: calc(100vw);
+            }
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+        }
+
+        &-col {
+            width: 50%;
+        }
+
+        &-a {
+            max-width: 449px;
+        }
+
+        &-b {
+            padding-top: 27px;
+            padding-left: 130px;
+            padding-right: 38px;
+        }
+
+        &-img {
+            position: relative;
+            text-align: center;
+
+            img {
+                max-height: 638px;
+                object-fit: cover;
+            }
+        }
+
+        &-title {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0;
+            max-width: 315px;
+
+            p {
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-b {
+                padding-left: 10%;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-b {
+                padding-top: 0;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 -27px;
+        margin-top: 82px;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 65px;
+            }
+
+            &-col {
+                width: 100%;
+            }
+
+            &-a {
+                max-width: unset;
+            }
+
+            &-b {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            &-text {
+                margin: 0 auto;
+            }
+
+            &-img {
+                max-width: 321px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-text {
+                max-width: 280px;
+            }
+        }
+    }
+}

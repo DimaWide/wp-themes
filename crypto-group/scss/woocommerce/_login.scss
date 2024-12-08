@@ -1,0 +1,197 @@
+.woocommerce-account.not-logged-in {
+
+    .woocommerce-form-login {
+        .cmp3-btns {
+            margin-bottom: 0;
+        }
+    }
+
+    .wcl-cmp-button-2 {
+        width: 100%;
+    }
+
+    .wcl-page {
+        margin-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .woocommerce {
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    }
+
+    .woocommerce form.login,
+    .woocommerce form.register {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .woocommerce {
+        padding: 36px 40px 36px;
+        border-radius: 5px;
+        background: #fff;
+        max-width: 666px;
+        margin: 0 auto;
+    }
+
+    // .woocommerce form.login,
+    // .woocommerce form.register {
+    //     padding: 30px 40px 30px;
+    //     border-radius: 5px;
+    //     background: #fff;
+    //     max-width: 666px;
+    //     margin: 0 auto;
+    // }
+
+    .lost_password {
+        text-align: center;
+
+        a {
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.woocommerce-account.not-logged-in {
+    .woocommerce-form-login__rememberme {
+        span {
+            color: $c-black-1;
+        }
+    }
+
+    .woocommerce-form__label-for-checkbox span {
+        font-size: 14px;
+        margin-top: 0.5px;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .woocommerce-form__label-for-checkbox {
+        position: relative;
+        padding-left: 20px;
+
+        &.active {
+            &::before {
+                // background-color: $c-black;
+            }
+
+            &::after {
+                display: block;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background: transparent;
+            border: 1px solid #000;
+        }
+
+        &::after {
+            content: '';
+            background-color: #007cba;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 4.6px;
+            left: 3.1px;
+            display: none;
+        }
+
+        input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 0;
+            padding: 0;
+        }
+    }
+
+    .woocommerce-form__input-checkbox.custom-checkbox {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        appearance: none;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .woocommerce-form__input-checkbox.custom-checkbox:checked {
+        background-color: #007cba;
+        border: 1px solid #007cba;
+    }
+
+    .woocommerce-form__input-checkbox.custom-checkbox:checked::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .woocommerce-form__label-for-checkbox span {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .woocommerce-account.not-logged-in .woocommerce {
+        padding: 30px 20px;
+    }
+}
+
+
+
+// woocommerce-lost-password 
+.woocommerce-lost-password.not-logged-in {
+    .woocommerce form .form-row-first {
+        width: 100%;
+    }
+
+    .woocommerce form .form-row-last {
+        width: 100%;
+    }
+
+    .woocommerce form .form-row {
+        &:nth-last-child(3) {
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .woocommerce-ResetPassword {
+        >p {
+            &:first-child {
+                margin-left: 4px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    .woocommerce form .show-password-input {
+        top: 28px;
+    }
+}

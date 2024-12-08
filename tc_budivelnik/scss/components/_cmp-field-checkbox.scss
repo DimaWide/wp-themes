@@ -1,0 +1,96 @@
+.cmp-field-checkbox {
+    .cmp {
+        &-checkbox {
+            position: relative;
+
+            /* Hide the default checkbox */
+            input[type="checkbox"] {
+                width: 24px;
+                height: 24px;
+
+                opacity: 0;
+                position: absolute;
+                left: 4px;
+                top: 6px;
+            }
+
+            /* Style for the custom checkbox */
+            label {
+                display: inline-block;
+                position: relative;
+                padding-left: 33px;
+                /* space for custom checkbox */
+                cursor: pointer;
+
+                color: #272323;
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            /* Custom checkbox design */
+            label:before {
+                content: "";
+                box-sizing: border-box;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+
+                border-radius: 3px;
+                border: 1px solid #1060C1;
+                background: #FFF;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            /* Custom checkbox checked state */
+            input[type="checkbox"]:checked+label:before {
+                background-color: #1060C1;
+                /* checkbox fill color when checked */
+            }
+
+            /* Check icon */
+            label:after {
+                content: '';
+                display: none;
+                position: absolute;
+                top: 5.9px;
+                left: 4.9px;
+                width: 11px;
+                height: 8px;
+                background-image: url('../img/check.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            /* Show check icon when checkbox is checked */
+            input[type="checkbox"]:checked+label:after {
+                display: block;
+            }
+        }
+    }
+
+    .cmp-checkbox label:before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cmp-checkbox label:after {
+        top: 8px;
+        left: 6px;
+        width: 12px;
+        height: 9px;
+    }
+
+    .cmp-checkbox label {
+        padding-left: 39px;
+        font-size: 16px;
+
+        span {
+            transform: translate(0, 1px);
+            display: inline-block;
+        }
+    }
+}

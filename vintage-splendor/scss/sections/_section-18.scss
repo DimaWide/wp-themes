@@ -1,0 +1,191 @@
+.wcl-section-18 {
+	padding: 80px 0 159px;
+	min-height: calc(100vh - 80px);
+	display: flex;
+	align-items: center;
+
+	.data {
+		&-row {
+			display: flex;
+			margin: 0 -15px;
+		}
+
+		&-col {
+			width: 50%;
+			padding: 0 15px;
+		}
+
+		&-a {
+			max-width: 534px;
+			margin-top: 85px;
+
+			&-a {
+				margin-bottom: 22px;
+			}
+		}
+
+		&-b {
+			padding-left: 30px;
+		}
+
+		&-img {
+			max-width: 516px;
+			margin-left: auto;
+
+			img {
+				border-radius: 20px;
+				border: 1px solid #000;
+				height: 445px;
+				object-fit: cover;
+
+			}
+		}
+
+		&-title {
+			font-family: $f-nineties;
+			font-weight: 400;
+			font-size: 31px;
+			line-height: 35px;
+			text-transform: uppercase;
+			float: left;
+			margin-right: 21px;
+		}
+
+		&-desc {
+			font-family: $f-lekton;
+			font-size: 28px;
+			line-height: 40px;
+
+			strong {
+				font-family: $f-inter;
+				font-weight: 400;
+				font-size: 24px;
+			}
+		}
+
+		&-links {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 17px;
+			row-gap: 12px;
+			margin-bottom: 44px;
+		}
+
+		&-note {
+			font-family: $f-commuters-sans;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.data {
+			&-title {
+				float: unset;
+				margin-right: 0;
+				margin-bottom: 12px;
+			}
+
+			&-desc {
+				font-size: 24px;
+				line-height: 32px;
+			}
+
+			&-img {
+				max-width: 340px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		.data {
+			&-row {
+				flex-wrap: wrap;
+			}
+
+			&-col {
+				width: 100%;
+			}
+
+			&-img {
+				display: none;
+			}
+
+			&-a {
+				margin-top: 0;
+			}
+
+			&-desc {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		text-align: center;
+		padding: 45px 0 72px;
+		min-height: calc(100vh - 118px);
+
+		.data {
+			&-container {
+				max-width: 427px;
+			}
+
+			&-title {
+				font-size: 33px;
+				line-height: 39px;
+				max-width: 350px;
+				margin: 0 auto;
+				margin-bottom: 26px;
+			}
+
+			&-desc {
+				margin-bottom: 30px;
+			}
+
+			&-desc {
+				font-size: 18px;
+				line-height: 25px;
+
+				strong {
+					font-size: 16px;
+					line-height: 25px;
+				}
+			}
+
+			&-links {
+				margin-bottom: 33px;
+
+				&-item {
+					width: 100%;
+				}
+			}
+
+			&-note {
+				font-size: 13px;
+			}
+		}
+	}
+
+	@media (max-width: 400px) {
+		.data {
+			&-desc {
+				max-width: 295px;
+				margin: 0 auto;
+				margin-bottom: 21px;
+			}
+		}
+	}
+
+	@media (max-width: 1025px) {
+		@media (min-height: 900px) {
+			padding: 110px 0 159px;
+			min-height: unset;
+
+			@media (max-width: 500px) {
+				padding: 45px 0 72px;
+			}
+		}
+	}
+}

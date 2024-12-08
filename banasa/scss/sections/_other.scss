@@ -1,0 +1,76 @@
+.page-projects_listing {
+    @media (min-width: 991px) {
+        .wcl-footer {
+            margin-top: 182px;
+        }
+    }
+}
+
+
+.single-project,
+.single-post {
+    @media (min-width: 991px) {
+        .wcl-footer {
+            margin-top: 141px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .wcl-footer {
+            margin-top: 70px;
+        }
+    }
+}
+
+.page-compania,
+.page-company {
+    @media (min-width: 991px) {
+        .wcl-footer {
+            margin-top: 156px;
+        }
+    }
+}
+
+
+
+
+
+// .page-contacto {
+//     @media (min-width: 991px) {
+//         .wcl-footer {
+//             margin-top: 150px;
+//         }
+//     }
+// }
+
+.wcl-body-inner {
+    padding-top: 158px;
+
+    @media (max-width: 1600px) {
+        padding-top: 120px;
+    }
+
+    @media (max-width: 1199px) {
+        padding-top: 100px;
+    }
+}
+
+// html {
+//     scrollbar-width: none;
+// }
+
+// div[class^="wcl-acf-block-"] {
+// 	display: none;
+// }
+
+// .wcl-acf-block-1 {
+// 	display: block !important;
+// }
+
+// header{
+// 	display: none;
+// }
+
+// .wcl-acf-block-1 .data-item-inner{
+// 	height: 873px !important;
+// }

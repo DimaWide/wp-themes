@@ -1,0 +1,21 @@
+.wcl-acf-block-5 {
+    margin: 74px 0;
+
+    &.mod-centered {
+        text-align: center;
+    }
+
+    .data {
+        &-img {
+            img {
+                border-radius: 10px;
+                border: 1px solid #000;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        margin: 48px 0;
+    }
+}

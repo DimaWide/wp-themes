@@ -1,0 +1,433 @@
+// ...
+// d5 
+
+.wcl-videos {
+    padding-bottom: 140px;
+
+    .data {
+        &-nav {
+            &-2 {
+                // height: auto;
+            }
+
+            &-1 {
+                padding-top: 12px;
+            }
+        }
+
+        &-title {
+            font-family: $f-elgoc;
+            font-weight: 500;
+            font-size: 56px;
+        }
+    }
+
+    .d5-nav-1-tax {
+        display: flex;
+        column-gap: 28px;
+        font-size: 12px;
+
+        &-list {
+            display: flex;
+            column-gap: 28px;
+        }
+
+        &-item {
+            &.active {
+                a {
+                    color: $c-dark-a;
+                }
+            }
+
+            &-link {
+                color: $c-olive;
+            }
+        }
+    }
+
+    .wcl-load-more {
+        margin-top: 85px;
+    }
+
+    .d5 {
+        &-list {
+            margin-top: 66px;
+
+            &-empty {
+                text-align: center;
+                padding: 20px 0;
+                font-weight: 500;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 65px;
+
+            &.active {
+                .d5-item-b {
+                    &-a {
+                        display: none;
+                    }
+
+                    &-b {
+                        display: block;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.mod-left.mod-tiktok {
+                .d5-item {
+                    &-b {
+                        &-a {
+                            padding-right: 0;
+                            padding-left: 87px;
+                            margin-right: auto;
+                            margin-left: 0;
+                        }
+
+                        &-b {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+
+            &.mod-right.mod-youtube {
+                .d5-item {
+                    &-a {}
+
+                    &-b {
+                        padding-left: 0;
+                        padding-right: 78px;
+
+                        &-a {}
+
+                        &-b {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            &.mod-tiktok {
+                .d5-item {
+                    &-a {
+                        width: 100%;
+                        width: 42.46%;
+                        height: 680px;
+                        max-width: 490px;
+                    }
+
+                    &-b {
+                        width: 57.54%;
+                        padding-left: 0;
+                        max-width: unset;
+
+                        &-a {
+                            padding-right: 87px;
+                            max-width: 380px;
+                            margin-right: 0;
+                            margin-left: auto;
+                        }
+
+                        &-b {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+
+            &.mod-right {
+                flex-direction: row-reverse;
+
+                .d5-item {
+                    &-b {
+                        &-a {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            &-a {
+                display: block;
+                width: 100%;
+                position: relative;
+                min-height: 502px;
+                width: 62.56%;
+                cursor: pointer;
+                overflow: hidden;
+
+                &:hover {
+                    .d5-item-a-play {
+                        transform: translate(-50%, -50%) scale(1.2);
+                    }
+
+                    .d5-item-a-label {
+                        span {
+                            &:first-child {
+                                display: none;
+                            }
+
+                            &:last-child {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                &-img {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                &-play {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    transition: all 0.25s ease;
+                }
+
+                &-iframe {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &-label {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 45px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    letter-spacing: 0.04em;
+                    color: $c-white-a;
+                    text-align: center;
+                    pad: 0 20px;
+                    text-transform: uppercase;
+
+                    span {
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &-b {
+                // flex-shrink: 0;
+                width: 100%;
+                //  width: 37.44%;
+                max-width: 380px;
+
+                padding-left: 54px;
+                display: flex;
+                align-items: center;
+
+                &-a {
+                    &-title {
+                        font-size: 35px;
+                        line-height: 40px;
+                    }
+
+                    &-cat {
+                        margin-top: 27px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 12px;
+                        letter-spacing: 0.04em;
+
+                        a {
+                            color: $c-dark;
+                        }
+                    }
+                }
+
+                &-b {
+                    display: none;
+                    width: 100%;
+                    max-width: 285px;
+                    margin-left: auto;
+
+                    &-note {
+                        display: none;
+                    }
+
+                    &-info {
+                        margin-top: 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-bottom: 85px;
+    }
+
+    @media (max-width: 767px) {
+        .d3 {
+            &-list {
+                &-out {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .d5 {
+            &-item {
+                display: block;
+                margin-bottom: 125px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+
+                &.mod-left.mod-tiktok {
+                    .d5-item {
+                        &-b {
+                            &-a {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+    
+                &.mod-right.mod-youtube {
+                    .d5-item {
+                        &-b {
+                            padding-right: 0;
+                        }
+                    }
+                }
+
+                &.mod-right {
+                    .d5-item {
+                        &-b {
+                            &-a {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+          
+                &.mod-tiktok {
+                    .d5-item {
+                        &-a {
+                            height: 447px;
+                            width: auto;
+                        }
+
+                        &-b {
+                            max-width: 300px;
+                            width: auto;
+
+                            &-a {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                &-a {
+                    width: auto;
+                    min-height: unset;
+                    margin: 0 auto;
+                    margin-bottom: 30px;
+                    max-width: 322px;
+                    height: 208px;
+
+                    &-img {
+                        position: relative;
+                    }
+
+                    &-play {
+                        width: 30px;
+                    }
+
+                    &-label {
+                        display: none;
+                    }
+                }
+
+                &-b {
+                    padding-left: 0;
+                    display: block;
+                    max-width: 300px;
+                    margin: 0 auto;
+
+                    &-a {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        text-align: center;
+                        margin-bottom: 24px;
+
+                        &-cat {
+                            margin-top: 0;
+                            margin-bottom: 25px;
+                        }
+
+                        &-title {
+                            font-weight: 500;
+                            font-size: 30px;
+                            line-height: 35px;
+                            max-width: 330px;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &-b {
+                        display: block;
+                        max-width: unset;
+
+                        &-note {
+                            display: block;
+                            font-weight: 500;
+                            font-size: 12px;
+                            letter-spacing: 0.04em;
+                            text-align: center;
+                            color: $c-red;
+                            text-transform: uppercase;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {
+                text-align: left;
+            }
+        }
+    }
+}

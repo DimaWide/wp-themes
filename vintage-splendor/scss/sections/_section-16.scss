@@ -1,0 +1,151 @@
+.wcl-splendor-collective {
+	.wcl-section-16 {
+		position: relative;
+		padding-top: 124px;
+		margin-top: 138px;
+		margin-bottom: 162px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 35px;
+			width: calc(100% - 70px);
+			height: 1px;
+			background-color: #000;
+		}
+
+		@media (max-width: 767px) {
+			padding-top: 74px;
+			margin-top: 77px;
+			margin-bottom: 70px;
+
+			&::after {
+				left: 26px;
+				width: calc(100% - 52px);
+			}
+
+			&-title {
+				margin-bottom: 37px;
+			}
+
+			&-item {
+				&-title {
+					margin-bottom: 35px;
+				}
+
+				&-inner {
+					padding: 64px 29px 20px;
+				}
+			}
+		}
+	}
+}
+
+.wcl-section-16 {
+	margin-top: 112px;
+	margin-bottom: 125px;
+	overflow: hidden;
+
+	.data {
+		&-title {
+			font-family: $f-nineties;
+			font-weight: normal;
+			font-size: 40px;
+			line-height: 40px;
+			text-transform: uppercase;
+			margin-bottom: 41px;
+		}
+
+		&-list {
+			overflow: visible;
+
+			&:not(.swiper-initialized) {
+				.data-list-inner {
+					width: auto;
+					margin: 0 -23px;
+				}
+
+				.data-item {
+					padding: 0 23px;
+				}
+			}
+		}
+
+		&-item {
+			height: auto;
+			width: 50%;
+
+			&-inner {
+				border: 1px solid #000;
+				background-color: #FFFFFF;
+				border-radius: 10px;
+				padding: 65px 31px 60px;
+				height: 100%;
+			}
+
+			&-title {
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 20px;
+				margin-bottom: 26px;
+				max-width: 400px;
+			}
+
+			&-desc {
+				font-family: $f-lekton;
+				font-size: 18px;
+				line-height: 25px;
+				max-width: 388px;
+				max-height: 125px;
+				overflow-y: auto;
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				&.mask {
+					-webkit-mask-image: linear-gradient(0, rgba(255, 255, 255, 0) 0%, #fff 35%);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.data {
+			&-list {
+				overflow: visible;
+			}
+
+			&-item {
+				width: 275px;
+
+				&-inner {
+					min-height: 345px;
+					padding: 50px 29px 40px;
+				}
+
+				&-title {
+					margin-bottom: 28px;
+				}
+
+				&-desc {
+					max-height: 155px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		margin-top: 104px;
+		margin-bottom: 78px;
+
+		.data {
+			&-title {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}

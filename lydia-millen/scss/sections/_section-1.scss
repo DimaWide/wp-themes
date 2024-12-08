@@ -1,0 +1,106 @@
+.wcl-section-1 {
+    margin-bottom: 110px;
+
+    .data {
+        &-container {
+            text-align: center;
+        }
+
+        &-note {
+            border-bottom: 0.7px solid $c-black;
+            padding-bottom: 17.4px;
+            margin-bottom: 77px;
+            column-gap: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 17.4px;
+
+            &-a {
+                letter-spacing: 4.2px;
+                text-transform: uppercase;
+            }
+
+            &-b {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        &-subtitle {
+            color: $c-black-b;
+            letter-spacing: 4.2px;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            margin-left: 3px;
+        }
+
+        &-title {
+            font-family: $f-pinyon-script;
+            font-weight: 400;
+            color: $c-black-b;
+            font-size: 44px;
+            line-height: 55px;
+            margin-bottom: 36px;
+            text-transform: capitalize;
+        }
+
+        &-desc {
+            text-align: center;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 1.6px;
+        }
+
+        &-info {
+            max-width: 686px;
+            margin: 0 auto;
+        }
+
+        &-link {
+            margin-top: 51px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .data {
+            &-note {
+                text-align: center;
+                padding-bottom: 22px;
+                margin-bottom: 65px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 92px;
+
+        .data {
+            &-note {
+                justify-content: center;
+
+                &-b {
+                    display: none;
+                }
+            }
+
+            &-subtitle {
+                margin-left: 0;
+                margin-bottom: 25px;
+            }
+
+            &-title {
+                margin-left: 0;
+                margin-bottom: 47px;
+            }
+
+            &-info {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

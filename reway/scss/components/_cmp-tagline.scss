@@ -1,0 +1,15 @@
+.wcl-cmp-tagline {
+    font-family: $f-kumbh-sans;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 50px;
+    /* 200% */
+    letter-spacing: 12.5px;
+    text-transform: uppercase;
+    position: relative;
+
+    @media (max-width: 1199px) {
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+}

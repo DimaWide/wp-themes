@@ -1,0 +1,207 @@
+/* 
+.wcl-link
+ */
+.wcl-link {
+    font-family: $f-inter;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    height: 33px;
+    padding: 2px 18px;
+    background-color: $c-white-2;
+    border: 0.5px solid $c-black;
+    border-radius: 28px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: $c-black;
+    text-decoration: none !important;
+    min-width: 139px;
+    position: relative;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $c-green;
+    }
+
+    svg {
+        width: 16px;
+        height: auto;
+        transition: all 0.2s ease;
+    }
+
+
+    &.mod-center {
+        justify-content: center;
+    }
+
+
+    &.mod-black-to-white {
+        background-color: $c-black;
+        color: $c-white;
+
+        svg {
+            fill: $c-white;
+        }
+
+        &:hover {
+            background-color: $c-white-2;
+            color: $c-black;
+
+            svg {
+                fill: $c-black;
+            }
+        }
+    }
+
+    &.mod-gradient {
+        background-image: url('../img/section_3_link_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        padding: 2px 16px;
+
+        span {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        svg {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $c-black;
+            opacity: 0;
+            transition: all 0.25s ease;
+            display: block !important;
+        }
+
+        &:hover {
+            background-color: $c-black;
+            color: $c-white;
+
+            &::after {
+                opacity: 1;
+            }
+
+            svg {
+                fill: $c-white;
+            }
+        }
+    }
+}
+
+
+/* 
+.wcl-link-underline
+ */
+.wcl-link-underline {
+    font-family: $f-commuters-sans;
+    font-size: 14px;
+    line-height: 17px;
+    color: $c-black;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    text-decoration: none;
+
+    &:hover {
+        &::after {
+            width: 0;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $c-black;
+        transition: all 0.25s ease;
+    }
+}
+
+
+
+/* 
+.wcl-link-cat
+ */
+.wcl-link-cat{
+    padding: 5px 24px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: $c-white;
+    background-color: $c-black;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    margin-bottom: 21px;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: $c-green;
+        color: $c-black;
+    }
+
+    &.mod-gradient {
+        background-image: url('../img/section_3_link_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        color: $c-black;
+        border: 0.5px solid #000;
+        padding: 4px 17px;
+
+        span{
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $c-black;
+            opacity: 0;
+            transition: all 0.25s ease;
+        }
+
+        &:hover {
+            background-color: $c-black;
+            color: $c-white;
+
+            &::after {
+                opacity: 1;
+            }
+
+            svg {
+                fill: $c-white;
+            }
+        }
+    }
+}

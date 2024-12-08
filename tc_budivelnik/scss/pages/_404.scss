@@ -1,0 +1,52 @@
+.wcl-page-404 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 124px;
+
+    .data {
+        &-img {
+            margin-bottom: 19px;
+
+            img {
+                max-height: 424px;
+            }
+        }
+
+        &-title {
+            color: #656C7D;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 56px;
+        }
+
+        &-btn {}
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 30px;
+        margin-bottom: 80px;
+
+        .data {
+            &-img {
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 46px;
+        margin-bottom: 140px;
+
+        .data {
+            &-title {
+                font-size: 14px;
+            }
+
+            &-img {
+                margin: 0 -20px;
+                margin-bottom: 22px;
+            }
+        }
+    }
+}

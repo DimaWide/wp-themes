@@ -1,0 +1,158 @@
+// subscriptions
+.woocommerce-account.logged-in {
+    &.woocommerce-view-subscription {
+        .data-b5 {
+            display: none;
+        }
+    }
+
+    &.woocommerce-subscriptions,
+    &.woocommerce-view-subscription {
+
+        h2 {
+            font-family: $f-commuters-sans;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .woocommerce-customer-details {
+            margin-top: 26px;
+
+            address {
+                font-family: $f-lekton;
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 16px;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .woocommerce_account_subscriptions {
+            p {
+                font-weight: bold;
+                font-size: 17px;
+            }
+        }
+
+        .data {
+            &-b4 {
+                &-link {
+                    margin-top: 31px;
+                }
+            }
+        }
+
+        .shop_table {
+            width: 100%;
+            margin-bottom: 40px;
+
+            th,
+            td {
+                padding: 10px 12px 10px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            tr {
+                border-bottom: 1px solid #000;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+
+            th {
+                text-align: left;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            td {
+                font-family: $f-lekton;
+                font-size: 16px;
+                line-height: 25px;
+
+                a {
+                    font-family: $f-commuters-sans;
+                    font-size: 13px;
+                    text-decoration: none;
+                    border-bottom: 1px solid $c-black;
+                    text-transform: uppercase;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            ul.wc-item-meta {
+                padding-left: 0;
+                margin-bottom: 21px;
+
+                li {
+                    margin-top: 14px;
+
+                    strong {
+                        float: left;
+                        margin-right: 7px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+
+        @media (max-width: 991px) {
+            .shop_table {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .woocommerce-orders-table {
+                thead {
+                    display: none;
+                }
+
+                tr {
+                    display: block;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                td {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 0;
+                    text-align: right;
+
+                    &.order-actions {
+                        &::before {
+                            content: "Actions: ";
+                        }
+                    }
+
+                    &::before {
+                        content: attr(data-title) ": ";
+                        font-family: $f-inter;
+                        font-weight: 500;
+                        font-size: 15px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.wcl-related-posts {
+    padding-top: 112px;
+    margin-top: 53px;
+    margin-bottom: 91px;
+    border-top: 1px solid #000;
+
+    .data {
+        &-col {
+            width: 50%;
+            height: auto;
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        &-list {
+            overflow: visible;
+            font-size: 15px;
+
+            &:not(.swiper-initialized) {
+                .data-list-inner {
+                    width: auto;
+                    margin: 0 -23px;
+                }
+
+                .data-col {
+                    padding: 0 23px;
+                }
+            }
+        }
+
+        &-item {
+            height: 100%;
+
+            &.mod-is-exclusive {
+                .data-item {
+                    &-inner {
+                        background-image: url('../img/related_post_bg.jpg');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            &.mod-not-have-access {
+                .data-item {
+                    &-logo {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &-inner {
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                background: #fff;
+                color: $c-black;
+                text-decoration: none;
+                border: 1px solid #000;
+                padding: 70px 50px;
+                min-height: 246px;
+                column-gap: 44px;
+                transition: all 0.25s ease;
+                position: relative;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            &-img {
+                min-width: 100px;
+
+                img {
+                    width: 105px;
+                    height: 105px;
+                    border-radius: 105px;
+                    object-fit: cover;
+                }
+            }
+
+            &-label {
+                font-family: $f-lekton;
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            &-title {
+                font-family: $f-nineties;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 29px;
+                text-transform: uppercase;
+                margin-bottom: 18px;
+                max-width: 290px;
+            }
+
+            &-logo {
+                img {
+                    position: absolute;
+                    right: 18px;
+                    bottom: 18px;
+                    width: 40px;
+                    opacity: 1;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-col {
+                width: 500px;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        border-top: none;
+        padding-top: 92px;
+        margin-top: 61px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 26px;
+            width: calc(100% - 52px);
+            height: 1px;
+            background-color: $c-black;
+        }
+
+        .data {
+            &-list {
+                &-inner {
+                    margin: 0;
+                    flex-wrap: wrap;
+                    row-gap: 42px;
+                }
+            }
+
+            &-col {
+                width: 100%;
+            }
+
+            &-item {
+                &-inner {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 72px 20px;
+                }
+
+                &-img {
+                    margin-bottom: 36px;
+
+                    img {
+                        width: 125px;
+                        height: 125px;
+                    }
+                }
+
+                &-title {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

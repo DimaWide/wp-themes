@@ -1,0 +1,107 @@
+/* 
+
+Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+Color names - http://name-of-color.com/
+
+==============================================
+    CONTENT OF THE FILE
+==============================================
+
+    1. Fonts
+    2. Variables
+
+*/
+
+
+
+
+/* 
+* 2. Variables
+*/
+
+$white: #fff;
+$black: #000;
+
+$c-orange-1: #F3BA00;
+$c-orange-2: #D6A506;
+$c-orange-3: #FFC300; // link
+
+$btn-color: $white;
+$btn-background: $black;
+
+$animation-speed: 0.3s;
+
+
+
+
+/* 
+* 1. Fonts
+*/
+
+$f-sora: "Sora", sans-serif;
+
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

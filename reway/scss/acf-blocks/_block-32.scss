@@ -1,0 +1,136 @@
+.wcl-acf-block-32 {
+    margin-top: 195px;
+
+    .data {
+        &-inner {
+            max-width: 702px;
+            margin: 0 auto;
+            padding: 139px 36px 118px;
+            text-align: center;
+
+            border: 1px solid #C2AE8C;
+            background: linear-gradient(352deg, rgba(24, 19, 11, 0.80) 87.38%, rgba(194, 174, 140, 0.80) 114.86%);
+            backdrop-filter: blur(15px);
+            transform: translate3d(0, 0, 0); will-change: transform;
+
+            &-out {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1640px;
+                    height: 70%;
+                    top: 173px;
+                    left: 50%;
+                    transform: translateX(-50%) translate3d(0, 0, 0);
+                    background: linear-gradient(174deg, rgba(86, 70, 61, 0.50) 65.55%, rgba(72, 71, 70, 0.50) 178.9%);
+                    filter: blur(250px);
+                    z-index: -1;
+                }
+            }
+        }
+
+        &-tagline {
+            margin-bottom: 32px;
+        }
+
+        &-title {
+            margin-bottom: 56px;
+            min-width: 1374px;
+            max-width: calc(100vw - 50px);
+            transform: translateX(-27.2%);
+        }
+
+        &-list {
+            margin-top: 141px;
+            padding: 0 40px;
+
+            color: #B9B0B0;
+            font-family: $f-kumbh-sans;
+            font-size: 25px;
+            font-weight: 200;
+            line-height: 50px;
+            /* 200% */
+            letter-spacing: 12.5px;
+            text-transform: uppercase;
+
+            p {
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1500px) {
+        .data {
+            &-title {
+                min-width: 1074px;
+                transform: translateX(-20.4%);
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-title {
+                min-width: unset;
+                transform: none;
+                margin: 0 -15px;
+            }
+
+            &-desc {
+                margin: 0 auto;
+                margin-top: 50px;
+                width: calc(100% - 40px);
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        margin-top: 143px;
+
+        .data {
+            &-container {
+                padding: 0 26px;
+            }
+
+            &-inner {
+                padding: 81px 30px 71px;
+            }
+
+            &-tagline {
+                margin-bottom: 26px;
+            }
+
+            &-desc {
+                margin-top: 36px;
+            }
+
+            &-list {
+                padding: 0;
+                max-width: 314px;
+                margin: 0 auto;
+                margin-top: 97px;
+
+                font-size: 20px;
+                font-weight: 200;
+                letter-spacing: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+}

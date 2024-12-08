@@ -1,0 +1,99 @@
+/* 
+* 2. Variables
+*/
+
+
+
+
+$c-white: #fff;
+$c-white-b: #f6f2ee;
+$c-white-c: #F8F7F4;
+
+$c-black: #000;
+$c-black-b: #272720;
+$c-black-c: #1f221f;
+
+$c-beige: #F6F2EE;
+$c-beige-b: #F7F2EE;
+ 
+$c-gray: #8B8B86;
+$c-gray-b: #dbd8d1;
+$c-gray-c: #D9D2CB;
+$c-gray-d: #707070;
+$c-gray-e: #d6d6d6;
+$c-gray-f: #d8d2cc;
+
+
+
+$f-adobe-caslon: "adobe-caslon-pro", sans-serif;
+$f-pinyon-script: "Pinyon Script", sans-serif;
+$f-brandon-grotesque: "Brandon Grotesque", sans-serif;
+
+
+// wcl-load-more - d2
+// wcl-field - d3
+// wcl-product - d4
+// wcl-shape - d5
+// wcl-nav - d6
+// wcl-footer-form - d7
+// wcl-post-view - d8
+
+/* 
+* 1. Fonts
+*/
+
+//@import url("https://use.typekit.net/fkp3com.css");
+
+@font-face {
+    font-family: 'Pinyon Script';
+    src: url('../fonts/PinyonScript.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'adobe-caslon-pro';
+    src: url('../fonts/adobe-caslon-pro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adobe-caslon-pro';
+    src: url('../fonts/adobe-caslon-pro-italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+// @font-face {
+//     font-family: 'Adobe Caslon Pro';
+//     src: url('../fonts/ACaslonPro-BoldItalic.woff2') format('woff2');
+//     font-weight: bold;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Adobe Caslon Pro';
+//     src: url('../fonts/ACaslonPro-Semibold.woff2') format('woff2');
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Adobe Caslon Pro';
+//     src: url('../fonts/ACaslonPro-SemiboldItalic.woff2') format('woff2');
+//     font-weight: 600;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

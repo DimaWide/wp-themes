@@ -1,0 +1,131 @@
+.wcl-acf-block-11 {
+    margin: 100px 0;
+
+    .data {
+        &-inner {
+            border-top: 1px solid #CCCAC8;
+            border-bottom: 1px solid #CCCAC8;
+            padding: 229px 0 227px;
+        }
+
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            width: 50%;
+
+            &:first-child {
+                padding-right: 50px;
+            }
+
+        }
+
+        &-title {
+            * {
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 128%;
+                margin-bottom: 8px;
+            }
+        }
+
+        &-subtitle {
+            * {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 32px;
+                /* 200% */
+                max-width: 482px;
+            }
+        }
+
+        &-desc {
+            color: #666564;
+            font-size: 14px;
+            line-height: 28px;
+            /* 200% */
+
+            p {
+                margin-bottom: 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        margin: 64px 0;
+
+        .data {
+            &-inner {
+                padding: 64px 0;
+            }
+
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 16px;
+                margin: 0;
+            }
+
+            &-col {
+                width: 100%;
+                padding: 0;
+            }
+
+            &-title {
+                * {
+                    font-size: 60px;
+                    line-height: 72px;
+                    /* 120% */
+                    letter-spacing: -1.2px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            &-subtitle {
+                * {
+                    color: #0b0c0c;
+                    font-size: 14px;
+                    line-height: 20px;
+                    /* 142.857% */
+                }
+            }
+
+            &-desc {
+                line-height: 20px;
+                /* 142.857% */
+
+                p {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .data {
+            &-inner {
+                border-color: #26313C;
+            }
+
+            &-desc {
+                color: #878D93;
+            }
+        }
+
+
+        @media (max-width: 767px) {
+            .data {
+                &-subtitle {
+                    * {
+                        color: #9FA3A8;
+                    }
+                }
+            }
+        }
+    }
+}

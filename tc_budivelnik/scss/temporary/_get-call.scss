@@ -1,0 +1,129 @@
+.wcl-popup.mod-get-call {
+    &:not(.active) {
+        .cmp-7-phone {
+            display: none;
+        }
+    }
+}
+
+.wcl-get-call {
+    border-radius: 5px;
+    background: #fff;
+    padding: 31px 40px 36px 40px;
+
+    width: calc(100% - 80px);
+    max-width: 669px;
+
+    .data {
+        &-title {
+            color: #272323;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 160%;
+            /* 38.4px */
+        }
+    }
+
+    .cmp6 {
+
+        &-field {
+            &-note {
+                margin: 10px 0 0px;
+            }
+        }
+
+        &-form {
+            margin-top: 24px;
+
+            input:not([type="submit"]) {
+                height: 60px;
+            }
+
+            &-note {
+                text-align: left;
+                margin-top: 10px;
+                font-size: 15px;
+                margin-top: 23px;
+
+                &.mod-success {
+                    color: #049F40;
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+
+            &-submit {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 31px 40px 40px;
+        width: calc(100% - 100px);
+        min-height: 300px;
+        height: auto;
+
+        .cmp6-form {
+            margin-top: 25px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 18px 25px 25px 25px;
+        width: calc(100% - 40px);
+        min-height: 100%;
+
+        // .cmp-button.mod-hover-2:hover {
+        //     border-color: #fff !important;
+        //     background-color: rgba(0, 0, 0, 0) !important;
+        //     color: #fff !important;
+        // }
+
+        .data {
+            &-title {
+                font-size: 18px;
+            }
+        }
+
+        .cmp6-form {
+            margin-top: 18px;
+
+            input:not([type=submit]) {
+                height: 55px;
+            }
+
+            input[type=submit] {
+                font-size: 16px;
+            }
+
+            &-submit {
+                margin-top: 20px;
+
+                // input {
+                //     background-color: #FFF;
+                //     color: #1060C1;
+                //     min-width: 192px;
+                // }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .cmp-7-phone .cmp7-mask-text {
+            top: 0.7px;
+        }
+
+        .cmp-7-phone .cmp7-country-code {
+            margin-top: 0.7px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .cmp6-form {
+            &-submit {
+                input {}
+            }
+        }
+    }
+}

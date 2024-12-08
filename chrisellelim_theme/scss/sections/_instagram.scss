@@ -1,0 +1,175 @@
+// ...
+
+
+.wcl-instagram {
+    background-color: $c-white-a;
+
+    .data {
+        &-src {
+            display: none;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            height: 275px;
+            position: relative;
+
+            &.mod-b {
+                background-image: url('../img/instagram-bg.png');
+                background-position: center;
+                background-size: cover;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $c-beige;
+                    opacity: 0.55;
+                    z-index: -1;
+                }
+            }
+
+            &-a {
+                max-width: 186px;
+                margin-left: auto;
+                width: 100%;
+
+                &-item {
+                    border-bottom: 1px solid $c-dark-d;
+                    margin-bottom: 19px;
+                    font-weight: bold;
+                    font-size: 11px;
+                    letter-spacing: 0.1em;
+                    color: $c-dark-b;
+                    text-transform: uppercase;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            width: 20%;
+            position: relative;
+            z-index: 1;
+
+            &-a {
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+                padding-bottom: 26px;
+
+                &.mod-b {
+                    padding-left: 0;
+                    padding-right: 10px;
+
+                    .data {
+                        &-list {
+                            &-a {
+                                margin-right: auto;
+                                margin-left: 0;
+
+                                &-item {
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sbi {
+                &_photo {
+                    display: block;
+                    height: 275px !important;
+                }
+            }
+
+            .sbi_type_carousel .fa-clone {
+                // height: 1em;
+                // display: inline-block;
+                // right: 12px;
+                // top: 12px;
+                // font-size: 24px;
+                // text-shadow: 0 0 8px rgba(0, 0, 0, .3);
+                display: none !important;
+            }
+        }
+    } 
+ 
+    @media (max-width: 991px) {
+        .data {
+            &-list {
+                height: 180px;
+            }
+
+            &-item {
+                &-a {
+                    padding-bottom: 0;
+                }
+
+                .sbi {
+                    &_photo {
+                        height: 180px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-item {
+                width: 33.33%;
+
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-list {
+                height: auto;
+            }
+
+            &-item {
+                display: none;
+                width: 100%;
+
+                &:first-child {
+                    display: block;
+                }
+
+                &-a {
+                    display: flex;
+                    width: 50%;
+                    height: 395px;
+                    padding-left: 27px;
+
+                    &.mod-b {
+                        padding-right: 27px;
+                    }
+                }
+
+                .sbi {
+                    &_photo {
+                        height: 376px !important;
+                    }
+                }
+            }
+        }
+    }
+}

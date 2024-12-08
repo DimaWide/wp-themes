@@ -1,0 +1,98 @@
+.wcl-footer {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgb(235, 236, 239);
+    background-color: #fff;
+
+    .data {
+
+        &-logo {
+            margin-bottom: 33px;
+            text-align: center;
+
+            img {
+                width: 126px;
+            }
+        }
+
+        &-b1 {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 30px;
+            column-gap: 50px;
+            justify-content: center;
+            margin-bottom: 29px;
+        }
+
+        &-social-media {
+            padding-left: 0;
+            margin-bottom: 0;
+
+            &-item {
+                list-style: none;
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    column-gap: 5px;
+
+                    color: #60606B;
+                    font-size: 15px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        color: #1cbcff;
+
+                        svg {
+                            fill: #1cbcff;
+
+                            * {
+                                fill: #1cbcff;
+                            }
+                        }
+                    }
+
+                    svg {
+                        max-height: 25px;
+                        transition: all 0.2s ease;
+
+                        * {
+                            transition: all 0.2s ease;
+                        }
+                    }
+                }
+
+                &-img {
+                    min-width: 22px;
+                    text-align: center;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &-privacy {
+            &-img {
+                margin-bottom: 28px;
+                text-align: center;
+
+                img {
+                    max-width: 165px;
+                }
+            }
+
+            &-text {
+                color: #363940;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}

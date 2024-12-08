@@ -1,0 +1,238 @@
+.wcl-blog {
+    margin-top: 89px;
+
+    &:not(.first-animated){
+        &.mod-section-animate {
+            .cmp-1-post .cmp1-img img {
+                transform: translate(0, 0) scale(1.25);
+                opacity: 0;
+                transform-origin: center;
+                transition: all 1s ease;
+            }
+        }
+    
+        &.visible {
+            .cmp-1-post .cmp1-img img {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    .cmp-1-post {
+        @media (max-width: 1600px) and (min-width: 767px) {
+            .cmp1 {
+                &-arrow {
+                    width: 21px;
+                }
+
+                &-title {
+                    font-size: 20px;
+                    line-height: 0.95;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            .cmp1 {
+                &-img {
+                    &-inner {
+                        aspect-ratio: unset;
+                    }
+
+                    img {
+                        max-height: 320px;
+                    }
+                }
+            }
+        }
+    }
+
+    .data {
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            &:first-child {
+                width: calc(100% - (300px + 80px));
+            }
+
+            &:nth-child(2) {
+                width: 300px;
+                margin-left: 80px;
+            }
+        }
+
+        &-container {
+            @media (min-width: 991px) {
+                padding: 0 100px;
+            }
+        }
+
+        &-sidebar {
+            max-width: 300px;
+
+            &.fixed {
+                position: fixed;
+                top: 40px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 70px;
+            margin: 0 -45px;
+
+            &-empty {
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+
+        &-item {
+            width: 33.33%;
+            padding: 0 45px;
+        }
+
+        &-load-more {
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 1800px) and (min-width: 1400px) {
+        .data {
+            &-list {
+                margin: 0 get-vw(-45px);
+            }
+
+            &-item {
+                padding: 0 get-vw(45px);
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-container {
+                padding: 0 50px;
+            }
+
+            &-list {
+                margin: 0 -25px;
+            }
+
+            &-item {
+                padding: 0 25px;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-list {
+                margin: 0 -20px;
+
+                &-out {
+                    max-width: 660px;
+                    margin: 0 auto;
+                }
+            }
+
+            &-item {
+                padding: 0 20px;
+                width: 50%;
+                max-width: 350px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 70px;
+
+        .data {
+            &-container {
+                padding: 0 25px;
+            }
+
+            &-col {
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            &-sidebar {
+                display: none;
+            }
+
+            &-list {
+                &-out {
+                    max-width: unset;
+                }
+            }
+
+            &-item {
+                width: 33.33%;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 50px;
+
+        .data {
+            &-container {
+                padding: 0 20px;
+            }
+
+            &-list {
+                row-gap: 50px;
+
+                &-out {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+            }
+
+            &-item {
+                width: 50%;
+            }
+
+            &-title {
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {
+                font-size: 26px;
+                margin-bottom: 40px;
+                max-width: 400px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-list {
+                justify-content: center;
+            }
+
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.wcl-cmp-2-hotel-info {
+    padding: 6px 20px 13px;
+    border-top: 2px solid #B59D8F;
+    border-bottom: 2px solid #B59D8F;
+
+    display: flex;
+    column-gap: 31px;
+    align-items: center;
+    max-width: 334px;
+    margin: 0 auto;
+    margin-bottom: 69px;
+
+    position: relative;
+
+    .cmp2 {
+        &-rating {
+            text-align: center;
+
+            &-val {
+                font-family: $f-kumbh-sans;
+                font-size: 70.473px;
+                font-weight: 300;
+                line-height: 68px;
+                /* 96.491% */
+                letter-spacing: -3.524px;
+
+                background: linear-gradient(253deg, #FFF 49.3%, #967360 98.8%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                margin-bottom: 7px;
+                position: relative;
+                left: -7px;
+            }
+
+            &-stars {
+                display: flex;
+                column-gap: 3px;
+
+                img {
+                    width: 18px;
+                }
+            }
+        }
+
+        &-reviews {
+            font-family: $f-kumbh-sans;
+            font-size: 20px;
+            font-weight: 200;
+            line-height: 35px;
+            /* 175% */
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            text-align: left;
+            margin-top: 8px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        column-gap: 27px;
+        max-width: 298px;
+        padding: 4px 19px 11px;
+
+        .cmp2 {
+            &-rating {
+                &-val {
+                    font-size: 62.877px;
+                    line-height: 60.671px;
+                    letter-spacing: -3.144px;
+                }
+                &-stars{
+                    img{
+                        width: 16px;
+                    }
+                }
+            }
+
+            &-reviews {
+                font-size: 17.844px;
+                line-height: 31.228px;
+                letter-spacing: 8.922px;
+            }
+        }
+    }
+}

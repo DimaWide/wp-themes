@@ -1,0 +1,50 @@
+.wcl-acf-block-8 {
+    padding-bottom: 92px;
+    padding-top: 40px;
+    text-align: center;
+
+    .data {
+        &-title {
+            font-weight: 900;
+            line-height: 38.4px;
+            font-size: 32px;
+            color: rgb(29, 46, 59);
+            letter-spacing: -0.8px;
+        }
+
+        &-desc {
+            color: #60606B;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+
+            max-width: 856px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-title {
+                line-height: 27.625px;
+                font-size: 21.25px;
+                letter-spacing: normal;
+
+                max-width: 460px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &-desc {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

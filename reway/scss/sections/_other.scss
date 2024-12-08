@@ -1,0 +1,194 @@
+.wcl-page {
+    .data-content {
+        >div[class^="wcl-acf-block-"] {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+body {
+    @media (min-width: 1025px) {
+        &.mod-popup-make-a-reservation {
+            .wcl-header {
+                position: fixed;
+                z-index: 110;
+
+                .data {
+                    &-col {
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.wcl-body-inner {
+    padding-top: 124px;
+
+    @media (max-width: 991px) {
+        padding-top: 79px;
+    }
+}
+
+
+
+
+.home {
+    .wcl-body-inner {
+        padding-top: 0;
+    }
+}
+
+
+
+
+
+// page-spa
+
+.page-spa {
+    .wcl-header {
+        .data-link {
+            &.mod-spa {
+                display: none;
+            }
+        }
+    }
+
+    .wcl-acf-block-10 {
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .wcl-acf-block-6 {
+        padding-top: 256px;
+    }
+
+    @media (max-width: 767px) {
+        .wcl-header {
+            .data-link {
+                &.mod-spa {
+                    display: block;
+                    padding: 0 20px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .wcl-acf-block-6 {
+            padding-top: 174px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .wcl-acf-block-10 {
+            margin-top: -50px;
+        }
+    }
+}
+
+
+
+
+// page-sports
+
+.page-sports {
+    .wcl-acf-block-10 {
+        margin-top: 176px;
+        margin-bottom: 264px;
+    }
+
+    .wcl-acf-block-6 {
+        padding-top: 118px;
+    }
+
+    @media (max-width: 1025px) {
+        .wcl-acf-block-10 {
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+    }
+}
+
+
+
+
+// page-gastronomy
+
+.page-gastronomy {
+    .wcl-acf-block-6 {
+        padding-top: 217px;
+    }
+
+    @media (max-width: 767px) {
+   
+        .wcl-acf-block-6 {
+            padding-top: 174px;
+        }
+    }
+}
+
+
+
+
+// page-dietitans
+
+.page-dietitans {
+    .wcl-acf-block-6 {
+        padding-top: 117px;
+    }
+
+
+    @media (max-width: 767px) {
+        .wcl-acf-block-6 {
+            padding-top: 190px;
+        }
+    }
+}
+
+
+
+
+
+// page-pilates
+
+.page-pilates {
+    .wcl-acf-block-6 {
+        padding-top: 0;
+
+        &::after {
+            top: -200px;
+        }
+
+        .data {
+            &-info {
+                margin-top: 176px;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .wcl-acf-block-6 {
+            padding-top: 141px;
+
+            .data-info {
+                margin-top: 100px;
+            }
+        }
+    }
+}

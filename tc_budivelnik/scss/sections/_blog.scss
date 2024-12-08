@@ -1,0 +1,181 @@
+.wcl-blog {
+    &.mod-mobile {
+        display: none;
+    }
+
+    .cmp-4-post .cmp4-title {
+        margin-bottom: 6px;
+    }
+
+    .data {
+        &-container {
+            max-width: 1277px;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 37px;
+            margin: 0 -15px;
+        }
+
+        &-item {
+            padding: 0 15px;
+            width: 33.33%;
+        }
+
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 30px;
+
+            &.active {
+                margin-top: 59px;
+            }
+        }
+
+        &-pagination {
+            &-inner {
+                display: flex;
+                justify-content: flex-end;
+                column-gap: 11px;
+            }
+
+            a {
+                &:hover {
+                    background-color: #1060c1;
+                    color: #fff;
+                }
+            }
+
+            &-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4px 4px;
+                width: 32px;
+                height: 32px;
+                border: 1px solid transparent;
+
+                color: #272323;
+                text-align: center;
+                font-size: 16px;
+                text-decoration: none;
+                border-radius: 3px;
+
+                &.mod-blinking {
+                    background-color: #1060c1;
+                    color: #fff;
+                }
+
+                &.mod-current {
+                    border-color: #1060C1;
+                }
+            }
+
+            &-dot {
+                width: 28px;
+            }
+        }
+
+        &-load-more {
+            button {
+                width: 161px;
+
+                // &.mod-blinking {
+                //     border-color: #1060C1 !important;
+                //     background-color: transparent !important;
+                //     color: #1060C1 !important;
+                // }
+
+                &:disabled {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .cmp-4-post .cmp4-img {
+            margin-bottom: 18px;
+        }
+
+        .data {
+            &-list {
+                margin: 0 -13px;
+
+                &-out {
+                    margin-top: 32px;
+                }
+            }
+
+            &-item {
+                width: 50%;
+                padding: 0 13px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        display: none;
+
+        &.mod-mobile {
+            display: block;
+        }
+
+        .data-list-out {
+            margin-top: 31px;
+        }
+
+        .cmp-4-post .cmp4-img {
+            margin-bottom: 7px;
+        }
+
+        .cmp-4-post .cmp4-title {
+            margin-bottom: 9px;
+        }
+
+        .cmp-4-post .cmp4-desc {
+            margin-bottom: 9px;
+        }
+
+        .cmp-3-product .cmp3-title {
+            margin-bottom: 3px;
+        }
+
+        .data-nav.active {
+            margin-top: 47px;
+        }
+
+        .data {
+            &-list {
+                row-gap: 32px;
+            }
+
+            &-item {
+                width: 100%;
+            }
+
+            &-nav {
+                flex-wrap: wrap;
+                row-gap: 29px;
+                overflow-x: auto;
+            }
+
+            &-pagination {
+                margin: 0 auto;
+            }
+
+            &-load-more {
+                margin: 0 auto;
+
+                button {
+                    min-height: 54px;
+                    min-width: 171px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

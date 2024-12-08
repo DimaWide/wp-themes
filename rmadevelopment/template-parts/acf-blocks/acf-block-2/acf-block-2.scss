@@ -1,0 +1,109 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-2 {
+    margin-top: 125px;
+    margin-bottom: 125px;
+
+    .data {
+        &-row {
+            display: flex;
+            align-items: center;
+        }
+
+        &-col {
+            width: 50%;
+            height: auto;
+
+            &:first-child {
+                width: calc(100% - 49.2%);
+                padding: 50px 75px 50px 0;
+            }
+
+            &:nth-child(2) {
+                width: 49.2%;
+            }
+        }
+
+        &-title {
+            margin-bottom: 25px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-transform: capitalize;
+
+            &.mod-mobile {
+                display: none;
+            }
+        }
+
+        &-desc {
+            margin-bottom: 25px;
+        }
+
+        &-img {
+            background-color: #fff;
+            max-width: 885px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                min-height: 540px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        text-align: center;
+
+        .data {
+            &-row {
+                flex-direction: column-reverse;
+                row-gap: 25px;
+            }
+
+            &-col {
+                width: 100% !important;
+
+                &:first-child {
+                    padding: 0;
+                }
+            }
+
+            &-title {
+                display: none;
+
+                &.mod-mobile {
+                    margin-bottom: 25px;
+                    display: block;
+                }
+            }
+
+            &-desc {
+                max-width: 690px;
+                margin: 0 auto;
+                margin-bottom: 25px;
+            }
+
+            &-img {
+                max-width: 875px;
+                margin: 0 auto;
+
+                img {
+                    min-height: unset;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        margin-top: 100px;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 90px;
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+}

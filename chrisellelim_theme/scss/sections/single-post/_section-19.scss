@@ -1,0 +1,53 @@
+// ...
+
+.wcl-section-19 {
+    margin: 108px 0;
+
+    .data {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -6px;
+        }
+
+        &-col {
+            width: 33.33%;
+            padding: 0 6px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-col {
+                width: 50%;
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin: 86px 0;
+        margin-bottom: 67px;
+
+        .data {
+            &-container {
+                padding: 0 44px;
+            }
+
+            &-row {
+                row-gap: 26px;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:nth-child(3) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

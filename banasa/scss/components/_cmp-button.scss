@@ -1,0 +1,41 @@
+.cmp-button {
+    font-family: $f-afacad;
+    font-weight: 600;
+    font-size: 21.1px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+
+    background-color: $c-red;
+    min-width: 130px;
+    min-height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+
+    transition: all 0.25s ease;
+    text-decoration: none;
+
+    &.active {
+        background-color: #fff;
+        border-color: $c-red;
+        color: $c-red;
+    }
+
+    &:not(:disabled) {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            border-color: $c-red;
+            color: $c-red;
+        }
+    }
+
+    &:disabled {
+        opacity: 0.8;
+    }
+}

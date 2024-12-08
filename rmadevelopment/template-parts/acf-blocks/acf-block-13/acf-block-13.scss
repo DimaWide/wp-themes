@@ -1,0 +1,114 @@
+@import '../../../scss/defaults/acf-pack';
+
+
+.wcl-acf-block-13 {
+    .cmp-4-news {
+        .cmp4 {
+            &-image {
+                aspect-ratio: 854 / 303;
+            }
+
+            &-b1 {
+                justify-content: space-between;
+            }
+
+            &-link {
+                transform: translate(0px, -4px);
+
+                &.mod-type-1 {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 1200px) {
+                &-link {
+                    display: none;
+                    margin-top: 30px;
+
+                    &.mod-type-1 {
+                        display: block;
+                    }
+                }
+            }
+
+            @media (max-width: 575px) {
+                &-inner {
+                    flex-direction: column;
+                }
+
+                &-link {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 144px;
+            margin: 0 -46px;
+            padding-top: 144px;
+        }
+
+        &-item {
+            padding: 0 46px;
+            width: 50%;
+
+            &:nth-child(odd) {
+                margin-top: -144px;
+            }
+        }
+
+        &-load-more {
+            margin-top: 75px;
+            text-align: center;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            button {
+                width: 148px;
+                padding: 8px 20px 5px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .data {
+            &-list {
+                row-gap: 90px;
+                margin: 0 -24px;
+                padding-top: 90px;
+            }
+
+            &-item {
+                padding: 0 24px;
+
+                &:nth-child(odd) {
+                    margin-top: -90px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-list {
+                row-gap: 70px;
+                padding-top: 0;
+            }
+
+            &-item {
+                width: 100%;
+
+                &:nth-child(odd) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.wcl-404 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    border-bottom: 1px solid $c-black;
+
+    .data {
+        &-subhead {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        &-title {
+            font-size: 60px;
+            font-family: $f-pinyon-script;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+
+        &-link {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .data {
+            &-container {
+                padding: 0 27px;
+            }
+
+            &-subhead {
+                font-size: 12px;
+            }
+        }
+    }
+}

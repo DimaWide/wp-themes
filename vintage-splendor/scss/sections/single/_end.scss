@@ -1,0 +1,195 @@
+.wcl-single-end {
+    margin-top: 117px;
+    margin-bottom: 53px;
+
+    .data {
+        &-b1 {
+            display: flex;
+            align-items: center;
+            column-gap: 39px;
+            margin-bottom: 41px;
+
+            &-line {
+                width: 50%;
+                height: 1px;
+                background-color: $c-black;
+            }
+
+            &-logo {
+                min-width: 47px;
+
+                img {
+                    width: 47px;
+                }
+            }
+        }
+
+        &-b2 {
+            &-row {
+                display: flex;
+                align-items: center;
+            }
+
+            &-col {
+                width: 33.33%;
+            } 
+
+            &-btn {
+                cursor: pointer;
+                background-color: $c-green;
+                min-width: 195px;
+
+                &:hover {
+                    background-color: $c-black;
+                    color: $c-white;
+                }
+
+                &.active {
+                    background-color: $c-black;
+                    color: $c-white;
+
+                    span {
+                        &:nth-child(1) {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                    }
+                }
+
+                span {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-note {
+                font-family: $f-lekton;
+                font-size: 20px;
+                text-align: center;
+                position: relative;
+                top: 1px;
+            }
+
+            &-share {
+                width: 198px;
+                margin: 0 auto;
+                margin-right: 0;
+
+                &-inner {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 20px;
+                    border-radius: 16.5px;
+                    background-color: $c-white-2;
+                    border: 0.5px solid #000;
+                    padding: 7px 15px;
+                    position: relative;
+                    overflow: hidden;
+                    width: 87px;
+                    height: 33px;
+                    margin: 0 auto;
+                    margin-right: 0;
+                    transition: all 0.25s ease;
+                    z-index: 5;
+
+                    &:hover {
+                        width: 100%;
+                        background-color: $c-white;
+
+                        .data-b2-share-label {
+                            left: 0;
+                        }
+
+                        .data-b2-share-list {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+                &-label {
+                    font-weight: 500;
+                    font-size: 14px;
+                    left: 8px;
+                    z-index: 1;
+                    position: relative;
+                    transition: all 0.25s ease;
+                }
+
+                &-list {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 20px;
+                    width: 100px;
+                    position: absolute;
+                    right: 20px;
+                    top: 0;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all 0.25s ease;
+
+                    &-item {
+                        font-family: $f-lekton;
+                        font-size: 11px;
+                        padding-top: 2px;
+
+                        a {
+                            color: $c-black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-b1 {
+                margin-bottom: 54px;
+            }
+
+            &-b2 {
+                text-align: center;
+
+                &-row {
+                    flex-wrap: wrap;
+                }
+
+                &-col {
+                    width: 100%;
+                    margin-bottom: 26px;
+
+                    &:nth-child(1) {
+                        margin-bottom: 0;
+                    }
+
+                    &:nth-child(2) {
+                        order: -1;
+                        margin-bottom: 30px;
+                    }
+
+                    &:nth-child(3) {
+                        order: -1;
+                    }
+                }
+
+                &-share {
+                    margin: 0 auto;
+
+                    &-inner {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 107px;
+    }
+}

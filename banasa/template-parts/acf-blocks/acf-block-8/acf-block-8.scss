@@ -1,0 +1,274 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-8 {
+    // max-width: 1920px;
+    // margin: 0 auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 158px);
+
+    @media (max-width: 1600px) {
+        min-height: calc(100vh - 120px);
+    }
+
+    @media (max-width: 1199px) {
+        min-height: calc(100vh - 100px);
+    }
+
+    &.mod-section-animate {
+        .data {
+            &-title {
+                transform: translate(50px, 0);
+                opacity: 0;
+                transition: all 1.7s ease;
+            }
+
+            &-subtitle {
+                transform: translate(50px, 0);
+                opacity: 0;
+                transition: all 1.7s ease;
+
+            }
+
+            &-bg-image {
+                img {
+                    transform: translate(0, 0) scale(1.25);
+                    transform-origin: center;
+                    opacity: 0;
+                    transition: all 2s ease;
+                }
+            }
+        }
+    }
+
+    &.visible {
+        .data {
+            &-image-2 {
+                svg {
+                    transform: translate(0, 0);
+                    opacity: 1;
+                }
+            }
+
+            &-title {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            &-subtitle {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            &-bg-image {
+                img {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-container {
+            padding-right: 229px;
+        }
+
+        &-info {
+            max-width: 730px;
+            margin-left: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        &-subtitle {
+            max-width: 357.37px;
+            font-size: 24px;
+            // line-height: 28.8px;
+            line-height: 1.15;
+            margin-bottom: 54px;
+        }
+
+        &-title {
+            max-width: 730.91px;
+            font-size: 50px;
+            //line-height: 48px;
+            line-height: 0.96;
+            margin-bottom: 0;
+        }
+
+        &-bg-image {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-position: right;
+                object-fit: cover;
+            }
+        }
+
+        &-image-2 {
+            svg {
+                position: absolute;
+                left: 0;
+                top: 21px;
+                width: 816.34px;
+                width: auto;
+                max-height: calc(100% - 92px);
+                height: auto;
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+
+    @media (max-width: 1880px) {
+        padding-top: get-vw(123px);
+        //  padding-bottom: get-vw(321px);
+
+        .data {
+            &-container {
+                padding-right: get-vw(229px);
+            }
+
+            &-info {
+                max-width: get-vw(730px);
+            }
+
+            &-subtitle {
+                max-width: get-vw(357px);
+                font-size: get-vw(24px);
+            }
+
+            &-title {
+                max-width: get-vw(730px);
+                font-size: get-vw(50px);
+            }
+
+            &-image-2 {
+                svg {
+                    height: get-vw(869px);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1450px) {
+        .data {
+            &-container {
+                max-width: 1240px;
+                margin: 0 auto;
+
+                @media (min-width: 991px) {
+                    padding: 0 80px;
+                }
+            }
+
+            &-subtitle {
+                font-size: 20px;
+                max-width: 300px;
+                margin-bottom: 44px;
+            }
+
+            &-title {
+                font-size: 36px;
+                max-width: 525px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-container {
+                padding-right: 80px;
+            }
+
+            &-subtitle {
+                font-size: 18px;
+                max-width: 270px;
+                margin-bottom: 35px;
+            }
+
+            &-title {
+                max-width: 400px;
+                font-size: 28px;
+            }
+
+            &-info {
+                max-width: 50%;
+                width: 400px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 70px;
+        padding-bottom: 100px;
+
+        .data {
+            &-container {
+                padding-right: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        min-height: unset;
+        padding-bottom: 100px;
+
+        .data {
+            &-title {
+                font-size: 24px;
+                max-width: 350px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 50px;
+        padding-bottom: 54px;
+        overflow: hidden;
+
+        .data {
+            &-container {
+                padding-right: 20px;
+            }
+
+            &-info {
+                width: auto;
+                max-width: 400px;
+                margin-left: 0;
+            }
+
+            &-image-2 {
+                display: none;
+
+                svg {
+                    transform: scaleX(-1);
+                    left: unset;
+                    right: 0;
+                }
+            }
+
+            &-bg-image {
+                img {
+                    height: 150%;
+                }
+            }
+
+            &-subtitle {
+                font-size: 16px;
+                max-width: 240px;
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                font-size: 20px;
+                max-width: 290px;
+            }
+        }
+    }
+}

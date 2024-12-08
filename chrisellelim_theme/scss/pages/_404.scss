@@ -1,0 +1,47 @@
+// ...
+
+
+.wcl-404 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: $c-white-a;
+
+    .data {
+        &-a {
+            text-align: center;
+        }
+
+        &-subhead {
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        &-title {
+            margin-bottom: 50px;
+        }
+
+        &-link {
+            a {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .data {
+            &-container {
+                padding: 0 27px;
+            }
+
+            &-subhead {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.cmp-button {
+    min-height: 50px;
+    padding: 8px 25px 5px;
+    background: #F3BA00;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #FFF;
+    text-align: center;
+    font-family: $f-sora;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 155%;
+    /* 27.9px */
+    text-transform: capitalize;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: #D6A506;
+    }
+
+    &:disabled{
+        background-color: #D6A506;
+    }
+
+    @media (max-width: 575px) {
+        width: 100%;
+    }
+}

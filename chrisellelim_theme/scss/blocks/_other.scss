@@ -1,0 +1,98 @@
+// ...
+
+
+.wcl-load-more {
+    padding: 10px 0;
+    border: 1px solid $c-olive-a;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+
+    .data {
+        &-btn {
+            font-family: $f-greycliff;
+            font-size: 12px;
+            color: $c-olive;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.wcl-subscribe {
+    margin-bottom: 30px;
+    color: $c-beige;
+
+    .data {
+        &-title {
+            font-size: 16px;
+            letter-spacing: 0.03em;
+            color: $c-beige;
+            margin-bottom: 30px;
+
+            p {
+                line-height: 21px;
+            }
+        }
+
+        &-notify {
+            font-size: 12px;
+            margin-top: 15px;
+            max-width: 220px;
+            line-height: 1.3;
+        }
+
+        &-form {
+            &-group {
+                display: flex;
+                column-gap: 14px;
+            }
+
+            input:not([type="submit"]) {
+                font-family: $f-greycliff;
+                display: block;
+                font-size: 12px;
+                color: $c-beige;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                border-top: 1px solid $c-white-c;
+                border-bottom: 1px solid $c-white-c;
+                height: 35px;
+                border-radius: unset;
+
+                &::placeholder {
+                    opacity: 1;
+                    color: $c-beige;
+                }
+            }
+
+            input[type="submit"] {
+                font-family: $f-greycliff;
+                width: 110px;
+                height: 35px;
+                flex-shrink: 0;
+                background: transparent;
+                border: 1px solid $c-white-c;
+                font-size: 12px;
+                letter-spacing: 0.06em;
+                color: $c-beige;
+                text-transform: uppercase;
+                transition: all 0.25s ease;
+                border-radius: unset;
+
+                &:hover {
+                    background-color: $c-beige;
+                    color: $c-dark-a;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        max-width: 360px;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+}

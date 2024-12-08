@@ -1,0 +1,138 @@
+/* 
+rating
+ */
+.wcl-block-3 {
+    .q3 {
+        &-head {
+            color: #44D7B6;
+            font-family: $f-square-peg;
+            font-size: 36px;
+            line-height: 90%;
+
+            display: flex;
+            column-gap: 5px;
+            row-gap: 10px;
+            cursor: pointer;
+
+            img {
+                width: 25px;
+            }
+
+            &.active {
+                img {
+                    transform: scaleY(-1)
+                }
+            }
+        }
+
+        &-rating {
+            display: inline-block;
+            background-color: $c-white;
+            filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.07));
+            border-radius: 30px;
+            transition: all 0.25s ease;
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            &-out {
+                display: block;
+                max-height: 0;
+                transition: all 0.25s ease;
+
+                &.active {
+                    max-height: 260px;
+
+                    .q3-rating {
+                        max-height: 260px;
+                    }
+                }
+            }
+
+            &-list {
+                display: flex;
+                column-gap: 30px;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                row-gap: 20px;
+                padding: 20px 35px 20px;
+            }
+
+            &-item {
+                flex-grow: 1;
+                min-width: 130px;
+                text-align: center;
+
+                i {
+                    color: #44d7b6;
+                }
+
+                &.mod-trip-advisor {
+                    .data-rating-item-score {
+                        column-gap: 9px;
+                    }
+                }
+
+                &-score {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    column-gap: 6px;
+                    row-gap: 10px;
+                    font-size: 18px;
+
+                    img {
+                        &.checked {
+                            filter: brightness(0) saturate(100%) invert(70%) sepia(56%) saturate(447%) hue-rotate(115deg) brightness(94%) contrast(89%);
+                        }
+                    }
+                }
+
+                &-title {
+                    color: #111;
+                    font-family: $f-outfit;
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 9px;
+                }
+
+                &-num {
+                    font-size: 14px;
+                    margin-top: 7px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    margin-top: 7px;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 575px) {
+        .q3 {
+            &-head {
+                font-size: 24px;
+
+                img {
+                    width: 16px;
+                }
+            }
+        }
+
+        .q3 {
+            &-head {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.wcl-block-4-link {
+    margin-top: 35px;
+    text-align: center;
+
+    @media (max-width: 575px) {
+        margin-top: 25px;
+    }
+}

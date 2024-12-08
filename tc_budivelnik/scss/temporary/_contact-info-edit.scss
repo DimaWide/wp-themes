@@ -1,0 +1,101 @@
+.wcl-contact-info-edit {
+    .cmp6 {
+        &-form {
+            margin-top: 31px;
+
+            &-btns {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                column-gap: 30px;
+            }
+
+            &-submit {
+                margin-top: 0;
+            }
+
+            &-note {
+                text-align: left;
+            }
+
+            &-reset {
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-title {
+            color: #272323;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 21px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .cmp6 {
+            &-form {
+                margin-top: 20px;
+
+                &-btns {
+                    margin-top: 30px;
+                }
+
+                &-reset {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+
+                input:not([type="submit"]) {
+                    font-size: 14px;
+                    padding: 14px 20px;
+                }
+
+                input[type="tel"] {
+                    font-size: 16px;
+                }
+
+                input[type="submit"] {
+                    padding: 10px 22px;
+                    min-height: 48px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .cmp6-form input[type=tel] {
+            font-size: 14px;
+        }
+
+        .cmp6 {
+            &-form {
+                &-btns {
+                    margin-top: 25px;
+                    display: block;
+                }
+
+                &-reset {
+                    margin-top: 23px;
+                    text-align: center;
+                }
+
+                &-note {
+                    text-align: center;
+                }
+            }
+        }
+
+        .cmp6-form input[type=submit] {
+            min-height: 54px;
+        }
+    }
+}

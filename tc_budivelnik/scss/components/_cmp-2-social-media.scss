@@ -1,0 +1,54 @@
+.cmp-2-social-media {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    .cmp2 {
+        &-item {
+            list-style: none;
+
+            a {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #FFF;
+
+                border-radius: 5px;
+                border: 1px solid #1060C1;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: #1060C1;
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+
+                img {
+                    max-height: 22px;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .cmp2 {
+            &-item {
+                a {
+                    background-color: #1060C1 !important;
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

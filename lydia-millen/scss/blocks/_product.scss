@@ -1,0 +1,86 @@
+.wcl-product {
+    text-align: center;
+
+    .d4 {
+        &-inner {
+            display: block;
+            position: relative;
+
+            &:hover {
+                .wcl-post-view {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .d4-title {
+                    color: rgba($c-black, 0.7);
+                }
+            }
+        }
+
+        &-binding {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 28px;
+            height: 28px;
+            background-color: rgba($c-white, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 56px;
+            transition: all 0.3s ease;
+            z-index: 1;
+
+            &:hover {
+                background-color: #ddd5ce;
+            }
+
+            img {
+                width: 13px;
+            }
+        }
+
+        &-img {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 360px;
+
+            picture {
+                height: 100%;
+            }
+
+            img {
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-title {
+            line-height: 21px;
+            font-style: italic;
+            letter-spacing: 1.4px;
+            min-height: 42px;
+            transition: all 0.25s ease;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .d4 {
+            &-img {
+                margin-bottom: 16px;
+            }
+
+            &-title {
+                min-height: unset;
+            }
+
+            &-binding {
+                right: 0;
+            }
+        }
+    }
+}

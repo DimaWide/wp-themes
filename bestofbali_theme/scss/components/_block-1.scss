@@ -1,0 +1,75 @@
+/* 
+Head of Sections
+ */
+
+.wcl-block-1 {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+
+    .m1 {
+        &-subtitle {
+            color: #44D7B6;
+            font-family: $f-square-peg;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 90%;
+            margin-bottom: 25px;
+        }
+
+        &-title {
+            color: #111;
+            font-family: $f-outfit;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 110%;
+        }
+
+        &-desc {
+            color: rgba(17, 17, 17, 0.75);
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 200%;
+            max-width: 438px;
+            margin-top: 25px;
+
+            position: relative;
+            left: 2px;
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        .m1 {
+            &-title {
+                font-size: 36px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 40px;
+
+        &.mod-subtitle-size-36px {
+            .m1-subtitle {
+                font-size: 24px;
+            }
+        }
+
+        .m1 {
+            &-subtitle {
+                font-size: 24px;
+            }
+
+            &-title {
+                max-width: 351px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

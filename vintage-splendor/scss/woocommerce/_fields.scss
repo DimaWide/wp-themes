@@ -1,0 +1,99 @@
+.woocommerce-page {
+    #mailchimp-gdpr-fields {
+        margin-bottom: 15px;
+
+        input[type=radio],
+        input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 0;
+            padding: 0;
+        }
+    }
+
+    label[for^="mailchimp"],
+    .woocommerce-form__label-for-radio {
+        position: relative;
+        padding-left: 30px;
+
+        &.active {
+            &::before {
+                background-color: $c-black;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 30px;
+            background: transparent;
+            border: 0.6px solid #000;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 0;
+            padding: 0;
+        }
+    }
+
+    .woocommerce-form__label-for-checkbox {
+        position: relative;
+        padding-left: 30px;
+
+        &.active {
+            &::before {
+                background-color: $c-black;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            border: 0.6px solid #000;
+        }
+
+        input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 0;
+            padding: 0;
+        }
+    }
+}
+
+.woocommerce-page {
+    &.woocommerce-edit-account {
+
+        label[for^="mailchimp"] {
+
+            &::before {
+                content: '';
+                top: 2.9px;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.wcl-acf-block-21 {
+    margin-top: 98px;
+
+    .data {
+        &-container {
+            max-width: 1920px;
+            position: relative;
+            padding-top: 115px;
+            min-height: 1161px;
+        }
+
+        &-img {
+            img {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: calc(100% - 504px);
+                height: 1161px;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+
+        &-block {
+            text-align: center;
+            max-width: 709px;
+            margin-left: 129px;
+        }
+
+        &-title {
+            margin-bottom: 56px;
+        }
+
+        &-info {
+            padding: 59px 80px 58px;
+            max-width: 536px;
+            transform: translate(-8px, 0px);
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-container {
+                min-height: unset;
+            }
+
+            &-block {
+                margin: 0 auto;
+            }
+
+            &-img {
+                img {
+                    margin: -160px 0;
+                    z-index: -1;
+                    position: relative;
+                    width: auto;
+                    transform: none;
+                    left: 0;
+                    top: 0;
+                    max-height: 500px;
+                }
+            }
+
+            &-info {
+                transform: none;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-img {
+                margin: 0 -35px;
+            }
+
+            &-container {
+                padding: 0 24px;
+            }
+
+            &-info {
+                padding: 50px 42px 50px;
+            }
+
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-info {
+                width: auto;
+            }
+        }
+    }
+}

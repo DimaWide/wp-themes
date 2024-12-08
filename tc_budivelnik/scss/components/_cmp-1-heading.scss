@@ -1,0 +1,49 @@
+.cmp-1-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+    row-gap: 15px;
+    margin-bottom: 50px;
+
+    .cmp1 {
+        &-title {
+            color: #272323;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 140%;
+            margin-top: 0;
+            margin-bottom: 0;
+            /* 50.4px */
+        }
+
+        &-link {
+            transform: translate(0px, 4px);
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-bottom: 33px;
+
+        .cmp1 {
+            &-title {
+                font-size: 32px;
+            }
+
+            &-link {
+                transform: translate(0px, 1px);
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 31px;
+
+        .cmp1 {
+            &-title {
+                font-size: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-9 {
+    margin-top: 50px;
+
+    .data {
+        &-container {
+            padding: 0;
+            max-width: unset;
+        }
+
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            width: 50%;
+
+            &:first-child {
+                width: 41.6%;
+            }
+
+            &:nth-child(2) {
+                width: 70%;
+                width: calc(100% - 41.6%);
+                // flex-shrink: 0;
+                // width: calc(100% - 570px);
+                // width: calc(100% - 897px);
+                // //  width: 70.3%;
+                // max-width: 1421px;
+                // max-width: 1120px;
+            }
+        }
+
+        &-image {
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            min-height: 586px;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            background-color: $c-red;
+            padding: 77px 90px 73px 159px;
+        }
+
+        &-logo {
+            position: absolute;
+            width: 238px;
+            right: 100%;
+            margin-right: -50px;
+            top: 82px;
+
+            svg {
+                width: 100%;
+                height: auto;
+                fill: #fff;
+
+                * {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &-text {
+            max-width: 771.86px;
+            font-size: 44px;
+            //line-height: 40px;
+            line-height: 0.9;
+            color: #fff;
+
+            strong {
+                font-weight: 600;
+            }
+
+            p {
+                margin-bottom: 42px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-img-el {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            left: -300px;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left;
+            }
+        }
+    }
+
+    @media (max-width: 1880px) {
+        .data {
+            &-text {
+                max-width: get-vw(771px);
+                font-size: get-vw(44px);
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .data {
+            &-img-el {
+                display: none;
+            }
+
+            &-logo {
+                position: static;
+                margin-bottom: 30px;
+                margin-right: 0;
+            }
+
+            &-info {
+                padding: 80px 80px 80px 80px;
+                min-height: unset;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+            }
+
+            &-text {
+                font-size: 24px;
+                max-width: 500px;
+            }
+
+            &-info {
+                padding: 70px 80px 70px 50px;
+                max-width: 540px;
+                width: calc(100% - 50px);
+                margin: 0 auto;
+                margin-top: -80px;
+                border-radius: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 20px;
+
+        .data {
+            &-info {
+                max-width: 440px;
+                width: calc(100% - 40px);
+                padding: 50px 40px;
+                border-radius: 30px;
+            }
+
+            &-text {
+                font-size: 20px;
+                max-width: 360px;
+
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-logo {
+                width: 100%;
+                max-width: 160px;
+                     margin-bottom: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-info {
+                max-width: 360px;
+                margin-top: -70px;
+                padding: 40px 30px;
+                border-radius: 16px;
+            }
+
+            &-logo {
+                max-width: 120px;
+            }
+
+            &-text {
+                font-size: 16px;
+                max-width: 280px;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .data {
+
+            &-info {
+                padding: 40px 20px;
+            }
+        }
+    }
+}

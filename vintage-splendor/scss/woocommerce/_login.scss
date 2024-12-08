@@ -1,0 +1,185 @@
+.woocommerce-account:not(.logged-in) {
+
+
+    .wcl-page {
+        margin: 70px 0 72px;
+        padding-left: 88px;
+
+        .data {
+            &-container {
+                position: relative;
+                max-width: 1180px;
+            }
+
+            &-title {
+                position: absolute;
+                transform: rotate(-90deg) translate(-100%, -39px);
+                left: 0;
+                top: 0;
+                transform-origin: left top;
+                font-family: $f-nineties;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 1;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .woocommerce-error,
+    .woocommerce-info,
+    .woocommerce-message {
+        padding: 16px 16px;
+        margin: 0 0 2em;
+        position: relative;
+        background-color: #f7f6f7;
+        color: #515151;
+        border-top: 3px solid #a46497;
+        list-style: none outside;
+        width: auto;
+        word-wrap: break-word;
+    }
+
+    .woocommerce-message {
+        border-top-color: #8fae1b
+    }
+
+    .woocommerce-info {
+        border-top-color: #1e85be
+    }
+
+    .woocommerce-error {
+        border-top-color: #b81c23
+    }
+
+    .woocommerce {
+        padding: 97px 151px 86px;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid #000;
+        min-height: 546px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .form-row label {
+            margin-left: 0;
+        }
+
+        h2 {
+            font-family: $f-commuters-sans;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        form {
+            border: none;
+            margin: 0;
+            padding: 0;
+
+            p {
+                margin-bottom: 11px;
+            }
+
+            button[type="submit"] {
+                margin-top: 8px;
+                margin-bottom: 29px;
+            }
+        }
+
+        .woocommerce-form-login__rememberme {
+            input {
+                width: 15px;
+                height: 15px;
+                background: #fff;
+                border: 0.6px solid #000;
+            }
+
+            span {
+                position: relative;
+                top: 1px;
+                margin-left: 4px;
+            }
+        }
+
+        .woocommerce-LostPassword {
+            margin-top: 17px;
+
+            a {
+                font-size: 16px;
+                color: #000;
+                text-decoration: none;
+                border-bottom: 1px solid $c-black;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .wcl-page {
+            padding-left: 0;
+
+            .data {
+                &-title {
+                    position: static;
+                    transform: none;
+                    margin-bottom: 46px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .woocommerce {
+            padding: 80px 80px 66px;
+            min-height: 320px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .wcl-page {
+            margin: 32px 0 55px;
+        }
+
+        .woocommerce {
+            padding: 64px 31px 53px;
+        }
+    }
+}
+
+.woocommerce-account {
+    .woocommerce-ResetPassword {
+        >p {
+            &:first-child {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 19px;
+                margin-bottom: 27px;
+            }
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+        }
+    }
+
+    &.woocommerce-lost-password {
+        .woocommerce {
+            button[type="submit"]:not(.wcl-link) {
+                @include button-submit {
+                    @include button-submit-mod-black-to-white;
+                }
+            }
+
+            .woocommerce-password-strength {
+                margin: 15px;
+                font-size: 14px;
+                color: $c-red;
+
+                &.strong {
+                    color: #16b800;
+                }
+            }
+        }
+    }
+}

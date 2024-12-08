@@ -1,0 +1,229 @@
+body {
+    &:not(.mod-have-banner) {
+        .wcl-page {
+            margin-top: 70px;
+        }
+
+        &.single-post {
+            .m4-content>div {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .wcl-body-inner {
+            padding-top: 81px;
+        }
+
+        @media (max-width: 767px) {
+            .wcl-page {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
+body {
+    &.mod-have-banner {
+        .wcl-destination .m4-sidebar {
+            padding-top: 663px;
+            margin-top: 75px;
+
+            @media (max-width: 1199px) {
+                padding-top: 0;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    &:not(.mod-have-banner) {
+        .wcl-header {
+            background-color: $c-black;
+
+            .data-menu li .sub-menu {
+                padding: 25px 20px 20px;
+                background: #000;
+                z-index: -1;
+                left: -20px;
+
+                @media (max-width: 1350px) {
+                    background: transparent;
+                    left: 0;
+                    z-index: 1;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+wcl-section
+ */
+.wcl-section {
+    margin: 150px 0;
+
+    @media (max-width: 767px) {
+        margin: 75px 0;
+    }
+}
+
+.wcl-share-media {
+    .data {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 12px;
+            row-gap: 10px;
+        }
+
+        &-item {
+            &.mod-facebook {
+                a {
+                    background-color: #4967ad;
+                    font-size: 17px;
+                }
+            }
+
+            &.mod-twitter {
+                a {
+                    background-color: #000;
+                    font-size: 19px;
+
+                    svg {
+                        fill: $c-white;
+                        width: 19px;
+                    }
+                }
+            }
+
+            &.mod-pinterest {
+                a {
+                    background-color: #ba3430;
+                    font-size: 22px;
+                }
+            }
+
+            &.mod-whatsapp {
+                a {
+                    background-color: #65cf72;
+                    font-size: 24px;
+                }
+            }
+
+            &.mod-massenger {
+                a {
+                    background-color: #548af7;
+                    font-size: 22px;
+                }
+            }
+
+            a {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 7px;
+                color: $c-white !important;
+                background-color: $c-black;
+                text-decoration: none;
+                font-size: 20px;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+}
+
+.wcl-block-1 {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.rmp-widgets-container.rmp-wp-plugin.rmp-main-container .rmp-rating-widget__msg {
+    display: none;
+}
+
+.wcl-dst-block-1 {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    &.mod-style-1 {
+        display: none;
+    }
+
+    &.mod-type-1 {
+        margin-top: 0;
+        margin-bottom: 200px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+}
+
+.wcl-destination.mod-default {
+    @media (max-width: 575px) {
+        .wcl-dst-block-1 {
+            &.mod-style-1 {
+                display: block !important;
+            }
+        }
+    }
+}
+
+
+.wcl-destination {
+    .wcl-acf-block-2 {
+
+        &:nth-last-child(2),
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.wcl-page {
+    .wp-block-image {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .wp-element-caption {
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+
+    .wp-block-heading {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 15px;
+    }
+}
+
+.wcl-section .data-list-pagination-out {
+    @media (max-width: 575px) {
+        display: none !important;
+    }
+}

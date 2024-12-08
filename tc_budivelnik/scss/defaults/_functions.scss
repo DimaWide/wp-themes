@@ -1,0 +1,23 @@
+/*
+Colors black & white
+@example scss - Usage
+
+   .my-class {
+        background: black(0.15);
+        color: white(0.9);
+   }
+
+*/
+@function black($opacity) {
+  @return rgba(black, $opacity);
+}
+
+@function white($opacity) {
+  @return rgba(white, $opacity);
+}
+
+@function get-vw($target) {
+  $vw-context: (
+    1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}

@@ -1,0 +1,217 @@
+.wcl-single-banner {
+    margin-top: 70px;
+    margin-bottom: 83px;
+
+    &.mo-has-image {
+        .data {
+            &-col {
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    max-width: unset;
+                }
+            }
+
+            &-a {
+                padding: 0;
+            }
+
+            &-title {
+                max-width: 550px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .data {
+                &-title {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            &:nth-child(1) {
+                width: calc(100% - 499px);
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+                max-width: 499px;
+            }
+        }
+
+        &-img {
+            text-align: right;
+
+            img {
+                width: 100%;
+                height: 471px;
+                object-fit: cover;
+                border-radius: 10px 10px 0px 0px;
+                border: 1px solid #000;
+                margin-bottom: 0;
+            }
+        }
+
+        &-a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            padding: 40px 40px 40px 98px;
+        }
+
+        &-tags {
+            margin-bottom: 27px;
+            display: flex;
+            column-gap: 12px;
+            row-gap: 12px;
+            flex-wrap: wrap;
+
+            a {
+                margin-bottom: 0;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 45px;
+            max-width: 290px;
+            margin-bottom: 0;
+        }
+
+        &-cat {
+            margin-top: 31px;
+
+            a {
+                font-family: $f-commuters-sans;
+                font-size: 15px;
+                color: $c-black;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+
+                &:hover {
+                    &::after {
+                        width: 0;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    right: 0;
+                    top: 100%;
+                    background-color: $c-black;
+                    transition: all 0.25s ease;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-col {
+                &:nth-child(1) {
+                    width: 50%;
+                }
+
+                &:nth-child(2) {
+                    width: 50%;
+                    max-width: unset;
+                }
+            }
+
+            &-a {
+                padding: 40px 40px 40px 50px;
+            }
+
+            &-title {
+                font-size: 40px;
+                line-height: 1.1;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 23px;
+        margin-bottom: 52px;
+
+        .data {
+            &-container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                width: 100% !important;
+            }
+
+            &-img {
+                margin-bottom: 44px;
+                position: relative;
+                padding-bottom: 70.2%;
+                text-align: center;
+
+                img {
+                    height: auto;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-a {
+                padding: 0;
+                display: block;
+            }
+
+            &-tags {
+                margin-bottom: 24px;
+            }
+
+            &-title {
+                font-size: 30px;
+                line-height: 35px;
+                max-width: 330px;
+            }
+
+            &-cat {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {
+                max-width: unset;
+            }
+        }
+    }
+}

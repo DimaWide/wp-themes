@@ -1,0 +1,32 @@
+.wcl-section-10 {
+    &.wcl-acf-block-4 {
+        margin-top: 91px;
+        margin-bottom: 107px;
+
+        @media (max-width: 767px) {
+            padding-top: 0;
+            margin-bottom: 101px;
+
+            &::after {
+                display: none;
+            }
+
+            .data {
+                &-c {
+                    &-title {
+                        text-align: left;
+                        margin-bottom: 33px;
+                    }
+                }
+
+                &-a {
+                    border-radius: 10px;
+                    background: #fff;
+                    border: 1px solid #000;
+                    margin: 0;
+                    padding: 20px 20px;
+                }
+            }
+        }
+    }
+}

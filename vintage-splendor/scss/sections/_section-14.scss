@@ -1,0 +1,254 @@
+.wcl-section-14 {
+    margin-top: 108px;
+    margin-bottom: 96px;
+
+    .data {
+        &-row {
+            display: flex;
+            margin: 0 -13px;
+        }
+
+        &-col {
+            //  flex-grow: 1;
+            width: 100%;
+            padding: 0 13px;
+
+            &:nth-child(2) {
+                max-width: 415px;
+                flex-shrink: 0;
+            }
+        }
+
+        &-a {
+            position: relative;
+            border: 1px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 528px;
+
+            &.mod-video{
+                cursor: pointer;
+            }
+
+            &.mod-img{
+                display: block;
+                .data-a-img{
+                    display: block;
+                }
+            }
+
+
+            &:hover {
+                .data-a {
+                    &-play {
+                        transform: translate(-50%, -50%) scale(1.1);
+                    }
+                }
+            }
+
+            &.active {
+                .data-a {
+                    &-play {
+                        transform: translate(-50%, -50%) scale(0);
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('../img/sc_14_bg_gradient.jpg');
+                background-size: cover;
+                background-position: center;
+                opacity: 0.39;
+            }
+
+            &-img {
+                display: none;
+         
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-video {
+                video {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-play {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                transition: all 0.25s ease;
+
+                img {
+                    width: 29px;
+                }
+            }
+        }
+
+        &-c {
+            border: 1px solid #000;
+            background-color: $c-white;
+            border-radius: 10px;
+            height: 530px;
+            position: relative;
+
+            &.scrolled {
+                &::after {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 27px;
+                margin-left: -4px;
+                background-image: url('../img/sc_14_arrow.svg');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 8px;
+                height: 16px;
+                opacity: 0;
+                transform: translateY(5px);
+                transition: all 0.25s ease;
+            }
+
+            &-inner {
+                padding: 54px 39px 0;
+                max-height: 472px;
+                overflow-y: auto;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                position: relative;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            &-title {
+                font-family: $f-nineties;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 40px;
+                text-transform: uppercase;
+                margin-bottom: 107px;
+            }
+
+            &-desc {
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        margin-top: 72px;
+        margin-bottom: 92px;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                margin-bottom: 71px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(2) {
+                    max-width: unset;
+                }
+            }
+
+
+            &-a {
+                height: auto;
+                padding-bottom: 58%;
+            }
+
+            &-c {
+                border: none;
+                background-color: transparent;
+                height: auto;
+
+                &::after {
+                    display: none;
+                }
+
+                &.scrolled {
+                    -webkit-mask-image: linear-gradient(0, rgba(255, 255, 255, 0) 0%, $c-white-2 50%);
+
+                }
+
+                &-inner {
+                    padding: 0;
+                }
+
+                &-title {
+                    margin-bottom: 33px;
+                }
+
+                &-desc {
+                    p {
+                        margin-bottom: 37px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        .data {
+            &-a {
+                padding-bottom: 70%;
+
+                &-play {
+                    img {
+                        width: 22px;
+                    }
+                }
+            }
+            &-c{
+                &-inner{
+                    max-height: unset;
+                }
+                &-title{
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+}

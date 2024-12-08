@@ -1,0 +1,306 @@
+.wcl-comments {
+    margin-top: 73px;
+    margin-bottom: 73px;
+
+    .data {
+        &-field {
+            width: 100%;
+            position: relative;
+
+            &.focus {
+                label {
+                    opacity: 0;
+                }
+            }
+
+            label {
+                position: absolute;
+                top: 13px;
+                left: 19px;
+                font-family: $f-adobe-caslon;
+                color: $c-black;
+                font-style: italic;
+                letter-spacing: 1.4px;
+                cursor: text;
+                opacity: 1;
+                transition: all 0.25s ease;
+                pointer-events: none;
+            }
+
+            &-author,
+            &-email {
+                width: calc(50% - 6px);
+            }
+
+            &-message {
+                label {
+                    top: 15px;
+                }
+            }
+        }
+
+        &-list {
+            margin-top: 80px;
+
+            &-out {
+                position: relative;
+
+                &.active {
+                    .data-list {
+                        padding-bottom: 94px;
+                    }
+
+                    .data-list-el {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &-el {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 94px;
+                background: linear-gradient(rgba(255, 255, 255, 0) 0%, $c-beige 100%);
+                visibility: hidden;
+            }
+        }
+
+        &-item {
+            border-bottom: 1px solid rgba($c-black, 0.3);
+            padding-bottom: 26px;
+            margin-bottom: 26px;
+
+            .children {
+                padding-left: 70px;
+                margin-top: 26px;
+                padding-top: 26px;
+                border-top: 1px solid rgba($c-black, 0.3);
+
+                li {
+                    margin-bottom: 26px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .data-item-comment {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            &-inner {
+                position: relative;
+            }
+
+            &-author {
+                font-size: 16px;
+                letter-spacing: 1.6px;
+                text-transform: capitalize;
+                margin-bottom: 7px;
+            }
+
+            &-date {
+                color: $c-gray;
+                font-size: 12px;
+                letter-spacing: 1.4px;
+                margin-bottom: 21px;
+            }
+
+            &-comment {
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 1.4px;
+                margin-bottom: 21px;
+            }
+
+            &-reply {
+                letter-spacing: 2px;
+                font-size: 12px;
+                text-transform: uppercase;
+
+                a {
+                    color: $c-black;
+                }
+            }
+
+            &-status {
+                font-size: 10px;
+                font-weight: 500;
+                margin-bottom: 26px;
+                font-family: $f-brandon-grotesque;
+            }
+        }
+    }
+
+    .akismet_comment_form_privacy_notice {
+        text-align: center;
+        font-size: 13px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    .form-submit {
+        text-align: center;
+        width: 100%;
+        margin-top: 38px;
+        margin-bottom: 0;
+    }
+
+    .comment {
+        &-reply-title {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            margin-bottom: 66px;
+            text-align: center;
+        }
+
+        &-form {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 12px;
+
+            input:not([type="submit"]),
+            textarea {
+                border: 1px solid $c-black;
+                background-color: transparent;
+                width: 100%;
+                height: 38px;
+                color: $c-black;
+                font-style: italic;
+                letter-spacing: 1.4px;
+                margin-bottom: 18px;
+                font-family: $f-adobe-caslon;
+                padding: 0 19px;
+                display: inline-block;
+                padding-top: 4px;
+
+                &::placeholder {
+                    opacity: 0;
+                    display: none;
+                    color: $c-black;
+                    transition: all 0.25s ease;
+                }
+
+                &:focus {
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            textarea {
+                height: 140px;
+                min-height: 38px;
+                padding-top: 10px;
+                resize: none;
+                margin-bottom: 0;
+            }
+
+            button[type="submit"] {
+                font-family: $f-adobe-caslon;
+                font-size: 15px;
+                color: $c-black;
+                border: none;
+                background-color: transparent;
+                display: inline-block;
+                padding: 0 10px;
+                padding-bottom: 5px;
+                line-height: 21px;
+                position: relative;
+                transition: all 0.25s ease;
+
+                &:hover {
+                    color: $c-gray;
+
+                    &::after {
+                        width: 0;
+                    }
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $c-black;
+                    transition: all 0.25s cubic-bezier(0.32, 0.41, 0.21, 0.82);
+                }
+
+                &::before {
+                    background-color: $c-gray;
+                }
+            }
+        }
+    }
+
+    .logged-in-as {
+        letter-spacing: 1.6px;
+        line-height: 24px;
+
+        a {
+            display: inline-block;
+            border-bottom: 1px solid $c-black;
+            line-height: 1;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 95px;
+        margin-bottom: 107px;
+
+        .comment {
+            &-reply-title {
+                margin-bottom: 31px;
+
+            }
+        }
+
+        .data {
+            &-item {
+                .children {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-field {
+
+                &-author,
+                &-email {
+                    width: 100%;
+                }
+            }
+
+            &-form {
+                max-width: 281px;
+                margin: 0 auto;
+
+                input:not([type="submit"]),
+                textarea {
+                    margin-bottom: 20px;
+                }
+
+                textarea {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

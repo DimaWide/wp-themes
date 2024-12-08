@@ -1,0 +1,60 @@
+.wcl-section-3 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+
+    .data {
+        &-map {
+            width: 100%;
+            height: 550px;
+            margin-bottom: 25px;
+        }
+
+        &-title {
+            font-family: $f-outfit;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 110%;
+            margin-bottom: 40px;
+        }
+
+        &-address {
+            font-size: 25px;
+            line-height: 150%;
+            margin-bottom: 40px;
+        }
+
+        &-img {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 75px;
+
+        .data {
+            &-title {
+                font-size: 36px
+            }
+
+            &-address {
+                font-size: 14px;
+            }
+
+            &-map {
+                margin-bottom: 40px;
+                height: 351px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-img {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}

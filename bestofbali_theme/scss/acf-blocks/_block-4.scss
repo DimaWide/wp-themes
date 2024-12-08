@@ -1,0 +1,137 @@
+.wcl-acf-block-4 {
+    position: relative;
+    margin: 150px 0;
+
+    .wcl-block-1 {
+        margin: 0;
+
+        .m1-subtitle {
+            position: relative;
+            left: 5px;
+        }
+    }
+
+    .data {
+        &-row {
+            display: flex;
+            align-items: center;
+            margin: 0 -14px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 14px;
+        }
+
+        &-imgs {
+            img {
+                position: absolute;
+                z-index: -1;
+
+                &:nth-child(1) {
+                    top: -240px;
+                    left: -277px;
+                }
+
+                &:nth-child(2) {
+                    left: 114px;
+                    bottom: -359px;
+                }
+            }
+        }
+
+        &-head {
+            text-align: left;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            margin: 0 -5px;
+        }
+
+        &-item {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .wcl-block-2 {
+            .m2 {
+                &-inner {
+                    aspect-ratio: 1/1;
+                    padding: 13px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+
+        .wcl-block-1 {
+            text-align: center;
+            margin-bottom: 40px;
+
+            .m1 {
+                &-subtitle {
+                    left: 0;
+                }
+
+                &-desc {
+                    margin: 0 auto;
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        margin: 75px 0;
+
+        .data {
+            &-imgs {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .wcl-block-1 {
+            text-align: left;
+
+            .m1 {
+                &-desc {
+                    margin-left: 0;
+                    font-size: 14px;
+                }
+
+                &-title {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .wcl-block-2 {
+            .m2 {
+                &-title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

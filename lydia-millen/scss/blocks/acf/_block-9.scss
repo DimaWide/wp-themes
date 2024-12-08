@@ -1,0 +1,36 @@
+.wcl-acf-block-9 {
+    margin: 0 -50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    .data {
+        &-container {
+            max-width: 1070px;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0;
+
+            p {
+                margin-bottom: 27px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 -27px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+}

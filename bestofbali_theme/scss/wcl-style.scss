@@ -1,0 +1,53 @@
+
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/functions';
+@import 'defaults/mixings';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+
+// Components
+@import 'components/block-1';
+@import 'components/block-2';
+@import 'components/social';
+@import 'components/other';
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/search';
+@import 'sections/newsletter';
+@import 'sections/section-1'; // Best Restaurants
+@import 'sections/section-3'; // Single Post Address, Rate
+@import 'sections/other';
+
+
+// Pages
+@import 'pages/single';
+@import 'pages/destination';
+@import 'pages/404';
+@import 'pages/search';
+
+
+// Acf Blocks
+@import 'acf-blocks/block-banner'; // Acf Block – Banner
+@import 'acf-blocks/block-1'; // Acf Block #1 - Dive into Bali's Top Destinations
+@import 'acf-blocks/block-2'; // Acf Block #2 - Find Bali's Finest Accommodations Tailored for You
+@import 'acf-blocks/block-3'; // Acf Block #3 - Explore Bali's Breathtaking Natural Wonders
+@import 'acf-blocks/block-4'; // Acf Block #4 - Immerse Yourself in the Essence of Balinese Traditions
+@import 'acf-blocks/block-5'; // Acf Block #5 - Discover Bali's Essential Experiences and Activities
+@import 'acf-blocks/block-6'; // Acf Block #6 - Uncover Bali's Best Beats and Clubs
+@import 'acf-blocks/block-7'; // Acf Block #7 - Bali’s Top Upcomig Events
+@import 'acf-blocks/block-8'; // Acf Block #8 - Text Content
+@import 'acf-blocks/block-9'; // Acf Block #9 - Place
+@import 'acf-blocks/block-10'; // Acf Block #10 - Ads Shortcode
+@import 'acf-blocks/block-11'; // Acf Block #11 - Article
+@import 'acf-blocks/block-12'; // Acf Block #12 - Google Map by Place Id
+@import 'acf-blocks/block-13'; // Acf Block #13 - Single Post Info
+@import 'acf-blocks/block-14'; // Acf Block #14 - Google Map Address
+@import 'acf-blocks/block-15'; // Acf Block #15 - Automatic Generate Places with Order by Priority
+@import 'acf-blocks/block-16'; // Acf Block #16 - Title and link for post
+@import 'acf-blocks/block-17'; // Acf Block #17 - Two Links

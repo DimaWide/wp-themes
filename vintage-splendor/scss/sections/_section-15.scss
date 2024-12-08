@@ -1,0 +1,105 @@
+.wcl-section-15 {
+    margin-top: 92px;
+    margin-bottom: 86px;
+
+    .data {
+        &-row {
+            display: flex;
+            align-items: center;
+            margin: 0 -15px;
+        }
+
+        &-col {
+            flex-grow: 1;
+            padding: 0 15px;
+
+            &:nth-child(1) {
+                width: 100%;
+                max-width: 265px;
+            }
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            min-height: 183px;
+            border-radius: 10px;
+            background-color: #fef9f0;
+            border: 1px solid #000;
+            padding: 30px 48px;
+            overflow: hidden;
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        &-list {
+            margin-right: -48px;
+        }
+
+        &-item {
+            width: auto;
+
+            &-link {
+                text-decoration: none;
+            }
+
+            &-img {
+                max-height: 50px;
+                object-fit: contain;
+            }
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        text-align: center;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                &:nth-child(1) {
+                    max-width: unset;
+                }
+            }
+
+            &-inner {
+                padding: 63px 30px 66px;
+            }
+
+            &-title {
+                font-size: 30px;
+                margin-bottom: 47px;
+            }
+
+            &-list {
+                margin-right: 0;
+                overflow: visible;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 0;
+
+        .data {
+            &-container {
+                padding: 0;
+            }
+
+            &-inner {
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+                border-bottom: none;
+            }
+        }
+    }
+}

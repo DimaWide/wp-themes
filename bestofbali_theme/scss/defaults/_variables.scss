@@ -1,0 +1,149 @@
+
+
+/* 
+* 2. Variables
+*/
+
+$c-white: #fff;
+$c-black: #000;
+
+$btn-color: $c-white;
+$btn-background: $c-black;
+
+$animation-speed: 0.3s;
+
+$f-sriracha: 'Sriracha', cursive;
+$f-square-peg: 'Square Peg', cursive;
+$f-sora: 'Sora', cursive;
+$f-outfit: 'Outfit', sans-serif;
+$f-now-alt: 'Now Alt', sans-serif;
+
+
+
+
+// Unique Blocks
+// wcl-block-1 - m1
+// wcl-block-2 - m2
+// wcl-social - m3
+// wcl-destination - m4
+// wcl-load-more - m5
+// wcl-block-3 - q3
+
+
+
+/* 
+* 1. Fonts
+*/
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Now Alt';
+    src: url('../fonts/NowAlt-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Square Peg';
+    src: url('../fonts/SquarePeg-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url('../fonts/Sriracha-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* 
+
+Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+Color names - http://name-of-color.com/
+
+==============================================
+    CONTENT OF THE FILE
+==============================================
+
+    2. Variables
+    1. Fonts
+
+*/

@@ -1,0 +1,116 @@
+.wcl-acf-block-5 {
+    padding-top: 74px;
+    padding-bottom: 97px;
+    background-color: #F6F6F6;
+
+    // Інформація про каспанію
+    &.mod-style-2 {
+        padding-top: 59px;
+        background-color: #fff;
+        @include container-full-width;
+
+        .data {
+            &-list-out {
+                margin-top: 68px;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            margin: 0 -50px;
+
+            .data {
+                &-container {
+                    padding: 0 50px;
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding-top: 73px;
+
+            .data-list-out {
+                margin-top: 32px;
+            }
+        }
+
+        @media (max-width: 575px) {
+       
+        }
+    }
+    
+
+    .data {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            margin: 0 -15px;
+
+            &-out {
+                margin-top: 65px;
+            }
+        }
+
+        &-item {
+            padding: 0 15px;
+            width: 33.33%;
+        }
+
+        &-link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 66px;
+        padding-bottom: 77px;
+
+        .data {
+            &-list {
+                margin: 0 -13px;
+
+                &-out {
+                    margin-top: 32px;
+                }
+            }
+
+            &-item {
+                width: 50%;
+                padding: 0 13px;
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 73px;
+        padding-bottom: 80px;
+
+        .cmp-1-heading {
+            margin-bottom: 36px;
+        }
+
+        .cmp1-link {
+            display: none;
+        }
+
+        .data {
+            &-list {
+                row-gap: 32px;
+            }
+
+            &-link {
+                display: block;
+                text-align: center;
+                margin-top: 47px;
+            }
+
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+}

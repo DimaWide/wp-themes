@@ -1,0 +1,147 @@
+.wcl-footer {
+    margin-top: 64px;
+    margin-bottom: 48px;
+
+    .data {
+        &-row {
+            display: flex;
+            margin: 0 -25px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 25px;
+        }
+
+        &-b1 {
+            margin-bottom: 65px;
+        }
+
+        &-logo {
+            margin-bottom: 32px;
+        }
+
+        &-menu {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 32px;
+            row-gap: 12px;
+
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: #666564;
+                    font-size: 16px;
+                    line-height: 24px;
+                    /* 150% */
+                    font-weight: 600;
+                    text-decoration: none;
+                    @include link_hover;
+                }
+            }
+        }
+
+        &-b2 {
+            padding-top: 31px;
+            border-top: 1px solid #CCCAC8;
+
+            &-text {
+                color: #807E7D;
+                font-size: 16px;
+                line-height: 24px;
+                /* 150% */
+            }
+
+            .data-menu {
+                column-gap: 16px;
+                justify-content: flex-end;
+
+                li {
+                    a {
+                        color: #807E7D;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        margin-top: 112px;
+
+        .data-b1 {
+            .data-menu li a {
+                color: #878D93;
+            }
+        }
+
+        .data {
+            &-row {
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+                row-gap: 48px;
+                margin: 0;
+            }
+
+            &-col {
+                width: 100%;
+                padding: 0;
+            }
+
+
+            &-b2 {
+                .data-row {
+                    row-gap: 16px;
+                }
+
+                .data-menu {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+
+        .data {
+            &-b1 {
+                margin-bottom: 48px;
+
+                .data-menu {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .data-logo {
+            svg {
+                * {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .data-menu li a {
+            color: #878D93;
+        }
+
+        .data-b2-text {
+            color: #878D93;
+        }
+
+        .data-b2 .data-menu li a {
+            color: #878D93;
+        }
+
+        .data-b2 {
+            border-color: #26313C;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+// Blocks
+@import 'blocks/fields';
+@import 'blocks/load-more';
+@import 'blocks/product';
+@import 'blocks/other';
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/instagram';
+@import 'sections/related-post';
+@import 'sections/comments';
+@import 'sections/section-1'; // Home - Banner
+@import 'sections/section-2'; // Home - 3 Column Product
+@import 'sections/section-3'; // Home - Recent Post
+@import 'sections/section-4'; // Home - Collection
+@import 'sections/section-5'; // Home - Book Products
+@import 'sections/section-6'; // Home - Recent Videos
+@import 'sections/section-7'; // Home - Shop the Edit 
+@import 'sections/section-8'; // Home - Month
+@import 'sections/section-9'; // About - Image & Text 
+@import 'sections/section-10'; // About - PROUD TO HAVE WORKED WITH 
+@import 'sections/section-11'; // About - FAQ 
+@import 'sections/section-12'; // About - 3 Columns 
+@import 'sections/section-13'; // About - Form 
+@import 'sections/section-14'; // Page - Title 
+@import 'sections/section-15'; // Gallery Slider  
+
+
+// Pages
+@import 'pages/404';
+@import 'pages/sample-page';
+@import 'pages/contact';
+@import 'pages/shop';
+@import 'pages/collection';
+@import 'pages/video';
+@import 'pages/outfit';
+@import 'pages/outfits';
+@import 'pages/category';
+@import 'pages/single';
+@import 'pages/posts-landing';
+@import 'pages/search';
+@import 'pages/posts-by-month';
+
+// Acf Blocks
+@import 'blocks/acf/block-1'; // Banner
+@import 'blocks/acf/block-2'; // Outfit
+@import 'blocks/acf/block-3'; // Shop Slider
+@import 'blocks/acf/block-4'; // Shop The Edit
+@import 'blocks/acf/block-5'; // Two Image
+@import 'blocks/acf/block-6'; // Text & Product
+@import 'blocks/acf/block-7'; // Image & Title - Text
+@import 'blocks/acf/block-8'; // Centered Text
+@import 'blocks/acf/block-9'; // Paragraph

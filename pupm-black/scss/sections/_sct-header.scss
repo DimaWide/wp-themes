@@ -1,0 +1,83 @@
+.sct-header {
+    padding-top: 31px;
+    padding-bottom: 0;
+
+    .data {
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-logo {
+            max-width: 259px;
+
+            a {
+                transition: all 0.2s ease;
+
+                &:hover {
+                    filter: brightness(1.1) contrast(1.1) drop-shadow(0px 2px 4px rgba(#000, 0.9));
+                }
+            }
+        }
+
+        &-btns {
+            display: flex;
+
+            &-item {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                a {
+                    height: 45px;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    display: inline-flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                &:nth-child(1) {
+                    a {
+                        height: 45px;
+                        background-image: url('../img/btn-1.svg');
+
+                        &:hover {
+                            filter: brightness(1.2) contrast(1) drop-shadow(2px 4px 6px rgba(#000, 0.6));
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    a {
+                        background-image: url('../img/btn-2.svg');
+
+                        &:hover {
+                            filter: brightness(1.1) contrast(1.1) drop-shadow(2px 4px 6px #50208A);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .data {
+            &-logo {
+                max-width: 230px;
+            }
+
+            &-row {
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 20px;
+                flex-direction: column;
+            }
+        }
+    }
+}

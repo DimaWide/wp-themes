@@ -1,0 +1,115 @@
+.wcl-section-13 {
+    margin-top: 119px;
+    margin-bottom: 108px;
+
+    .data {
+        &-row {
+            display: flex;
+            margin: 0 -15px;
+        }
+
+        &-col {
+            padding: 0 15px;
+
+            &:nth-child(1) {
+                flex-grow: 1;
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+                max-width: 693px;
+            }
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 25px;
+
+            span {
+                display: none;
+            }
+        }
+
+        &-text {
+            font-family: $f-commuters-sans;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        &-desc {
+            font-family: $f-lekton;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: -2px;
+
+            &.mod-mobile {
+                display: none;
+            }
+        }
+
+        &-link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-col {
+                &:nth-child(2) {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 59px;
+        margin-bottom: 73px;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                width: 100% !important;
+            }
+
+            &-text {
+                display: none;
+            }
+
+            &-title {
+                font-family: $f-inter;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 34px;
+                margin-bottom: 29px;
+                text-transform: capitalize;
+
+                span {
+                    display: inline;
+                }
+            }
+
+            &-desc {
+                font-size: 22px;
+                line-height: 33px;
+                margin-bottom: 22px;
+                margin-top: 0;
+                display: none;
+
+                &.mod-mobile {
+                    display: block;
+                }
+            }
+
+            &-link {
+                display: block;
+            }
+        }
+    }
+}

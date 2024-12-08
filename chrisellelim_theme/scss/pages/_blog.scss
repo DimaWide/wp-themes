@@ -1,0 +1,30 @@
+// ...
+
+.wcl-blog {
+    padding: 140px 0 80px;
+
+    .wcl-load-more {
+        margin-top: 80px;
+    }
+
+    .data {
+        &-list {
+            &-empty {
+                text-align: center;
+                padding: 20px 0;
+                font-weight: 500;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 80px;
+
+        .wcl-load-more {
+            margin-top: 60px;
+        }
+    }
+}

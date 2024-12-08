@@ -1,0 +1,41 @@
+.sct-9-we-are {
+    text-align: center;
+
+    .data {
+        &-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        &-desc {
+            /* 24.8px */
+            max-width: 856px;
+            margin: 0 auto;
+        }
+
+        &-content {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 155%;
+            /* 24.8px */
+            max-width: 856px;
+            margin: 0 auto;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    color: #b54dff;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {}
+        }
+    }
+}

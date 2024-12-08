@@ -1,0 +1,110 @@
+.wcl-section-7 {
+    margin-top: 70px;
+    padding-bottom: 77px;
+    border-bottom: 1px solid $c-black;
+
+    .data {
+        &-inner {
+            background-size: cover;
+            background-position: center;
+            padding: 63px 38px;
+            max-width: 1107px;
+            position: relative;
+        }
+
+        &-img {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+
+        &-a {
+            text-align: center;
+            background-image: url('../img/sc-7-bg.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 58px 57px 66px;
+            max-width: 365px;
+            margin: 0 auto;
+            margin-right: 0;
+        }
+
+        &-logo {
+            max-width: 64px;
+            margin: 0 auto;
+            margin-bottom: 58px;
+            img {
+                width: 75px;
+            }
+        }
+
+        &-title {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            margin-bottom: 29px;
+        }
+
+        &-desc {
+            font-size: 16px;
+            line-height: 26px;
+            font-style: italic;
+            letter-spacing: 1.6px;
+            max-width: 240px;
+            margin: 0 auto;
+            margin-bottom: 76px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-a {
+                padding: 58px 57px 58px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-container {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-bottom: 0;
+        margin-bottom: 93px;
+        border-bottom: none;
+
+        .data {
+            &-img {
+                img {
+                    height: 422px;
+                }
+            }
+
+            &-inner {
+                padding: 0 27px;
+                padding-top: 267px;
+            }
+
+            &-a {
+                padding: 58px 32px 58px;
+            }
+
+            &-desc {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

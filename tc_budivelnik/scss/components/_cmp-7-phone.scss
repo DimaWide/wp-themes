@@ -1,0 +1,72 @@
+.cmp-7-phone {
+    font-size: 16px;
+
+    .cmp7 {
+        &-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        &-country-code {
+            position: absolute;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        &-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        &-phone {
+            letter-spacing: normal;
+
+            &:not([type="submit"]) {
+                padding-left: 56px !important;
+            }
+        }
+
+        &-mask-text {
+            color: rgba(#272323, 0.4);
+            color: #9a9a9a;
+
+            top: 0;
+            position: absolute;
+            left: 56px;
+            width: auto;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            white-space: break-spaces;
+            line-height: 1;
+            letter-spacing: normal;
+        }
+    }
+
+    @media (max-width: 575px) {
+        font-size: 14px;
+
+        .cmp7-phone:not([type=submit]) {
+            padding-left: 53px;
+        }
+
+        .cmp7 {
+            &-phone {
+                &:not([type="submit"]) {
+                    padding-left: 53px !important;
+                }
+            }
+
+            &-mask-text {
+                left: 53px;
+            }
+        }
+    }
+}

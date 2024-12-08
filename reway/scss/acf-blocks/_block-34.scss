@@ -1,0 +1,112 @@
+.wcl-acf-block-34 {
+    padding-top: 187px;
+    padding-bottom: 197px;
+
+    .data {
+        &-title {
+            margin: 0;
+            min-width: 1095px;
+            transform: translate(-21.7%, 0);
+            margin-bottom: 53px;
+        }
+
+        &-info {
+            padding: 64px 69px 96px;
+            margin-left: 214px;
+            max-width: 745px;
+        }
+
+        &-tagline {
+            margin-left: 16px;
+            margin-bottom: 25px;
+        }
+
+        &-desc {
+            max-width: 546px;
+            margin: 0 auto;
+            margin-top: 53px;
+        }
+
+        &-img {
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                height: 759px;
+                margin-top: -300px;
+            }
+        }
+    }
+
+    @media (max-width: 1600px) {
+        .data {
+            &-info {
+                margin: 0 auto;
+            }
+
+            &-tagline {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-title {
+                min-width: unset;
+                transform: none;
+                margin: 0 -50px;
+            }
+
+            &-desc {
+                margin-top: 53px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 533px;
+        padding-bottom: 1px;
+
+        .data {
+            &-container {
+                padding: 0 23px;
+            }
+
+            &-info {
+                width: auto;
+                padding: 56px 49px 60px;
+            }
+
+            &-title {
+                margin: 0 -25px;
+                -webkit-text-fill-color: unset;
+                background: unset;
+            }
+
+            &-tagline {
+                margin-bottom: 16px;
+            }
+
+            &-img {
+                height: 863px;
+
+                &::after {
+                    height: 619px;
+                    margin-top: -190px;
+                }
+
+                img {
+                    object-position: 70% 0;
+                }
+            }
+
+            &-desc {
+                margin-top: 31px;
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+        }
+    }
+}

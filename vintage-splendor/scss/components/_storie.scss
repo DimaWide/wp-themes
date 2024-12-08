@@ -1,0 +1,271 @@
+.wcl-t5-storie {
+    margin-bottom: 98px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.mod-have-access {
+        &.mod-is-exclusive {
+            .t5 {
+                &-inner {
+                    &:hover {
+                        .t5 {
+                            &-logo {
+                                svg {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.mod-not-have-access {
+        .t5 {
+            &-inner {
+                &:hover {
+                    .t5 {
+                        &-logo {
+                            svg {
+                                transform: translate(-50%, -50%);
+                                opacity: 1;
+                            }
+                        }
+
+                        &-a {
+                            &::after {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-a {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../img/sc_9_bg.png');
+                    background-size: cover;
+                    background-position: center;
+                    opacity: 0;
+                    transition: all 0.2s ease;
+                }
+            }
+
+            &-cat {
+                background-image: url('../img/sc_9_bg_2.png');
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                color: $c-black;
+                background-color: transparent;
+                position: relative;
+                border: 0.5px solid $c-black;
+                padding: 5px 17px;
+
+                &:hover {
+                    color: $c-white;
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $c-black;
+                    opacity: 0;
+                    transition: all 0.25s ease;
+                }
+            }
+        }
+    }
+
+    .t5 {
+        &-inner {
+            border: 1px solid $c-black;
+            border-radius: 10px;
+            background-color: $c-white;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: $c-black;
+            display: block;
+        }
+
+        &-img {
+            height: 500px;
+
+            img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+
+        &-a {
+            border-bottom: 1px solid $c-black;
+            position: relative;
+        }
+
+        &-b {
+            padding: 30px 32px 30px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            text-transform: uppercase;
+            max-width: 350px;
+            margin-bottom: 23px;
+            max-height: 68px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-link {
+            font-size: 15px;
+        }
+
+        &-logo {
+            svg {
+                position: absolute;
+                width: 80px;
+                fill: $c-white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.2s ease;
+                z-index: 1;
+                opacity: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        margin-bottom: 76px;
+
+        &.mod-not-have-access {
+            .t5 {
+                &-logo {
+                    svg {
+                        opacity: 1;
+                        width: 50px;
+                    }
+                }
+
+                &-a {
+                    &::after {
+                        opacity: 0.5 !important;
+                    }
+                }
+            }
+        }
+
+        .t5 {
+            &-img {
+                height: 320px;
+
+                img {
+                    height: 320px;
+                }
+            }
+
+            &-b {
+                padding: 47px 24px 47px;
+            }
+
+            &-title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 66px;
+
+        .t5 {
+            &-b {
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+
+        &.mod-is-exclusive {
+            .t5 {
+                &-logo {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &.mod-not-have-access {
+            .t5 {
+                &-a {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &-cat {
+                    padding: 4px 17px;
+                }
+            }
+        }
+
+        .t5 {
+            &-inner {
+                border-radius: 5px;
+            }
+
+            &-img {
+                height: 287px;
+
+                img {
+                    height: 287px;
+                }
+            }
+
+            &-title {
+                margin-bottom: 18px;
+            }
+
+            &-logo {
+                svg {
+                    width: 60px;
+                    height: 60px;
+                    //  opacity: 1;
+                }
+            }
+        }
+    }
+}

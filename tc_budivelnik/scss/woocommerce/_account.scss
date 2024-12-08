@@ -1,0 +1,350 @@
+// 1. woocommerce-account 
+// 2. woocommerce-lost-password 
+// 3. woocommerce-ResetPassword lost_reset_password
+
+.woocommerce-account.no-login {
+    .wcl-page {
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+
+    .woocommerce {
+        .data-b1 {
+            margin-top: 54px;
+
+            &-title {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 160%;
+                text-align: center;
+                /* 28.8px */
+                margin-bottom: 27px;
+            }
+
+            &-links {
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+
+                a {
+                    width: 50%;
+                    @include link_hover;
+
+                    &:hover {
+                        opacity: 0.85;
+                    }
+
+                    img {
+                        max-height: 16px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+
+        .data-not-have-account {
+            margin-top: 53px;
+
+            &-title {
+                color: #272323;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 160%;
+                /* 38.4px */
+                margin-bottom: 23px;
+            }
+
+            &-link {
+                text-align: center;
+
+                a {
+                    width: 100%;
+                    padding-left: 13px;
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+        padding: 31px 40px 42px;
+        border-radius: 5px;
+        background: #FFF;
+        max-width: 666px;
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+            color: #272323;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 160%;
+            /* 38.4px */
+            margin-bottom: 29px;
+        }
+    }
+
+    .woocommerce form {
+        float: unset;
+        padding: 0;
+        margin: 0;
+        border: none;
+
+        button[type="submit"] {
+            width: 100%;
+        }
+    }
+
+    .woocommerce form .form-row {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 14px;
+        }
+
+        &.lost_password {
+            margin-bottom: 23px;
+        }
+    }
+
+    .woocommerce-form-login .woocommerce-form-login__submit {
+        width: 100%;
+        float: unset;
+        margin: 0;
+    }
+
+    .data-woocommerce-form-login__rememberme {
+        display: none;
+    }
+
+    form .show-password-input {
+        top: 53%;
+        transform: translateY(-50%);
+        right: 23px;
+    }
+
+    .woocommerce-LostPassword {
+        text-align: right;
+
+        a {
+            color: #1060C1;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 160%;
+            /* 22.4px */
+            text-decoration-line: underline;
+            @include link_hover;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .wcl-page {
+            margin-top: 80px;
+            margin-bottom: 80px;
+
+            .data-container {
+                padding: 0 50px;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        .cmp-button {
+            border-radius: 5px;
+        }
+
+        .wcl-page {
+            margin-top: 74px;
+            margin-bottom: 80px;
+
+            .data-container {
+                padding: 0 20px;
+            }
+        }
+
+        .woocommerce {
+            padding: 0;
+
+            h2 {
+                font-size: 21px;
+                margin-bottom: 23px;
+            }
+
+
+            form .form-row.lost_password {
+                margin-bottom: 21px;
+            }
+
+            .data-b1 {
+                margin-top: 44px;
+            }
+
+            .data-b1-title {
+                font-size: 16px;
+                margin-bottom: 22px;
+            }
+
+            .data-b1-links a {
+                min-height: 58px;
+                border-radius: 5px;
+            }
+
+            .data-not-have-account {
+                margin-top: 43px;
+            }
+
+            .data-not-have-account-title {
+                font-size: 21px;
+                margin-left: 11px;
+            }
+
+            .data-not-have-account-link a {
+                padding-left: 31px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// woocommerce-lost-password
+.woocommerce-lost-password {
+    .wcl-page {
+        margin-bottom: 315px;
+    }
+
+    .woocommerce {
+        padding-top: 32px;
+        padding-bottom: 40px;
+
+        .data {
+            &-title {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            &-subtitle {
+                color: #868C9A;
+                text-align: center;
+                font-size: 16px;
+                line-height: 160%;
+                /* 25.6px */
+                max-width: 442px;
+                margin: 0 auto;
+                margin-bottom: 23px;
+            }
+        }
+    }
+
+    .woocommerce form .form-row-submit {
+        margin-bottom: 0;
+    }
+
+    .woocommerce form {
+        .form-row.form-row-first {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .wcl-page {
+            margin-bottom: 198px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .wcl-page {
+            margin-bottom: 283px;
+        }
+
+        .woocommerce {
+            padding: 0;
+        }
+
+        .woocommerce .data-title {
+            font-size: 21px;
+        }
+
+        .woocommerce .data-subtitle {
+            font-size: 13px;
+            margin-bottom: 33px;
+        }
+
+        .woocommerce form .form-row.form-row-first {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+
+
+
+
+
+// woocommerce-ResetPassword lost_reset_password
+.woocommerce-lost-password {
+    .woocommerce {
+        form {
+            p {
+                width: 100%;
+            }
+
+            >p {
+                &:first-child {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+
+            label {
+                display: none;
+            }
+        }
+
+        form .form-row.form-row-last {
+            margin-bottom: 30px;
+        }
+
+        form .form-row.form-row-first {
+            margin-bottom: 20px;
+        }
+
+        form .form-row {
+            margin-bottom: 20px;
+
+            &.form-row-submit {
+                margin-bottom: 0;
+            }
+        }
+
+        .woocommerce-password-strength {
+            padding: 6px 22px;
+            border-radius: 0 0 5px 5px;
+        }
+    }
+}
+
+
+.page-template-login,
+.woocommerce-lost-password {
+    @media (max-width: 575px) {
+        background-color: #fff;
+
+        .data-container {
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+// ...
+
+.wcl-section-7 {
+    background-color: $c-dark-a;
+    padding: 65px 0;
+
+    .wcl-subscribe {
+        margin-bottom: 0;
+
+        .data {
+            &-form {
+                &-group {
+                    column-gap: 0;
+                }
+            }
+
+            &-field {
+                width: 100%;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+
+                &:last-child {
+                    margin-left: 26px;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-a {
+            width: 37.5%;
+            padding-right: 160px;
+            position: relative;
+        }
+
+        &-b {
+            width: 62.5%;
+        }
+
+        &-title {
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            color: $c-beige;
+            line-height: 18px;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 10px;
+            right: 72px;
+
+            img {
+                width: 9px;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .wcl-subscribe {
+            .data {
+                &-form {
+                    &-group {
+                        display: block;
+                    }
+                }
+
+                &-field {
+                    width: 100%;
+
+                    &:first-child {
+                        margin-right: 0;
+
+                        input {
+                            border-bottom: none;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-top: 25px;
+                        margin-left: 0;
+                        text-align: right;
+                    }
+                }
+
+                &-notify {
+                    text-align: right;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .data {
+            &-a {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 26px;
+                text-align: center;
+            }
+
+            &-b {
+                width: 100%;
+            }
+
+            &-title {
+                max-width: 325px;
+                margin: 0 auto;
+            }
+
+            &-icon {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        padding: 68px 0;
+    }
+}

@@ -1,0 +1,13 @@
+// ...
+
+.page-about {
+    @media (max-width: 575px) {
+        .wcl-header {
+            &.sticky-b {
+                transform: none;
+                z-index: 5;
+                visibility: visible;
+            }
+        }
+    }
+}

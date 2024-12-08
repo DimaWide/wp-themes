@@ -1,0 +1,53 @@
+// ...
+
+.wcl-thing {
+    .d6 {
+        &-inner {
+            padding: 14px 18px 23px 18px;
+            background-color: $c-white;
+            border: 1px solid $c-beige;
+            display: block;
+            height: 100%;
+            transition: all 0.1s ease;
+            position: relative;
+
+            &:hover {
+                border-color: $c-olive-a;
+                color: $c-dark-a;
+            }
+        }
+
+        &-img {
+            padding: 10px;
+            margin-bottom: 26px;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-height: 100%;
+            }
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+
+        &-title {
+            font-size: 12px;
+            line-height: 14px;
+            max-width: 170px;
+        }
+
+        &-brand {
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            max-width: 90px;
+            flex-shrink: 0;
+        }
+    }
+}

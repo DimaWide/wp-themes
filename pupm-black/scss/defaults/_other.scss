@@ -1,0 +1,171 @@
+body {
+    .mod-mobile {
+        display: none;
+    }
+
+    @media (max-width: 1025px) {
+        .mod-mobile {
+            display: block;
+        }
+
+        .mod-desktop {
+            display: none;
+        }
+    }
+}
+
+
+
+.pwspfwc_popup_modal {
+    color: #000;
+}
+
+.wcl-tsparticles {
+    z-index: -1;
+    position: absolute;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    max-height: 100%;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+$grey: rgba(#fff, 1);
+$blue: rgba(#b54dff, 1);
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        padding: 4px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform:  rotate(0deg);
+        border-top-color: $grey;
+    }
+
+    50% {
+        transform:  rotate(180deg);
+        border-top-color: $blue;
+    }
+
+    100% {
+        transform:  rotate(360deg);
+        border-top-color: $grey;
+    }
+}
+
+@mixin loaderDivMixin {
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px solid transparent;
+    animation: rotate linear 3.5s infinite;
+}
+
+
+@keyframes scale_up {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.preloader {
+    animation: scale_up 1s ease 1 forwards;
+}
+
+.preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    display: block;
+    overflow: hidden;
+
+    div {
+        height: 100%;
+    }
+}
+
+/* loader 1 */
+.loader1,
+.loader1 div {
+    @include loaderDivMixin;
+    border-top-color: $grey;
+    border-bottom-color: $blue;
+}
+
+// /*loader 2  */
+// .loader2,
+// .loader2 div {
+//     @include loaderDivMixin;
+//     border-top-color: $blue;
+//     border-left-color: $grey;
+//     border-right-color: $grey;
+// }
+
+// /*loader 3  */
+// .loader3,
+// .loader3 div {
+//     @include loaderDivMixin;
+//     border-top-color: $grey;
+//     border-left-color: $blue;
+//     animation-timing-function: cubic-bezier(.55, .38, .21, .88);
+//     animation-duration: 3s;
+// }
+
+// /* loader 4 */
+// .loader4,
+// .loader4 div {
+//     @include loaderDivMixin;
+//     border-radius: 50%;
+//     padding: 4px;
+//     animation: rotate2 4s infinite linear;
+// }
+
+// div:hover {
+//     animation-play-state: paused;
+// }
+
+.loader,
+.loader * {
+    will-change: transform;
+}

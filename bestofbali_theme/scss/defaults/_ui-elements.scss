@@ -1,0 +1,42 @@
+/* 
+==============================================
+    CONTENT OF THE FILE
+==============================================
+
+
+    ...
+
+*/
+
+
+
+/* 
+wcl-btn
+ */
+
+.wcl-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/acf_9_link_bg.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 147px;
+    height: 57px;
+    padding: 10px 20px;
+
+    color: $c-white;
+    text-align: center;
+    font-family: $f-now-alt;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 130%;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+

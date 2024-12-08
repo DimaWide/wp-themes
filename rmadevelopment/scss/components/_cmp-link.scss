@@ -1,0 +1,21 @@
+.cmp-link {
+    color: #F3BA00;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 155%;
+    /* 27.9px */
+    text-transform: capitalize;
+    text-decoration: none;
+
+    img {
+        margin-left: 10px;
+        width: 25px;
+        transition: all 0.25s ease;
+    }
+
+    &:hover{
+        img{
+            transform: translate(5px, 0);
+        }
+    }
+}

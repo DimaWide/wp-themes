@@ -1,0 +1,143 @@
+// ...
+
+
+.wcl-section-25 {
+    padding-top: 91px;
+    padding-bottom: 81px;
+    background-color: $c-yellow;
+
+    .data {
+        &-container {
+            max-width: 1260px;
+        }
+
+        &-title {
+            font-family: $f-greycliff;
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+
+            strong {
+                color: transparent;
+                -webkit-text-stroke: 1px $c-dark-a;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -11px;
+        }
+
+        &-item {
+            padding: 0 11px;
+            width: 33.33%;
+            position: relative;
+
+            &-inner {
+                display: block;
+
+                &:hover {
+                    .data-item-img {
+                        transform: rotate(1.5deg);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 42px;
+            }
+
+            &-img {
+                height: 479px;
+                margin-bottom: 20px;
+                transition: all 0.25s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-title {
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                max-width: 300px;
+            }
+
+            &-cat {
+                font-weight: 500;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                color: $c-dark;
+                text-transform: uppercase;
+
+                a {
+                    color: $c-dark;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        .data {
+            &-title {
+                margin-bottom: 42px;
+            }
+
+            &-item {
+                &:nth-child(2) {
+                    margin-top: 0;
+                }
+
+                &-img {
+                    height: 414px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-item {
+                width: 50%;
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        padding-top: 71px;
+        padding-bottom: 89px;
+
+        .data {
+            &-title {
+                margin-bottom: 52px;
+            }
+
+            &-list {
+                row-gap: 55px;
+            }
+
+            &-item {
+                width: 100%;
+
+                &:last-child {
+                    display: block;
+                }
+
+                &-cat {
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.article-content h3 {}
+
+.comment-respond form p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pin-wrap>a.pin-it {
+    font-family: 'elgoc';
+
+    &::after {
+        content: '\f231';
+        font-family: "Font Awesome 6 Brands";
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        display: var(--fa-display, inline-block);
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+        position: absolute;
+        left: 30px;
+        top: 12px;
+        font-size: 16px;
+    }
+}
+
+.wcl-comments .data-c-form input[type=submit] {
+    margin-left: 0;
+    padding: 5px 18px;
+}
+
+.article-intro {
+    @media (max-width: 600px) {
+        h2 {
+            margin-top: 45px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.chriselle-sig {
+    display: none;
+}
+
+.wcl-section-16.mod-old-site {
+    .wcl-thing {
+        .d6 {
+            &-inner {
+                box-shadow: unset;
+            }
+
+            &-brand {
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .data {
+        &-list {
+            &:not(.swiper-initialized) {
+                .data-item {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &-item {
+            width: 33.33%;
+            width: 248px;
+            height: auto;
+
+            &-inner {
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+.cd-block-two-images-overlapped-figure figcaption::before {
+    font-size: 80px;
+    top: 14px;
+    transform: rotate(180deg) translateX(50%);
+    transform-origin: top;
+}
+
+@media (max-width: 767px){
+    .cd-block-two-images-overlapped.right .cd-block-two-images-overlapped-figure figcaption {
+        left: 50%;
+        right: unset;
+    }
+}

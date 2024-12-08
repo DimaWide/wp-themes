@@ -1,0 +1,31 @@
+.single-post {
+    .wcl-instagram {
+        margin-top: 150px;
+    }
+
+    @media (max-width: 767px) {
+        .wcl-instagram {
+            margin-top: 107px;
+        }
+    }
+}
+
+
+.wcl-single {
+    .data-container {
+        max-width: 1000px;
+    }
+
+    &.wcl-content {
+        p {
+            font-style: normal;
+        }
+    }
+}
+
+.single-post{
+    .wcl-body-inner{
+        overflow-x: hidden;
+    }
+}
+ 

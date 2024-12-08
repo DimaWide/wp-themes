@@ -1,0 +1,62 @@
+.wcl-load-more {
+    margin-top: 103px;
+    margin-bottom: 108px;
+
+    .d2 {
+        &-container {
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        &-btn {
+            font-family: $f-adobe-caslon;
+            font-size: 15px;
+            color: $c-black;
+            border: none;
+            background-color: transparent;
+            display: inline-block;
+            padding: 0 10px;
+            padding-bottom: 5px;
+            line-height: 21px;
+            position: relative;
+            transition: all 0.25s ease;
+
+            &:hover {
+                color: $c-gray;
+
+                &::after {
+                    width: 0;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $c-black;
+                transition: all 0.25s cubic-bezier(0.32, 0.41, 0.21, 0.82);
+            }
+
+            &::before {
+                background-color: $c-gray;
+            }
+
+            &[disabled="true"] {
+                pointer-events: none;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .d3 {
+            &-btn {
+                margin-top: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+.sct-2-we-are {
+    margin-top: 100px;
+    margin-bottom: 125px;
+
+    .data {
+        &-container {
+            position: relative;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &-col {
+            width: 50%;
+
+            &:first-child {
+                padding-right: 50px;
+            }
+        }
+
+        &-circles {
+            position: relative;
+
+            &-item {
+                position: absolute;
+                width: 283px;
+                height: 283px;
+                border-radius: 283px;
+                opacity: 0.08;
+                background: #F5FDD3;
+                filter: blur(50px);
+                z-index: -1;
+
+                &:nth-child(1) {
+                    top: 0;
+                    right: 100%;
+                    margin-right: 162px;
+                }
+
+                &:nth-child(2) {
+                    top: -65px;
+                    right: 100%;
+                    margin-right: -15px;
+                }
+
+                &:nth-child(3) {
+                    top: 57px;
+                    left: -51px;
+                }
+
+                &:nth-child(4) {
+                    top: 0;
+                    left: 155px;
+                }
+            }
+        }
+
+        &-img {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 863px;
+            left: -133px;
+        }
+
+        &-info {
+            max-width: 550px;
+        }
+
+        &-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 155%;
+            /* 55.8px */
+            margin-bottom: 15px;
+        }
+
+        &-subtitle {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 155%;
+            /* 31px */
+            margin-bottom: 15px;
+        }
+
+        &-desc {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 155%;
+        }
+
+        &-b1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+            row-gap: 24px;
+            transform: translate(12px, 0px);
+
+            &-col {
+                padding: 0 12px;
+                width: 50%;
+                max-width: 330px;
+            }
+
+            &-item {
+                position: relative;
+                aspect-ratio: 306 / 306;
+                overflow: hidden;
+
+                &-inner {
+                    border: 5px solid #FFF;
+                    height: 100%;
+                }
+
+                img {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: calc(100% + 0px);
+                    height: calc(100% + 0px);
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 55px;
+        margin-bottom: 75px;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 25px;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:first-child {
+                    width: 100%;
+                    padding-right: 0;
+                }
+
+                &:last-child {
+                    width: 100%;
+                }
+            }
+
+            &-b1 {
+                transform: none;
+                justify-content: center;
+                max-width: 570px;
+                margin: 0 auto;
+            }
+
+            &-info {
+                margin: 0 auto;
+            }
+
+            &-title {
+                font-size: 32px;
+                margin-bottom: 10px;
+            }
+
+            &-subtitle {
+                font-size: 16px;
+            }
+
+            &-desc {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-b1 {
+                row-gap: 13.5px;
+                margin: 0 -6.5px;
+
+                &-col {
+                    padding: 0 6.5px;
+                }
+            }
+
+            &-col {
+                &:last-child {
+                    max-width: 550px;
+                    margin: 0 auto;
+                }
+            }
+
+            &-subtitle{
+                margin-bottom: 11px;
+                line-height: 158%;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        .data {
+            &-b2 {
+                display: none;
+            }
+        }
+    }
+}

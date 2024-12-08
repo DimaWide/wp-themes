@@ -1,0 +1,229 @@
+@import '../../../scss/defaults/acf-pack';
+
+.wcl-acf-block-10 {
+    margin-top: 210px;
+    margin-bottom: 213px;
+
+    .data {
+        &-container {
+            @media (min-width: 1200px) {
+                padding: 0 100px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin: 0 -50px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 50px;
+        }
+
+        &-block {
+            position: relative;
+
+            &-img {
+                img {
+                    width: 371.54px;
+                    //height: 360.34px;
+                    height: auto;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            }
+        }
+
+        &-title {
+            max-width: 583.59px;
+            margin: 0 auto;
+
+            font-size: 47px;
+            // line-height: 45px;
+            line-height: 0.957;
+            text-align: center;
+        }
+
+        &-content {
+            max-width: 827.05px;
+            font-size: 25px;
+
+            ul {
+                @include wcl-reset-list;
+
+                li {
+                    position: relative;
+                    padding-left: 30px;
+                    line-height: 1.1;
+                    margin-bottom: 15.3px;
+                    font-weight: 600;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                        width: 15.47px;
+                        height: 15.47px;
+                        background-image: url('../../../img/acf-10-list-marker.svg');
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: 1400px) {
+        .data {
+            &-content {
+                transform: translate(-52px, 0px);
+            }
+
+            &-block {
+                transform: translate(-26px, 10px);
+
+                &-img {
+                    img {
+                        margin-left: 20px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-title {
+                font-size: 42px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-title {
+                font-size: 40px;
+                max-width: 493px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 150px;
+        margin-bottom: 120px;
+
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 100px;
+                margin: 0;
+            }
+
+            &-col {
+                width: 100%;
+                padding: 0;
+            }
+
+            &-block {
+                min-height: 220px;
+
+                &-img {
+                    img {
+                        width: 290px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 70px;
+
+        .data {
+            &-row {
+                row-gap: 80px;
+            }
+
+            &-title {
+                font-size: 30px;
+                max-width: 370px;
+            }
+
+            &-block {
+                min-height: 170px;
+
+                &-img {
+                    img {
+                        width: 218px;
+                    }
+                }
+            }
+
+            &-content {
+                font-size: 20px;
+
+                ul {
+                    li {
+                        padding-left: 24px;
+                        margin-bottom: 15px;
+
+                        &::after {
+                            top: 5px;
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 100px;
+
+        .data {
+            &-row {
+                row-gap: 60px;
+            }
+
+            &-title {
+                font-size: 26px;
+                max-width: 290px;
+            }
+
+            &-block {
+                min-height: unset;
+
+                &-img {
+                    img {
+                        width: 188px;
+                    }
+                }
+            }
+
+            &-content {
+                font-size: 16px;
+
+                li {
+                    padding-left: 22px;
+
+                    &::after {
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

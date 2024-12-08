@@ -1,0 +1,121 @@
+.wcl-acf-block-26 {
+    margin-top: 218px;
+
+    .data {
+        &-container {
+            position: relative;
+            max-width: 1920px;
+            padding: 0 83px 0 97px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1640px;
+                height: 1644px;
+                left: 401px;
+                top: -389px;
+                background: linear-gradient(174deg, rgba(86, 70, 61, 0.50) 65.55%, rgba(72, 71, 70, 0.50) 178.9%);
+                filter: blur(250px);
+                transform: translate3d(0, 0, 0); will-change: transform;
+                z-index: -1;
+            }
+        }
+
+        &-inner {
+            position: relative;
+            padding-top: 303px;
+            padding-bottom: 124px;
+        }
+
+        &-block {
+            max-width: 690px;
+            margin-left: 123px;
+            text-align: center;
+        }
+
+        &-img {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+                z-index: -1;
+            }
+        }
+
+        &-title {
+            margin-bottom: 42px;
+        }
+
+        &-desc {
+            max-width: 686px;
+            margin: 0 auto;
+        }
+
+        &-link {
+            margin-top: 50px;
+
+            button {
+                padding: 12px 67px;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-container {
+                padding: 0 50px;
+            }
+
+            &-block {
+                margin: 0 auto;
+            }
+
+            &-inner {
+                position: static;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 170px;
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-inner {
+                padding-top: 555px;
+                padding-bottom: 0;
+            }
+
+            &-img {
+                img {
+                    max-height: 1000px;
+                }
+            }
+
+            &-desc {
+                font-size: 12px;
+                letter-spacing: 0.84px;
+            }
+
+            &-link {
+                margin-top: 75px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-link {
+                button {
+                    padding: 28px 23px;
+                    max-width: 307px;
+                }
+            }
+        }
+    }
+}

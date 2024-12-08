@@ -1,0 +1,1739 @@
+article {
+
+  border-top: solid 1px rgba($black, .1);
+  padding: 68px 0 0;
+
+  @include breakpoint($max: 600px) {
+
+    padding-top: 0;
+
+  }
+
+}
+
+.article-intro {
+
+  text-align: center;
+  margin-bottom: 83px;
+
+  @include breakpoint($max: 600px) {
+
+    margin-bottom: 45px;
+
+  }
+
+  h2 {
+
+    //font-family: $serif;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 14px;
+
+    a {
+
+      margin-right: 25px;
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 3px;
+
+    }
+
+  }
+
+  h1 {
+
+    max-width: 771px;
+    margin: 22px auto 80px;
+    //font-family: $display;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    @include breakpoint($max: 800px) {
+
+      font-size: 42px;
+      line-height: 48px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 32px;
+      line-height: 32px;
+      margin: 18px 0 0;
+
+    }
+
+  }
+
+  .featured-image {
+
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoint($max: 960px) {
+
+      height: 600px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      height: 260px;
+      margin-bottom: 40px;
+
+    }
+
+  }
+
+  video {
+
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%); 
+
+    @include breakpoint($max: 600px) {
+
+      margin-bottom: 40px;
+
+    }
+
+  }
+
+}
+
+.article-content {
+
+  max-width: 784px;
+  margin: 0 auto 110px;
+  //font-family: $serif;
+  font-weight: normal;
+  //font-size: 18px;
+  line-height: 30px;
+
+  @include breakpoint($max: 600px) {
+
+    margin-bottom: 46px;
+
+  }
+
+  p {
+
+    margin-bottom: 36px;
+    
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  &:first-of-type {
+
+    > p:first-child {
+
+      //font-family: $display;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 18px;
+        line-height: 26px;
+
+      }
+
+      a {
+
+        //font-family: inherit !important; 
+        font-size: inherit !important;
+
+      }
+
+    }
+
+  }
+
+  > figure {
+
+    margin-bottom: 100px;
+
+    figcaption {
+
+      font-size: 12px;
+      line-height: 12px;
+      margin: 18px 0 0;
+      font-weight: $light;
+
+    }
+
+  }
+
+  h2 {
+
+    //font-family: $display;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1.25;
+    margin: 72px 0 20px;
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 28px;
+
+    }
+
+  }
+
+  h3 {
+
+    //font-family: $sans-serif;
+    font-weight: $medium;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 72px 0 16px;
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 22px;
+
+    }
+
+  }
+
+  h4 {
+
+    //font-family: $sans-serif;
+    font-weight: $medium;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 72px 0 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+  }
+
+  > .pin-wrap {
+
+    margin: 0 0 75px;
+
+  }
+
+  ol {
+
+    list-style: none;
+    counter-reset: list;
+
+    li {
+
+      margin-bottom: 30px;
+      padding-left: 40px;
+      position: relative;
+
+      @include breakpoint($max: 600px) {
+
+        padding-left: 30px;
+
+      }
+
+      &::before {
+
+        counter-increment: list;
+        content: counter(list) ".";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        //font-family: $sans-serif;
+        font-weight: $medium;
+        font-size: 24px;
+        line-height: 24px;
+
+      }
+
+    }
+
+  }
+
+  ul {
+
+    list-style: none;
+    counter-reset: list;
+
+    li {
+
+      margin-bottom: 20px;
+      padding-left: 40px;
+      position: relative;
+
+      @include breakpoint($max: 600px) {
+
+        padding-left: 30px;
+
+      }
+
+      &::before {
+
+        width: 6px;
+        height: 6px;
+        content: ' ';
+        display: block;
+        border-radius: 50%;
+        background-color: $black;
+        position: absolute;
+        top: 12px;
+        left: 4px;
+        //font-family: $sans-serif;
+        font-weight: $medium;
+        font-size: 24px; 
+        line-height: 24px;
+
+      }
+
+    }
+
+  }
+
+  a {
+
+    //font-family: $sans-serif;
+    font-weight: $medium;
+    //font-size: 18px;
+    box-shadow: inset 0 -9px 0 rgba(#f4f4cd, 1);
+    transition: all .3s;
+
+    &:hover {
+
+      box-shadow: inset 0 -18px 0 rgba(#f4f4cd, 1);
+
+    }
+
+  }
+
+}
+
+.gallery-widget {
+
+  @include justifyed();
+  margin-bottom: 110px;
+
+  @include breakpoint($max: 600px) {
+
+    margin-bottom: 46px;
+
+  }
+
+  .gallery-wrap {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+
+      & + .gallery-wrap {
+
+        margin-top: 58px;
+
+      }
+
+    }
+
+    figcaption {
+
+      font-size: 12px;
+      line-height: 12px;
+      margin: 18px 0 0;
+      font-weight: $light;
+      text-align: left;
+
+    }
+
+  }
+
+  .small-wrap {
+
+    width: 63%;
+    margin: 0 auto;
+    text-align: right;
+
+    @include breakpoint($max: 960px) {
+
+      width: 75%;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+      padding: 0 30px;
+
+    }
+
+  }
+
+  .gallery-wrap + .gallery-wrap .small-wrap {
+
+    text-align: left;
+
+  }
+
+  .gallery-content {
+
+    //font-family: $serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    width: 63%;
+    text-align: left;
+    margin: 0 auto;
+
+    @include breakpoint($max: 960px) {
+
+      width: 75%;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      width: 100%;
+      padding-right: 30px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      padding: 0 30px;
+
+    }
+
+    a {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 17px;
+      border-bottom: solid 1px rgba($black, .1);
+
+    }
+
+    p {
+
+      margin: 0 0 24px;
+
+    }
+
+    h2 {
+
+      //font-family: $display;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 1.25;
+      margin: 72px 0 20px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 28px;
+
+      }
+
+    }
+
+    h3 {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 24px;
+      line-height: 1.25;
+      margin: 72px 0 16px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 22px;
+
+      }
+
+    }
+
+    h4 {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 20px;
+      line-height: 20px;
+      margin: 72px 0 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+    }
+
+    > *:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  .big-image {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+
+    @include breakpoint($max: 960px) {
+
+      width: 50%;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+      margin-bottom: 58px;
+
+    }
+
+    figcaption {
+
+      font-size: 12px;
+      line-height: 12px;
+      margin: 18px 0 0;
+      font-weight: $light;
+      text-align: left;
+
+    }
+
+  }
+
+  .small-images {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(60% - 60px);
+    margin-left: 60px;
+
+    @include breakpoint($max: 960px) {
+
+      width: calc(50% - 30px);
+      margin-left: 30px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+      margin-left: 0;
+
+    }
+
+    > .pin-wrap,
+    > figure {
+
+      width: 45%;
+      //margin-top: 60px;
+      display: inline-block; 
+      vertical-align: bottom;
+
+      @include breakpoint($max: 800px) {
+
+        vertical-align: top;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        padding-right: 30px;
+
+      }
+
+      figcaption {
+
+        font-size: 12px;
+        line-height: 12px;
+        margin: 18px 0 0;
+        font-weight: $light;
+        text-align: left;
+        padding-right: 72px;
+
+        @include breakpoint($max: 600px) {
+
+          padding-right: 0;
+
+        }
+
+      }
+
+    }
+
+    .shop-image {
+
+      width: calc(55% + 60px);
+      margin-left: -60px;
+      display: inline-block;
+      vertical-align: bottom;
+      text-align: right;
+
+      @include breakpoint($max: 800px) {
+
+        vertical-align: top;
+        margin-top: 30px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        padding-left: 30px;
+        margin-left: 0;
+        margin-top: -120px;
+
+      }
+
+      figcaption {
+
+        font-size: 12px;
+        line-height: 12px;
+        margin: 18px 0 0;
+        font-weight: $light;
+        text-align: left;
+
+      }
+
+      .shop-hover {
+
+        width: calc(50% - 30px);
+
+        @include breakpoint($max: 800px) {
+
+          width: 50%;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.shop-hover {
+
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 0 30px 0 16px;
+  text-align: left;
+  //font-family: $serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+  margin-top: 22px;
+  position: relative;
+  max-width: 196px;
+
+  @include breakpoint($max: 800px) {
+
+    width: 50%;
+    max-width: 50%;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    //max-width: 133px;
+
+  }
+
+  &::before {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba($black, .1);
+    content: ' ';
+    display: block;
+
+  }
+
+  span {
+
+    display: block;
+    //font-family: $sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+
+  }
+
+  &:last-of-type {
+
+    &::after {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: rgba($black, .1);
+      content: ' ';
+      display: block;
+
+    }
+
+  }
+
+  svg {
+
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 13px;
+    transition: all .3s;
+
+    &.diag {
+
+      opacity: 0;
+
+      @include breakpoint($max: 600px) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .shop-hover-item {
+
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 16px;
+    background-color: $white;
+    opacity: 0;
+    transition: all .3s;
+    //margin-bottom: -22px;
+
+    img {
+
+      width: 100%;
+
+    }
+
+  }
+
+  &:hover {
+
+    .plus {
+
+      opacity: 0;
+
+      @include breakpoint($max: 600px) {
+
+        opacity: 1;
+
+      }
+
+    }
+
+    svg.diag {
+
+      opacity: 1;
+
+      @include breakpoint($max: 600px) {
+
+        opacity: 0;
+
+      }
+
+    }
+
+    .shop-hover-item {
+
+      padding-bottom: 38px;
+      //margin-bottom: 0;
+      opacity: 1;
+
+      @include breakpoint($max: 600px) {
+
+        padding-bottom: 16px;
+        opacity: 0;
+
+      }
+
+    }
+
+  }
+
+  &.active {
+
+    .shop-hover-item {
+
+      padding-bottom: 38px !important;
+      //margin-bottom: 0;
+      opacity: 1 !important;
+
+    }
+
+    svg {
+
+      transform: rotate(45deg);
+
+    }
+
+  }
+
+}
+
+.full-image-widget-wrap {
+
+  margin-bottom: 110px;
+  height: 100vh;
+  // width: 100vw;
+  // margin-left: 50%;
+  // transform: translateX(-50%);
+  clear: both;
+
+  @include breakpoint($max: 800px) {
+
+    margin-bottom: 46px;
+    height: 177vw;
+
+  }
+
+}
+
+.full-image-widget {
+
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: translateZ(0);
+
+  @include breakpoint($max: 800px) {
+
+    background-attachment: unset;
+    height: 177vw;
+    transform: none; 
+
+  }
+
+}
+
+.large-image-widget {
+
+  @include justifyed();
+  margin-bottom: 110px;
+
+  @include breakpoint($max: 600px) {
+
+    margin-bottom: 46px;
+
+  }
+
+  .img-wrap {
+
+    width: calc(66.666% - 22.5px);
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: right;
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+
+    }
+
+  }
+
+  .content {
+
+    width: calc(33.333% - 22.5px);
+    display: inline-block;
+    vertical-align: bottom;
+    //font-family: $serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+      margin-top: 46px;
+
+    }
+
+    a {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 17px;
+      border-bottom: solid 1px rgba($black, .1);
+
+    }
+
+    p {
+
+      margin-bottom: 24px;
+
+      &:last-child {
+
+        margin-bottom: 0;
+
+      }
+
+    }
+
+    h2 {
+
+      //font-family: $display;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 1.25;
+      margin: 72px 0 20px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 28px;
+
+      }
+
+    }
+
+    h3 {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 24px;
+      line-height: 1.25;
+      margin: 72px 0 16px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 22px;
+
+      }
+
+    }
+
+    h4 {
+
+      //font-family: $sans-serif;
+      font-weight: $medium;
+      font-size: 20px;
+      line-height: 20px;
+      margin: 72px 0 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+    }
+
+    + .img-wrap {
+
+      text-align: left;
+
+    }
+
+  }
+
+}
+
+.post-slider {
+
+  font-size: 0;
+  margin-bottom: 110px;
+  //padding: 30px 0;
+  position: relative;
+
+  @include breakpoint($max: 800px) {
+
+    padding: 0;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    margin-bottom: 46px;
+
+  }
+
+  > h2 {
+
+    display: none;
+    //font-family: $sans-serif;
+    font-weight: $semi;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 2.17px;
+    margin: 0 0 26px;
+
+    @include breakpoint($max: 800px) {
+
+      display: block;
+      text-align: center;
+      text-transform: uppercase;;
+
+    }
+
+  }
+  
+  .next-arrow {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 72px;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.00) 7%, #FFFFFF 100%);
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+    margin-right: calc(-50vw + 623px);
+    padding-right: 24px;
+
+    @include breakpoint($max: 1365px) {
+
+      margin-right: -60px;
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      margin-right: -38px;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      display: none !important;
+
+    }
+
+    svg {
+
+      width: 20px;
+      height: 100%;
+      float: right;
+      fill: $black;
+
+    }
+
+    &.slick-disabled {
+
+      opacity: 0;
+      pointer-events: none;
+
+    }
+
+  }
+
+  .prev-arrow {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 72px;
+    height: 100%;
+    background-image: linear-gradient(-90deg, rgba(255,255,255,0.00) 7%, #FFFFFF 100%);
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+    margin-left: calc(-50vw + 623px);
+    padding-left: 24px;
+
+    @include breakpoint($max: 1365px) {
+
+      margin-left: -60px;
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      margin-left: -38px;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      display: none !important;
+
+    }
+
+    svg {
+
+      width: 20px;
+      height: 100%;
+      fill: $black;
+      transform: rotate(180deg);
+
+    }
+
+    &.slick-disabled {
+
+      opacity: 0;
+      pointer-events: none;
+
+    }
+
+  }
+
+  .slider {
+
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include breakpoint($max: 600px) {
+
+      width: 75%;
+      margin: auto;
+      display: block;
+
+    }
+
+    &.outro-slider {
+
+      &::before {
+
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($black, .1);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: ' ';
+        display: block; 
+
+      }
+
+      &::after {
+
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($black, .1);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: ' ';
+        display: block; 
+
+      }
+
+    }
+
+    .mob-hide {
+
+      @include breakpoint($max: 800px) {
+
+        display: none;
+
+      }
+
+      > h2 {
+
+        max-width: 160px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        //font-family: $sans-serif;
+        font-weight: $semi;
+        font-size: 22px; 
+        line-height: 24px; 
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        top: 100px;
+        transform: translateY(-50%);
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+
+      }
+
+    }
+
+    .slick-list {
+
+      overflow: visible;
+
+    }
+
+    div.slick-track div {
+
+      @include breakpoint($max: 600px) {
+
+        width: 50vw;
+
+      }
+
+    }
+
+    .slide {
+
+      position: relative;
+
+      > a {
+
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: 200px;
+        position: relative;
+        padding: 0 20px;
+        //margin-left: 60px;
+
+        @include breakpoint($max: 600px) {
+
+          height: 50vw;
+
+        }
+
+        img {
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          width: auto;
+          height: auto;
+          max-width: 80%;
+          max-height: 80%;
+          transition: all .3s;
+
+        }
+
+      }
+
+      .content {
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 0 12px;
+        text-align: center;
+        opacity: 0;
+        transition: all .3s;
+
+        @include breakpoint($max: 800px) {
+
+          position: static;
+          transform: none;
+          opacity: 1;
+          margin-top: 12px;
+          margin-bottom: 30px;
+
+        }
+
+        h3 {
+
+          //font-family: $sans-serif;
+          font-weight: $medium;
+          font-size: 9px;
+          line-height: 9px;
+          letter-spacing: 2.4px;
+          text-transform: uppercase;
+          margin: 0 0 5px;
+
+        }
+
+        h2 {
+
+          margin: 0;
+          //font-family: $display;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 17px;
+
+        }
+
+        > a {
+
+          //font-family: $sans-serif;
+          font-weight: $semi;
+          font-size: 24px;
+          line-height: 24px;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin-top: 31px;
+
+          @include breakpoint($max: 800px) {
+
+            display: none;
+
+          }
+
+          svg {
+
+            width: 10px;
+            height: 4px;
+            margin-left: 4px;
+            fill: $black;
+            vertical-align: middle;
+
+          }
+
+        }
+
+      }
+
+      &:hover {
+
+        img {
+
+          opacity: .1;
+
+        }
+
+        .content {
+
+          opacity: 1;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+article .wrapper:last-child > *:last-child {
+
+  margin-bottom: 0;
+
+}
+
+.article-outro {
+
+  margin-top: 64px;
+
+  > h2 {
+
+    //font-family: $display;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 30px;
+
+  }
+
+  .post-grid {
+
+    position: relative;
+
+  }
+
+  .post-section {
+
+    margin-bottom: 76px;
+
+    @include breakpoint($max: 600px) {
+
+      margin-bottom: 44px;
+
+    }
+
+    > h2 {
+
+      top: 168px;
+
+    }
+
+  }
+
+  .section-posts {
+
+    > h2 {
+
+      display: none;
+
+      @include breakpoint($max: 960px) {
+
+        display: block;
+
+      }
+
+    }
+
+  }
+
+}
+
+.comments-wrap {
+
+  text-align: center;
+  border-top: solid 1px rgba($black, .1);
+  border-bottom: solid 1px rgba($black, .1);
+  padding: 30px 0 26px;
+  margin-bottom: 65px;
+
+  svg {
+
+    width: 6px;
+    height: 14px;
+    vertical-align: middle;
+    margin: -2px 30px 0;
+
+  }
+
+  .comments-trigger {
+
+    //font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+
+    em {
+
+      font-style: normal;
+      font-weight: $medium;
+
+    }
+
+  }
+
+  .comments {
+
+    padding: 24px 24px 0;
+    max-width: 784px;
+    margin: 0 auto;
+    display: none;
+
+  }
+
+  .comments-ph {
+
+    width: 100%;
+    height: 500px;
+    background-color: $black;
+
+  }
+
+}
+
+.article-fixed {
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $black;
+  width: 100%;
+  color: $white;
+  font-size: 0;
+  padding: 14px 20px;
+  transform: translateY(100%);
+  transition: all .3s;
+  z-index: 1;
+
+  @include breakpoint($max: 600px) {
+
+    padding: 8px 16px;
+
+  }
+
+  &.open {
+
+    transform: none;
+
+  }
+
+  &:before {
+
+    content: ' ';
+    display: none;
+    width: 1px;
+    height: 100%;
+    background-color: $white;
+    opacity: .3;
+    position: absolute;
+    top: 0;
+    right: 60px;
+
+    @include breakpoint($max: 600px) {
+
+      display: block;
+
+    }
+
+  }
+
+  h2 {
+
+    width: calc(50% - 164px);
+    display: inline-block;
+    vertical-align: middle;
+    //font-family: $serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    @include breakpoint($max: 1170px) {
+
+      font-size: 13px;
+      line-height: 13px;
+      margin-bottom: -2px;
+
+      width: calc(50% - 120px);
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      display: none;
+
+    }
+
+  }
+
+  .share {
+
+    width: 328px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    //font-family: $sans-serif;
+    font-weight: $semi;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+
+    @include breakpoint($max: 1170px) {
+
+      width: 240px;
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      width: auto;
+      padding-top: 4px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: calc(100% - 40px);
+      text-align: left;
+
+    }
+
+    a {
+
+      margin-left: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+
+      @include breakpoint($max: 1170px) {
+
+        margin-left: 16px;
+
+      }
+
+      @include breakpoint($max: 960px) {
+
+        margin-left: 36px;
+
+      }
+
+      @include breakpoint($max: 440px) {
+
+        margin-left: 16px;
+
+      }
+
+      svg {
+
+        fill: $white;
+
+      }
+
+      span {
+
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 12px 12px 8px;
+        background-color: $black;
+        margin-bottom: 35px;
+        display: none;
+
+        &::after {
+
+          content: ' ';
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          width: 0; 
+          height: 0; 
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 10px solid $black;
+
+        }
+
+      }
+
+    }
+
+    .link {
+
+      width: 19px;
+      height: 19px;
+
+    }
+
+    .mail {
+
+      width: 16px;
+      height: 14px;
+
+    }
+
+    .fb {
+
+      width: 7px;
+      height: 16px;
+
+    }
+
+    .tw {
+
+      width: 17px;
+      height: 14px;
+
+    }
+
+    .pi {
+
+      width: 14px;
+      height: 18px;
+
+    }
+
+  }
+
+  .comments-scroll {
+
+    width: calc(50% - 164px);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    //font-family: $sans-serif;
+    font-weight: $semi;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+
+    @include breakpoint($max: 1170px) {
+
+      width: calc(50% - 120px);
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      float: right;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 0;
+      width: 40px;
+
+    }
+
+    svg {
+
+      width: 28px;
+      height: 27px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+
+      @include breakpoint($max: 600px) {
+
+        margin-left: 0;
+
+      }
+
+    }
+
+    > span {
+
+      position: absolute;
+      top: 4px; 
+      right: 1px;
+      width: 26px;
+      text-align: center;
+      font-size: 13px;
+
+    }
+
+  }
+
+}
+
+.chriselle-sig {
+
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+
+}

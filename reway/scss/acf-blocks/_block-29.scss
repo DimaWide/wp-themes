@@ -1,0 +1,123 @@
+.wcl-acf-block-29 {
+    padding-top: 186px;
+    padding-bottom: 133px;
+
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+
+    .data {
+        &-img {
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left center;
+                z-index: -1;
+            }
+        }
+
+        &-tagline {
+            left: 7px;
+        }
+
+        &-block {
+            text-align: center;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: 8px;
+        }
+
+        &-title {
+            margin-bottom: 50px;
+        }
+
+        &-info {
+            max-width: 536px;
+            padding: 61px 44px 53px;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        .data {
+            &-tagline {
+                left: 0;
+            }
+
+            &-block {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-block {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 179px;
+
+        .data {
+            &-container {
+                padding: 0 23px;
+            }
+
+            &-tagline {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 139px;
+        padding-bottom: 1px;
+
+        .data {
+            &-img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: calc(100% - 143px);
+                z-index: -1;
+                max-height: 1883px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 500px);
+                    min-width: 2556px;
+                    height: 628px;
+                    top: 100%;
+                    left: -250px;
+                    margin-top: -300px;
+
+                    background: #000;
+                    filter: blur(150px);
+                    transform: translate3d(0, 0, 0); will-change: transform;
+                    z-index: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-info {
+                width: auto;
+                margin-top: 742px;
+                padding: 58px 44px 48px;
+            }
+        }
+    }
+}

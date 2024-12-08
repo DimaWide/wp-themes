@@ -1,0 +1,364 @@
+//...
+
+.grecaptcha-badge {
+    display: none;
+}
+
+.wcl-form {
+    margin: 84px 0 173px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 80px;
+        bottom: 0;
+        width: 242px;
+        height: 765px;
+        background: rgba(40, 167, 121, 0.63);
+        filter: blur(262px);
+        z-index: -1;
+        bottom: -350px;
+    }
+
+    .data {
+        &-container {
+            max-width: 1255px;
+        }
+
+        &-group {
+            display: flex;
+            column-gap: 40px;
+
+            .data-field {
+                width: 50%;
+            }
+        }
+
+        &-notify {
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 133%;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        &-field {
+            margin-bottom: 45px;
+
+
+            &.hidden {
+                display: none;
+            }
+
+            &-1 {
+                &-inner {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 20px;
+
+                    >div {
+                        width: 50%;
+                    }
+                }
+
+                &-info {
+                    justify-content: space-between;
+                    column-gap: 10px;
+                    align-items: center;
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+
+                &-name {
+                    font-size: 18px;
+                    letter-spacing: -0.5px;
+                    text-transform: capitalize;
+                    opacity: 0.7;
+                    line-height: 1.2;
+                }
+
+                &-close {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+
+            &.mod-select {
+                .data-field-body {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 35px;
+                        top: 51%;
+                        transform: translateY(-50%);
+                        z-index: -1;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url('../img/select-arrow.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+
+            &.mod-checkbox {
+                margin: 27px 0 57px;
+
+                .data-field-body {
+                    display: flex;
+                    column-gap: 62px;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                }
+            }
+
+            &.mod-file {
+                label {
+                    height: 65px;
+                    width: 100%;
+                    border: 1px solid $c-white;
+                    border-radius: 50px;
+                    display: inline-block;
+                    font-weight: 600;
+                    font-size: 18px;
+                    max-width: 218px;
+                    text-align: center;
+                    padding: 23px 10px 0;
+                }
+
+                input:not([type=submit]) {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    padding: 0;
+                    max-width: 218px;
+                }
+            }
+
+            &-notify {
+                margin-top: 15px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.2;
+                text-transform: capitalize;
+                text-align: center;
+            }
+
+            &-body {
+                position: relative;
+            }
+
+            &-title {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 133%;
+                text-transform: capitalize;
+                margin-bottom: 25px;
+            }
+
+            input:not([type="submit"]),
+            select,
+            textarea {
+                font-family: $f-manrope;
+                width: 100%;
+                height: 65px;
+                background: rgba($c-white, 0.02);
+                border: 1px solid rgba($c-white, 0.3);
+                border-radius: 50px;
+                padding: 0 35px;
+                color: $c-white;
+                font-weight: 600;
+                font-size: 16px;
+
+                &::placeholder {
+                    color: rgba($c-white, 0.6);
+                }
+            }
+
+            input {
+                &.error {
+                    border-color: $c-green;
+                }
+            }
+
+            select {
+                appearance: none;
+                color: rgba($c-white, 0.6);
+
+                &.active {
+                    color: $c-white;
+                }
+
+                option {
+                    color: $c-black;
+                }
+            }
+
+            textarea {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                height: 267px;
+                min-height: 65px;
+                resize: none;
+                border-radius: 40px;
+            }
+        }
+
+        &-submit {
+            text-align: center;
+            margin-top: 59px;
+
+            button {
+                max-width: 259px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-field {
+                &-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-group {
+                &-2 {
+                    flex-direction: column;
+
+                    .data-field {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-field {
+
+                input:not([type="submit"]),
+                select,
+                textarea {
+                    height: 52px;
+                    font-size: 14px;
+                }
+
+                textarea {
+                    height: 267px;
+                }
+
+                &.mod-file {
+                    label {
+                        height: 52px;
+                        padding-top: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 69px;
+        margin-bottom: 207px;
+
+        .data {
+            &-group {
+                flex-wrap: wrap;
+
+                .data-field {
+                    width: 100%;
+                }
+            }
+
+            &-field {
+                margin-bottom: 35px;
+
+                &-title {
+                    margin-bottom: 18px;
+                    line-height: 30px;
+                }
+
+                &.mod-file {
+                    label {
+                        font-size: 16px;
+                    }
+                }
+
+                &-1 {
+                    &-name {
+                        font-size: 14px;
+                    }
+                }
+
+                &.mod-checkbox {
+                    margin: 7px 0 44px;
+
+                    .data-field-body {
+                        column-gap: 27px;
+                    }
+                }
+            }
+
+            &-submit {
+                margin-top: 35px;
+
+                button {
+                    font-size: 15px;
+                    padding: 0 29px;
+                }
+            }
+
+            &-notify {
+                margin-top: 35px;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-field {
+                &.mod-file {
+                    .data-field-body {
+                        max-width: 179px;
+                        width: 58%;
+                    }
+                }
+
+                &-1 {
+                    &-inner {
+                        >div {
+                            &:first-child {
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+
+                    &-close {
+                        flex-shrink: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &-submit {
+                button {
+                    max-width: 328px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.wcl-acf-block-3 {
+    margin-top: 152px;
+
+    &.mod-slider {
+        .data {
+            &-list {
+                &-nav {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-container {
+            max-width: unset;
+        }
+
+        &-head {
+            padding: 0 12px;
+        }
+
+        &-list {
+            &-nav {
+                display: none;
+
+                &-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    z-index: 10;
+                    width: 86px;
+                    height: 86px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.swiper-button-disabled {
+                        cursor: auto;
+                    }
+
+                    img {
+                        max-width: 86px;
+                    }
+
+                    &.mod-prev {
+                        left: 50%;
+                        margin-left: -648px;
+                    }
+
+                    &.mod-next {
+                        right: 50%;
+                        margin-right: -648px;
+
+                        img {
+                            transform: scale(-1, 1);
+                        }
+                    }
+                }
+            }
+
+            &-pagination {
+                transform: none !important;
+
+                &-out {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    bottom: 35px;
+                    width: 100%;
+                    z-index: 10;
+                }
+
+                .swiper-pagination-bullet {
+                    background-color: $c-white;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 12px;
+                    opacity: 0.5;
+                    margin: 0 6px;
+
+                    &.swiper-pagination-bullet-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            &-inner {
+                height: 550px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 50px 50px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.25);
+                    backdrop-filter: blur(2px);
+                }
+            }
+
+            &-info {
+                position: relative;
+                z-index: 1;
+                max-width: 700px;
+            }
+
+            &-title {
+                color: $c-white;
+                text-align: center;
+                font-family: $f-outfit;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 110%;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+            }
+
+            &-link {
+                background-image: url('../img/acf_3_bg_link.svg');
+                color: #033279 !important;
+            }
+
+            &-img {
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        .data {
+            &-item {
+                &-title {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 75px;
+
+        .data {
+            &-item {
+                &-inner {
+                    padding: 50px 12px;
+                }
+
+                &-info {
+                    max-width: 355px;
+                    margin: 0 auto;
+                }
+
+                &-title {
+                    font-size: 32px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}

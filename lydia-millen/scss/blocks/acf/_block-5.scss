@@ -1,0 +1,56 @@
+.wcl-acf-block-5 {
+    text-align: center;
+    margin: 56px -100px;
+
+    .data {
+        &-container {
+            max-width: 1100px;
+        }
+
+        &-inner {
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+
+            @media (max-width: 1025px) {
+                max-width: calc(100vw);
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 38px;
+            margin: 0 -11px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 11px;
+        }
+
+        &-img {
+            position: relative;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 56px -27px;
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-row {
+                justify-content: center;
+            }
+
+            &-col {
+                width: 100%;
+            }
+
+            &-img {
+                max-width: 321px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

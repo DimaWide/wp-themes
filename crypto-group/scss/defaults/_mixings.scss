@@ -1,0 +1,91 @@
+/*
+Mixin for styling form-placeholders
+@example scss - Usage
+
+   .my-class {
+        background: black(0.15);
+        color: white(0.9);
+   }
+
+*/
+@mixin placeholder {
+   &::-webkit-input-placeholder {
+      @content
+   }
+
+   &::-moz-placeholder {
+      opacity: 1;
+      @content
+   }
+
+   &:-moz-placeholder {
+      @content
+   }
+
+   &:-ms-input-placeholder {
+      @content
+   }
+
+   &.placeholder {
+      @content
+   }
+}
+
+@mixin container-full-width {
+   width: 100vw;
+   margin-left: calc(-50vw + 50%);
+
+   @media (max-width: 1199px) {
+      width: auto;
+      margin-left: unset;
+   }
+}
+
+@mixin link_hover($hover-opacity: 0.7) {
+   transition: all 0.25s ease;
+
+   &:hover {
+      opacity: $hover-opacity;
+   }
+}
+
+@mixin button {
+   min-width: 140px;
+   min-height: 35px;
+
+   /* Box Model */
+   border: 1px solid #18A4DE;
+   background: #1CBCFF;
+   box-shadow: 0px 4px 16px 2px rgba(0, 44, 122, 0.20);
+   border-radius: 3px;
+   padding: 10px 20px;
+   position: relative;
+
+   /* Typography */
+   color: rgb(255, 255, 255);
+   font-family: Inter, sans-serif;
+   font-size: 15px;
+
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   text-decoration: none;
+
+   /* Background */
+   background: rgb(28, 188, 255);
+
+   /* Flexbox */
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 5px;
+
+   /* Effects */
+   transition: background 0.2s ease 0s, color 0.2s ease 0s;
+
+   &:hover {
+       opacity: 1;
+       background-color: rgb(17, 173, 239);
+   }
+}

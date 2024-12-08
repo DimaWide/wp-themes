@@ -1,0 +1,108 @@
+.wcl-single {
+    margin-bottom: 94px;
+
+    .data {
+        &-head {
+            margin-top: 25px;
+            margin-bottom: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            row-gap: 20px;
+            column-gap: 100px;
+            margin-bottom: 32px;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 160%;
+            margin-bottom: 0;
+        }
+
+        &-date {
+            flex-shrink: 0;
+            font-size: 14px;
+            line-height: 28px;
+            /* 200% */
+            display: flex;
+            align-items: center;
+            column-gap: 9px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        &-content {
+            font-size: 16px;
+            line-height: 170%;
+            /* 27.2px */
+            
+            p {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .wp-block-image {
+                margin-top: 24px;
+                margin-bottom: 29px;
+            }
+        }
+
+        &-share {
+            margin-top: 31px;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-head {
+                column-gap: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        .data {
+            &-date {
+                display: none;
+            }
+
+            &-head {
+                margin-top: 17px;
+                margin-bottom: 40px;
+            }
+
+            &-title {
+                font-size: 21px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data-title {
+            font-size: 18px;
+        }
+
+        .data-head {
+            margin-top: 11px;
+            margin-bottom: 30px;
+        }
+
+        .data-content .wp-block-image {
+            margin-top: 21px;
+            margin-bottom: 30px;
+        }
+
+        .data {
+            &-content {
+                font-size: 13px;
+            }
+        }
+    }
+}

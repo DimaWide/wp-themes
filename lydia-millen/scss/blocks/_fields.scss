@@ -1,0 +1,59 @@
+.wcl-field {
+    &-checkbox {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer;
+
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            height: 10px;
+            width: 10px;
+            left: 0;
+            top: 1px;
+            padding: 0;
+
+            &:checked~.d3-mark {
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        .d3 {
+            &-name {
+                display: inline-block;
+                font-size: 11px;
+                letter-spacing: 1.2px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            &-mark {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                background: transparent;
+                border-radius: 50%;
+                height: 10px;
+                width: 10px;
+                border: 1px solid #a1998c;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    height: 10px;
+                    width: 10px;
+                    background: #a1998c;
+                }
+            }
+        }
+    }
+}

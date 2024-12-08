@@ -1,0 +1,58 @@
+.wcl-cmp-button-two {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 372px;
+    padding: 12px 32px;
+    height: auto;
+    min-height: 77px;
+
+    border-radius: 149.515px;
+    border: none;
+    box-shadow: inset 0 0 0 0.5px #c2ae8c;
+    background: linear-gradient(101deg, #684419 -18.11%, #C2AE8C 123.84%);
+
+    color: #140E0A;
+    font-family: $f-kumbh-sans;
+    font-size: 19.63px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -85px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('../img/button-bg.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 600px;
+        height: 290px;
+        z-index: -1;
+        pointer-events: none;
+        pointer-events: none;
+    }
+
+    @media (max-width: 575px) {
+        &::after {
+            top: -100px;
+            background-image: url('../img/button-bg-mobile.svg');
+            height: 330px;
+            background-size: 500px 320px;
+        }
+    }
+}

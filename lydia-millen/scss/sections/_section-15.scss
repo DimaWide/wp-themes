@@ -1,0 +1,44 @@
+.wcl-section-15 {
+    margin-bottom: 88px;
+
+    .data {
+        &-list {
+            &-out {
+                position: relative;
+            }
+        }
+
+        &-item {
+            text-align: center;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-height: 640px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        margin-bottom: 70px;
+
+        .data {
+            &-list {
+                &-out {
+                    margin-left: -27px;
+                    margin-right: -27px;
+                }
+            }
+            &-item {
+                img {
+                    height: 335px;
+                }
+            }
+        }
+    }
+}

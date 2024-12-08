@@ -1,0 +1,270 @@
+.wcl-section-8 {
+    border-top: 0.7px solid $c-black;
+    margin-bottom: 124px;
+
+    &.last-slide {
+        .data-list {
+            cursor: pointer;
+
+            &:hover {
+                .data-curl {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-curl {
+            position: absolute;
+            right: 2px;
+            bottom: 0;
+            width: 45px;
+            height: 45px;
+            transform: matrix(0, 1, -1, 0, 0, 0);
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            opacity: 0;
+            z-index: 10;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            transition-property: opacity;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: scale(1, -1);
+                background: #F4F4F4 0% 0% no-repeat padding-box;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 45px 45px 0 0;
+                border-color: #F4F4F4 transparent transparent transparent;
+                filter: drop-shadow(0px 3px 6px #00000029);
+            }
+        }
+
+
+        &-list {
+            cursor: pointer;
+
+            &:hover {
+                .data-curl {
+                    opacity: 1;
+                }
+            }
+
+            &-nav {
+                &-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    z-index: 1;
+                    transition: all 0.2s ease;
+
+                    &.swiper-button-disabled {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    img {
+                        max-width: 15px;
+                    }
+
+                    &.mod-prev {
+                        left: calc(57.2% + 20px)
+                    }
+
+                    &.mod-next {
+                        right: 20px;
+
+                        img {
+                            transform: scale(-1, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-item {
+            display: flex;
+            height: auto;
+
+            >div {
+                &:first-child {
+                    width: 57%;
+                }
+
+                &:nth-child(2) {
+                    width: 43%;
+                }
+            }
+
+            &-img {
+                position: relative;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                }
+            }
+
+            &-info {
+                text-align: center;
+                background-image: url('../img/sc-8-bg.png');
+                background-position: center;
+                background-size: cover;
+                padding: 88px 75px 65px;
+                background-color: $c-white;
+                position: relative;
+            }
+
+            &-chapter {
+                color: $c-black-b;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 4.2px;
+
+                span {
+                    display: inline-block;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &-month {
+                font-family: $f-pinyon-script;
+                font-weight: 400;
+                color: $c-black-b;
+                font-size: 44px;
+                margin-bottom: 82px;
+            }
+
+            &-desc {
+                color: $c-black-b;
+                max-width: 400px;
+                margin: 0 auto;
+                margin-bottom: 52px;
+                font-size: 12px;
+                line-height: 25px;
+                letter-spacing: 1.4px;
+                overflow-y: auto;
+                height: 325px;
+                overflow-y: auto;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &.mask {
+                    mask-image: linear-gradient(0, rgba(244, 242, 237, 0) 0%, #f4f2ed 50%);
+                }
+
+                strong {
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &-link {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-list {
+                &-nav {
+                    &-btn {
+                        &.mod-prev {
+                            left: calc(50% + 20px);
+                        }
+                    }
+                }
+            }
+
+            &-item {
+                >div {
+                    &:first-child {
+                        width: 50%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 50%;
+                    }
+                }
+
+                &-info {
+                    padding: 80px 40px 65px;
+                }
+
+                &-month {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        border: none;
+        margin-bottom: 100px;
+
+        .data {
+            &-list {
+                &-nav {
+                    &-btn {
+                        top: 527px;
+
+                        &.mod-prev {
+                            left: 20px;
+                        }
+                    }
+                }
+            }
+
+            &-item {
+                flex-wrap: wrap;
+
+                >div {
+                    &:first-child {
+                        width: 100%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 100%;
+                    }
+                }
+
+
+                &-img {
+                    img {
+                        height: 335px;
+                        position: static;
+                    }
+                }
+
+                &-info {
+                    padding: 65px 48px 65px;
+                }
+
+                &-desc {
+                    margin-bottom: 0;
+                }
+
+                &-link {
+                    display: none;
+                }
+            }
+        }
+    }
+}

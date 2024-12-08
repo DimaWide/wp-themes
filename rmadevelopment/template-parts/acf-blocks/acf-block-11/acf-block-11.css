@@ -1,0 +1,189 @@
+/*
+Colors black & white
+@example scss - Usage
+
+   .my-class {
+        background: black(0.15);
+        color: white(0.9);
+   }
+
+*/
+/*
+Mixin for styling form-placeholders
+@example scss - Usage
+
+   .my-class {
+        background: black(0.15);
+        color: white(0.9);
+   }
+
+*/
+/* 
+* 2. Variables
+*/
+/* 
+* 1. Fonts
+*/
+.wcl-acf-block-11 .data-item {
+  margin-bottom: 75px;
+}
+.wcl-acf-block-11 .data-item:last-child {
+  margin-bottom: 0;
+}
+.wcl-acf-block-11 .data-item:nth-child(3) .data-item-link {
+  display: block;
+}
+.wcl-acf-block-11 .data-item-inner {
+  color: #222;
+  text-decoration: none;
+  display: flex;
+}
+.wcl-acf-block-11 .data-item-inner > div:first-child {
+  width: 47.4444444444%;
+  max-width: 854px;
+}
+.wcl-acf-block-11 .data-item-inner > div:nth-child(2) {
+  width: 50.8333333333%;
+}
+.wcl-acf-block-11 .data-item-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 50px;
+  padding-left: 61px;
+}
+.wcl-acf-block-11 .data-item-image {
+  aspect-ratio: 854/653;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25);
+}
+.wcl-acf-block-11 .data-item-image.mod-empty {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.wcl-acf-block-11 .data-item-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wcl-acf-block-11 .data-item-place {
+  color: #F3BA00;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.wcl-acf-block-11 .data-item-name {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.wcl-acf-block-11 .data-item-desc {
+  max-width: 854px;
+}
+.wcl-acf-block-11 .data-item-link {
+  margin-top: 25px;
+}
+.wcl-acf-block-11 .data-load-more {
+  margin-top: 75px;
+  text-align: center;
+  display: none;
+}
+.wcl-acf-block-11 .data-load-more.active {
+  display: block;
+}
+.wcl-acf-block-11 .data-load-more button {
+  width: 148px;
+  padding: 8px 20px 5px;
+}
+@media (min-width: 1025px) {
+  .wcl-acf-block-11 .data-item.mod-right .data-item-inner {
+    flex-direction: row-reverse;
+  }
+  .wcl-acf-block-11 .data-item.mod-right .data-item-info {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1500px) {
+  .wcl-acf-block-11 .data-item.mod-right .data-item-inner {
+    justify-content: flex-end;
+  }
+  .wcl-acf-block-11 .data-item:first-child {
+    margin-bottom: 68px;
+  }
+  .wcl-acf-block-11 .data-container {
+    padding: 0 84px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 1199px) {
+  .wcl-acf-block-11 .data-item-place {
+    font-size: 16px;
+  }
+  .wcl-acf-block-11 .data-item-name {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1025px) {
+  .wcl-acf-block-11 .data-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    row-gap: 60px;
+  }
+  .wcl-acf-block-11 .data-item {
+    width: 50%;
+    padding: 0 20px;
+    margin-bottom: 0;
+  }
+  .wcl-acf-block-11 .data-item.mod-right .data-item-inner {
+    flex-direction: row-reverse;
+  }
+  .wcl-acf-block-11 .data-item-inner {
+    flex-wrap: wrap;
+  }
+  .wcl-acf-block-11 .data-item-inner > div {
+    width: 100% !important;
+  }
+  .wcl-acf-block-11 .data-item-image {
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.25);
+  }
+  .wcl-acf-block-11 .data-item-info {
+    padding-top: 30px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .wcl-acf-block-11 .data-item {
+    width: 100%;
+  }
+  .wcl-acf-block-11 .data-item.mod-right {
+    text-align: right;
+  }
+  .wcl-acf-block-11 .data-item-image {
+    max-width: 65%;
+    margin-left: 0;
+  }
+  .wcl-acf-block-11 .data-item-info {
+    padding-top: 15px;
+    text-align: left;
+  }
+  .wcl-acf-block-11 .data-item-place {
+    font-size: 14px;
+  }
+  .wcl-acf-block-11 .data-item-name {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .wcl-acf-block-11 .data-item {
+    width: 100%;
+  }
+  .wcl-acf-block-11 .data-item-image {
+    max-width: unset;
+  }
+}

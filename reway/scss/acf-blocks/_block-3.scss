@@ -1,0 +1,224 @@
+.wcl-acf-block-3 {
+    margin-top: 188px;
+    position: relative;
+
+    &.mod-fitness-center {
+
+        @media (min-width: 1025px) {
+            margin-top: 139px;
+
+            .data-item-image img {
+                height: 762px;
+            }
+
+            .data {
+                &-container {
+                    padding-bottom: 375px;
+                }
+
+                &-title {
+                    margin-bottom: 37px;
+                }
+
+                &-tagline {
+                    margin-bottom: 9px;
+                    left: 6px;
+                }
+
+                &-info {
+                    padding: 88px 105px 64px;
+                }
+
+                &-link {
+                    margin-top: 60px;
+                }
+            }
+        }
+
+        @media (max-width: 1025px) {
+            .data {
+                &-info {
+                    padding: 60px 55px 48px;
+                }
+
+                &-link {
+                    margin-top: 34px;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .data-item-image img {
+                height: 496px;
+            }
+
+            .data {
+                &-container {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.mod-images-align-right {
+        .data-list {
+            justify-content: flex-end;
+        }
+    }
+
+    &.mod-unique-restaurant {
+        .data {
+            &-container {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        @media (min-width: 1025px) {
+            margin-top: 137px;
+
+            .data-item-image img {
+                height: 829px;
+            }
+
+            .data {
+                &-container {
+                    padding-bottom: 362px;
+                }
+
+                &-tagline {
+                    margin-left: 12px;
+                }
+
+                &-info {
+                    padding: 76px 107px 69px;
+                }
+
+                &-link {
+                    margin-top: 46px;
+                }
+            }
+        }
+    }
+
+    .data {
+        &-container {
+            max-width: 1920px;
+            padding-bottom: 285px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1640px;
+                height: 897px;
+                left: 167px;
+                bottom: -433px;
+                background: linear-gradient(174deg, rgba(86, 70, 61, 0.50) 65.55%, rgba(72, 71, 70, 0.50) 178.9%);
+                filter: blur(250px);
+                transform: translate3d(0, 0, 0); will-change: transform;
+                z-index: -2;
+            }
+        }
+
+        &-title {
+            margin-bottom: 37px;
+        }
+
+        &-info {
+            max-width: 522px;
+            padding: 68px 107px 56px;
+        }
+
+        &-link {
+            margin-top: 43px;
+        }
+
+        &-list {
+            display: flex;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &-item {
+            position: relative;
+            width: 50%;
+
+            &-image {
+                img {
+                    width: 100%;
+                    height: 691px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1600px) {
+        .data {
+            &-tagline {
+                left: 0 !important;
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        margin-top: 135px;
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-info {
+                padding: 60px 55px 48px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+	.data{
+        &-tagline{
+            margin-bottom: 10px;
+        }
+    }
+    }
+    
+    @media (max-width: 767px) {
+        .data {
+            &-container {
+                padding-bottom: 0;
+            }
+
+            &-list {
+                width: auto;
+                position: relative;
+                display: block;
+                margin: 0 -35px;
+                margin-top: -25px;
+            }
+
+            &-item {
+                width: 100%;
+
+                &-image {
+                    img {
+                        height: 496px;
+                    }
+                }
+            }
+
+            &-link {
+                margin-top: 40px;
+            }
+        }
+    }
+}

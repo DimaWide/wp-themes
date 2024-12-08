@@ -1,0 +1,165 @@
+.woocommerce-checkout {
+    .woocommerce-NoticeGroup {
+        color: #272323;
+        font-size: 14px;
+        line-height: 160%;
+        /* 22.4px */
+    }
+}
+
+.woocommerce-Price-currencySymbol {
+    font-family: $f-roboto;
+}
+
+.woocommerce {
+    p {
+        line-height: 160%;
+    }
+
+    .restore-item {
+        @include link_hover;
+    }
+}
+
+.woocommerce-cart .woocommerce-message {
+    margin: 10px 0;
+}
+
+.woocommerce-message {
+    color: #272323;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+
+    +p {
+        line-height: 160%;
+    }
+
+    a {
+        @include link_hover(0.85);
+    }
+}
+
+.woocommerce-page {
+    .wc-empty-cart-message {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .return-to-shop {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+
+    .woocommerce-error,
+    .woocommerce-info,
+    .woocommerce-message {
+        margin-bottom: 25px;
+    }
+
+    .woocommerce {
+        form {
+            &:not(.mod-not-wc) {
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                input[type="password"],
+                input[type="date"],
+                input[name="password"],
+                textarea,
+                select {
+                    width: 100%;
+                    height: 55px;
+
+                    border-radius: 3px;
+                    border: 1px solid rgba(#272323, 0.2);
+
+                    padding: 15px 22px;
+                    transition: all 0.2s ease;
+
+                    color: #272323;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.4;
+
+                    &::placeholder {
+                        color: rgba(#272323, 0.4);
+                    }
+
+                    &:focus {
+                        border-color: rgba(#272323, 0.6);
+
+                        &::placeholder {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+
+                input[type="password"] {
+                    padding-right: 50px !important;
+                }
+
+                select {
+                    padding-right: 50px !important;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+
+                    background-image: url('../img/arrow-select.svg');
+                    background-position: right 20px center;
+                    background-repeat: no-repeat;
+                    background-color: #fff;
+
+                    &::-ms-expand {
+                        display: none;
+                    }
+
+                    option {
+                        background-color: transparent;
+                    }
+                }
+
+                @media (max-width: 991px) {
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    input[type="password"],
+                    input[type="date"],
+                    textarea,
+                    select {
+                        font-size: 14px;
+                        padding: 15px 18px;
+                        border-radius: 3px;
+                    }
+                }
+
+                select{
+                    background-position: right 12px center;
+                    background-size: 7px 7px;
+                }
+
+                @media (max-width: 575px) {
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    input[type="password"],
+                    input[type="date"],
+                    textarea,
+                    select {
+                        font-size: 14px;
+                        padding: 15px 18px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

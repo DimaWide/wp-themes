@@ -1,0 +1,140 @@
+.wcl-acf-block-10 {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background-color: #fff;
+    @include container-full-width;
+
+    .data {
+        &-container {
+            max-width: 1270px;
+        }
+
+        &-title {
+            font-weight: 900;
+            line-height: 48px;
+            font-size: 40px;
+            text-align: center;
+            color: rgb(29, 46, 59);
+            letter-spacing: -0.8px;
+            margin-bottom: 32px;
+        }
+
+        &-item {
+            &.active {
+                .data-item {
+                    &-answer {
+                        max-height: 500px;
+                        border-color: rgb(232, 238, 240);
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+
+            &-question {
+                padding: 10.5px 30px;
+                background-color: rgba(0, 0, 0, 0);
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    background-color: #f4f9fc;
+                    border-color: #f4f9fc;
+                }
+
+                &-text {
+                    font-weight: 700;
+                    line-height: 24px;
+                    font-size: 20px;
+                    color: rgb(29, 46, 59);
+                    cursor: pointer;
+                    margin-bottom: 0;
+
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-right: 50px;
+                }
+
+                &-arrow {
+                    position: absolute;
+                    top: 50%;
+                    right: 40px;
+                    transform: translateY(-50%);
+
+                    i {
+                        color: rgb(29, 46, 59);
+                        font-weight: 900;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease;
+                border-bottom: 1px solid rgb(232, 238, 240);
+                border-color: transparent;
+
+                &-text {
+                    color: rgb(77, 82, 86);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+
+                    padding: 10px 30px 30px;
+
+                    a {
+                        color: rgb(28, 188, 255);
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-container {
+                padding: 0 15px;
+            }
+
+            &-title {
+                line-height: 27.625px;
+                font-size: 21.25px;
+                letter-spacing: normal;
+                margin-bottom: 40px;
+            }
+
+            &-item {
+                &-question {
+                    padding: 10px 15px;
+
+                    &-text {
+                        line-height: 20.825px;
+                        font-size: 14.875px;
+                    }
+
+                    &-arrow {
+                        right: 15px;
+
+                        i {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                &-answer {
+                    &-text {
+                        padding: 10px 15px 30px;
+                        font-size: 14.875px;
+                        line-height: 22.3125px;
+                    }
+                }
+            }
+        }
+    }
+}

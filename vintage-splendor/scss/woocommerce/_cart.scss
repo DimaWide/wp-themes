@@ -1,0 +1,372 @@
+.woocommerce-cart {
+    &.wcl-cart-empty {
+        .woocommerce {
+            text-align: center;
+
+            .cart-empty {
+                font-size: 14px;
+            }
+
+            a.button {
+                margin-top: 30px;
+                @include link;
+                @include link-black-tow-white;
+            }
+        }
+    }
+
+    .woocommerce-notices-wrapper {
+        margin-bottom: 30px
+    }
+
+    .data {
+        &-update-cart {
+            display: none !important;
+            text-align: left !important;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .wcl-page {
+        margin-top: 62px;
+        margin-bottom: 89px;
+
+        .data {
+            &-title {
+                text-align: center;
+                font-family: $f-commuters-sans;
+                font-weight: 400;
+                font-size: 25px;
+                text-transform: uppercase;
+                margin-bottom: 41px;
+            }
+        }
+    }
+
+    .woocommerce-cart-form {
+        tr {
+            &:last-child {
+                td {
+                    padding-top: 30px;
+                }
+            }
+        }
+
+        th {
+            font-weight: 500;
+            font-size: 15px;
+            text-align: left;
+            padding: 10px;
+            padding-bottom: 13px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        td {
+            width: 25%;
+            font-family: $f-lekton;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 10px;
+
+            &.data-product-remove {
+                font-family: 'Inter';
+                font-size: 24px;
+            }
+
+            &:nth-child(1) {
+                min-width: 372px;
+                padding-left: 0;
+            }
+
+            &:nth-child(2) {
+                width: 28.2%;
+            }
+
+            &:nth-child(3) {
+                width: 30.2%;
+            }
+
+            a {
+                color: $c-black;
+                text-decoration: none;
+            }
+        }
+
+        .coupon {
+            float: left;
+            display: flex;
+
+            label {
+                display: none;
+            }
+
+            input {
+                width: 190px;
+                height: 33px;
+                background: #fef9f0;
+                border: 0.5px solid #000;
+                padding: 2px 10px;
+                font-family: $f-inter;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                color: #000;
+                border-radius: 33px;
+                margin-right: 9px;
+
+                &::placeholder {
+                    color: $c-black;
+                }
+
+                &:focus {
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        button[name="update_cart"] {
+            float: right;
+        }
+
+        button[name="apply_coupon"] {
+            background-color: $c-black;
+            color: $c-white;
+            min-width: 162px;
+
+            svg {
+                fill: $c-white;
+            }
+
+            &:hover {
+                background-color: $c-green;
+                color: $c-black;
+
+                svg {
+                    fill: $c-black;
+                }
+            }
+        }
+
+        .woocommerce-cart-form__cart-item {
+            border-bottom: 0.6px solid #000;
+            padding-bottom: 10px;
+        }
+    }
+
+    .cart-collaterals {
+        max-width: 562px;
+        margin-left: auto;
+        margin-top: 15px;
+
+        h2 {
+            font-family: $f-commuters-sans;
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+
+        th,
+        td {
+            padding: 6px 10px;
+            line-height: 25px;
+        }
+
+        td {
+            &[data-title="Recurring total"] {
+                font-weight: 700;
+
+                small {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        th {
+            width: 40%;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        td {
+            width: 50%;
+            font-family: $f-lekton;
+            font-size: 16px;
+        }
+
+        .wc-proceed-to-checkout {
+            margin-top: 22px;
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .woocommerce-cart-form {
+            table {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            thead {
+                display: none;
+            }
+
+            th,
+            td {
+                padding: 10px 0;
+                line-height: 20px;
+            }
+
+            tr {
+                display: block;
+            }
+
+            td {
+                display: block;
+                text-align: right;
+                width: 100%;
+
+                &:nth-child(1) {
+                    min-width: unset;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+
+            .woocommerce-cart-form__cart-item {
+                td::before {
+                    content: attr(data-title) ": ";
+                    font-family: $f-inter;
+                    font-weight: 500;
+                    font-size: 15px;
+                    float: left;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .cart-collaterals {
+            margin-top: 54px;
+            max-width: unset;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .wcl-page {
+            margin-top: 35px;
+            margin-bottom: 96px;
+
+            .data {
+                &-title {
+                    font-size: 20px;
+                    margin-bottom: 22px;
+                }
+            }
+        }
+
+        .data {
+            &-update-cart {
+                display: block !important;
+            }
+        }
+
+        .woocommerce-cart-form {
+            tr {
+                &:last-child {
+                    td {
+                        padding-top: 37px;
+                    }
+                }
+            }
+
+            .data-update-cart {
+                padding: 24px 0 28px;
+
+                button {
+                    width: 100%;
+                    max-width: 164px;
+                    background-color: $c-white;
+                }
+            }
+
+            .coupon {
+                float: unset;
+                text-align: left;
+                margin-bottom: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 12px;
+            }
+
+            .actions {
+                padding-right: 0;
+            }
+
+            .coupon {
+                input {
+                    width: 100%;
+                    max-width: 153px;
+                    min-width: 150px;
+                }
+            }
+
+
+            button[name="apply_coupon"] {
+                min-width: 156px;
+            }
+
+            button[name="update_cart"] {
+                float: unset;
+            }
+
+            .actions {
+                button[name="update_cart"] {
+                    display: none;
+                    max-width: 50%;
+                }
+            }
+        }
+
+        .cart-collaterals {
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            td {
+                text-align: right;
+            }
+
+            th,
+            td {
+                line-height: 20px;
+                padding: 8px 10px;
+            }
+
+            th {
+                padding-left: 0;
+            }
+        }
+
+        .data {
+            &-update-cart {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.wcl-acf-block-6 {
+    margin: 0 -100px;
+    margin-top: 99px;
+    margin-bottom: 93px;
+
+    .data {
+        &-container {
+            max-width: 1100px;
+        }
+
+        &-inner-2 {
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+
+            @media (max-width: 1025px) {
+                max-width: calc(100vw);
+            }
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+        }
+
+        &-col {
+            width: 50%;
+        }
+
+        &-text {
+            max-width: 320px;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0;
+            margin: 0 auto;
+            margin-top: 60px;
+
+            p {
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-inner {
+            text-align: center;
+            background-image: url('../img/acf-block-6-bg.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 96px 57px 74px;
+            max-width: 449px;
+            margin-left: auto;
+        }
+
+        &-img {
+            margin-bottom: 35px;
+
+            img {
+                max-height: 303px;
+            }
+        }
+
+        &-title {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 23px;
+            letter-spacing: 1.4px;
+            max-width: 265px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            text-transform: unset;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-inner {
+                padding: 66px 40px 45px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 -27px;
+        margin-top: 82px;
+        margin-bottom: 82px;
+
+        .data {
+            &-row {
+                flex-direction: column-reverse;
+                row-gap: 71px;
+            }
+
+            &-col {
+                width: 100%;
+            }
+
+            &-inner {
+                max-width: 321px;
+                margin: 0 auto;
+            }
+
+            &-img {
+                max-width: 143px;
+                margin: 0 auto;
+                margin-bottom: 28px;
+            }
+
+            &-title {
+                max-width: 200px;
+                margin: 0 auto;
+                margin-bottom: 33px;
+            }
+
+            &-text {
+                margin-top: 0;
+                text-align: center;
+            }
+
+        }
+    }
+}

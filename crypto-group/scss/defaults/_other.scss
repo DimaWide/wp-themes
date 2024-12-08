@@ -1,0 +1,146 @@
+div[class^="wcl-acf-block-"] {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    i {
+        width: auto;
+    }
+}
+
+.wcl-page.mod-default {
+    // margin-top: 50px;
+    // margin-bottom: 100px;
+}
+
+
+body {
+    &.mod-bar-show {
+        padding-top: 46.8px;
+
+        @media (max-width: 767px) {
+            padding-top: 44px;
+        }
+    }
+
+    &.admin-bar {
+        .wcl-bar {
+            top: 32px;
+        }
+    }
+
+    @media screen and (max-width: 782px) {
+        &.admin-bar {
+            .wcl-bar {
+                top: 0;
+            }
+        }
+    }
+}
+
+.home {
+    .wcl-body-inner {
+        @media (max-width: 767px) {
+            padding-bottom: 80px;
+        }
+    }
+}
+
+
+.home {
+    .wcl-page {
+        >.data-container {
+            padding: 0;
+        }
+    }
+}
+
+.home {
+    .wcl-page-content {
+        flex-grow: 1;
+
+        a {
+            &:not(div[class^="wcl-acf-block-"] a) {
+                color: #1cbcff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+
+
+.home {
+    .wcl-footer {
+        background-color: #f4f9fc;
+    }
+}
+
+.page-listing-video,
+.tax-video_category {
+    .wcl-header .data-row {
+        padding-top: 15px;
+    }
+}
+
+.page-listing-video,
+.tax-video_category,
+.single-video {
+    .wcl-header .data-row {
+        padding-top: 15px;
+    }
+
+    @media (max-width: 767px) {
+        .wcl-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+
+.pmpro-body-level-required {
+    .page-title {
+        display: none;
+    }
+}
+
+
+
+.pmpro_content_message {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    text-align: center;
+
+}
+
+.pmpro-body-level-required {
+    .pmpro_content_message {
+        a {
+            @include button;
+            margin-top: 30px;
+        }
+    }
+}
+

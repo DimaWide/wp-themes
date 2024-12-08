@@ -1,0 +1,250 @@
+.wcl-acf-block-5 {
+    margin-top: 50px;
+    padding-bottom: 80px;
+    background: rgb(244, 249, 252);
+    @include container-full-width;
+
+    .data {
+        &-container {
+            max-width: 938px;
+        }
+
+        &-head {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        &-title {
+            font-weight: 900;
+            line-height: 57.6px;
+            font-size: 48px;
+            text-align: center;
+            color: rgb(29, 46, 59);
+            letter-spacing: -0.8px;
+            margin-bottom: 15px;
+        }
+
+        &-subtitle {
+            text-align: center;
+            color: rgb(77, 82, 86);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+
+            strong,
+            b {
+                color: rgb(29, 46, 59);
+            }
+        }
+
+        &-lists {
+            max-width: 838px;
+            margin: 0 auto;
+            margin-top: 40px;
+            gap: 26.25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-block-2 {
+            margin-top: 50px;
+
+            &-tagline {
+                text-align: center;
+                color: rgb(29, 46, 59);
+                font-family: Caveat, handwriting;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 50.4px;
+                margin-bottom: 10px;
+            }
+
+            &-title {
+                font-weight: 900;
+                line-height: 38.4px;
+                font-size: 32px;
+                text-align: center;
+                color: rgb(29, 46, 59);
+                font-family: Inter, sans-serif;
+                letter-spacing: -0.8px;
+                margin-bottom: 20px;
+            }
+
+            &-button {
+                margin-top: 25px;
+                text-align: center;
+
+                a {
+                    /* Box Model */
+                    border: 1px solid rgba(0, 0, 0, 0.13);
+                    border-radius: 3px;
+                    padding: 12px 30px;
+                    position: relative;
+                    width: 407.656px;
+
+                    /* Typography */
+                    color: rgb(255, 255, 255);
+                    font-family: Inter, sans-serif;
+                    font-size: 24px;
+                    font-weight: 800;
+                    line-height: 48px;
+                    letter-spacing: normal;
+                    text-align: center;
+                    text-decoration: none;
+
+                    /* Background */
+                    background: rgb(28, 188, 255);
+
+                    /* Flexbox */
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 5px;
+
+                    /* Effects */
+                    box-shadow: rgba(0, 44, 122, 0.2) 0px 4px 16px 2px;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        background: none 0% 0% / auto repeat scroll padding-box border-box rgb(17, 173, 239);
+                    }
+
+                    i {
+                        color: rgb(255, 255, 255);
+                        font-size: 20px;
+                        line-height: 20px;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                    }
+                }
+
+                &-sub-text {
+                    margin-top: 10px;
+
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 19.6px;
+                    color: rgb(96, 96, 107);
+                }
+            }
+        }
+
+        &-block-1 {
+            width: 50%;
+            padding: 25px 30px 45px;
+            background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: rgba(0, 44, 122, 0.1) 0px 0px 40px 0px;
+            color: rgb(96, 96, 107);
+            font-size: 14px;
+            line-height: 20px;
+
+            &.mod-with {
+                .data-block-1-item-text {
+                    i {
+                        color: rgb(28, 188, 255);
+                    }
+                }
+            }
+
+            &-title {
+                font-weight: 900;
+                line-height: 33.6px;
+                font-size: 28px;
+                text-align: center;
+                color: rgb(29, 46, 59);
+                letter-spacing: -0.8px;
+                margin-bottom: 20px;
+            }
+
+            &-list {
+                margin-bottom: 0;
+            }
+
+            &-item {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-text {
+                    color: rgb(77, 82, 86);
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 27px;
+
+                    i {
+                        width: auto;
+
+                        margin-right: 8px;
+                        color: rgb(210, 47, 47);
+                        font-size: 18px;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-block-2 {
+                &-tagline {
+                    font-size: 19.125px;
+                    line-height: 26.775px;
+                }
+
+                &-title {
+                    line-height: 27.625px;
+                    font-size: 21.25px;
+                    letter-spacing: normal;
+                }
+            }
+
+            &-title {
+                line-height: 38.675px;
+                font-size: 29.75px;
+                letter-spacing: normal;
+                margin-bottom: 15px;
+            }
+
+            &-subtitle {
+                font-size: 17px;
+                line-height: 25.5px;
+                max-width: 500px;
+                margin: 0 auto;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &-lists {
+                row-gap: 26px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &-block-1 {
+                width: 100%;
+                max-width: 500px;
+                padding-bottom: 40px;
+
+                &-title {
+                    line-height: 25.5px;
+                    font-size: 21.25px;
+                    letter-spacing: normal;
+                }
+
+                &-item {
+                    &-text {
+                        font-size: 14.875px;
+                        line-height: 22.3125px;
+                    }
+                }
+            }
+        }
+    }
+}

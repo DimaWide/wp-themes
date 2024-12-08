@@ -1,0 +1,108 @@
+.sct-10-product {
+    &.mod-generate {
+        width: 1000px;
+        background: #282834;
+        padding: 45px 0 65px;
+        margin: 0;
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        left: -9999px;
+
+        &.mod-dex_paid-no-active {
+            .data-img {
+                img{
+                    scale: 1;
+                }
+                &::after {
+                left: unset;
+                    right: -13px;
+                    width: 128px;
+                    background-size: contain;
+                    background-image: url('../img/generate-mask-3.png');
+
+                    right: -27px;
+                    width: 108px;
+                    background-size: contain;
+                    background-position: -20px 0;
+                }
+            }
+        }
+
+        .data-img {
+            background-color: transparent;
+            mask-image: none;
+            position: relative;
+            overflow: hidden;
+            animation: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 420px;
+                height: 100%;
+                background-image: url('../img/generate-mask-2.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 414px;
+                height: 100%;
+                width: 10px;
+                background: #383749;
+                //  background: #fff;
+                z-index: 2;
+            }
+
+            img {
+                border-radius: 15px;
+                scale: 0.96;
+                mask-image: none;
+                animation: none;
+            }
+        }
+
+
+        .wcl-row {
+            display: flex;
+            align-items: center;
+            max-width: 856px;
+            margin: 0 auto;
+            border-radius: 15px;
+            background: #383749;
+            max-height: 350px;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .wcl-col-1 {
+            width: 100%;
+            max-width: 50%;
+        }
+
+        .wcl-col-2 {
+            width: 100%;
+            max-width: 50%;
+        }
+
+        .data-list-item,
+        .data-link,
+        .cmp-button {
+            color: #fff;
+        }
+
+        .cmp-button span {
+            color: #fff !important;
+            font-size: 15px;
+            z-index: 999;
+            position: relative;
+        }
+    }
+}

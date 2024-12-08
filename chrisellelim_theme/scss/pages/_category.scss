@@ -1,0 +1,192 @@
+// ...
+
+
+.wcl-category {
+    background-color: $c-yellow;
+    padding-bottom: 87px;
+    padding-top: 65px;
+
+    .data {
+        &-container {}
+
+        &-title {
+            font-size: 56px;
+            text-align: center;
+            background-color: $c-yellow;
+            // padding: 50px 0 25px;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            max-width: 33.33%;
+            margin: 0 auto;
+            margin-bottom: -38px;
+            padding-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.mod-less {
+                font-size: 50px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            margin: 0 -11px;
+            overflow: hidden;
+            height: 100%;
+            position: relative;
+
+            &-empty {
+                text-align: center;
+                margin: 100px 0;
+                font-weight: 700;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            &-col {
+                padding: 0 11px;
+                width: 33.33%;
+                position: relative;
+            }
+
+            .col-2 {
+                margin-top: 60px;
+            }
+
+            &-out {
+                position: relative;
+                overflow: hidden;
+                height: 635px;
+                padding: 0 10px;
+                // padding-bottom: 10px;
+
+                // box-sizing: content-box;
+            }
+        }
+
+        &-item {
+            height: 635px;
+
+            &:hover {
+                .data-item-img {
+                    transform: rotate(1.5deg);
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-inner {}
+
+            &-img {
+                height: 523px;
+                margin-bottom: 23px;
+                transition: all 0.25s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-title {
+                font-family: $f-greycliff;
+                font-size: 12px;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                color: $c-dark;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .wcl-load-more {
+        margin-top: 50px;
+        border: none;
+
+        .data {
+            &-btn {
+                padding: 0;
+                padding-bottom: 3px;
+                color: $c-dark-a;
+
+                &::after {
+                    background-color: $c-dark-c;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-bottom: 75px;
+
+        .data {
+            &-list {
+                &-out {
+                    height: 500px;
+                }
+            }
+
+            &-item {
+                height: 500px;
+
+                &-img {
+                    height: 388px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+
+        .data {
+            &-container {
+                padding: 0 27px;
+            }
+
+            &-title {
+                margin-bottom: 35px;
+                max-width: unset;
+                padding-bottom: 0;
+            }
+
+            &-list {
+                flex-wrap: wrap;
+                row-gap: 52px;
+                justify-content: center;
+
+                &-out {
+                    height: auto;
+                    overflow: visible;
+                    padding: 0;
+                }
+
+                &-col {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 52px;
+                    max-width: 400px;
+                }
+
+                .col-2 {
+                    margin-top: 0;
+                }
+            }
+
+            &-item {
+                height: auto;
+
+                &-img {
+                    height: 414px;
+                }
+            }
+        }
+    }
+}

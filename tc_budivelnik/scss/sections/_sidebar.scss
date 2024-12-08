@@ -1,0 +1,66 @@
+.wcl-sidebar {
+    .data {
+        &-cats {
+            border-radius: 5px;
+            background: #FFF;
+            padding: 5px 17px;
+
+            &-list {
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+
+            &-item {
+                color: #272323;
+                font-size: 14px;
+                font-weight: 400;
+                list-style: none;
+
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+
+                a {
+                    padding: 7.5px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    column-gap: 20px;
+
+                    color: #272323;
+                    border-bottom: 1px solid #F6F6F6;
+                    text-decoration: none;
+                    //@include link_hover;
+
+                    &:hover {
+                        //stroke: #80889A;
+                        color: #1060C1;
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(1360%) hue-rotate(184deg) brightness(89%) contrast(88%);
+                        }
+                    }
+
+                    img {
+                        transition: all 0.25s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        .data {
+            &-cats {
+                padding: 6px 20px;
+
+                &-item {
+                    a {
+                        padding: 7.3px 0;
+                    }
+                }
+            }
+        }
+    }
+}

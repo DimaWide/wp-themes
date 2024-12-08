@@ -1,0 +1,36 @@
+//...
+
+
+.page-template-for-companies {
+    .wcl-section-6 {
+        margin-bottom: 120px;
+    }
+}
+
+.page-template-contact {
+    .wcl-section-6 {
+        margin-bottom: 95px;
+    }
+}
+
+@media (max-width: 991px) {
+    .page-template-for-companies {
+        .wcl-section-6 {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .page-template-for-companies {
+        .wcl-section-6 {
+            margin-bottom: 82px;
+        }
+    }
+
+    .page-template-contact {
+        .wcl-section-6 {
+            margin-bottom: 80px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.wcl-404 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 140px;
+
+    .data {
+        &-title {
+            font-size: 90px;
+            line-height: 70px;
+            margin-bottom: 40px;
+        }
+
+        &-subtitle {
+            font-weight: 600;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        &-link {
+            margin-top: 50px;
+        }
+    }
+}
+
+
+.error404  {
+    @media (min-width: 991px) {
+        .wcl-footer {
+            margin-top: 140px;
+        }
+    }
+}

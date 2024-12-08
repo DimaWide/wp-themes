@@ -1,0 +1,271 @@
+// woocommerce-payment-methods
+.woocommerce-account.logged-in {
+    &.woocommerce-payment-methods {
+        .shop_table {
+            width: 100%;
+            margin-bottom: 15px;
+
+            th,
+            td {
+                padding: 9px 12px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            tr {
+                border-bottom: 1px solid #000;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+
+            th {
+                text-align: left;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            td {
+                font-family: $f-lekton;
+                font-size: 16px;
+                line-height: 25px;
+
+                a {
+                    font-family: $f-commuters-sans;
+                    font-size: 13px;
+                    text-decoration: none;
+                    border-bottom: 1px solid $c-black;
+                    text-transform: uppercase;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .shop_table {
+                thead {
+                    display: none;
+                }
+
+                tr {
+                    display: block;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                td {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 0;
+                    text-align: right;
+
+                    &.payment-method-actions {
+                        &::before {
+                            content: "Actions: ";
+                        }
+                    }
+
+                    &::before {
+                        content: attr(data-title) ": ";
+                        font-family: $f-inter;
+                        font-weight: 500;
+                        font-size: 15px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// woocommerce-add-payment-method
+.woocommerce-account.logged-in {
+    &.woocommerce-add-payment-method {
+
+        // woocommerce-checkout-payment
+        .woocommerce-Payment {
+            padding-top: 16px;
+            border-top: 1px solid #000;
+            font-size: 14px;
+
+            ul {
+                padding-left: 0;
+
+                li {
+                    list-style: none;
+                    margin-bottom: 6px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .woocommerce-terms-and-conditions-wrapper {
+                text-align: left;
+            }
+
+            .woocommerce-privacy-policy-text {
+                a {
+                    color: $c-black;
+                }
+            }
+
+            button[type="submit"]:not(.wcl-link) {
+                @include button-submit;
+                margin-top: 20px;
+            }
+
+            .place-order {
+                margin-top: 55px;
+                padding-top: 32px;
+                border-top: 1px solid #000;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .payment_method_stripe {
+                list-style: none;
+            }
+
+            .woocommerce-PaymentMethods {
+                padding-left: 0;
+
+                label {
+                    text-transform: capitalize;
+                    font-size: 16px;
+                }
+            }
+
+            .woocommerce-PaymentMethod>label {
+                margin-bottom: 27px;
+                font-size: 15px;
+            }
+
+            .wc-credit-card-form {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 116px;
+
+                .form-row-wide {
+                    margin-bottom: 55px;
+                    width: 100%;
+                }
+
+                .form-row.form-row-first {
+                    width: calc(50% - 58px);
+                }
+
+                .form-row.form-row-last {
+                    width: calc(50% - 58px);
+                }
+            }
+
+            .payment_box {
+                background-color: $c-black;
+                padding: 55px 45px 53px;
+                color: $c-white;
+                font-size: 16px;
+
+                .wc-stripe-elements-field {
+                    height: 38px;
+                    padding: 10px 9px;
+                }
+
+                #stripe-payment-data {
+                    text-transform: uppercase;
+
+                    >p {
+                        font-family: $f-commuters-sans;
+                        font-size: 15px;
+                        margin-bottom: 39px;
+                    }
+                }
+
+                a {
+                    color: $c-white;
+                }
+            }
+
+
+            @media (max-width: 991px) {
+                .wc-credit-card-form {
+                    column-gap: 60px;
+
+                    .form-row.form-row-first {
+                        width: calc(50% - 30px);
+                    }
+
+                    .form-row.form-row-last {
+                        width: calc(50% - 30px);
+                    }
+
+                    .form-row-wide {
+                        margin-bottom: 70px;
+                    }
+                }
+            }
+
+            @media (max-width: 575px) {
+                margin-top: 44px;
+                padding-top: 42px;
+
+                button[type="submit"] {
+                    margin-top: 33px;
+                }
+
+                .place-order {
+                    margin-top: 43px;
+                    padding-top: 39px;
+                }
+
+                .woocommerce-terms-and-conditions-wrapper {
+                    text-align: center;
+                }
+
+                .payment_box {
+                    padding: 52px 35px 40px;
+
+                    #stripe-payment-data {
+
+                        >p {
+                            margin-left: -3px;
+                            font-size: 16px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+
+                .wc-stripe-elements-field {
+                    height: 31px;
+                    padding: 6px 5px;
+                }
+
+                form.checkout {
+                    .woocommerce-PaymentMethods {
+                        label {
+                            margin-bottom: 9px;
+                        }
+                    }
+
+                    .woocommerce-PaymentMethod>label {
+                        margin-bottom: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

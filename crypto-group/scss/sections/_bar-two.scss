@@ -1,0 +1,37 @@
+.wcl-bar-two {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 12px 8px 14px;
+    background: none 0% 0% / auto repeat scroll padding-box border-box rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    transition: all 0.5s ease;
+    z-index: 100;
+    display: none;
+    transform: translateY(100%);
+
+    &.active{
+        transform: translateY(0);
+    }
+
+    .data {
+        &-button {
+            a {
+                min-height: 53px;
+                padding: 12px 20px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+    }
+}

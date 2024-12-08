@@ -1,0 +1,7 @@
+# Ignore
+node_modules
+advanced-cache.php
+package-lock.json
+
+# But not these files...
+!.gitignore

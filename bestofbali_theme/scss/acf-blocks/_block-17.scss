@@ -1,0 +1,40 @@
+.wcl-acf-block-17 {
+    margin: 80px 0;
+
+    .data {
+        &-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 25px;
+            row-gap: 20px;
+
+            &-item {
+                .wcl-link {
+                    font-size: 16px;
+                }
+
+                &.mod-two {
+                    a {
+                        color: #3685FB;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 130%;
+                        text-decoration-line: underline;
+                        @include link-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-links {
+                flex-direction: column;
+                row-gap: 25px;
+            }
+        }
+    }
+}

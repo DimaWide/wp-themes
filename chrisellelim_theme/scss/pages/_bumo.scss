@@ -1,0 +1,131 @@
+// ...
+
+
+.page-bumo {
+    .wcl-instagram {
+        background-color: $c-beige;
+
+        .data {
+            &-list {
+                &.mod-b {
+                    display: none;
+                }
+            }
+
+            &-item {
+                &-a {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .data {
+                &-item {
+                    &-a {
+                        height: 240px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wcl-section-4.mod-b {
+    .data {
+        &-title {
+            font-family: $f-greycliff;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        &-item {
+            &:nth-child(3n+3) {
+                .data-item {
+                    &-b {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        padding-top: 0;
+                        padding-bottom: 110px;
+                    }
+                }
+            }
+
+            &.mod-right {
+                margin-bottom: -55px;
+
+                .data-item {
+                    &-b {
+                        padding-top: 0;
+                        padding-bottom: 110px;
+                    }
+                }
+            }
+
+            &-title {
+                margin-bottom: 25px;
+            }
+
+            &-desc {
+                p {
+                    line-height: 21px;
+                }
+            }
+
+            &-cat {
+                margin-bottom: 0;
+                margin-top: 24px;
+            }
+
+            &-b {
+                padding-top: 124px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        background-color: $c-white;
+        padding-top: 64px;
+        padding-bottom: 90px;
+
+        .data {
+            &-item {
+                margin-bottom: 90px;
+
+                &.mod-right {
+                    margin-bottom: 90px;
+
+                    .data-item {
+                        &-b {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+
+                &:nth-child(3n+3) {
+                    .data-item {
+                        &-b {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-b {
+                    padding-top: 0;
+                }
+
+                &-title {
+                    font-size: 46px;
+                }
+            }
+        }
+    }
+}

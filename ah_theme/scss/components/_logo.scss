@@ -1,0 +1,28 @@
+.wcl-logo {
+    img {
+        max-height: 30px;
+    }
+
+    .m2 {
+        &-item {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .m2 {
+            &-item {
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+

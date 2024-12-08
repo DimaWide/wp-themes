@@ -1,0 +1,191 @@
+.wcl-newsletter {
+    margin-bottom: -138px;
+    position: relative;
+    z-index: 1;
+    color: $c-white;
+
+    .data {
+        &-row {
+            display: flex;
+        }
+
+        &-col {
+            &:first-child {
+                width: 59%;
+                max-width: 770px;
+            }
+        }
+
+        &-form {
+            margin: 0 auto;
+            margin-top: 49px;
+        }
+
+        &-inner {
+            border-radius: 15px;
+            background: #2A62B7;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+            padding: 56px 0 68px;
+
+            position: relative;
+            text-align: center;
+        }
+
+        &-title {
+            color: $c-white;
+            font-family: $f-outfit;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 110%;
+            margin-bottom: 26px;
+        }
+
+        &-subtitle {
+            color: $c-white;
+            font-size: 16px;
+            line-height: 150%;
+            font-weight: 500;
+            max-width: 408px;
+            margin: 0 auto;
+        }
+
+        &-img {
+            position: absolute;
+            right: 0;
+            top: -83px;
+            z-index: 1;
+            max-width: calc(100% - 59%);
+            display: flex;
+            align-items: center;
+            width: 526px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        &-form {
+            width: 100%;
+            min-width: 200px;
+            max-width: 235px;
+            position: relative;
+
+            input {
+                color: #033279;
+                font-family: $f-now-alt;
+                line-height: 130%;
+                font-weight: 700;
+
+                width: 100%;
+                height: 46px;
+                padding: 5px 12px;
+                border: 1.5px solid #FFF;
+                background-color: $c-white;
+                outline: none;
+
+                &::placeholder {
+                    color: #033279;
+                }
+            }
+
+            button {
+                font-family: $f-now-alt;
+                color: $c-white;
+                margin-top: 15px;
+                background-color: transparent;
+                background-image: url('../img/newsletter_bg_link.svg');
+                background-size: 100%;
+                border: none;
+                width: 100%;
+                height: 46px;
+                font-weight: 700;
+            }
+
+            &-note {
+                font-size: 13px;
+                margin-top: 15px;
+                line-height: 130%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-inner {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 30px;
+                justify-content: center;
+            }
+
+            &-col {
+                &:first-child {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+
+            &-img {
+                max-width: 400px;
+                margin: 0 auto;
+                position: static;
+                width: auto;
+
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-img {
+                max-width: 360px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: -366px;
+
+        .data {
+            &-inner {
+                padding: 40px 30px;
+                max-width: unset;
+                margin: 0 auto;
+            }
+
+            &-row {
+                row-gap: 40px;
+            }
+
+            &-title {
+                font-size: 32px;
+                margin-bottom: 10px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &-subtitle {
+                font-size: 14px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

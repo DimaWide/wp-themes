@@ -1,0 +1,117 @@
+
+.sct-decoration {
+    padding-top: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .data {
+        &-container {
+            position: relative;
+        }
+
+        &-circles {
+            position: relative;
+
+            &.mod-1 {
+                .data-circles-item {
+                    &:nth-child(1) {
+                        background-color: #D3FFF0;
+                        opacity: 0.08;
+                        top: 110px;
+                        left: 0;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #F5FDD3;
+                        opacity: 0.08;
+                        top: 186px;
+                        left: 0;
+                        margin-left: -168px;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #FED1EC;
+                        opacity: 0.05;
+                        top: 317px;
+                        transform: translateX(-100%);
+                        left: 0;
+                        margin-left: -55px;
+                    }
+                }
+            }
+
+            &.mod-2 {
+                .data-circles-item {
+                    &:nth-child(1) {
+                        background-color: #F5FDD3;
+                        opacity: 0.05;
+                        top: 287px;
+                        right: 50px;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #D3FFF0;
+                        opacity: 0.05;
+                        top: 211px;
+                        right: -170px;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #FECFB9;
+                        opacity: 0.05;
+                        top: 343px;
+                        right: -300px;
+                    }
+                }
+            }
+
+            &-item {
+                position: absolute;
+                width: 283px;
+                height: 283px;
+                border-radius: 283px;
+                opacity: 0.15;
+                background: #F5FDD3;
+                filter: blur(50px);
+                z-index: -1;
+            }
+        }
+
+        &-b1-item {
+            position: absolute;
+            z-index: -1;
+
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-circles {
+                display: none;
+            }
+
+            &-b1-item {
+                max-width: 40vw;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-b1-item {
+                max-width: 230px;
+            }
+        }
+    }
+}

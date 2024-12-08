@@ -1,0 +1,378 @@
+.single-post {
+    .wcl-section-6 {
+        &.mod-two {
+            @media (max-width: 767px) {
+                display: block;
+                margin-top: 112px;
+                margin-bottom: 92px;
+
+                &-col {
+                    &:nth-child(2) {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .mc4wp-form-fields {
+                    button[type=submit] {
+                        background-color: $c-white !important;
+                        color: $c-black !important;
+
+                        &::after {
+                            filter: none !important;
+                        }
+                    }
+                }
+            }
+
+
+            @media (max-width: 575px) {
+                .mc4wp-form-fields {
+                    input {
+                        max-width: 256px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wcl-section-6 {
+    margin-top: 112px;
+    margin-bottom: 109px;
+
+    p {
+        margin: 0 !important;
+    }
+
+    &.mod-two {
+        margin-bottom: 120px;
+
+        .data {
+            &-row {
+                align-items: flex-end;
+            }
+        }
+
+        .mc4wp {
+            &-form {
+                &-fields {
+                    align-items: flex-end;
+
+                    button[type="submit"] {
+                        color: $c-white;
+                        background-color: $c-black;
+
+                        &:hover {
+                            color: $c-black;
+                            background-color: transparent;
+
+                            &::after {
+                                filter: brightness(0) invert(0);
+                            }
+                        }
+
+                        &::after {
+                            filter: brightness(1) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .data {
+            &-inner {
+                border: none;
+                border-radius: none;
+                background-color: transparent;
+                padding: 0;
+            }
+
+            &-col {
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 4.9%;
+                    width: 32.9%;
+                }
+            }
+        }
+
+
+        @media (max-width: 991px) {
+            .data {
+                &-col {
+                    &:nth-child(2) {
+                        width: 100%;
+                        margin-left: 0;
+                    }
+                }
+
+                &-title {
+                    text-align: center;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+    }
+
+    .data {
+        &-inner {
+            border: 1px solid #000000;
+            background-color: #FF927E;
+            border-radius: 10px;
+            padding: 42px 30px 41px 30px;
+
+            &-b {
+                max-width: 936px;
+                margin: 0 auto;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin: 0 -10px;
+            align-items: center;
+        }
+
+        &-col {
+            padding: 0 10px;
+
+            &:nth-child(1) {
+                width: 11%;
+            }
+
+            &:nth-child(2) {
+                width: 32%;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                max-width: 549px;
+            }
+        }
+
+        &-logo {
+            img {
+                width: 50px;
+            }
+        }
+
+        &-title {
+            font-family: $f-lekton;
+            font-size: 25px;
+            line-height: 40px;
+            font-weight: 400;
+        }
+    }
+
+    .mc4wp {
+        &-alert {
+            font-family: $f-lekton;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            margin-top: 11px;
+        }
+
+        &-success {
+            max-width: 360px;
+        }
+
+        &-form {
+            &-fields {
+                display: flex;
+                column-gap: 45px;
+
+                p {
+                    margin-bottom: 0;
+
+                    &:nth-child(1) {
+                        width: 100%;
+                        max-width: 345px;
+                    }
+                }
+
+                input {
+                    border: none;
+                    font-family: $f-inter;
+                    color: $c-black;
+                    font-size: 19px;
+                    border-bottom: 1px solid #000;
+                    width: 100%;
+                    padding-bottom: 7px;
+                    background-color: transparent;
+
+                    &:focus {
+                        &::placeholder {
+                            opacity: 0;
+                        }
+                    }
+
+                    &::placeholder {
+                        color: $c-black;
+                        text-transform: uppercase;
+                        font-family: $f-nineties;
+                        transition: all 0.2s ease;
+                    }
+                }
+
+                button[type="submit"] {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 10px;
+                    height: 33px;
+                    padding: 2px 18px;
+                    background-color: $c-white-2;
+                    border: 0.5px solid $c-black;
+                    border-radius: 28px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $c-black;
+                    text-decoration: none;
+                    min-width: 139px;
+                    transition: all 0.25s ease;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $c-black;
+                        color: $c-white;
+
+                        &::after {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 18px;
+                        top: 11.8px;
+                        background-image: url('../img/link_arrow.svg');
+                        background-size: cover;
+                        background-position: center;
+                        width: 16px;
+                        height: 8px;
+                        transition: all 0.25s ease;
+                    }
+
+                    span {
+                        display: none;
+
+                        &:nth-child(1) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1060px) {
+        .mc4wp {
+            &-form {
+                &-fields {
+                    column-gap: 32px;
+                }
+            }
+        }
+
+        .data {
+            &-col {
+                &:nth-child(1) {
+                    margin-right: 11px;
+                }
+
+                &:nth-child(2) {
+                    min-width: 270px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &-col {
+                margin-bottom: 40px;
+
+                &:nth-child(1) {
+                    width: auto;
+                }
+
+                &:nth-child(2) {
+                    width: auto;
+                    min-width: unset;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        text-align: center;
+        margin-top: 85px;
+        margin-bottom: 95px;
+
+        .mc4wp {
+            &-form {
+                &-fields {
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    input {
+                        text-align: center;
+                        max-width: 256px;
+                        margin: 0 auto;
+                        margin-bottom: 28px;
+                    }
+                }
+            }
+        }
+
+        .data {
+            &-col {
+                margin-bottom: 32px;
+
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    margin-bottom: 18px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-inner {
+                padding: 54px 30px;
+            }
+
+            &-logo {
+                position: relative;
+                left: 4px;
+            }
+        }
+    }
+}

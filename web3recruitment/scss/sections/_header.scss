@@ -1,0 +1,271 @@
+//...
+
+
+.wcl-header {
+    margin: 30px 0;
+    color: $c-white;
+
+    .data {
+        &-container {}
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 40px;
+        }
+
+        &-col {
+            &:last-child {
+                display: flex;
+                align-items: center;
+                column-gap: 50px;
+            }
+        }
+
+        &-logo {
+            max-width: 300px;
+        }
+
+        &-btn {
+            a {
+                width: 157px;
+                height: 111px;
+                background: rgba($c-white, 0.15);
+                border-radius: 3px;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+
+        &-nav {
+            .data-logo {
+                display: none;
+            }
+
+            &-menu {
+                padding-left: 0;
+                margin-bottom: 0;
+                display: flex;
+
+                li {
+                    list-style: none;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 120%;
+                    margin-right: 29px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        padding-right: 27px;
+                        display: inline-block;
+                        position: relative;
+
+                        img {
+                            margin-left: 13px;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            margin-top: -6px;
+                            width: 12px;
+                            height: 12px;
+                            background-image: url('../img/footer-arrow.svg');
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-menu-btn {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: 100%;
+            display: none;
+            align-items: center;
+            z-index: 1;
+
+            &.mod-to-close {
+                position: absolute;
+                left: unset;
+                height: auto;
+                right: 24px;
+                top: 63px;
+            }
+
+            &-ico {
+                display: flex;
+                height: 16px;
+                width: 19px;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.active {
+                    transform: rotate(360deg);
+
+                    .bar-top {
+                        transform: rotate(45deg);
+                    }
+
+                    .bar-middle {
+                        opacity: 0;
+                    }
+
+                    .bar-bottom {
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                .bar {
+                    height: 2.3px;
+                    width: 100%;
+                    background: $c-white;
+                    transform-origin: left;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1199px) {
+        .data {
+            &-logo {
+                max-width: 240px;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-nav {
+                &-menu {
+                    li {
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            &-btn {
+                a {
+                    height: 91px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-menu-btn {
+                display: flex;
+            }
+
+            &-btn {
+                a {
+                    height: 80px;
+                }
+            }
+
+            &-nav {
+                display: none;
+                position: fixed;
+                min-height: 180px;
+                left: 0;
+                top: 0;
+                background: $c-black;
+                border-radius: 0px 10px 10px 10px;
+                padding: 40px 20px 38px 46px;
+                width: calc(100% - 243px);
+                z-index: 5;
+
+                &.active {
+                    display: block;
+                }
+
+                .data-logo {
+                    display: block;
+                    margin-bottom: 25px;
+                }
+
+                &-menu {
+                    display: block;
+
+                    li {
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                        font-size: 16px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 23px 0;
+
+        .data {
+            &-container {
+                padding: 0 16px;
+            }
+
+            &-col {
+                &:last-child {
+                    column-gap: 20px;
+                }
+            }
+
+            &-logo {
+                max-width: 142px;
+            }
+
+            &-btn {
+                a {
+                    width: 97px;
+                    height: 52px;
+                    font-size: 13px;
+                    padding: 5px;
+                }
+            }
+
+            &-nav {
+                padding: 34px 20px 28px 16px;
+                width: calc(100% - 113px);
+
+                &-menu {
+                    li {
+                        font-size: 14px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            &-menu-btn {
+                &.mod-to-close {
+                    right: 18px;
+                    top: 41px;
+                }
+            }
+        }
+    }
+}

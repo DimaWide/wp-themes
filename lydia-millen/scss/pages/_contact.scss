@@ -1,0 +1,264 @@
+.wcl-contact {
+    margin-top: 76px;
+    text-align: center;
+    margin-bottom: 153px;
+
+    .data {
+        &-container {
+            max-width: 940px;
+        }
+
+        &-title {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 5.4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &-name {
+            font-family: $f-pinyon-script;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 59px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            margin-bottom: 67px;
+        }
+
+        &-logo {
+            max-width: 75px;
+            margin: 0 auto;
+            margin-bottom: 51px;
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            line-height: 26px;
+            font-style: italic;
+            letter-spacing: 1.6px;
+            max-width: 412px;
+            margin: 0 auto;
+            margin-bottom: 74px;
+        }
+
+        &-form {
+            text-align: left;
+            position: relative;
+            left: 6px;
+
+            .wpcf7 {
+                &-spinner {
+                    display: none;
+                }
+
+                &-response-output {
+                    font-size: 12px;
+                    border: none;
+                    margin-top: 25px;
+                    padding: 0;
+                    margin-right: 0;
+                    text-align: center;
+                }
+
+                &-not-valid-tip {
+                    margin: 10px 16px;
+                    font-size: 12px;
+                }
+
+                p {
+                    position: relative;
+                    margin-bottom: 18px;
+
+                    br {
+                        display: none;
+                    }
+
+                    &.focus {
+                        label {
+                            opacity: 0;
+                        }
+                    }
+
+                    label {
+                        position: absolute;
+                        top: 13px;
+                        left: 17px;
+                        font-family: $f-adobe-caslon;
+                        color: $c-black;
+                        letter-spacing: 1.4px;
+                        font-style: italic;
+                        cursor: text;
+                        opacity: 1;
+                        transition: all 0.25s ease;
+                        pointer-events: none;
+
+                        &[for="your-message"] {
+                            top: 28px;
+                        }
+                    }
+                }
+
+                &-wcl-group {
+                    display: flex;
+                    column-gap: 11px;
+
+                    >p {
+                        width: 50%;
+                    }
+                }
+
+                &-wcl-submit {
+                    margin-top: 44px;
+                    text-align: center;
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px $c-beige inset !important;
+                }
+
+                input:not([type="submit"]),
+                select,
+                textarea {
+                    font-family: $f-adobe-caslon;
+                    display: block;
+                    width: 100%;
+                    color: $c-black;
+                    font-style: italic;
+                    letter-spacing: 1.4px;
+                    height: 38px;
+                    padding: 0 16px;
+                    border: 1px solid $c-black;
+                    background-color: transparent;
+                    padding-top: 5px;
+
+                    &::placeholder {
+                        display: none;
+                        opacity: 0;
+                        color: $c-black;
+                        transition: all 0.25s ease;
+                    }
+
+                    &:focus {
+                        &::placeholder {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                select {
+                    appearance: none;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-position: right 14px center;
+                    background-image: url('../img/contact-arrow.svg');
+                }
+
+                textarea {
+                    height: 331px;
+                    min-height: 36px;
+                    padding-top: 24px;
+                    resize: none;
+                }
+
+                button[type="submit"] {
+                    font-family: $f-adobe-caslon;
+                    font-size: 15px;
+                    color: $c-black;
+                    border: none;
+                    background-color: transparent;
+                    display: inline-block;
+                    padding: 0 10px;
+                    padding-bottom: 5px;
+                    line-height: 21px;
+                    position: relative;
+                    transition: all 0.25s ease;
+
+                    &:hover {
+                        color: $c-gray;
+
+                        &::after {
+                            width: 0;
+                        }
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $c-black;
+                        transition: all 0.25s cubic-bezier(0.32, 0.41, 0.21, 0.82);
+                    }
+
+                    &::before {
+                        background-color: $c-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 37px;
+        margin-bottom: 99px;
+
+        .data {
+            &-name {
+                margin-bottom: 52px;
+            }
+
+            &-subtitle {
+                max-width: 280px;
+                margin: 0 auto;
+                margin-bottom: 78px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-form {
+                left: 0;
+                max-width: 281px;
+                margin: 0 auto;
+
+                .wpcf7 {
+                    &-wcl-group {
+                        flex-wrap: wrap;
+
+                        >p {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        label {
+                            &[for="your-message"] {
+                                top: 13px;
+                            }
+                        }
+                    }
+
+                    textarea {
+                        padding-top: 9px;
+                    }
+
+                    &-wcl-submit {
+                        margin-top: 30px;
+                    }
+
+                    textarea {
+                        height: 140px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// ...
+
+.single-post {
+    background-color: $c-white-a;
+
+    .wcl-container {
+        max-width: 984px;
+    }
+
+    p {
+        line-height: 21px;
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            .wcl-container {
+                padding: 0 27px;
+            }
+        }
+    }
+}
+

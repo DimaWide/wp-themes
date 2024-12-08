@@ -1,0 +1,345 @@
+.wcl-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .data {
+        &-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $c-black;
+            border: 1px solid $c-gray;
+            opacity: 0.19;
+        }
+
+        &-close {
+            position: absolute;
+            top: 21px;
+            right: 20px;
+            cursor: pointer;
+            line-height: 1;
+
+            img {
+                width: 15px;
+            }
+        }
+
+        &-inner {
+            position: relative;
+            padding: 55px 75px;
+            width: 100%;
+            max-width: 600px;
+            background-color: $c-white-2;
+            border: 1px solid $c-black;
+
+            &-out {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                padding: 60px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+
+    @media (max-width: 575px) {
+        .data {
+            &-inner {
+                &-out {
+                    align-items: flex-end;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-height: 500px) {
+        .data {
+            &-inner {
+                &-out {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+}
+
+.wcl-popup {
+    &.mod-type-1 {
+        .data {
+            &-title {
+                font-family: $f-nineties;
+                font-size: 40px;
+                line-height: 46px;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: 21px;
+            }
+
+            &-subtitle {
+                font-size: 17px;
+                line-height: 25px;
+                margin-bottom: 21px;
+            }
+
+            &-links {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 17px;
+                row-gap: 12px;
+            }
+
+            &-link {
+                a {
+                    margin-top: 20px;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .data {
+                &-inner {
+                    padding: 91px 27px
+                }
+
+                &-subtitle {
+                    max-width: 330px;
+                }
+            }
+        }
+    }
+}
+
+.wcl-popup {
+    &.wcl-popup-type-1 {
+        @media (max-width: 575px) {
+            .data {
+                &-inner {
+                    border-left: none;
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    &.wcl-popup-type-2 {
+        .data {
+            &-inner {
+                background-image: url('../img/popup_t2_bg.png');
+                background-size: cover;
+                background-position: center;
+            }
+
+            &-subtitle {
+                margin-bottom: 31px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .data {
+                &-inner {
+                    padding: 81px 27px;
+                    border-left: none;
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+.wcl-popup.wcl-popup-type-2 {
+    &.js-mod-2 {
+        .data {
+            &-inner {
+                &-out {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    padding: 18px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .data {
+                &-inner {
+                    &-out {
+                        align-items: flex-end;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        @media (max-height: 400px) {
+            .data {
+                &-inner {
+                    &-out {
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wcl-popup {
+    &.wcl-popup-type-3 {
+        .data {
+            &-inner {
+                padding: 88px 77px;
+                background-color: $c-white;
+            }
+
+            &-text {
+                font-family: $f-lekton;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+
+        .mc4wp {
+            &-alert {
+                font-family: $f-lekton;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                margin: 0 auto;
+                margin-top: 18px;
+                text-align: center;
+            }
+
+            &-success {
+                max-width: 360px;
+            }
+
+            &-form {
+                &-fields {
+                    p {
+                        margin-bottom: 36px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                            text-align: center;
+                        }
+                    }
+
+                    input {
+                        border: none;
+                        font-family: $f-inter;
+                        color: $c-black;
+                        font-size: 24px;
+                        border-bottom: 1px solid #000;
+                        width: 100%;
+                        padding: 0 10px;
+                        padding-bottom: 13px;
+                        text-align: center;
+                        background-color: transparent;
+
+                        &::placeholder {
+                            font-size: 28px;
+                            color: $c-black;
+                            text-transform: uppercase;
+                            font-family: $f-nineties;
+                        }
+                    }
+
+                    button[type="submit"] {
+                        font-family: $f-commuters-sans;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: $c-black;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        position: relative;
+                        border: none;
+                        background-color: transparent;
+                        padding: 0 5px;
+                        padding-bottom: 3px;
+
+                        span {
+                            display: none;
+
+                            &:nth-child(2) {
+                                display: inline-block;
+                            }
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 0;
+                            }
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $c-black;
+                            transition: all 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .mc4wp {
+                &-form {
+                    &-fields {
+                        input {
+                            font-size: 20px;
+                            padding-bottom: 10px;
+
+                            &::placeholder {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .data {
+                &-inner {
+                    padding: 124px 27px;
+                    max-width: calc(100% - 52px);
+                }
+
+                &-text {
+                    max-width: 240px;
+                    margin: 0 auto;
+                    margin-bottom: 35px;
+                }
+
+                &-form {
+                    max-width: 240px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

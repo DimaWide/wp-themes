@@ -1,0 +1,100 @@
+// ...
+
+
+.wcl-section-31 {
+    background-color: $c-white-a;
+    padding-top: 108px;
+    padding-bottom: 120px;
+
+    .data {
+        &-title {
+            font-family: $f-greycliff;
+            font-weight: bold;
+            font-size: 30px;
+            color: $c-olive-a;
+            text-transform: uppercase;
+            max-width: 885px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+
+            p {
+                line-height: 40px;
+                margin-bottom: 0;
+
+                &:nth-child(4n+2) {
+                    margin-left: 135px;
+                }
+
+                &:nth-child(4n+3) {
+                    margin-right: 50px;
+                    text-align: right;
+                }
+            }
+
+            strong {
+                color: transparent;
+                -webkit-text-stroke: 1px $c-olive-a;
+            }
+        }
+
+        &-subtitle {
+            font-weight: 500;
+            font-size: 15px;
+            color: $c-olive;
+            max-width: 570px;
+            margin: 0 auto;
+
+            a {
+                font-weight: 500;
+            }
+
+            p {
+                line-height: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-title {
+                p {
+                    &:nth-child(4n+2) {
+                        margin-left: 0;
+                        text-align: right;
+                    }
+
+                    &:nth-child(4n+3) {
+                        margin-right: 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 71px;
+        padding-bottom: 76px;
+
+        .data {
+            &-title {
+                max-width: 490px;
+                margin-bottom: 40px;
+
+                p {
+                    &:nth-child(4n+3) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-container {
+                max-width: 360px;
+            }
+        }
+    }
+}

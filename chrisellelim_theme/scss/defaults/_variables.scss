@@ -1,0 +1,565 @@
+// ...
+// d6
+
+$c-white: #fff;
+$c-white-a: #fefbf6;
+$c-white-b: #fefbf7;
+$c-white-c: #f4f0e7;
+$c-white-d: #fbf9e1;
+$c-white-e: #fbf9e3;
+$c-dark: #000;
+$c-dark-a: #3f393a;
+$c-dark-b: #434828;
+$c-dark-c: #3e393a;
+$c-dark-d: #44472c;
+
+$c-olive: #a99d8a;
+$c-olive-a: #a79d8c;
+$c-olive-c: #b0a99a;
+$c-olive-d: #bfb8a5;
+$c-beige: #f5f0e6;
+$c-beige-a: #F3E8E2;
+$c-beige-b: #f5f0e5;
+$c-red: #ba5a51;
+$c-red-a: #ce867c;
+$c-grey: #585152;
+$c-grey-a: #8b8586;
+$c-blue: #E3ECEF;
+$c-blue-a: #9dbbbe;
+$c-yellow: #f4f4cd;
+
+$c-magenta: #ba5a51;
+
+$f-greycliff: 'greycliff', sans-serif;
+$f-elgoc: 'elgoc', sans-serif;
+
+
+@function get-vw($target) {
+    $vw-context: (1920 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+}
+
+@mixin link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $c-dark-a;
+        width: 100%;
+        height: 1px;
+    }
+}
+
+@font-face {
+    font-family: 'greycliff';
+    src: url('../fonts/greycliffcf-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'greycliff';
+    src: url('../fonts/greycliffcf-medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'greycliff';
+    src: url('../fonts/greycliffcf-demibold-webfont.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'greycliff';
+    src: url('../fonts/greycliffcf-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'elgoc';
+//     src: url('../fonts/elgocalt-medium-webfont.woff2') format('woff2');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'elgoc';
+    src: url('../fonts/elgocalt-medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+// new
+
+$black: #000;
+
+
+// Colours
+// -------------------------
+
+$white: #fff;
+
+//$lightest_grey: #f8f8f8;
+//$light_grey: #f1f1f1;
+$grey: #8E8E8E;
+$dark-grey: #2a2a2a;
+//$darkest_grey: #62686d;
+
+$black: #000;
+$brand: #F8F4EE;
+$dark-brand: #ece2d6;
+$dark-brand: $c-yellow;
+
+
+
+$link: $grey;
+$text: $black;
+$strong: darken($text, 10%);
+
+//$brand: #000;
+
+
+// Type
+// -------------------------
+
+
+
+$serif: 'adobe-garamond-pro', serif;
+$sans-serif: 'Calibre', helvetica;
+$display: 'Begum-Regular', serif;
+
+$light: 300;
+$book: 400;
+$medium: 500; 
+$semi: 600;
+$heavy: 700;
+$extra: 800;
+$em-base: 16px;
+
+
+
+
+$serif: 'adobe-garamond-pro', serif;
+$sans-serif: 'Calibre', helvetica;
+$display: 'Begum-Regular', serif;
+
+
+
+
+//
+//Center Alignment
+//
+
+@mixin alignment($pos:relative, $direction:vertical) {
+
+    @if $direction == vertical {
+      position: $pos;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+    @if $direction == horizontal {
+      position: $pos;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    @if $direction == center{
+      position: $pos;
+      left: 50%; 
+      top: 50%;
+      @include transform(translateY(-50%) translateX(-50%));
+    }
+    @if $direction == reset{
+      position: $pos;
+      left: auto; top: auto;
+      @include transform(translateY(auto) translateX(auto));
+    }
+     
+  }  
+  
+  
+  
+  
+  //   
+  //List Reset
+  //
+  
+  @mixin listreset { 
+    padding: 0;
+    margin: 0;
+    list-style: none outside;
+  
+    //li { padding: 0;}
+  }
+  
+  
+  //
+  //Border Test
+  //
+  
+  @mixin test {
+    $rand: random(365); 
+    border: 1px solid;
+    border-color: hsla($rand, 90, 50, 1);
+    background-color: hsla($rand, 90, 50, .05);
+  
+  }
+  
+  
+  
+  //
+  //Grid Precursor
+  //
+  
+  @mixin justifyed {
+    vertical-align: top;
+    text-align: justify;
+    font-size: 0;
+  
+    &::after { 
+      content: ''; 
+      display: inline-block; 
+      width: 100%; 
+      height: 0; 
+      font-size: 0; 
+      line-height: 0; 
+      letter-spacing: 0; 
+    } 
+  
+  }
+  
+  
+  //
+  //Link Color Mixin
+  //
+  
+  @mixin linkcolor($value, $direction: darken, $hover: false) {
+    @include transition (all .2s ease-in-out);
+    @if $hover == false {
+      @if $direction == darken {
+        color: $value;
+  
+        &:hover { 
+          color: darken($value, 20%); 
+        }
+  
+        &:active { 
+          color: darken($value, 25%); 
+        }  
+  
+        &:visited { 
+          color: darken($value, 5%); 
+        }  
+  
+      }
+      @if $direction == lighten {
+        color: $value;
+        
+        &:hover { 
+          color: lighten($value, 20%); 
+        }
+        
+        &:active { 
+          color: lighten($value, 25%); 
+        } 
+  
+        &:visited { 
+          color: lighten($value, 5%); 
+        }    
+  
+      }
+  
+    } @else {
+      color: $value;
+  
+      &:hover { 
+        color: $hover; 
+      }
+  
+      &:active { 
+        color: darken($hover, 25%); 
+      }  
+  
+    }
+  
+  }
+  
+  //
+  //Placeholder Text Mixin
+  //
+  
+  @mixin placecolor($value) {
+    $placeholders: ':-webkit-input' ':-moz' '-moz' '-ms-input';
+    @each $placeholder in $placeholders {
+      &:#{$placeholder}-placeholder {
+        color: $value;     
+        opacity: 1; 
+        height: inherit; 
+        vertical-align: middle; 
+      }
+    }
+  }
+  
+  //
+  //Breakpoint Mixin
+  //
+  
+  $full-widthl: 1600px;
+  $large-desktopl: 1400px;
+  $desktopl: 1200px;
+  $tabletl: 1050px;
+  $tablet-portraitl: 900px;
+  $sub-tabletl: 660px;
+  $mobilel: 500px;
+  
+  
+  @mixin breakpoint($min: 0, $max: 0) {
+    $point: type-of($min);
+   
+    @if $point == string {
+    
+      @if $min == full-width-max {
+        @media (max-width: $full-widthl) { @content; }
+      }  
+      
+      @if $min == full-width-min {
+        @media (min-width: $full-widthl) { @content; }
+      }  
+       
+      @else if $min == large-desktop {
+        @media (min-width: $-largedesktopl - 1) and (max-width:  $desktopl - 1) { @content; }
+      }
+      @else if $min == large-desktop-max {
+        @media (max-width: $large-desktopl) { @content; }
+      }
+      @else if $min == large-desktop-min {
+        @media (min-width: $large-desktopl) { @content; }
+      }
+  
+      @else if $min == desktop{
+        @media (min-width: $desktopl - 1) and (max-width:  $tabletl - 1) { @content; }
+      }
+      
+      @else if $min == desktop-max{
+        @media (max-width: 1200px)  { @content; }
+      }
+      @else if $min == desktop-min{
+        @media (min-width: 1200px)  { @content; }
+      }
+       
+      @else if $min == tablet {
+        @media (min-width: $tabletl - 1) and (max-width:  $desktopl - 1) { @content; }
+      }
+      @else if $min == tablet-max {
+        @media (max-width: $tabletl)  { @content; }
+      }
+      @else if $min == tablet-min {
+        @media (min-width: $tabletl)  { @content; }
+      }
+  
+      @else if $min == tablet-portrait{
+        @media (min-width: $tablet-portrait - 1) and (max-width:  $tabletl - 1) { @content; }
+      }
+      @else if $min == tablet-portrait-max{
+        @media (max-width: $tablet-portraitl)  { @content; }
+      }
+      @else if $min == tablet-portrait-min{
+        @media (min-width: $tablet-portraitl)  { @content; }
+      }
+  
+       
+      @else if $min == sub-tablet {
+        @media (min-width: $sub-tabletl - 1) and (max-width:  $tablet-portrait - 1)  { @content; }
+      }
+      @else if $min == sub-tablet-max {
+        @media (max-width: $sub-tabletl)  { @content; }
+      }
+      @else if $min == sub-tablet-min {
+        @media (min-width: $sub-tabletl)  { @content; }
+      }
+  
+      @else if $min == mobile {
+        @media (min-width: $mobilel - 1) and (max-width:  $sub-tabletl - 1)  { @content; }
+      }
+      @else if $min == mobile-max {
+        @media (max-width: $mobilel)  { @content; }
+      }
+      @else if $min == mobile-min {
+        @media (min-width: $mobilel)  { @content; }
+      }
+  
+    } @else if $point == number {
+      $query: 'all' !default;
+      @if $min != 0 and $max != 0 { 
+        $query: '(min-width: #{$min}) and (max-width: #{$max})'; 
+      }
+      @else if $min != 0 and $max == 0 { 
+        $query: '(min-width: #{$min})'; 
+      }
+      @else if $min == 0 and $max != 0 { 
+        $query: '(max-width: #{$max})'; 
+      }
+      @media #{$query} { 
+        @content;
+      }
+    }
+  }
+  
+
+
+
+
+
+  /// new
+  
+
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
+
+@mixin transition($properties...) {
+  // Fix for vendor-prefix transform property
+  $needs-prefixes: false;
+  $webkit: ();
+  $moz: ();
+  $spec: ();
+
+  // Create lists for vendor-prefixed transform
+  @each $list in $properties {
+    @if nth($list, 1) == "transform" {
+      $needs-prefixes: true;
+      $list1: -webkit-transform;
+      $list2: -moz-transform;
+      $list3: ();
+
+      @each $var in $list {
+        $list3: join($list3, $var);
+
+        @if $var != "transform" {
+          $list1: join($list1, $var);
+          $list2: join($list2, $var);
+        }
+      }
+
+      $webkit: append($webkit, $list1);
+      $moz:    append($moz,    $list2);
+      $spec:   append($spec,   $list3);
+    } @else {
+      $webkit: append($webkit, $list, comma);
+      $moz:    append($moz,    $list, comma);
+      $spec:   append($spec,   $list, comma);
+    }
+  }
+
+  @if $needs-prefixes {
+    -webkit-transition: $webkit;
+       -moz-transition: $moz;
+            transition: $spec;
+  } @else {
+    @if length($properties) >= 1 {
+      @include prefixer(transition, $properties, webkit moz spec);
+    } @else {
+      $properties: all 0.15s ease-out 0s;
+      @include prefixer(transition, $properties, webkit moz spec);
+    }
+  }
+}
+
+@mixin transition-property($properties...) {
+  -webkit-transition-property: transition-property-names($properties, "webkit");
+     -moz-transition-property: transition-property-names($properties, "moz");
+          transition-property: transition-property-names($properties, false);
+}
+
+@mixin transition-duration($times...) {
+  @include prefixer(transition-duration, $times, webkit moz spec);
+}
+
+@mixin transition-timing-function($motions...) {
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  @include prefixer(transition-timing-function, $motions, webkit moz spec);
+}
+
+@mixin transition-delay($times...) {
+  @include prefixer(transition-delay, $times, webkit moz spec);
+}
+
+
+
+/// new
+
+/// A mixin for generating vendor prefixes on non-standardized properties.
+///
+/// @param {String} $property
+///   Property to prefix
+///
+/// @param {*} $value
+///   Value to use
+///
+/// @param {List} $prefixes
+///   Prefixes to define
+///
+/// @example scss - Usage
+///   .element {
+///     @include prefixer(border-radius, 10px, webkit ms spec);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     -webkit-border-radius: 10px;
+///     -moz-border-radius: 10px;
+///     border-radius: 10px;
+///   }
+///
+/// @require {variable} $prefix-for-webkit
+/// @require {variable} $prefix-for-mozilla
+/// @require {variable} $prefix-for-microsoft
+/// @require {variable} $prefix-for-opera
+/// @require {variable} $prefix-for-spec
+
+@mixin prefixer($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      @if $prefix-for-webkit {
+        -webkit-#{$property}: $value;
+      }
+    } @else if $prefix == moz {
+      @if $prefix-for-mozilla {
+        -moz-#{$property}: $value;
+      }
+    } @else if $prefix == ms {
+      @if $prefix-for-microsoft {
+        -ms-#{$property}: $value;
+      }
+    } @else if $prefix == o {
+      @if $prefix-for-opera {
+        -o-#{$property}: $value;
+      }
+    } @else if $prefix == spec {
+      @if $prefix-for-spec {
+        #{$property}: $value;
+      }
+    } @else  {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin disable-prefix-for-all() {
+  $prefix-for-webkit:    false !global;
+  $prefix-for-mozilla:   false !global;
+  $prefix-for-microsoft: false !global;
+  $prefix-for-opera:     false !global;
+  $prefix-for-spec:      false !global;
+}

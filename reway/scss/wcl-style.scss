@@ -1,0 +1,73 @@
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/functions';
+@import 'defaults/mixings';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+
+// Components
+@import 'components/cmp-title';
+@import 'components/cmp-tagline';
+@import 'components/cmp-info';
+@import 'components/cmp-desc';
+@import 'components/cmp-button';
+@import 'components/cmp-button-two';
+@import 'components/cmp-head';
+@import 'components/cmp-1-block'; // social, place, button
+@import 'components/cmp-2-hotel-info';
+@import 'components/cmp-3-form';
+@import 'components/cmp-4-lang';
+
+
+// Sections
+@import 'sections/footer';
+@import 'sections/header';
+@import 'sections/popup';
+@import 'sections/other';
+
+
+// ACF Blocks
+@import 'acf-blocks/block-1'; // Acf Block #01 – Extraordinary
+@import 'acf-blocks/block-2'; // Acf Block #02 – An Extraordinary World Awaiting Discovery
+@import 'acf-blocks/block-3'; // Acf Block #03 – A Haven of Peace and Renewal
+@import 'acf-blocks/block-4'; // Acf Block #04 – Reway Club
+@import 'acf-blocks/block-5'; // Acf Block #05 – Privileged Services
+@import 'acf-blocks/block-6'; // Acf Block #06 – Become a Member
+@import 'acf-blocks/block-7'; // Acf Block #07 – Contact Us - Discover Our Secret World
+@import 'acf-blocks/block-8'; // Acf Block #08 – Gallery
+@import 'acf-blocks/block-9'; // Acf Block #09 – A Different Perspective on Life
+@import 'acf-blocks/block-10'; // Acf Block #10 – Video
+@import 'acf-blocks/block-11'; // Acf Block #11 – Experiences at Reway Ankara Club
+@import 'acf-blocks/block-12'; // Acf Block #12 – The architect of elegance
+@import 'acf-blocks/block-13'; // Acf Block #13 – Reway Offers Four Levels of Privilege
+@import 'acf-blocks/block-14'; // Acf Block #14 – Elite Social Network and Privileged Living
+@import 'acf-blocks/block-15'; // Acf Block #15 – Secure Your Place at Reway Club
+@import 'acf-blocks/block-16'; // Acf Block #16 – Luxurious Spa Experience in a Hotel Concept
+@import 'acf-blocks/block-17'; // Acf Block #17 – What You Will Experience at Our Reway Ankara SPA
+@import 'acf-blocks/block-18'; // Acf Block #18 – An Unforgettable Massage Experience in Ankara
+@import 'acf-blocks/block-19'; // Acf Block #19 – The exclusive TurkishBath Pleasure at Reway
+@import 'acf-blocks/block-20'; // Acf Block #20 – A Unique Sauna Experience at Reway Ankara SPA
+@import 'acf-blocks/block-21'; // Acf Block #21 – Time for Purification in the Steam Room
+@import 'acf-blocks/block-22'; // Acf Block #22 – Elegance and Strength Combined
+@import 'acf-blocks/block-23'; // Acf Block #23 – Experiences at Reway Ankara Sports
+@import 'acf-blocks/block-24'; // Acf Block #24 – Become the Best Version of Yourself with PT Fitness
+@import 'acf-blocks/block-25'; // Acf Block #25 – Meet Your NASM Certified Personal Sports Trainer
+@import 'acf-blocks/block-26'; // Acf Block #26 – Discipline, Order, Motivation.
+@import 'acf-blocks/block-27'; // Acf Block #27 – Gastronomic Delights at Reway Ankara
+@import 'acf-blocks/block-28'; // Acf Block #28 – Personalized Flavor Experience Tailored to Your Palate Preferences
+@import 'acf-blocks/block-29'; // Acf Block #29 – Rejuvenate with Exquisite Flavors
+@import 'acf-blocks/block-30'; // Acf Block #30 – Sophisticated Culinary Art Filled with Striking Flavors
+@import 'acf-blocks/block-31'; // Acf Block #31 – Effective Weight Control with Our Experienced Dietitians
+@import 'acf-blocks/block-32'; // Acf Block #32 – Post-Workout Recovery
+@import 'acf-blocks/block-33'; // Acf Block #33 – Enhance Your Performance with Nutrition from Our Dietitians
+@import 'acf-blocks/block-34'; // Acf Block #34 – Journey to Health with Reway Ankara
+@import 'acf-blocks/block-35'; // Acf Block #35 – Strengthen with Our Pilates Reformer Program
+@import 'acf-blocks/block-36'; // Acf Block #36 – Achieve Your Goals Quickly
+@import 'acf-blocks/block-37'; // Acf Block #37 – For a Stronger and Fitter Body, Choose Reway
+@import 'acf-blocks/block-38'; // Acf Block #38 – Contact Us
+
+
+// Pages
+@import 'pages/404';

@@ -1,0 +1,23 @@
+// ...
+
+.wcl-block-1 {
+    height: 60px;
+    background-color: $c-red;
+    padding-top: 24px;
+    text-align: center;
+
+    .data {
+        &-link {
+            font-size: 14px;
+            color: $c-white;
+
+            span {
+                &:last-child {
+                    font-weight: 500;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

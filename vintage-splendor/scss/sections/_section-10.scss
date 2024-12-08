@@ -1,0 +1,179 @@
+.wcl-section-10 {
+    margin-top: 155px;
+    margin-bottom: 121px;
+
+    .data {
+        &-row {
+            display: flex;
+            margin: 0 -8px;
+        }
+
+        &-col {
+            padding: 0 8px;
+
+            &:nth-child(1) {
+                width: calc(100% - 291px);
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+                max-width: 291px;
+            }
+        }
+
+        &-a {
+            padding: 73px 20px;
+            background-color: $c-white;
+            border: 1px solid $c-black;
+            border-radius: 10px;
+        }
+
+        &-c {
+            display: none;
+        }
+
+        &-list {
+            &:not(.swiper-initialized) {
+                .data-list-inner {
+                    width: auto;
+                    margin: 0 -5px;
+                }
+
+                .data-item {
+                    padding: 0 5px;
+                    width: 167px;
+                }
+            }
+        }
+
+        &-item {
+            width: 157px;
+            text-align: center;
+
+            &-inner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 190px;
+            }
+
+            &-img {
+                img {
+                    max-height: 200px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &-b {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: $c-white;
+            background-color: $c-blue;
+            border: 1px solid $c-black;
+            padding: 38px 31px 22px;
+            border-radius: 10px;
+            height: 100%;
+
+            &-subtitle {
+                font-size: 13px;
+                line-height: 16px;
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+
+            &-title {
+                font-family: $f-nineties;
+                font-size: 35px;
+                line-height: 40px;
+                font-weight: 400;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    @media (max-width: 1266px) {
+        .data {
+            &-a {
+                overflow: hidden;
+            }
+
+            &-list {
+                overflow: visible;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 56px;
+        margin-top: 55px;
+        position: relative;
+        margin-bottom: 70px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 26px;
+            width: calc(100% - 52px);
+            height: 1px;
+            background-color: $c-black;
+        }
+
+        .data {
+            &-col {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            &-a {
+                padding: 88px 20px;
+            }
+
+            &-c {
+                display: block;
+                text-align: center;
+
+                &-title {
+                    font-family: $f-nineties;
+                    font-size: 35px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-bottom: 31px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                &-subtitle {
+                    font-size: 13px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    margin-bottom: 16px;
+                }
+
+                &-link {
+                    margin-top: 43px;
+                }
+            }
+
+            &-item {
+                &-img {
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

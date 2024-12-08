@@ -1,0 +1,23 @@
+.cmp-title {
+    color: #272323;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 140%;
+    /* 50.4px */
+    margin-bottom: 37px;
+
+    &.mod-small{
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 32px;
+        margin-bottom: 33px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,44 @@
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/functions';
+@import 'defaults/mixings';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+@import 'defaults/other';
+
+
+// Components
+@import 'components/cmp-button';
+@import 'components/cmp-link';
+@import 'components/cmp-content';
+@import 'components/cmp-1-popup';
+@import 'components/cmp-2-team-popup';
+@import 'components/cmp-3-sidebar';
+@import 'components/cmp-4-news';
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/page';
+@import 'sections/404';
+@import 'sections/sct-1-hero';
+@import 'sections/sct-2-content';
+@import 'sections/sct-3-related-posts';
+
+
+// Acf Blocks
+// <!-- Acf Block #1 – Who we are -->
+// <!-- Acf Block #2 – Development -->
+// <!-- Acf Block #3 – The company -->
+// <!-- Acf Block #4 – Our skills -->
+// <!-- Acf Block #5 – Recent projects -->
+// <!-- Acf Block #6 – News -->
+// <!-- Acf Block #7 – Development -->
+// <!-- Acf Block #8 – Our Team -->
+// <!-- Acf Block #9 – Our skills -->
+// <!-- Acf Block #11 – Recent projects -->
+// <!-- Acf Block #12 – News -->
+// <!-- Acf Block #13 – Blog -->
+// <!-- Acf Block #14 – Contact Info & Form -->

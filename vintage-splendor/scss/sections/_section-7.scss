@@ -1,0 +1,223 @@
+.wcl-section-7 {
+    padding-top: 106px;
+    padding-bottom: 109px;
+    border-top: 1px solid $c-black;
+    border-bottom: 1px solid $c-black;
+    background-image: url('../img/section_7_bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .data {
+        &-container {
+            max-width: 1366px;
+            padding: 0 35px;
+        }
+
+        &-title {
+            font-family: $f-nineties;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: -27px;
+            position: relative;
+            left: -18px;
+        }
+
+        &-list {
+            display: flex;
+            margin: 0 -24px;
+        }
+
+        &-item {
+            width: 33.33%;
+            padding: 0 24px;
+
+            &:first-child {
+                .data-item {
+                    &-title {
+                        max-width: 317px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 60px;
+
+                .data-item {
+                    &-img {
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+
+            &.mod-have-access {
+                .data-item {
+                    &-logo {
+                        display: none;
+                    }
+                }
+            }
+
+            &-inner {
+                color: $c-black;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    .data-item {
+                        &-logo {
+                            svg {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-a {
+                position: relative;
+            }
+
+            &-cat {
+                position: absolute;
+                left: 11px;
+                top: 14px;
+                background-color: $c-green;
+                color: $c-black;
+
+                &:hover {
+                    background-color: $c-black;
+                    color: $c-white;
+                }
+            }
+
+            &-img {
+                margin-bottom: 26px;
+                height: 400px;
+                background-color: rgba($c-white, 0.3);
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            &-logo {
+                svg {
+                    position: absolute;
+                    width: 40px;
+                    fill: $c-white;
+                    right: 21px;
+                    bottom: 21px;
+                    transition: all 0.2s ease;
+                }
+            }
+
+            &-title {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 600;
+            }
+        }
+
+        &-link {
+            margin-top: 62px;
+            text-align: center;
+
+            a {
+                &:hover {
+                    background-color: $c-black;
+                    color: $c-white;
+
+                    svg {
+                        fill: $c-white;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        .data {
+            &-list {
+                flex-wrap: wrap;
+                margin-top: -67px;
+                justify-content: center;
+            }
+
+            &-item {
+                width: 50%;
+                margin-top: 67px;
+
+                &:nth-child(2) {
+                    margin-top: 67px;
+                }
+            }
+
+            &-title {
+                margin-bottom: 58px;
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 62px;
+        padding-bottom: 88px;
+
+        .data {
+            &-container {
+                max-width: 500px;
+                padding: 0 26px;
+            }
+
+            &-title {
+                font-size: 35px;
+            }
+
+            &-item {
+                width: 100%;
+
+                &-img {
+                    margin-bottom: 28px;
+                    height: 322px;
+
+                    img {
+                        height: 322px;
+                    }
+                }
+
+                &-logo {
+                    svg {
+                        right: 14px;
+                        bottom: 19px;
+                    }
+                }
+            }
+
+            &-link {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-item {
+                &-img {
+                    height: auto;
+                    img {
+                        aspect-ratio: 1 / 1;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

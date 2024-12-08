@@ -1,0 +1,435 @@
+.wcl-acf-block-6 {
+    padding-top: 87px;
+    padding-bottom: 101px;
+    background-color: #fff;
+
+    // Інформація про каспанію
+    &.mod-style-2 {
+        background-color: #F6F6F6;
+        @include container-full-width;
+        padding-top: 88px;
+
+        .data {
+            &-container {
+                transform: none;
+                max-width: 1280px;
+            }
+
+            &-row {
+                margin-right: -60px;
+            }
+
+            &-b1 {
+                padding: 23px 30px;
+                border-radius: 5px;
+                background: #fff;
+                margin-top: 20px;
+
+                &-col:first-child {
+                    max-width: 212px;
+                }
+            }
+
+            &-shops {
+                &-item {
+                    background-color: #fff;
+                }
+            }
+
+            &-map {
+                height: 100%;
+
+                &-item {
+                    height: 100%;
+                    min-height: 325px;
+                    border-radius: 5px;
+                }
+            }
+
+            &-b1 {
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            padding-bottom: 100px;
+
+            .data {
+                &-row {
+                    margin: 0 -16px;
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding-top: 73px;
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: 700px) {
+            padding-bottom: 74px;
+
+            .data {
+                &-map {
+                    height: auto;
+                }
+
+                &-col {
+                    padding: 0;
+                }
+
+                &-row {
+                    margin: 0;
+                }
+
+                &-b1 {
+                    margin-top: 26px;
+                }
+            }
+        }
+    }
+
+    // Наші контакти
+    &.mod-style-3 {
+        padding-top: 0;
+        padding-bottom: 208px;
+
+        @media (max-width: 991px) {
+            padding-bottom: 94px;
+        }
+
+        @media (max-width: 575px) {
+            padding-bottom: 80px;
+        }
+    }
+
+    .cmp-title {
+        margin-bottom: 37px;
+    }
+
+    .data {
+        &-container {
+            max-width: 1320px;
+
+            @media (min-width: 1600px) {
+                transform: translate(34px, 0px);
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -16px;
+            row-gap: 20px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 16px;
+        }
+
+        &-map {
+            &.mod-v2 {
+                display: none;
+            }
+
+            &-item {
+                max-width: 571px;
+                height: 376px;
+                min-height: 250px;
+            }
+
+            &-markers {
+                display: none;
+            }
+        }
+
+        &-work-hours {
+            &-label {
+                color: #868C9A;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 170%;
+                /* 27.2px */
+                margin-bottom: 7px;
+            }
+
+            &-info {
+                color: #272323;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+                /* 175% */
+            }
+        }
+
+        &-b1 {
+            margin-top: 27px;
+
+            &-row {
+                display: flex;
+                margin: 0 -10px;
+            }
+
+            &-col {
+                padding: 0 10px;
+                width: 50%;
+
+                &:first-child {
+                    width: 40%;
+                }
+
+                &:nth-child(2) {
+                    width: 60%;
+                }
+            }
+        }
+
+        &-social {
+            @media (min-width: 1500px) {
+                transform: translate(-3px, 0px);
+            }
+
+            &-label {
+                color: #868C9A;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 170%;
+                /* 27.2px */
+                margin-bottom: 14px;
+            }
+        }
+
+        &-shops {
+            &-item {
+                padding: 23px 30px;
+                border-radius: 5px;
+                background: #F6F6F6;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-row {
+                    display: flex;
+                    margin: 0 -10px;
+                }
+
+                &-col {
+                    padding: 0 10px;
+                    width: 50%;
+
+                    &:first-child {
+                        width: 37.4%;
+                        width: 50%;
+                        max-width: 208px;
+                    }
+
+                    &:nth-child(2) {
+                        width: calc(100% - 37.4%);
+                    }
+                }
+
+                &-label {
+                    color: #868C9A;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 170%;
+                    /* 23.8px */
+                    margin-bottom: 2px;
+                }
+
+                &-value {
+                    color: #272323;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 170%;
+                    /* 27.2px */
+
+                    a {
+                        color: #272323;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        padding-top: 70px;
+        padding-bottom: 86px;
+
+        .cmp-title {
+            margin-bottom: 34px;
+        }
+
+        .data {
+            &-row {
+                margin: 0 -13px;
+            }
+
+            &-col {
+                padding: 0 13px;
+            }
+
+            &-map {
+                height: 100%;
+
+                &-item {
+                    height: calc(100% - 20px);
+                }
+            }
+
+            &-work-hours {
+                &-label {
+                    font-size: 14px;
+                    margin-bottom: 9px;
+                }
+
+                &-info {
+                    font-size: 14px;
+                    line-height: 170%;
+                    /* 23.8px */
+                }
+            }
+
+            &-social {
+                &-label {
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-shops {
+                &-item {
+                    padding: 18px 25px;
+                    margin-bottom: 25px;
+
+                    &-label {
+                        margin-bottom: 1px;
+                    }
+
+                    &-row {
+                        flex-wrap: wrap;
+                        row-gap: 4px;
+                    }
+
+                    &-col {
+                        max-width: unset;
+                        width: 100% !important;
+                    }
+                }
+            }
+
+            &-b1 {
+                margin-top: 18px;
+
+                &-col {
+                    &:nth-child(1) {
+                        width: 50%;
+                    }
+
+                    &:nth-child(2) {
+                        width: auto;
+                        width: 50%;
+                        margin-left: auto;
+                        transform: translate(3px, 0px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .data {
+            &-row {
+                flex-wrap: wrap;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            &-map {
+                height: auto;
+                display: none;
+                margin-top: 34px;
+
+                &.mod-v2 {
+                    display: block;
+                }
+
+                &-item {
+                    height: 325px;
+                    max-width: unset;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 74px;
+        padding-bottom: 54px;
+
+        .cmp-title {
+            margin-bottom: 36px;
+        }
+
+        .data {
+            &-b1 {
+                margin-top: 26px;
+
+                &-col {
+                    &:nth-child(2) {
+                        transform: translate(-4px, 0px);
+                    }
+                }
+            }
+
+            &-work-hours {
+                &-label {
+                    font-size: 13px;
+                    margin-bottom: 7px;
+                }
+
+                &-info {
+                    font-size: 15px;
+                }
+            }
+
+            &-social {
+                margin-right: -12px;
+
+                &-label {
+                    font-size: 13px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            &-shops {
+                &-item {
+                    margin-bottom: 20px;
+
+                    &-row {
+                        row-gap: 9px;
+                    }
+
+                    &-label {
+                        font-size: 13px;
+                    }
+
+                    &-value {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}

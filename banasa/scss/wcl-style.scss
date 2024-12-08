@@ -1,0 +1,28 @@
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/functions';
+@import 'defaults/mixins';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+
+// Components
+@import 'components/cmp-social-media';
+@import 'components/cmp-1-post';
+@import 'components/cmp-2-form';
+@import 'components/cmp-3-sidebar';
+@import 'components/cmp-button';
+@import 'components/cmp-content';
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/other';
+@import 'sections/project-hero';
+@import 'sections/project-symilar';
+@import 'sections/blog';
+@import 'sections/page';
+@import 'sections/404';
+@import 'sections/single';

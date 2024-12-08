@@ -1,0 +1,186 @@
+.wcl-section-4 {
+    margin-top: 109px;
+    margin-bottom: 148px;
+    overflow: hidden;
+
+    .data {
+        &-title {
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 500;
+            margin-bottom: 29px;
+        }
+
+        &-list {
+            overflow: visible;
+
+            &:not(.swiper-initialized) {
+                .data-list-inner {
+                    width: auto;
+                    margin: 0 -11.5px;
+                }
+
+                .data-item {
+                    padding: 0 11.5px;
+                    width: 297px;
+                }
+            }
+        }
+
+        &-item {
+            width: 25%;
+            height: auto;
+            width: 274px;
+
+            &.mod-going-out {
+                .data-item-inner{
+                    opacity: 0.3;
+                }
+            }
+
+            &-inner {
+                border: 1px solid $c-black;
+                background-color: $c-white;
+                padding: 39px 31px 23px;
+                height: 100%;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                min-height: 345px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    .data-item {
+                        &-link {
+                            a {
+                                opacity: 1;
+                            }
+                        }
+
+                        &-logo {
+                            img {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-image: url('../img/section_4_bg.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all 0.2s ease;
+                }
+
+                &-b {
+                    position: relative;
+                    z-index: 1;
+                    padding-bottom: 33px;
+                    height: 100%;
+                }
+            }
+
+
+            &-index {
+                font-family: $f-nineties;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 25px;
+            }
+
+            &-desc {
+                font-family: $f-lekton;
+                font-size: 18px;
+                line-height: 25px;
+                max-width: 202px;
+                margin-bottom: 30px;
+                max-height: 155px;
+                scrollbar-width: none;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &.mask {
+                    -webkit-mask-image: linear-gradient(0, rgba(255, 255, 255, 0) 0%, #fff 35%);
+                }
+            }
+
+            &-link {
+                a {
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    &:hover {
+                        background-color: $c-black;
+                        color: $c-white;
+
+                        svg {
+                            fill: $c-white;
+                        }
+                    }
+                }
+            }
+
+            &-logo {
+                img {
+                    position: absolute;
+                    right: 21px;
+                    bottom: 19px;
+                    width: 40px;
+                    z-index: 1;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-list {
+                overflow: visible;
+            }
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        margin-bottom: 110px;
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 66px;
+        margin-bottom: 70px;
+
+        .data {
+            &-inner {
+                padding-bottom: 66px;
+                border-bottom: 1px solid $c-black;
+            }
+
+            &-item {
+                &-inner {
+                    padding-top: 36px;
+                }
+
+                &-index {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

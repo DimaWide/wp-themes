@@ -16,6 +16,11 @@ Theme development and modification.
 
 ---
 
+### Vintage Splendor
+[Description](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/README.md) | [View Theme](https://vintage-splendor.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor) | [Webhook Integration](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/Webhook.md)
+
+---
+
 ### A&H  
 [Description](https://github.com/DimaWide/wp-themes/tree/main/ah_theme/README.md) | [View Theme](https://ah.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/ah_theme)
 
@@ -40,10 +45,6 @@ Theme development and modification.
 ### Reway
 [Description](https://github.com/DimaWide/wp-themes/tree/main/reway/README.md) | [View Theme](https://reway.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/reway)
 
----
-
-### Vintage Splendor
-[Description](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/README.md) | [View Theme](https://vintage-splendor.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor)
 
 ---
 

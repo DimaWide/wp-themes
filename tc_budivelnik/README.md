@@ -8,7 +8,7 @@
 
 Ссылка на сайт: [budmarket.org.ua](https://budmarket.org.ua/)
 
-Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
+Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua-mobile.jpg)
 
 ## Ключевые особенности:
 

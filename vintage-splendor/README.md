@@ -4,6 +4,9 @@
 
 **Ссылка на сайт:** [www.avintagesplendor.com](http://www.avintagesplendor.com)
 
+Скриншот: [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
+Скриншот: [Calendly Event.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
+
 ## Выполненные работы
 
 - **Создание и разработка темы с нуля:** Основывалась на макете из Figma.

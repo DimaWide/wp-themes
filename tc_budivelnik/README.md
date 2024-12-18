@@ -7,7 +7,7 @@
 Краткое описание: Это расширенная тема WooCommerce, разработанная с нуля для предоставления клиентам максимально удобного и персонализированного опыта онлайн-шопинга.  
 
 Ссылка на сайт: [budmarket.org.ua](https://budmarket.org.ua/)
-![Скриншот проекта](screencapture-avintagesplendor-personal-brand-styling.jpg)
+![Скриншот проекта](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
 
 ## Ключевые особенности:
 

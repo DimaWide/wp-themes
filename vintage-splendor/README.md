@@ -5,8 +5,7 @@
 
 **Ссылка на сайт:** [www.avintagesplendor.com](http://www.avintagesplendor.com)
 
-Скриншот: [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
-Скриншот: [Calendly Event.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-budmarket-org-ua.jpg)
+Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor.jpg) | [Мобильный вид](screencapture-avintagesplendor-mobile.jpg)
 
 ## Выполненные работы
 

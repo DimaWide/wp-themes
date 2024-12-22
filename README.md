@@ -56,16 +56,14 @@ Theme development and modification.
 
 ### WP:
 - pump.black: [ссылка](https://pump.black/)
-- ah.webcomplete.io: [ссылка](https://ah.webcomplete.io/)
+- a3hconsulting.com: [ссылка](https://www.a3hconsulting.com/)
 - banasa.com: [ссылка](https://banasa.com/)
+- med-deo.com.ua: [ссылка](https://www.med-deo.com.ua/)
 - rmadevelopment.webcomplete.io: [ссылка](https://rmadevelopment.webcomplete.io/)
 - reway.webcomplete.io: [ссылка](https://reway.webcomplete.io/)
-- vintage-splendor.webcomplete.io: [ссылка](https://vintage-splendor.webcomplete.io/)
 - lydia-millen.webcomplete.io: [ссылка](https://lydia-millen.webcomplete.io/)
 - tania.webcomplete.io: [ссылка](https://tania.webcomplete.io/)
 - themichelewang.com: [ссылка](https://themichelewang.com/)
-- med-deo.com.ua: [ссылка](https://www.med-deo.com.ua/)
-- a3hconsulting.com: [ссылка](https://www.a3hconsulting.com/)
 - web3recruitment.webcomplete.io: [ссылка](https://web3recruitment.webcomplete.io/)
 - nikole-beauty.webcomplete.io: [ссылка](https://nikole-beauty.webcomplete.io/)
 - chrisellelim.webcomplete.io: [ссылка](https://chrisellelim.webcomplete.io/)

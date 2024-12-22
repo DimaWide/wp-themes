@@ -4,7 +4,7 @@
 
 **Ссылка на сайт:** [pump.black](https://pump.black)
 
-Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor.jpg) | [Мобильный вид](screencapture-avintagesplendor-mobile.jpg)
+Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/screencapture-loc-pump-black.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/pump.black/screencapture-loc-pump-black-mobile.jpg)
 
 ## Основные функции
 

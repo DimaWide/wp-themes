@@ -48,12 +48,15 @@ Theme development and modification.
 ---
 
 ## Список примеров работ:
-
+Woocommerce:
 - budmarket.org.ua: [ссылка](https://budmarket.org.ua/)
+- avintagesplendor.com: [ссылка](https://www.avintagesplendor.com/)
+- cryptogrupe.lt: [ссылка](https://cryptogrupe.lt/)
+WP:
+- pump.black: [ссылка](https://pump.black/)
 - ah.webcomplete.io: [ссылка](https://ah.webcomplete.io/)
 - banasa.com: [ссылка](https://banasa.com/)
 - rmadevelopment.webcomplete.io: [ссылка](https://rmadevelopment.webcomplete.io/)
-- crypto-group.webcomplete.io: [ссылка](https://crypto-group.webcomplete.io/)
 - reway.webcomplete.io: [ссылка](https://reway.webcomplete.io/)
 - vintage-splendor.webcomplete.io: [ссылка](https://vintage-splendor.webcomplete.io/)
 - lydia-millen.webcomplete.io: [ссылка](https://lydia-millen.webcomplete.io/)

@@ -36,8 +36,8 @@ Theme development and modification.
 
 ---
 
-### Crypto Group
-[Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://crypto-group.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
+### Crypto Group (Woocommerce)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://cryptogrupe.lt/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
 
 ---
 

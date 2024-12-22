@@ -48,11 +48,13 @@ Theme development and modification.
 ---
 
 ## Список примеров работ:
-Woocommerce:
+
+### Woocommerce:
 - budmarket.org.ua: [ссылка](https://budmarket.org.ua/)
 - avintagesplendor.com: [ссылка](https://www.avintagesplendor.com/)
 - cryptogrupe.lt: [ссылка](https://cryptogrupe.lt/)
-WP:
+
+### WP:
 - pump.black: [ссылка](https://pump.black/)
 - ah.webcomplete.io: [ссылка](https://ah.webcomplete.io/)
 - banasa.com: [ссылка](https://banasa.com/)

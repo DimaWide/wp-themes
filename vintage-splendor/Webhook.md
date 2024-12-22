@@ -4,12 +4,16 @@
 
 Ссылка на страницу: [Personal Brand Styling](https://www.avintagesplendor.com/personal-brand-styling/)
 
-Скриншоты:   
- Главная страница - [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling-mobile)  
- Страница бронирования ивента - [Calendly Event Booking.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/calendly-event-booking.jpg)  
- Емейл тимплейт - [Virtual Styling Session + Shopping Links (Gift Card).jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/virtual-styling-session-shopping-links-gift-card.jpg)  
- Емейл тимплейт - [Virtual Styling Session + Shopping Links.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/virtual-styling-session-shopping-links.jpg)  
- Емейл тимплейт - [Order Woocommerce.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/screencapture-mail-google-order.jpg)  
+Скриншоты:
+ [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling-mobile)  
+
+ [Calendly Event Booking.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/calendly-event-booking.jpg)  
+
+ [Virtual Styling Session + Shopping Links (Gift Card).jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/virtual-styling-session-shopping-links-gift-card.jpg)  
+
+ [Virtual Styling Session + Shopping Links.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/virtual-styling-session-shopping-links.jpg)  
+ 
+ [Order Woocommerce.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-mail-google-order.jpg)  
 
 ## Краткое введение
 

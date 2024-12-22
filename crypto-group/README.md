@@ -1,6 +1,6 @@
 # Crypto Group
 
-Ссылка на сайт: [crypto-group.webcomplete.io](https://crypto-group.webcomplete.io/)
+Ссылка на сайт: [crypto-group.webcomplete.io](https://cryptogrupe.lt/)
 
 ## Описание
 

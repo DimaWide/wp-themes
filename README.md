@@ -25,14 +25,14 @@ Theme development and modification.
 
 ---
 
-### Banasa
-
-[Description](https://github.com/DimaWide/wp-themes/tree/main/banasa/README.md) | [View Theme](https://banasa.com/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/banasa)
+### Crypto Group (Woocommerce)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://cryptogrupe.lt/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
 
 ---
 
-### Crypto Group (Woocommerce)
-[Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://cryptogrupe.lt/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
+### Banasa
+
+[Description](https://github.com/DimaWide/wp-themes/tree/main/banasa/README.md) | [View Theme](https://banasa.com/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/banasa)
 
 ---
 

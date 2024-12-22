@@ -5,7 +5,7 @@
 Ссылка на страницу: [Personal Brand Styling](https://www.avintagesplendor.com/personal-brand-styling/)
 
 Скриншоты:   
-Страница услуг - [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling-mobile)  
+Страница услуг - [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling-mobile.jpg)  
 Страница сервиса бронирования событий - [Calendly Event Booking.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/calendly-event-booking.jpg)  
 Кастомный емейл тимплейт - [Virtual Styling Session + Shopping Links (Gift Card).jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/virtual-styling-session-shopping-links-gift-card.jpg)  
 Кастомный емейл тимплейт - [Virtual Styling Session + Shopping Links.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/virtual-styling-session-shopping-links.jpg)  

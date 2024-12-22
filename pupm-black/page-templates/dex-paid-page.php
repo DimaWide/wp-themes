@@ -4,13 +4,12 @@
  * Template Name: Dex Paid Page
  */
 
-$sound_status = '';
+$sound_status = 'mod-enable';
 
 if (isset($_COOKIE['dex_paid_page_sound'])) {
     $sound_status = $_COOKIE['dex_paid_page_sound'] === 'true' ? 'mod-enable' : 'mod-disable';
 }
 
-$ca_mint = 'AnM6bkqJy3D4douPgp1keUTmQNygP2KKiM7bVw9qpump';
 $ca_mint = '';
 
 $token     = '';
@@ -61,7 +60,6 @@ get_header();
                 </div>
 
                 <div class="data-inner data-row">
-
                 </div>
             </div>
         </div>

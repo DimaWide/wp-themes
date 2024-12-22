@@ -2,19 +2,108 @@
 
 
 
-add_action('admin_menu', 'np_add_admin_page');
 
+
+// get_active_banners_with_html
+function get_active_banners_with_html() {
+    $banners = get_field('banner', 'option');
+    $active_banners = [];
+    $has_active_banners = false;
+
+    if ($banners) {
+        $current_time = current_time('timestamp');
+
+        foreach ($banners as $banner) {
+            $start_date = $banner['start_date'];
+            $time = $banner['time'];
+            $content_type = isset($banner['content_type']) ? $banner['content_type'] : 'image'; // По умолчанию - html_banner
+            $banner_content = $banner[$content_type];
+
+            $banner_days = !empty($time['days']) ? $time['days'] : 0;
+            $banner_hours = !empty($time['hours']) ? $time['hours'] : 0;
+            $banner_minutes = !empty($time['minutes']) ? $time['minutes'] : 0;
+
+            if ($start_date) {
+                $start_timestamp = strtotime($start_date);
+
+                $expiration_time = strtotime("+{$banner_days} days +{$banner_hours} hours +{$banner_minutes} minutes", $start_timestamp);
+
+                if ($current_time <= $expiration_time) {
+                    $time_left = $expiration_time - $start_timestamp;
+                    $days_left = floor($time_left / (60 * 60 * 24));
+                    $hours_left = floor(($time_left % (60 * 60 * 24)) / (60 * 60));
+                    $minutes_left = floor(($time_left % (60 * 60)) / 60);
+
+                    $time_left_server = $expiration_time - $current_time;
+                    $server_days_left = floor($time_left_server / (60 * 60 * 24));
+                    $server_hours_left = floor(($time_left_server % (60 * 60 * 24)) / (60 * 60));
+                    $server_minutes_left = floor(($time_left_server % (60 * 60)) / 60);
+
+                    $has_active_banners = true;
+
+                    $banner_html = '<div class="data-item">';
+                    if (!empty($banner_content)) {
+                        switch ($content_type) {
+                            case 'html':
+                                $banner_html .= '<div class="data-image" data-time-duration="' . esc_attr("Time left: {$days_left} days, {$hours_left} hours, {$minutes_left} minutes") .  '"  data-left-server-time="' . esc_attr("Time left: {$server_days_left} days, {$server_hours_left} hours, {$server_minutes_left} minutes") . '">';
+                                $banner_html .= $banner_content;
+                                $banner_html .= '</div>';
+                                break;
+
+                            case 'image':
+                                $banner_content = wp_get_attachment_image($banner_content, 'image-size-2');
+                                $banner_html .= '<div class="data-image" data-time-duration="' . esc_attr("Time left: {$days_left} days, {$hours_left} hours, {$minutes_left} minutes") .  '"  data-left-server-time="' . esc_attr("Time left: {$server_days_left} days, {$server_hours_left} hours, {$server_minutes_left} minutes") . '">';
+                                $banner_html .= $banner_content;
+                                $banner_html .= '</div>';
+                                break;
+
+                            case 'video':
+                                $banner_content = wp_get_attachment_url($banner_content, 'full');
+                                $banner_html .= '<div class="data-video" data-time-duration="' . esc_attr("Time left: {$days_left} days, {$hours_left} hours, {$minutes_left} minutes") .  '"  data-left-server-time="' . esc_attr("Time left: {$server_days_left} days, {$server_hours_left} hours, {$server_minutes_left} minutes") . '">';
+                                $banner_html .= '<video muted autoplay loop>';
+                                $banner_html .= '<source src="' . esc_url($banner_content) . '" type="video/mp4">';
+                                $banner_html .= 'Your browser does not support the video tag.';
+                                $banner_html .= '</video>';
+                                $banner_html .= '</div>';
+                                break;
+
+                            default:
+                                // Неизвестный тип контента, пропустить
+                                continue 2;
+                        }
+                    }
+                    $banner_html .= '</div>';
+
+                    $active_banners[] = $banner_html;
+                }
+            }
+        }
+    }
+
+    return [
+        'active_banners' => $active_banners,
+        'has_active_banners' => $has_active_banners
+    ];
+}
+
+
+
+
+/* 
+np_add_admin_page
+ */
 function np_add_admin_page() {
     add_menu_page(
-        'Orders',                      // Заголовок страницы
-        'Orders',                      // Название меню
-        'manage_options',              // Права доступа
-        'np-orders',                   // Слаг страницы
-        'np_display_orders_page',      // Функция для отображения содержимого страницы
-        'dashicons-list-view',         // Иконка меню
-        33                               // Позиция
+        'Orders',                      
+        'Orders',                      
+        'manage_options',              
+        'np-orders',                   
+        'np_display_orders_page',      
+        'dashicons-list-view',         
+        33                             
     );
 }
+add_action('admin_menu', 'np_add_admin_page');
 
 
 
@@ -26,22 +115,12 @@ np_display_orders_page
 function np_display_orders_page() {
     global $wpdb;
 
-    // Количество заказов на страницу
     $per_page = 10;
 
-    // Получаем текущую страницу
     $current_page = isset($_GET['paged']) ? absint($_GET['paged']) : 1;
     $offset = ($current_page - 1) * $per_page;
 
-    // // Получаем все заказы
-    // $orders = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}np_orders ORDER BY created_at DESC LIMIT $offset, $per_page");
-    // $total_orders = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}np_orders");
 
-    // // Пагинация
-    // $total_pages = ceil($total_orders / $per_page);
-
-
-    // Получаем все заказы вместе с токеном
     $orders = $wpdb->get_results("
        SELECT o.*, t.token_mint_value 
        FROM {$wpdb->prefix}np_orders o 
@@ -51,23 +130,15 @@ function np_display_orders_page() {
    ");
     $total_orders = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}np_orders");
 
-    // Пагинация
     $total_pages = ceil($total_orders / $per_page);
-
-
-
-    // HTML для отображения заказов
 ?>
     <div class="wrap">
         <h1 class="np-orders-title">Orders Management</h1>
         <style>
             .wrap .np-orders-title {
                 font-size: 24px;
-                /* Increased font size for title */
                 margin-bottom: 12px;
-                /* Space below the title */
                 color: #333;
-                /* Title color */
             }
 
             .pagination-links {
@@ -129,51 +200,36 @@ function np_display_orders_page() {
             .wrap .status-finished {
                 color: green;
                 font-weight: bold;
-                /* Bold text for visibility */
             }
 
             .wrap .status-other {
                 color: orange;
-                /* Orange color for other statuses */
                 font-weight: bold;
-                /* Bold text for visibility */
             }
 
-            .token-mint-value span{
+            .token-mint-value span {
                 white-space: nowrap;
-                /* Prevents text from wrapping to a new line */
                 overflow: hidden;
-                /* Hides overflow content */
                 max-width: 200px;
-                /* Sets a maximum width for the cell */
                 display: block;
-                /* Ensures the overflow behavior works correctly */
                 overflow-x: auto;
-                /* Adds horizontal scrollbar if needed */
                 text-overflow: clip;
             }
 
-            /* WebKit browsers (Chrome, Safari) */
             .token-mint-value span::-webkit-scrollbar {
                 height: 6px;
-                /* Set the height of the horizontal scrollbar */
             }
 
             .token-mint-value span::-webkit-scrollbar-thumb {
                 background: #8b8b8b;
-                /* Color of the scrollbar handle */
-                /* Rounding the scrollbar handle */
             }
 
             .token-mint-value span::-webkit-scrollbar-thumb:hover {
                 background: #555;
-                /* Color of the scrollbar handle on hover */
             }
 
             .token-mint-value span::-webkit-scrollbar-track {
                 background: #f1f1f1;
-                /* Color of the scrollbar track */
-                /* Rounding the scrollbar track */
             }
         </style>
 
@@ -206,7 +262,7 @@ function np_display_orders_page() {
 
                         echo '<td>' . esc_html($order->created_at) . '</td>';
                         $emulate_status = ($order->admin_payment_emulate == 1) ? 'Emulated' : 'Not Emulated';
-                        echo '<td>' . esc_html($emulate_status) . '</td>'; 
+                        echo '<td>' . esc_html($emulate_status) . '</td>';
                         echo '<td class="token-mint-value"><span>' . esc_html($order->token_mint_value ? $order->token_mint_value : 'N/A') . '</span></td>'; // Display mint token
                         echo '</tr>';
                     }
@@ -218,8 +274,7 @@ function np_display_orders_page() {
         </table>
 
         <?php
-        // Пагинация
-        $big = 999999999; // уникальное число для замены
+        $big = 999999999; 
         $links = paginate_links(array(
             'base' => str_replace($big, '%#%', esc_url(get_admin_url() . 'admin.php?page=np-orders&paged=' . $big)),
             'format' => '?paged=%#%',
@@ -227,7 +282,7 @@ function np_display_orders_page() {
             'total' => $total_pages,
             'prev_text' => __('&laquo; Previous'),
             'next_text' => __('Next &raquo;'),
-            'type' => 'array', // вернем массив для кастомного HTML
+            'type' => 'array', 
         ));
 
         // Check if $links is an array and output each link
@@ -408,90 +463,6 @@ function get_plan_price_by_id($plan_id) {
 
 
 
-/* 
-wcl_test
- */
-function wcl_test() {
-    // Функция для чтения содержимого файла и сохранения в опцию
-    function save_file_content_to_option() {
-        // Путь к вашему файлу
-        $file_path = get_template_directory() . '/inc/data/test-fields.txt'; // Adjust the path to your file
-
-        // Проверка, существует ли файл
-        if (file_exists($file_path)) {
-            // Чтение содержимого файла
-            $file_content = file_get_contents($file_path);
-
-            // Десериализация содержимого файла
-            $deserialized_data = unserialize($file_content);
-
-            // Сохранение содержимого в опцию WordPress
-            update_option('big_buys_data', $deserialized_data);
-
-            echo 'Содержимое файла успешно сохранено в опцию!';
-        } else {
-            echo 'Файл не найден!';
-        }
-    }
-
-    // Функция для чтения содержимого файла и сохранения в опцию
-    function save_file_content_to_option_2() {
-        var_dump(123);
-        // Путь к вашему файлу
-        $file_path = get_template_directory() . '/inc/data/test-fields-2.txt'; // Adjust the path to your file
-
-        // Проверка, существует ли файл
-        if (file_exists($file_path)) {
-            // Чтение содержимого файла
-            $file_content = file_get_contents($file_path);
-
-            // Десериализация содержимого файла
-            $deserialized_data = unserialize($file_content);
-
-            // Сохранение содержимого в опцию WordPress
-            update_option('test_token', $deserialized_data);
-
-            echo 'Содержимое файла успешно сохранено в опцию!';
-        } else {
-            echo 'Файл не найден!';
-        }
-    }
-
-
-    function save_json_to_wp_option() {
-        $file_path = get_template_directory() . '/inc/data/LOCAT STORAGE-3.json'; // Adjust the path to your file
-
-        if (file_exists($file_path)) {
-            // Read the JSON file contents
-            $json_data = file_get_contents($file_path);
-
-            // Decode JSON data into PHP array
-            $data_array = json_decode($json_data, true);
-
-            if (json_last_error() === JSON_ERROR_NONE) {
-                // Save the data to a WordPress option
-                $option_name = 'wcl_token_fields'; // Name of the option
-                update_option($option_name, $data_array);
-                echo 'Data saved successfully';
-            } else {
-                echo 'Error decoding JSON data';
-            }
-        } else {
-            echo 'File does not exist';
-        }
-    }
-
-
-    if (isset($_GET['test'])) {
-        //save_json_to_wp_option();
-        //save_file_content_to_option();
-        //save_file_content_to_option_2();
-    }
-}
-
-
-
-
 
 
 /* 
@@ -541,6 +512,9 @@ if (false) {
     function acf_register_block_type() {
     }
 }
+
+
+
 
 
 
@@ -596,19 +570,19 @@ create_featured_field_post_type
  */
 function create_featured_field_post_type() {
     $labels = array(
-        'name'               => _x('Featured Fields', 'post type general name'),
-        'singular_name'      => _x('Featured Field', 'post type singular name'),
-        'menu_name'          => _x('Featured Fields', 'admin menu'),
-        'name_admin_bar'     => _x('Featured Field', 'add new on admin bar'),
-        'add_new'            => _x('Add New', 'featured field'),
-        'add_new_item'       => __('Add New Featured Field'),
-        'new_item'           => __('New Featured Field'),
-        'edit_item'          => __('Edit Featured Field'),
-        'view_item'          => __('View Featured Field'),
-        'all_items'          => __('All Featured Fields'),
-        'search_items'       => __('Search Featured Fields'),
-        'not_found'          => __('No featured fields found.'),
-        'not_found_in_trash' => __('No featured fields found in Trash.')
+        'name'               => _x('Featured Projects', 'post type general name'),
+        'singular_name'      => _x('Featured project', 'post type singular name'),
+        'menu_name'          => _x('Featured Projects', 'admin menu'),
+        'name_admin_bar'     => _x('Featured project', 'add new on admin bar'),
+        'add_new'            => _x('Add New', 'featured project'),
+        'add_new_item'       => __('Add New Featured project'),
+        'new_item'           => __('New Featured project'),
+        'edit_item'          => __('Edit Featured project'),
+        'view_item'          => __('View Featured project'),
+        'all_items'          => __('All Featured Projects'),
+        'search_items'       => __('Search Featured Projects'),
+        'not_found'          => __('No featured projects found.'),
+        'not_found_in_trash' => __('No featured projects found in Trash.')
     );
 
     $args = array(
@@ -616,7 +590,7 @@ function create_featured_field_post_type() {
         'public'       => false,
         'show_ui'      => true,
         'has_archive'  => true,
-        'rewrite'      => array('slug' => 'featured-field'),
+        'rewrite'      => array('slug' => 'featured-project'),
         'supports'     => array('title', 'editor', 'thumbnail', 'excerpt'),
         'show_in_rest' => true,
         'menu_icon'    => 'dashicons-star-filled',
@@ -635,19 +609,19 @@ create_upcoming_field_post_type
  */
 function create_upcoming_field_post_type() {
     $labels = array(
-        'name'               => _x('Upcoming Fields', 'post type general name'),
-        'singular_name'      => _x('Upcoming Field', 'post type singular name'),
-        'menu_name'          => _x('Upcoming Fields', 'admin menu'),
-        'name_admin_bar'     => _x('Upcoming Field', 'add new on admin bar'),
-        'add_new'            => _x('Add New', 'upcoming field'),
-        'add_new_item'       => __('Add New Upcoming Field'),
-        'new_item'           => __('New Upcoming Field'),
-        'edit_item'          => __('Edit Upcoming Field'),
-        'view_item'          => __('View Upcoming Field'),
-        'all_items'          => __('All Upcoming Fields'),
-        'search_items'       => __('Search Upcoming Fields'),
-        'not_found'          => __('No upcoming fields found.'),
-        'not_found_in_trash' => __('No upcoming fields found in Trash.')
+        'name'               => _x('Upcoming Launches', 'post type general name'),
+        'singular_name'      => _x('Upcoming Launch', 'post type singular name'),
+        'menu_name'          => _x('Upcoming Launches', 'admin menu'),
+        'name_admin_bar'     => _x('Upcoming Launch', 'add new on admin bar'),
+        'add_new'            => _x('Add New', 'upcoming launche'),
+        'add_new_item'       => __('Add New Upcoming launche'),
+        'new_item'           => __('New Upcoming launche'),
+        'edit_item'          => __('Edit Upcoming launche'),
+        'view_item'          => __('View Upcoming launche'),
+        'all_items'          => __('All Upcoming Launches'),
+        'search_items'       => __('Search Upcoming Launches'),
+        'not_found'          => __('No upcoming launches found.'),
+        'not_found_in_trash' => __('No upcoming launches found in Trash.')
     );
 
     $args = array(
@@ -692,43 +666,21 @@ function check_post_status($post_id) {
     $minutes = (int)$time['minutes'];
     $seconds = (int)$time['seconds'];
 
-    // Преобразуем всё в секунды для точного сравнения
     $total_seconds = ($days * 86400) + ($hours * 3600) + ($minutes * 60) + $seconds;
 
     if ($order['status'] != 'finished') {
-        update_post_meta($post_id, 'featured_status', 'inactive'); // Меняем статус на 'inactive'
-
-        // $post_update = array(
-        //     'ID'           => $post_id,
-        //     'post_status'  => 'draft',
-        // );
-        // wp_update_post($post_update);
+        update_post_meta($post_id, 'featured_status', 'inactive'); 
     } else {
         if ($activation_date && $total_seconds) {
-            // Текущая дата и время
             $current_date = new DateTime(current_time('mysql'));
             $activation_date = new DateTime($activation_date);
 
-            // Вычисляем разницу между текущей датой и датой активации в секундах
             $interval = $current_date->getTimestamp() - $activation_date->getTimestamp();
 
-            // Если прошло больше указанного количества секунд, меняем статус на 'inactive'
             if ($interval > $total_seconds) {
-                update_post_meta($post_id, 'featured_status', 'inactive'); // Меняем статус на 'inactive'
-
-                // $post_update = array(
-                //     'ID'           => $post_id,
-                //     'post_status'  => 'draft',
-                // );
-                // wp_update_post($post_update);
+                update_post_meta($post_id, 'featured_status', 'inactive'); 
             } else {
-                update_post_meta($post_id, 'featured_status', 'active'); // Меняем статус на 'inactive'
-
-                // $post_update = array(
-                //     'ID'           => $post_id,
-                //     'post_status'  => 'publish',
-                // );
-                // wp_update_post($post_update);
+                update_post_meta($post_id, 'featured_status', 'active'); 
             }
         }
     }
@@ -744,23 +696,18 @@ function check_post_status($post_id) {
 check_all_featured_field_posts_status
  */
 function check_all_featured_field_posts_status() {
-    // Получаем все активные посты
     $args = array(
         'post_type'      => 'featured_field',
         'post_status'    => ['publish', 'draft'],
-        // 'meta_key'       => 'featured_status',
-        // 'meta_value'     => 'active',
         'posts_per_page' => -1
     );
 
     $posts = get_posts($args);
 
-    // Проверяем статус каждого поста
     foreach ($posts as $post) {
         check_post_status($post->ID);
     }
 }
-// add_action('check_featured_field_posts_status_event', 'check_all_featured_field_posts_status');
 
 
 
@@ -769,31 +716,26 @@ function check_all_featured_field_posts_status() {
 getDatabaseConnection
  */
 function getDatabaseConnection() {
-    static $mysqli = null; // Используем static для сохранения соединения между вызовами
+    static $mysqli = null;
 
-    // Если соединение уже существует, возвращаем его
     if ($mysqli !== null) {
         return $mysqli;
     }
-    
-    // Конфигурация подключения
-    $db_host     = '192.145.239.202';
-    $db_name     = 'web3re5_f84aw48f';
-    $db_user     = 'web3re5_f4aw8411cc';
-    $db_password = 'Oi-M$;Pff{w4';
-    $db_port     = 3306;
-    $db_charset  = 'utf8mb4';
 
-    // Создание соединения
+    $db_host     = getenv('DB2_HOST');
+    $db_name     = getenv('DB2_NAME');
+    $db_user     = getenv('DB2_USER');
+    $db_password = getenv('DB2_PASSWORD');
+    $db_port     = getenv('DB2_PORT');
+    $db_charset  = getenv('DB2_CHARSET');
+
     $mysqli = new mysqli($db_host, $db_user, $db_password, $db_name, $db_port);
 
-    // Проверка на ошибки соединения
     if ($mysqli->connect_error) {
         error_log('Connection Error (' . $mysqli->connect_errno . '): ' . $mysqli->connect_error);
         die('Database connection failed.');
     }
 
-    // Установка кодировки
     if (!$mysqli->set_charset($db_charset)) {
         error_log('Error loading character set utf8mb4: ' . $mysqli->error);
         die('Error setting character set.');
@@ -805,34 +747,35 @@ function getDatabaseConnection() {
 
 
 
-// Функция для получения данных из таблицы с лимитом, начиная с последних записей
-// Функция для получения данных из таблицы с лимитом, начиная с последних записей 
+
+
+
+
+
+
+/* 
+getTableData
+ */
 function getTableData($table_name, $limit = null) {
     $mysqli = getDatabaseConnection();
 
-    // Подготовка базового запроса
     $query = "SELECT * FROM $table_name";
 
-    // Если таблица live_stream, добавляем условие по market_cap
     if ($table_name === 'live_stream') {
         $query .= " WHERE usd_market_cap >= 6000";
     }
 
-    // Добавляем сортировку по id в обратном порядке
     $query .= " ORDER BY id DESC";
 
-    // Добавление лимита, если он передан
     if ($limit !== null) {
         $query .= " LIMIT $limit";
     }
 
-    // Выполняем запрос
     $result = $mysqli->query($query);
     if (!$result) {
         die('Error executing query: ' . $mysqli->error);
     }
 
-    // Возвращаем результат как массив данных
     $data = [];
     while ($row = $result->fetch_assoc()) {
         $data[] = $row;
@@ -845,24 +788,22 @@ function getTableData($table_name, $limit = null) {
 
 
 
-// Функция для получения всех имен таблиц из базы данных
+
+// getAllTableNames
 function getAllTableNames() {
     $mysqli = getDatabaseConnection();
 
-    // Запрос для получения всех таблиц в текущей базе данных
     $query = "SHOW TABLES";
 
-    // Выполняем запрос
     $result = $mysqli->query($query);
 
     if (!$result) {
         die('Error executing query: ' . $mysqli->error);
     }
 
-    // Возвращаем имена таблиц как массив
     $tables = [];
     while ($row = $result->fetch_array()) {
-        $tables[] = $row[0]; // Таблицы возвращаются как нумерованный массив
+        $tables[] = $row[0]; 
     }
 
     $result->free();
@@ -874,11 +815,13 @@ function getAllTableNames() {
 
 
 
-// Функция для получения всех таблиц и всех данных из каждой таблицы
+
+/* 
+getLimitedTablesData
+ */
 function getLimitedTablesData($limit = 10) {
     $mysqli = getDatabaseConnection();
 
-    // Получаем список всех таблиц в базе данных
     $tables_query = "SHOW TABLES";
     $tables_result = $mysqli->query($tables_query);
 
@@ -886,14 +829,11 @@ function getLimitedTablesData($limit = 10) {
         die('Error retrieving tables: ' . $mysqli->error);
     }
 
-    // Массив для хранения данных с лимитом из каждой таблицы
     $all_data = [];
 
-    // Проходим по каждой таблице
     while ($table_row = $tables_result->fetch_array()) {
-        $table_name = $table_row[0]; // Имя таблицы
+        $table_name = $table_row[0];
 
-        // Получаем данные с лимитом из текущей таблицы
         $data_query = "SELECT * FROM $table_name LIMIT $limit";
         $data_result = $mysqli->query($data_query);
 
@@ -901,24 +841,19 @@ function getLimitedTablesData($limit = 10) {
             die("Error retrieving data from $table_name: " . $mysqli->error);
         }
 
-        // Сохраняем данные текущей таблицы
         $table_data = [];
         while ($row = $data_result->fetch_assoc()) {
             $table_data[] = $row;
         }
 
-        // Добавляем данные текущей таблицы в массив всех данных
         $all_data[$table_name] = $table_data;
 
-        // Освобождаем результат
         $data_result->free();
     }
 
-    // Закрываем соединение и освобождаем ресурсы
     $tables_result->free();
     $mysqli->close();
 
-    // Возвращаем данные всех таблиц с лимитом
     return $all_data;
 }
 
@@ -936,25 +871,19 @@ formatTimeAgo
  */
 function formatTimeAgo($timestamp) {
 
-    // Преобразуем временную метку из миллисекунд в секунды
     $timestampInSeconds = $timestamp / 1000;
 
-    // Получаем текущее время в секундах
     $currentTime = time();
 
-    // Рассчитываем разницу между текущим временем и временной меткой
     $differenceInSeconds = $currentTime - $timestampInSeconds;
 
-    // Если разница меньше 60 секунд, возвращаем "<1 min ago"
     if ($differenceInSeconds < 60) {
         return '<1 min ago';
     }
 
-    // Вычисляем количество часов и минут
     $hours = floor($differenceInSeconds / 3600);
     $minutes = floor(($differenceInSeconds % 3600) / 60);
 
-    // Форматируем результат
     $formatted = '';
     if ($hours > 0) {
         $formatted .= $hours . ' h ';
@@ -972,16 +901,6 @@ function formatTimeAgo($timestamp) {
 checkImageUrl
  */
 function checkImageUrl($url) {
-    // Get the headers of the URL
-    // $headers = @get_headers($url);
-
-    // // Check if the headers are available and if the HTTP status code is 200 (OK)
-    // if ($headers && strpos($headers[0], '200') !== false) {
-    //     return true; // Image exists and is accessible
-    // } else {
-    //     return false; // Image doesn't exist or is inaccessible
-    // }
-
     return true;
 }
 
@@ -994,27 +913,22 @@ function checkImageUrl($url) {
 get_sound_status
  */
 function get_sound_status($table_type) {
-    // Определяем дефолтные значения для каждой таблицы
     $default_values = [
-        'dex_paid' => 'true',        // по умолчанию звук включен
-        'live_stream' => 'false',    // по умолчанию звук выключен
-        // 'big_buys' => 'true'         // по умолчанию звук включен
+        'dex_paid' => 'true',
+        'live_stream' => 'true',
+        'big_buys' => 'false'
     ];
 
-    // Получаем имя куки для таблицы
     $cookie_name = $table_type . '_sound';
 
-    // Если кука установлена, возвращаем её значение ('true' или 'false')
     if (isset($_COOKIE[$cookie_name])) {
         return $_COOKIE[$cookie_name] === 'true' ? 'mod-enable' : 'mod-disable';
     }
 
-    // Если куки нет, возвращаем дефолтное значение для данной таблицы
     if (isset($default_values[$table_type])) {
         return $default_values[$table_type] === 'true' ? 'mod-enable' : 'mod-disable';
     }
 
-    // Возвращаем значение по умолчанию, если таблица не найдена
     return 'mod-disable';
 }
 
@@ -1026,7 +940,6 @@ function get_sound_status($table_type) {
 Check if the HTTP host is a common local domain
  */
 function is_local_dev_site() {
-   // return false;
 
     if (
         strpos($_SERVER['HTTP_HOST'], 'localhost') !== false ||
@@ -1049,19 +962,15 @@ function is_local_dev_site() {
 format_mint_string
  */
 function format_mint_string($input, $start_length = 15, $end_length = 4) {
-    // Получаем длину строки
     $input_length = strlen($input);
 
-    // Если строка короче, чем длина начала и конца вместе, вернем оригинал
     if ($input_length <= $start_length + $end_length) {
         return $input;
     }
 
-    // Извлекаем начало и конец строки
     $start = substr($input, 0, $start_length);
     $end = substr($input, -$end_length);
 
-    // Возвращаем форматированную строку
     return $start . '...' . $end;
 }
 
@@ -1115,7 +1024,6 @@ function reset_cron_tasks() {
     if ($timestamp) {
         wp_unschedule_event($timestamp, 'check_featured_fields_status');
     }
-    // Пересоздаем cron задачу для тестирования
     wp_schedule_event(time(), 'one_minute', 'check_featured_fields_status');
 }
 if (isset($_GET['cron_test'])) {

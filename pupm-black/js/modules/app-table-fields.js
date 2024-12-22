@@ -16,16 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	/* 
 	socket
 	*/
-	// true
-	// false
-	if (false) {
+	let state = true
+
+	if (window.location.hostname === 'loc.pump.black') {
+		state = false
+	}
+
+	if (state === true) {
 		createWebSocketWithProxy();
 	} else {
 		/* 
 		Emulate Socket
 		*/
 		if (document.querySelector('.home') || document.querySelector('.page-template-dex-paid-page')) {
-			createProcessor(0, 1000);
+		//	createProcessor(0, 1000);
 		}
 	}
 
@@ -41,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		const socket = new WebSocket('wss://site55.online:8080');
 
 		socket.onopen = function () {
-			console.log('WebSocket connection opened with proxy');
+			//console.log('WebSocket connection opened with proxy');
 		};
 
 		socket.onmessage = function (event) {
-			console.log('Received message:', event.data);
+			//console.log('Received message:', event.data);
 
 			// Check if the data is a Blob
 			if (event.data instanceof Blob) {
@@ -57,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						const jsonData = JSON.parse(reader.result);
 
 						// Логирование полученного JSON
-						console.log('Message from server (parsed):', jsonData);
+						//console.log('Message from server (parsed):', jsonData);
 
 						// Generate row
 						addRowAndPlaySound(jsonData)
@@ -69,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				// Read the Blob as text
 				reader.readAsText(event.data);
 			} else {
-				console.log('Received non-Blob message:', event.data);
+				//console.log('Received non-Blob message:', event.data);
 			}
 		};
 
 		socket.onerror = function (error) {
-			console.error('WebSocket error:', error);
+			//console.error('WebSocket error:', error);
 		};
 
 		socket.onclose = function () {
-			console.log('WebSocket connection closed');
+			//console.log('WebSocket connection closed');
 		};
 	}
 
@@ -151,21 +155,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
 	/* 
 	addRowAndPlaySound
 	*/
 	function addRowAndPlaySound(obj) {
 		if (obj.token_type === 'big_buys') {
-			tableManagerBigBuys.addRow(obj.token);
-			checkAndPlaySoundForTable('big_buys');
+			if (document.querySelector('.mod-big-buys')) {
+				tableManagerBigBuys.addRow(obj.token);
+				if (!tableManagerBigBuys.isPaused) {
+					checkAndPlaySoundForTable('big_buys');
+				}
+			}
 		} else if (obj.token_type === 'dex_paid') {
-			tableManagerDexPaid.addRow(obj.token);
-			checkAndPlaySoundForTable('dex_paid');
+			if (document.querySelector('.dex_paid')) {
+				tableManagerDexPaid.addRow(obj.token);
+				checkAndPlaySoundForTable('dex_paid');
+			}
 		} else if (obj.token_type === 'live_stream') {
-			tableManagerLiveStream.addRow(obj.token);
-			checkAndPlaySoundForTable('live_stream');
+			if (document.querySelector('.live_stream')) {
+				tableManagerLiveStream.addRow(obj.token);
+				checkAndPlaySoundForTable('live_stream');
+			}
 		}
 	}
 
@@ -180,11 +190,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		let index = initialIndex;
 
 		function processNextObject() {
-			//const savedData = localStorage.getItem('savedObjects');
 			const savedData = wcl_obj.tokenFields;
 
 			if (savedData) {
-				// const objectArray = JSON.parse(savedData);
 				const objectArray = savedData;
 
 				if (index < objectArray.length) {
@@ -198,10 +206,8 @@ document.addEventListener('DOMContentLoaded', function () {
 						index = 0;
 					}
 				} else {
-					// console.log('Нет объектов для обработки.');
 				}
 			} else {
-				// console.log('Нет данных в localStorage.');
 			}
 		}
 
@@ -219,22 +225,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	*/
 	if (document.querySelector('.sct-1-featured-fields.mod-upcoming-fields')) {
 		let section = document.querySelector('.sct-1-featured-fields.mod-upcoming-fields.mod-desktop');
-	
+
 		const dateString = serverTimeUTC;
-	
+
 		// Split the date and time components
 		const [datePart, timePart] = dateString.split(' ');
 		const [year, month, day] = datePart.split('-').map(Number);
 		const [hours, minutes, seconds] = timePart.split(':').map(Number);
-	
+
 		const dateObject = new Date(year, month - 1, day, hours, minutes, seconds); // month is 0-based
-	
+
 		const incrementDateByOneSecond = () => {
 			dateObject.setSeconds(dateObject.getSeconds() + 1); // Add one second to the current time
 		};
-	
+
 		const intervalId = setInterval(incrementDateByOneSecond, 1000); // Update the dateObject every second
-	
+
 		// Функция для обновления таймера
 		function updateCountdown(item) {
 			// Получаем дату запуска из атрибута data-launch
@@ -243,20 +249,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			const hoursElem = item.querySelector('.hours');
 			const minutesElem = item.querySelector('.minutes');
 
-			console.log(launchDate)
-	
 			// Обновление таймера каждую секунду
 			const countdownInterval = setInterval(function () {
 				// Текущее время
 				const now = dateObject.getTime(); // берем текущее время из dateObject, который обновляется каждую секунду
 				const distance = launchDate - now; // разница между временем запуска и текущим временем
-	
+
 				if (distance > 0) {
 					// Рассчитываем оставшиеся дни, часы и минуты
 					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	
+
 					// Обновляем DOM элементы
 					daysElem.textContent = days;
 					hoursElem.textContent = hours;
@@ -270,17 +274,17 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}, 1000); // Обновляем каждую секунду
 		}
-	
+
 		// Находим все элементы с классом 'data-b2-item' и запускаем таймер для каждого
 		let countdownItems = section.querySelectorAll('.data-b2-item');
-	
+
 		// Если экран меньше 1025px, выбираем элементы для мобильной версии
 		if (window.matchMedia("(max-width: 1025px)").matches) {
 			countdownItems = document.querySelector('.sct-1-featured-fields.mod-upcoming-fields.mod-mobile').querySelectorAll('.data-b2-item');
 		}
-	
+
 		// Запускаем функцию для каждого элемента таймера
 		countdownItems.forEach(item => updateCountdown(item));
 	}
-	
+
 });

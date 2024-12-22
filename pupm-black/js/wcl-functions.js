@@ -155,9 +155,9 @@ function getCookie(name) {
   return null;
 }
 var soundStatus = {
-  dex_paid: getCookie('dex_paid_sound') === 'true' || false,
-  live_stream: getCookie('live_stream_sound') === 'true' || false,
-  big_buys: getCookie('big_buys_sound') === 'true' || false
+  dex_paid: getCookie('dex_paid_sound') === 'true' ? true : getCookie('dex_paid_sound') ? false : true,
+  live_stream: getCookie('live_stream_sound') === 'true' ? true : getCookie('live_stream_sound') ? false : true,
+  big_buys: false
 };
 function toggleSound(tableClass) {
   soundStatus[tableClass] = !soundStatus[tableClass]; // Переключаем статус
@@ -183,13 +183,18 @@ function updateIcon(tableClass) {
 }
 function checkAndPlaySoundForTable(tableClass) {
   if (soundStatus[tableClass]) {
-    playSoundForTable();
+    playSoundForTable(tableClass);
   }
 }
-function playSoundForTable() {
-  var soundFileUrl = wcl_obj.sound_file_url;
+function playSoundForTable(tableClass) {
+  var soundFileUrl = '';
+  if (tableClass == 'dex_paid') {
+    soundFileUrl = wcl_obj.sound_for_dex_paid;
+  } else if (tableClass == 'live_stream') {
+    soundFileUrl = wcl_obj.sound_for_livestream;
+  }
   var audio = new Audio(soundFileUrl);
-  audio.volume = 0.5;
+  audio.volume = 0.1;
   audio.play();
 }
 
@@ -258,11 +263,6 @@ var TableRowBase = /*#__PURE__*/function () {
     value: function formatValue(value) {
       return value !== 'N/A' ? value : 'N/A';
     }
-
-    // formatUsdMarketCap() {
-    // 	const usdMarketCap = parseFloat(this.data.usd_market_cap);
-    // 	return !isNaN(usdMarketCap) ? `${Math.round(usdMarketCap)}k` : '';
-    // }
   }, {
     key: "getMarketCapHtmlBigBuys",
     value: function getMarketCapHtmlBigBuys() {
@@ -292,7 +292,7 @@ var TableRowBase = /*#__PURE__*/function () {
       if (!isNaN(solAmount)) {
         // Divide by 1,000,000,000
         var formattedAmount = (solAmount / 1000000000).toFixed(2);
-        return "".concat(withSign ? '+' : '').concat(formattedAmount, "k");
+        return "".concat(withSign ? '+' : '').concat(formattedAmount);
       }
       return '';
     }
@@ -357,7 +357,7 @@ var TableRowBase = /*#__PURE__*/function () {
         var formattedWithCommas = new Intl.NumberFormat('en-US').format(roundedValue);
 
         // Возвращаем отформатированное значение с суффиксом 'k', если значение больше 0
-        return "".concat(formattedWithCommas, "k");
+        return "".concat(formattedWithCommas);
       }
       return null; // Возвращаем null, если есть ошибка
     }
@@ -369,9 +369,9 @@ var TableRowBase = /*#__PURE__*/function () {
         marketCap = parseFloat(this.data.market_cap_usd);
       }
       if (!isNaN(marketCap)) {
-        return "$".concat(marketCap.toFixed(0).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$&,').replace(/,/g, ' ')) + 'k';
+        return "$".concat(marketCap.toFixed(0).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$&,').replace(/,/g, ' '));
       }
-      return '';
+      return 'N/A';
     }
   }, {
     key: "formatHoldersCount",
@@ -480,7 +480,7 @@ var LiveStreamRow = /*#__PURE__*/function (_TableRowBase3) {
   return _createClass(LiveStreamRow, [{
     key: "createMobileView",
     value: function createMobileView() {
-      if (parseFloat(this.data.market_cap) < 6000) {
+      if (parseFloat(this.data.usd_market_cap) < 6000) {
         return '';
       }
       return "\n\t\t<div class=\"data-b3-row\">\n\t\t\t<div class=\"data-b3-col\">\n\t\t\t\t<div class=\"data-b2-item-image\">\n\t\t\t\t\t".concat(this.data.image_uri !== 'N/A' ? "<img src=\"".concat(this.data.image_uri, "\" alt=\"img\">") : 'No image available', "\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"data-b3-col\">\n\t\t\t\t<div class=\"data-b2-item-name\">\n\t\t\t\t\t").concat(this.formatValue(this.data.name), "\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"data-b2-item-name\">").concat(this.formatValue(this.data.symbol), "</div>\n\n\t\t\t\t<div class=\"data-b2-item-marketcap\">\n\t\t\t\t\t").concat(this.formatMarketCap(), "\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t\n\t\t\t<div class=\"data-b3-col\">\n\t\t\t\t <div class=\"data-b2-item-ca\">\n\t\t\t\t\t<div class=\"data-b2-item-ca-field\" data-mint=\"").concat(this.data.mint, "\">").concat(this.formatMint(), "</div>\n\t\t\t\t\t<div class=\"data-b2-item-ca-btn\">\n\t\t\t\t\t\t<img src=\"").concat(this.templateUrl, "/img/copy.svg\" alt=\"img\">\n\t\t\t\t\t\t<div class=\"data-b2-item-ca-copy-notify\">Copied</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"data-b3-row\">\n\t\t\t<div class=\"data-b3-col\">\n\t\t\t\t<div class=\"data-b2-item-social\">\n\t\t\t\t\t").concat(this.createSocialLinks(), "\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"data-b3-col\">\n\t\t\t\t<div class=\"data-b2-item-buy-links\">\n\t\t\t\t\t").concat(this.createBuyLinks(), "\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t");
@@ -488,7 +488,7 @@ var LiveStreamRow = /*#__PURE__*/function (_TableRowBase3) {
   }, {
     key: "createDesktopView",
     value: function createDesktopView() {
-      if (parseFloat(this.data.market_cap) < 6000) {
+      if (parseFloat(this.data.usd_market_cap) < 6000) {
         return '';
       }
       return "\n\t\t\t<td><div class=\"data-b2-item-image\">".concat(this.data.image_uri !== 'N/A' ? "<img src=\"".concat(this.data.image_uri, "\" alt=\"img\">") : 'No image available', "</div></td>\n\t\t\t<td><div class=\"data-b2-item-name\">").concat(this.formatValue(this.data.name), "</div></td>\n\t\t\t<td><div class=\"data-b2-item-name\">").concat(this.formatValue(this.data.symbol), "</div></td>\n\t\t\t<td>\n\t\t\t\t<div class=\"data-b2-item-ca\">\n\t\t\t\t\t<div class=\"data-b2-item-ca-field\" data-mint=\"").concat(this.data.mint, "\">").concat(this.formatMint(), "</div>\n\t\t\t\t\t<div class=\"data-b2-item-ca-btn\">\n\t\t\t\t\t\t<img src=\"").concat(this.templateUrl, "/img/copy.svg\" alt=\"img\">\n\t\t\t\t\t\t<div class=\"data-b2-item-ca-copy-notify\">Copied</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t\t<td><div class=\"data-b2-item-social\">").concat(this.createSocialLinks(), "</div></td>\n\t\t\t<td><div class=\"data-b2-item-marketcap\">").concat(this.formatMarketCap(), "</div></td>\n\t\t\t<td>\n\t\t\t  <div class=\"data-b2-item-buy-links\">\n\t\t\t\t").concat(this.createBuyLinks(), "\n\t\t\t</div>\n\t\t\t</td>\n\t\t");
@@ -540,8 +540,6 @@ var TableManager = /*#__PURE__*/function () {
         }
       };
 
-      //console.log(selectors)
-
       // Return the appropriate selector based on the device type
       return this.isMobile ? selectors[tableType].mobile : selectors[tableType].desktop;
     }
@@ -551,21 +549,6 @@ var TableManager = /*#__PURE__*/function () {
     key: "getMaxRows",
     value: function getMaxRows(tableType) {
       var maxRowsConfig = wcl_obj.tablesMaxRows; // Используем переданные данные
-      console.log(this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tableType].desktop);
-      // const maxRowsConfig = {
-      // 	BigBuys: {
-      // 		desktop: 10,
-      // 		mobile: 7
-      // 	},
-      // 	DexPaid: {
-      // 		desktop: 5,
-      // 		mobile: 4
-      // 	},
-      // 	LiveStream: {
-      // 		desktop: 4,
-      // 		mobile: 4
-      // 	}
-      // };
 
       // Return maxRows based on the table type and device type
       return this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tableType].desktop;
@@ -577,7 +560,6 @@ var TableManager = /*#__PURE__*/function () {
     value: function togglePause() {
       var _this3 = this;
       this.isPaused = !this.isPaused;
-      // console.log(this.isPaused )
       if (!this.isPaused && this.buffer.length > 0) {
         // Если пауза отключена и есть данные в буфере, добавляем их в таблицу
         this.buffer.forEach(function (token) {
@@ -620,7 +602,6 @@ var TableManager = /*#__PURE__*/function () {
     value: function addRow(data) {
       var _this4 = this;
       if (this.isPaused) {
-        // Если пауза активна, добавляем данные в буфер
         if (this.buffer.length < this.maxBufferSize) {
           this.buffer.push(data);
         }
@@ -638,8 +619,6 @@ var TableManager = /*#__PURE__*/function () {
         if (!row) {
           return;
         }
-
-        // Создание элемента строки и добавление класса
         var newRowElement = '';
         if (this.isMobile) {
           newRowElement = document.createElement('div');
@@ -796,7 +775,6 @@ ready(function () {
   /* 
   sct-10-product
   */
-  // loadImageWithTimeout
   function loadImageWithTimeout(imageElement, placeholderSrc) {
     var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2000;
     var originalSrc = imageElement.getAttribute('src');
@@ -808,6 +786,7 @@ ready(function () {
     var timer = setTimeout(function () {
       // Если изображение не загрузилось за 2 секунды, заменяем его на плейсхолдер
       imageElement.setAttribute('src', placeholderSrc);
+      imageElement.classList.add('not-found');
       img.src = ''; // Остановить загрузку
     }, timeout);
 
@@ -819,6 +798,7 @@ ready(function () {
     img.onerror = function () {
       clearTimeout(timer); // Если ошибка, заменяем на плейсхолдер
       imageElement.setAttribute('src', placeholderSrc);
+      imageElement.classList.add('not-found');
     };
 
     // Начинаем загрузку
@@ -915,6 +895,47 @@ ready(function () {
   sct-10-product
   */
   if (document.querySelector('.sct-10-product')) {
+    // Track the current index in the shuffled array
+    // Function to shuffle the array
+    var shuffleArray = function shuffleArray(array) {
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        // Swap elements
+        var _ref = [array[j], array[i]];
+        array[i] = _ref[0];
+        array[j] = _ref[1];
+      }
+      return array;
+    }; // Function to get a random audio file URL without repetition
+    var getRandomAudioFileUrl = function getRandomAudioFileUrl() {
+      // Get the already played audio URLs from localStorage
+      var playedFiles = JSON.parse(localStorage.getItem('playedFiles')) || [];
+      if (currentIndex >= shuffledFiles.length) {
+        // Reset the index and shuffle the array again when all files have been played
+        currentIndex = 0;
+        shuffledFiles = shuffleArray(audioFiles.slice());
+      }
+      var audioFileUrl;
+
+      // Find the next audio file URL that hasn't been played
+      while (currentIndex < shuffledFiles.length) {
+        audioFileUrl = shuffledFiles[currentIndex]; // Get the next audio file URL
+
+        if (!playedFiles.includes(audioFileUrl)) {
+          // If this audio file hasn't been played, mark it as played
+          playedFiles.push(audioFileUrl);
+          localStorage.setItem('playedFiles', JSON.stringify(playedFiles)); // Update localStorage
+          currentIndex++; // Increment the index for the next call
+          return audioFileUrl; // Return the selected audio file URL
+        }
+        currentIndex++; // Increment index if the file has been played
+      }
+
+      // If all files have been played, reset the index and the played files list
+      currentIndex = 0;
+      localStorage.removeItem('playedFiles'); // Clear the played files
+      return audioFileUrl; // Return null if all files have been played
+    };
     // Function to play audio
     var playAudio = function playAudio() {
       audio.play();
@@ -953,6 +974,11 @@ ready(function () {
     }; // Show preloader
     var _section4 = document.querySelector('.sct-10-product');
     var soundFileUrl = wcl_obj.sound_url_check_paid;
+    var audioContainer = document.getElementById('audio-container');
+    var audioFiles = JSON.parse(audioContainer.getAttribute('data-audio-files'));
+    var shuffledFiles = shuffleArray(audioFiles.slice()); // Create a shuffled copy of the audio files
+    var currentIndex = 0;
+    soundFileUrl = getRandomAudioFileUrl();
     var audio = new Audio(soundFileUrl);
     audio.volume = 0.7;
     var defaultValue = true; // Значение по умолчанию
@@ -977,12 +1003,16 @@ ready(function () {
     xhr.onload = function (data) {
       if (xhr.status >= 200 && xhr.status < 400) {
         var data = JSON.parse(xhr.responseText);
-        console.log(data);
         var status_dex_paid = data.status_dex_paid;
+        if (data.token_for_screenshot.trim() === "") {
+          _section4.querySelector('.data-b1').style.display = "none";
+        } else {
+          _section4.querySelector('.data-b1').style.display = "block";
+        }
         setTimeout(function () {
           preloader.style.display = 'none'; // Hide preloader
 
-          if (status_dex_paid) {
+          if (status_dex_paid && data.token_for_screenshot.trim() != "") {
             document.querySelector('.sct-10-product.mod-type-1').classList.add('mod-dex_paid-active');
             document.querySelector('.sct-10-product.mod-generate').classList.add('mod-dex_paid-active');
             tsParticles_init();
@@ -997,18 +1027,17 @@ ready(function () {
 
           // Находим все изображения с классом 'data-b2-item-image'
           var images = document.querySelectorAll('.sct-10-product .data-img img'); // Измените на нужный селектор, если необходимо
-          var placeholder = wcl_obj.template_url + '/img/image-placeholder.png'; // Ссылка на плейсхолдер
+          var placeholder = wcl_obj.template_url + '/img/pump-fun-icon.png'; // Ссылка на плейсхолдер
 
           // Применяем функцию ко всем изображениям
           images.forEach(function (image) {
-            console.log(image);
             loadImageWithTimeout(image, placeholder);
           });
-        }, 600);
+        }, 100);
         if (status_dex_paid && soundStatus.dex_paid_page_sound) {
           setTimeout(function () {
             playAudio();
-          }, 500);
+          }, 0);
         }
         _section4.querySelectorAll('.data-b1-icon').forEach(function (icon) {
           icon.addEventListener('click', function () {
@@ -1087,19 +1116,30 @@ ready(function () {
     var urlParams = new URLSearchParams(window.location.search);
     var url_section = urlParams.get('section');
     section.querySelector('form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      var actionUrl = this.action; // Dynamically get the action attribute
-
+      event.preventDefault();
+      var actionUrl = this.action;
       var mintValue = this.mint.value;
-      var fullUrl = actionUrl + '?mint=' + encodeURIComponent(mintValue);
-      window.location.href = fullUrl;
+      var errorMsg = document.querySelector('.data-form-note');
+      if (errorMsg) {
+        errorMsg.remove();
+      }
+      if (mintValue.length >= 42 && mintValue.length <= 44) {
+        var fullUrl = actionUrl + '?mint=' + encodeURIComponent(mintValue);
+        window.location.href = fullUrl;
+      } else {
+        errorMsg = document.createElement('div');
+        errorMsg.classList.add('data-form-note');
+        errorMsg.textContent = "Input must be between 42 and 44 characters.";
+        var formInner = section.querySelector('.data-form-out');
+        if (formInner) {
+          formInner.appendChild(errorMsg);
+        }
+      }
     });
     if (url_section === "check-dexscreener-paid-status") {
       if (scrollTo) {
         var element = document.getElementById('check-dexscreener-paid-status');
         if (element) {
-          // Получаем позицию элемента и корректируем её с учетом отступа
           var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
           window.scrollTo({
             top: elementPosition,
@@ -1120,6 +1160,20 @@ ready(function () {
       e.preventDefault();
       var form = this;
       var mint = form.querySelector('input[name="mint"]').value;
+      var errorMsg = document.querySelector('.data-form-note');
+      if (errorMsg) {
+        errorMsg.remove();
+      }
+      if (mint.length >= 42 && mint.length <= 44) {} else {
+        errorMsg = document.createElement('div');
+        errorMsg.classList.add('data-form-note');
+        errorMsg.textContent = "Input must be between 42 and 44 characters.";
+        var formInner = _section6.querySelector('.data-form-out');
+        if (formInner) {
+          formInner.appendChild(errorMsg);
+        }
+        return;
+      }
       var data_request = {
         action: 'project_load_posts',
         mint: mint
@@ -1136,6 +1190,7 @@ ready(function () {
       if (section_groove.querySelector('.data-inner')) {
         section_groove.querySelector('.data-inner').classList.add('active');
       }
+      document.querySelector('.sct-8-gooner .data-link button').setAttribute('disabled', 'disabled');
       form.querySelector('input[type="submit"]').setAttribute('disabled', 'disabled');
       form.querySelector('input[type="submit"]').classList.add('active');
       var xhr = new XMLHttpRequest();
@@ -1144,14 +1199,19 @@ ready(function () {
       xhr.onload = function (data) {
         if (xhr.status >= 200 && xhr.status < 400) {
           var data = JSON.parse(xhr.responseText);
-          //console.log(data)
-
           form.querySelector('input[type="submit"]').classList.remove('active');
           form.querySelector('input[type="submit"]').removeAttribute('disabled');
           section_groove.querySelector('.data-b1').innerHTML = data.token;
           section_groove.setAttribute('data-mint', data.mint);
           if (section_groove.querySelector('.data-inner').classList.contains('active')) {
             section_groove.querySelector('.data-inner').classList.remove('active');
+          }
+          if (!data.token.trim()) {
+            // Create the new markup
+            var newMarkup = "\n                        <div class=\"data-b2\">\n                            <div class=\"data-b2-img\">\n                                <img src=\"".concat(wcl_obj.template_url, "/img/token-not-found.svg\" alt=\"img\">\n                            </div>\n\n                            <h2 class=\"data-b2-title\">\n                                Not Found\n                            </h2>\n                        </div>\n                        ");
+            section_groove.querySelector('.data-b1').insertAdjacentHTML('beforeend', newMarkup);
+          } else {
+            document.querySelector('.sct-8-gooner .data-link button').removeAttribute('disabled');
           }
           preloader.style.display = 'none';
         }
@@ -1166,19 +1226,21 @@ ready(function () {
   sct-10-product mod-active
   */
   function init_btn_download() {
-    document.querySelector('.data-btn-download').addEventListener('click', function (e) {
-      e.preventDefault();
-      html2canvas(document.querySelector('#product-to-img'), {
-        useCORS: true,
-        // Разрешить кросс-доменные изображения
-        allowTaint: true // Разрешить таинственные изображения
-      }).then(function (canvas) {
-        var link = document.createElement('a');
-        link.href = canvas.toDataURL('image/jpeg');
-        link.download = 'pump_black_image.jpg'; // Название сохраняемого файла
-        link.click();
+    if (document.querySelector('.data-btn-download')) {
+      document.querySelector('.data-btn-download').addEventListener('click', function (e) {
+        e.preventDefault();
+        html2canvas(document.querySelector('#product-to-img'), {
+          useCORS: true,
+          // Разрешить кросс-доменные изображения
+          allowTaint: true // Разрешить таинственные изображения
+        }).then(function (canvas) {
+          var link = document.createElement('a');
+          link.href = canvas.toDataURL('image/jpeg');
+          link.download = 'pump_black_image.jpg'; // Название сохраняемого файла
+          link.click();
+        });
       });
-    });
+    }
   }
 
   /* 
@@ -1244,6 +1306,9 @@ ready(function () {
     });
     _section7.querySelectorAll('.data-item-inner').forEach(function (element) {
       element.addEventListener('click', function (e) {
+        if (_section7.querySelector('.data-link button').classList.contains('active')) {
+          return;
+        }
         var self = element.parentElement;
         var notice = _section7.querySelector('.data-notice');
         _section7.querySelectorAll('.data-item').forEach(function (element) {
@@ -1450,9 +1515,6 @@ ready(function () {
                   minimumValue: 11
                 }
               },
-              // number: {
-              // 	//	value: 150 // Увеличено количество частиц для яркости эффекта
-              // },
               move: {
                 gravity: {
                   enable: true,
@@ -1609,14 +1671,18 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 
   socket
   */
-  // true
-  // false
-  if (false) {} else {
+  var state = true;
+  if (window.location.hostname === 'loc.pump.black') {
+    state = false;
+  }
+  if (state === true) {
+    createWebSocketWithProxy();
+  } else {
     /* 
     Emulate Socket
     */
     if (document.querySelector('.home') || document.querySelector('.page-template-dex-paid-page')) {
-      createProcessor(0, 1000);
+      //	createProcessor(0, 1000);
     }
   }
 
@@ -1626,10 +1692,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function createWebSocketWithProxy() {
     var socket = new WebSocket('wss://site55.online:8080');
     socket.onopen = function () {
-      console.log('WebSocket connection opened with proxy');
+      //console.log('WebSocket connection opened with proxy');
     };
     socket.onmessage = function (event) {
-      console.log('Received message:', event.data);
+      //console.log('Received message:', event.data);
 
       // Check if the data is a Blob
       if (event.data instanceof Blob) {
@@ -1640,7 +1706,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var jsonData = JSON.parse(reader.result);
 
             // Логирование полученного JSON
-            console.log('Message from server (parsed):', jsonData);
+            //console.log('Message from server (parsed):', jsonData);
 
             // Generate row
             addRowAndPlaySound(jsonData);
@@ -1651,14 +1717,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // Read the Blob as text
         reader.readAsText(event.data);
       } else {
-        console.log('Received non-Blob message:', event.data);
+        //console.log('Received non-Blob message:', event.data);
       }
     };
     socket.onerror = function (error) {
-      console.error('WebSocket error:', error);
+      //console.error('WebSocket error:', error);
     };
     socket.onclose = function () {
-      console.log('WebSocket connection closed');
+      //console.log('WebSocket connection closed');
     };
   }
 
@@ -1717,14 +1783,22 @@ document.addEventListener('DOMContentLoaded', function () {
   */
   function addRowAndPlaySound(obj) {
     if (obj.token_type === 'big_buys') {
-      tableManagerBigBuys.addRow(obj.token);
-      (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('big_buys');
+      if (document.querySelector('.mod-big-buys')) {
+        tableManagerBigBuys.addRow(obj.token);
+        if (!tableManagerBigBuys.isPaused) {
+          (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('big_buys');
+        }
+      }
     } else if (obj.token_type === 'dex_paid') {
-      tableManagerDexPaid.addRow(obj.token);
-      (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('dex_paid');
+      if (document.querySelector('.dex_paid')) {
+        tableManagerDexPaid.addRow(obj.token);
+        (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('dex_paid');
+      }
     } else if (obj.token_type === 'live_stream') {
-      tableManagerLiveStream.addRow(obj.token);
-      (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('live_stream');
+      if (document.querySelector('.live_stream')) {
+        tableManagerLiveStream.addRow(obj.token);
+        (0,_components_sound__WEBPACK_IMPORTED_MODULE_2__.checkAndPlaySoundForTable)('live_stream');
+      }
     }
   }
 
@@ -1734,10 +1808,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function createProcessor(initialIndex, intervalTime) {
     var index = initialIndex;
     function processNextObject() {
-      //const savedData = localStorage.getItem('savedObjects');
       var savedData = wcl_obj.tokenFields;
       if (savedData) {
-        // const objectArray = JSON.parse(savedData);
         var objectArray = savedData;
         if (index < objectArray.length) {
           var obj = objectArray[index];
@@ -1746,12 +1818,8 @@ document.addEventListener('DOMContentLoaded', function () {
           if (index >= objectArray.length) {
             index = 0;
           }
-        } else {
-          // console.log('Нет объектов для обработки.');
-        }
-      } else {
-        // console.log('Нет данных в localStorage.');
-      }
+        } else {}
+      } else {}
     }
     setInterval(processNextObject, intervalTime);
   }
@@ -1768,7 +1836,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var daysElem = item.querySelector('.days');
       var hoursElem = item.querySelector('.hours');
       var minutesElem = item.querySelector('.minutes');
-      console.log(launchDate);
 
       // Обновление таймера каждую секунду
       var countdownInterval = setInterval(function () {

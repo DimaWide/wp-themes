@@ -15,7 +15,7 @@ function project_load_posts() {
     $token_image_uri      = '';
 
     if ($mint) {
-        if (is_local_dev_site()) {
+        if (is_local_dev_site() && false) {
             $token = get_option('test_token');
         } else {
             $token = getTokenDetails($mint);
@@ -73,7 +73,7 @@ add_action('wp_ajax_nopriv_project_load_posts', 'project_load_posts');
  */
 function dex_paid_token_load() {
     $mint  = isset($_POST['mint']) ? $_POST['mint'] : 'AnM6bkqJy3D4douPgp1keUTmQNygP2KKiM7bVw9qpump';
-    $token = '';
+    $token = [];
     $isDexPaid = '';
 
     $token_name           = '';
@@ -85,8 +85,9 @@ function dex_paid_token_load() {
             $token = get_option('test_token');
             $isDexPaid = true;
         } else {
-            $token     = getTokenDetails($mint);
             $isDexPaid = checkDexPaid($mint);
+            $token = getTokenDetails($mint);
+           // handle_dexscreener_add_token_to_table($mint, $isDexPaid, $token);
         }
 
         $token_name           = $token['name'];
@@ -184,6 +185,20 @@ function dex_paid_token_load() {
                 <div class="data-link-2 data-btn-download">
                     <button>DOWNLOAD SCREENSHOT</button>
                 </div>
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="data-b2">
+            <div class="data-b2-img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/token-not-found.svg'; ?>" alt="img">
+            </div>
+
+            <h2 class="data-b2-title">
+                Not Found
+            </h2>
+
+            <div class="data-b2-link">
+                <a href="<?php echo site_url(''); ?>">Return Home</a>
             </div>
         </div>
     <?php endif; ?>

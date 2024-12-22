@@ -25,9 +25,9 @@ function getCookie(name) {
 }
 
 const soundStatus = {
-    dex_paid: getCookie('dex_paid_sound') === 'true' || false,
-    live_stream: getCookie('live_stream_sound') === 'true' || false,
-    big_buys: getCookie('big_buys_sound') === 'true' || false,
+    dex_paid: getCookie('dex_paid_sound') === 'true' ? true : getCookie('dex_paid_sound') ? false : true,
+    live_stream: getCookie('live_stream_sound') === 'true' ? true : getCookie('live_stream_sound') ? false : true,
+    big_buys: false,
 };
 
 
@@ -43,6 +43,7 @@ function saveSoundStatus(tableClass) {
 }
 
 export function updateIcon(tableClass) {
+
     const icons = document.querySelectorAll(`.${tableClass} .data-b1-icon`);
     icons.forEach(icon => {
         if (soundStatus[tableClass]) {
@@ -59,13 +60,19 @@ export function updateIcon(tableClass) {
 
 export function checkAndPlaySoundForTable(tableClass) {
     if (soundStatus[tableClass]) {
-        playSoundForTable();
+        playSoundForTable(tableClass);
     }
 }
 
-function playSoundForTable() {
-    let soundFileUrl = wcl_obj.sound_file_url;
+function playSoundForTable(tableClass) {
+    let soundFileUrl = '';
+    if (tableClass == 'dex_paid') {
+         soundFileUrl = wcl_obj.sound_for_dex_paid;
+    } else if(tableClass == 'live_stream'){
+         soundFileUrl = wcl_obj.sound_for_livestream;
+    }
+ 
     const audio = new Audio(soundFileUrl);
-    audio.volume = 0.5;
+    audio.volume = 0.1;
     audio.play();
 }

@@ -1,6 +1,6 @@
 <?php
 
-$tables_field = get_field('tables_field', 'option');
+$tables_field                 = get_field('tables_field', 'option');
 $count_fields_dex_paid        = $tables_field['dex_paid'] ?? 5;
 $count_fields_dex_paid_mobile = $tables_field['dex_paid_mobile'] ?? 4;
 
@@ -10,7 +10,7 @@ $fields_data  = '';
 if (is_local_dev_site()) {
 	$fields_data = get_option('big_buys_data');
 } else {
-	$fields_data = getTableData('dex_paid', $count_fields);
+	$fields_data = getTableData('dex_paid', $count_fields_dex_paid);
 }
 ?>
 <!-- sct-1-featured-fields mod-dex-paid -->
@@ -39,7 +39,7 @@ if (is_local_dev_site()) {
 							break;
 						}
 
-						$dataOptimizer = new DataOptimizer($row, 'DexPaid');
+						$dataOptimizer = new Token($row, 'DexPaid');
 						?>
 						<div class="data-b2-item">
 							<div class="data-b3-row">
@@ -121,7 +121,7 @@ if (is_local_dev_site()) {
 								break;
 							}
 
-							$dataOptimizer = new DataOptimizer($row, 'DexPaid');
+							$dataOptimizer = new Token($row, 'DexPaid');
 							?>
 							<tr class="data-b2-item">
 								<td>

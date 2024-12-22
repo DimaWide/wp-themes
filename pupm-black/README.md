@@ -1,6 +1,10 @@
-
+# Описание проекта
 
 Это приложение позволяет пользователям покупать токены, проверять их статус и получать базовую информацию о токенах.
+
+**Ссылка на сайт:** [pump.black](https://pump.black)
+
+Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor.jpg) | [Мобильный вид](screencapture-avintagesplendor-mobile.jpg)
 
 ## Основные функции
 

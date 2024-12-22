@@ -35,10 +35,6 @@ class TableRowBase {
 		return value !== 'N/A' ? value : 'N/A';
 	}
 
-	// formatUsdMarketCap() {
-	// 	const usdMarketCap = parseFloat(this.data.usd_market_cap);
-	// 	return !isNaN(usdMarketCap) ? `${Math.round(usdMarketCap)}k` : '';
-	// }
 
 	getMarketCapHtmlBigBuys() {
 		const marketCap = parseFloat(this.data.usd_market_cap);
@@ -67,7 +63,7 @@ class TableRowBase {
 		if (!isNaN(solAmount)) {
 			// Divide by 1,000,000,000
 			const formattedAmount = (solAmount / 1000000000).toFixed(2);
-			return `${withSign ? '+' : ''}${formattedAmount}k`;
+			return `${withSign ? '+' : ''}${formattedAmount}`;
 		}
 		return '';
 	}
@@ -127,33 +123,35 @@ class TableRowBase {
 	formatSolAmountBigBuys() {
 		const solPrice = parseFloat(wcl_obj.current_sol_price); // Получаем цену SOL из локализованного объекта
 		const solAmount = parseFloat(this.data.sol_amount); // Преобразуем solAmount в число
-	
+
 		if (!isNaN(solAmount) && !isNaN(solPrice)) {
 			const usdValue = (solAmount / 1000000000) * solPrice; // Вычисляем значение в долларах
 			const valueDividedByThousand = usdValue;
-	
+
 			// Округляем значение до целого числа
 			const roundedValue = Math.round(valueDividedByThousand);
-			
+
 			// Форматируем значение с запятыми (если необходимо)
 			const formattedWithCommas = new Intl.NumberFormat('en-US').format(roundedValue);
-			
+
 			// Возвращаем отформатированное значение с суффиксом 'k', если значение больше 0
-			return `${formattedWithCommas}k`;
+			return `${formattedWithCommas}`;
 		}
 		return null; // Возвращаем null, если есть ошибка
 	}
-	
+
 	formatMarketCap() {
 		let marketCap = parseFloat(this.data.usd_market_cap);
+
 		if (this.tableType == 'DexPaid') {
 			marketCap = parseFloat(this.data.market_cap_usd);
 		}
 
 		if (!isNaN(marketCap)) {
-			return `$${marketCap.toFixed(0).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$&,').replace(/,/g, ' ')}` + 'k';
+			return `$${marketCap.toFixed(0).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$&,').replace(/,/g, ' ')}`;
 		}
-		return '';
+
+		return 'N/A';
 	}
 
 	formatHoldersCount() {
@@ -190,7 +188,6 @@ class TableRowBase {
 
 		return formatted.trim() + ' ago';
 	}
-
 
 
 	// Method to generate HTML for buy links
@@ -368,7 +365,7 @@ class DexPaidRow extends TableRowBase {
 
 class LiveStreamRow extends TableRowBase {
 	createMobileView() {
-		if (parseFloat(this.data.market_cap) < 6000) {
+		if (parseFloat(this.data.usd_market_cap) < 6000) {
 			return '';
 		}
 
@@ -417,7 +414,7 @@ class LiveStreamRow extends TableRowBase {
 	}
 
 	createDesktopView() {
-		if (parseFloat(this.data.market_cap) < 6000) {
+		if (parseFloat(this.data.usd_market_cap) < 6000) {
 			return '';
 		}
 
@@ -444,6 +441,9 @@ class LiveStreamRow extends TableRowBase {
 		`;
 	}
 }
+
+
+
 
 /* 
 TableManager
@@ -485,8 +485,6 @@ class TableManager {
 			}
 		};
 
-		//console.log(selectors)
-
 		// Return the appropriate selector based on the device type
 		return this.isMobile ? selectors[tableType].mobile : selectors[tableType].desktop;
 	}
@@ -494,21 +492,6 @@ class TableManager {
 	// Method to get maxRows based on table type and device type
 	getMaxRows(tableType) {
 		const maxRowsConfig = wcl_obj.tablesMaxRows; // Используем переданные данные
-console.log( this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tableType].desktop)
-		// const maxRowsConfig = {
-		// 	BigBuys: {
-		// 		desktop: 10,
-		// 		mobile: 7
-		// 	},
-		// 	DexPaid: {
-		// 		desktop: 5,
-		// 		mobile: 4
-		// 	},
-		// 	LiveStream: {
-		// 		desktop: 4,
-		// 		mobile: 4
-		// 	}
-		// };
 
 		// Return maxRows based on the table type and device type
 		return this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tableType].desktop;
@@ -518,7 +501,6 @@ console.log( this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tab
 	// Метод для паузы и возобновления добавления строк
 	togglePause() {
 		this.isPaused = !this.isPaused;
-		// console.log(this.isPaused )
 		if (!this.isPaused && this.buffer.length > 0) {
 			// Если пауза отключена и есть данные в буфере, добавляем их в таблицу
 			this.buffer.forEach(token => this.addRow(token));
@@ -527,42 +509,40 @@ console.log( this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tab
 	}
 
 
-	 loadImageWithTimeout(imageElement, placeholderSrc, timeout = 2000) {
+	loadImageWithTimeout(imageElement, placeholderSrc, timeout = 2000) {
 		const originalSrc = imageElement.getAttribute('src');
-		
+
 		// Создаем новый объект изображения
 		const img = new Image();
-		
+
 		// Таймер для отслеживания загрузки
 		const timer = setTimeout(() => {
 			// Если изображение не загрузилось за 2 секунды, заменяем его на плейсхолдер
 			imageElement.setAttribute('src', placeholderSrc);
 			img.src = ''; // Остановить загрузку
 		}, timeout);
-	
+
 		// Попытка загрузить изображение
-		img.onload = function() {
+		img.onload = function () {
 			clearTimeout(timer); // Если изображение загрузилось, отменяем таймер
 			imageElement.setAttribute('src', originalSrc); // Устанавливаем оригинальное изображение
 		};
-	
-		img.onerror = function() {
+
+		img.onerror = function () {
 			clearTimeout(timer); // Если ошибка, заменяем на плейсхолдер
 			imageElement.setAttribute('src', placeholderSrc);
 		};
-	
-		// Начинаем загрузку
-		img.src = originalSrc; 
-	}
-	
 
+		// Начинаем загрузку
+		img.src = originalSrc;
+	}
 
 	addRow(data) {
 		if (this.isPaused) {
-			// Если пауза активна, добавляем данные в буфер
 			if (this.buffer.length < this.maxBufferSize) {
 				this.buffer.push(data);
 			}
+			
 		} else {
 			if (!this.table) {
 				return
@@ -581,7 +561,6 @@ console.log( this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tab
 				return;
 			}
 
-			// Создание элемента строки и добавление класса
 			let newRowElement = '';
 
 			if (this.isMobile) {
@@ -592,7 +571,9 @@ console.log( this.isMobile ? maxRowsConfig[tableType].mobile : maxRowsConfig[tab
 				newRowElement = document.createElement('tr');
 				newRowElement.innerHTML = row;
 				newRowElement.classList.add('data-b2-item', 'new-row');
+
 			}
+
 
 			// Теперь проверяем все изображения внутри newRowElement
 			const images = newRowElement.querySelectorAll('.data-b2-item-image img');

@@ -3,8 +3,7 @@
 
 
 
-define('WCL_THEME_VERSION', '0.152');
-
+define('WCL_THEME_VERSION', '0.173');
 
 
 
@@ -23,6 +22,7 @@ define('WCL_THEME_VERSION', '0.152');
 */
 function wcl_theme_enqueue_scripts() {
 	global $current_sol_price;
+
 	// Remove jQuery from front-end of the website
 	//wp_deregister_script('jquery');
 
@@ -39,11 +39,11 @@ function wcl_theme_enqueue_scripts() {
 
 	wp_enqueue_script('wcl-functions-js', get_template_directory_uri() . '/js/wcl-functions.js', array(), WCL_THEME_VERSION, true);
 
-	$sound_file            = get_field('sound_add_new_field', 'option');
-	$sound_url             = wp_get_attachment_url($sound_file);
-	$sound_file_check_paid = get_field('sound_check_paid_active', 'option');
-	$sound_url_check_paid  = wp_get_attachment_url($sound_file_check_paid);
-	$token_fields          = get_option('wcl_token_fields');
+	$sound_for_dex_paid   = get_field('sound_for_dex_paid', 'option');
+	$sound_for_dex_paid   = wp_get_attachment_url($sound_for_dex_paid);
+	$sound_for_livestream = get_field('sound_for_livestream', 'option');
+	$sound_for_livestream = wp_get_attachment_url($sound_for_livestream);
+	$token_fields         = get_option('wcl_token_fields');
 
 	$tables_field = get_field('tables_field', 'option');
 
@@ -58,12 +58,12 @@ function wcl_theme_enqueue_scripts() {
 		'ajax_url'             => admin_url('admin-ajax.php'),
 		'site_url'             => site_url('/'),
 		'template_url'         => get_template_directory_uri(),
-		'sound_file_url'       => $sound_url ? $sound_url : null,
-		'sound_url_check_paid' => $sound_url_check_paid ? $sound_url_check_paid : null,
+		'sound_for_dex_paid'   => $sound_for_dex_paid ? $sound_for_dex_paid : null,
+		'sound_for_livestream' => $sound_for_livestream ? $sound_for_livestream : null,
 		'tokenFields'          => $token_fields,
 		'current_sol_price'    => $current_sol_price,
 		'tablesMaxRows' => [
-			'BigBuys'              => array(
+			'BigBuys' => array(
 				'desktop' => $count_fields_big_buys,
 				'mobile'  => $count_fields_big_buys_mobile
 			),
@@ -157,6 +157,8 @@ add_filter('big_image_size_threshold', '__return_false');
 add_image_size('image-size-1', 65, 65, true);
 add_image_size('image-size-1@2x', 130, 130, true);
 
+add_image_size('image-size-2', 800, 125, true);
+add_image_size('image-size-2@2x', 1600, 250, true);
 
 
 
@@ -311,8 +313,7 @@ add_filter('acf/validate_post_id', __NAMESPACE__ . '\wcl_fix_acf_field_post_id_o
 */
 
 
-require_once get_theme_file_path('/inc/acf-blocks-functions.php');
-require_once get_theme_file_path('/inc/DataOptimizer.php');
+require_once get_theme_file_path('/inc/Token.php');
 require_once get_theme_file_path('/inc/database-functions.php');
 require_once get_theme_file_path('/inc/helper-functions.php');
 require_once get_theme_file_path('/inc/token-functions.php');

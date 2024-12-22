@@ -97,22 +97,6 @@
             max-width: 856px;
             margin: 0 auto;
 
-            // &::after {
-            //     content: '';
-            //     position: absolute;
-            //     left: 31%;
-            //     top: -44px;
-
-            //     width: 255.814px;
-            //     height: 219.98px;
-            //     transform: rotate(60.61deg);
-            //     border-radius: 15px;
-            //     background: #6E25B5;
-            //     transform-origin: bottom center;
-            //     // transform: translateX(-50%);
-            //     z-index: -1;
-            // }
-
             &-inner {
                 display: flex;
                 align-items: center;
@@ -121,6 +105,20 @@
                 max-width: 680px;
                 margin: 0 auto;
                 transform: translate(6px, 0px);
+            }
+
+            &-out{
+                width: 100%;
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            
+            &-note {
+                margin-top: 10px;
+                font-size: 16px;
+                margin-left: 38px;
+                color: #ff3434;
+                letter-spacing: 0.8px;
             }
 
             input:not([type="submit"]) {
@@ -180,28 +178,16 @@
         }
     }
 
-    @media (max-width: 1400px) {
-        .data {
-            &-form {}
-        }
-    }
-
     @media (max-width: 1199px) {
         .data {
             &-title {
                 font-size: 40px;
             }
-
-            &-form {}
         }
     }
 
     @media (max-width: 1025px) {
         .data {
-            &-container {}
-
-            &-form {}
-
             &-title {
                 font-size: 32px;
             }
@@ -261,6 +247,14 @@
                     row-gap: 20px;
                     height: auto;
                 }
+
+                &-note {
+                    font-size: 16px;
+                    max-width: 200px;
+                    margin: 0 auto;
+                    margin-top: 16px;
+                    text-align: center;
+                }
             }
         }
     }
@@ -283,20 +277,13 @@
                 padding: 34px 34px 34px;
 
                 input:not([type="submit"]) {
-                    //transform: none;
                     background-position: left;
                     width: calc(100% - 12px);
                 }
 
                 input[type="submit"] {
-                    //transform: none;
                     width: 100%;
                     background-position: left;
-                }
-
-                &-inner {
-                    // display: block;
-                    // row-gap: 20px;
                 }
             }
         }

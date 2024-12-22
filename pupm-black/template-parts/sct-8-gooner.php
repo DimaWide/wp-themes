@@ -87,7 +87,7 @@ $plans = [
             </div>
 
             <div class="data-link">
-                <button class="cmp-button">
+                <button class="cmp-button" disabled>
                     <span>Order</span>
                 </button>
             </div>

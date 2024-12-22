@@ -49,10 +49,12 @@ socket.onclose = () => console.log('Disconnected from WebSocket server');
 // Use 'wss://' for secure WebSocket connection
 const socket = new WebSocket('wss://site55.online:8080');
 
-socket.onopen = () => console.log('Connected to Secure WebSocket server');
+socket.onopen = () => {
+    // console.log('Connected to Secure WebSocket server');
+}
 
 socket.onmessage = (event) => {
-    console.log('Message arrived');
+   // console.log('Message arrived');
     
     // Check if the data is a Blob
     if (event.data instanceof Blob) {
@@ -64,7 +66,7 @@ socket.onmessage = (event) => {
                 const jsonData = JSON.parse(reader.result);
 
                 // Log the parsed JSON object
-                console.log('Message from server (parsed):', jsonData);
+                //console.log('Message from server (parsed):', jsonData);
 
                 // Access specific fields from the JSON
                 const mint = jsonData.mint;
@@ -83,10 +85,13 @@ socket.onmessage = (event) => {
         // Read the Blob as text
         reader.readAsText(event.data);
     } else {
-        console.log('Received non-Blob message:', event.data);
+        //console.log('Received non-Blob message:', event.data);
     }
 };
 
 socket.onerror = (error) => console.error('WebSocket Error:', error);
 
-socket.onclose = () => console.log('Disconnected from WebSocket server');
+socket.onclose = () => {
+   //console.log('Disconnected from WebSocket server');
+}
+ 

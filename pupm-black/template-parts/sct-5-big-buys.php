@@ -43,7 +43,7 @@ if (is_local_dev_site()) {
 							break;
 						}
 
-						$dataOptimizer = new DataOptimizer($row);
+						$dataOptimizer = new Token($row);
 						?>
 						<div class="data-b2-item">
 							<div class="data-b3-row">
@@ -156,7 +156,7 @@ if (is_local_dev_site()) {
 								break;
 							}
 
-							$dataOptimizer = new DataOptimizer($row);
+							$dataOptimizer = new Token($row);
 							?>
 							<tr class="data-b2-item">
 								<td>
@@ -183,8 +183,6 @@ if (is_local_dev_site()) {
 									<div class="data-b2-item-usd mod-flex-center">
 										<img src="<?php echo get_stylesheet_directory_uri() . '/img/dollar-money-sign.svg'; ?>" alt="img">
 										<?php echo $dataOptimizer->formatUsdSolAmountBigBuys(); ?>
-										<?php ///echo $dataOptimizer->formatUsdMarketCap(); 
-										?>
 									</div>
 								</td>
 

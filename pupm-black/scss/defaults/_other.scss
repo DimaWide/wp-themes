@@ -63,17 +63,17 @@ $blue: rgba(#b54dff, 1);
 
 @keyframes rotate2 {
     0% {
-        transform:  rotate(0deg);
+        transform: rotate(0deg);
         border-top-color: $grey;
     }
 
     50% {
-        transform:  rotate(180deg);
+        transform: rotate(180deg);
         border-top-color: $blue;
     }
 
     100% {
-        transform:  rotate(360deg);
+        transform: rotate(360deg);
         border-top-color: $grey;
     }
 }
@@ -133,39 +133,37 @@ $blue: rgba(#b54dff, 1);
     border-bottom-color: $blue;
 }
 
-// /*loader 2  */
-// .loader2,
-// .loader2 div {
-//     @include loaderDivMixin;
-//     border-top-color: $blue;
-//     border-left-color: $grey;
-//     border-right-color: $grey;
-// }
-
-// /*loader 3  */
-// .loader3,
-// .loader3 div {
-//     @include loaderDivMixin;
-//     border-top-color: $grey;
-//     border-left-color: $blue;
-//     animation-timing-function: cubic-bezier(.55, .38, .21, .88);
-//     animation-duration: 3s;
-// }
-
-// /* loader 4 */
-// .loader4,
-// .loader4 div {
-//     @include loaderDivMixin;
-//     border-radius: 50%;
-//     padding: 4px;
-//     animation: rotate2 4s infinite linear;
-// }
-
-// div:hover {
-//     animation-play-state: paused;
-// }
-
 .loader,
 .loader * {
     will-change: transform;
+}
+
+
+.cmp-banner {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .data {
+        &-item {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-video{
+            width: 100%;
+            video{
+                height: 125px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }

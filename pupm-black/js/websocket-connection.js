@@ -1,6 +1,8 @@
 const socket = new WebSocket('ws://195.35.56.191:8080');
 
-socket.onopen = () => console.log('Connected to WebSocket server');
+socket.onopen = () => {
+    // console.log('Connected to WebSocket server');
+}
 
 socket.onmessage = (event) => {
     // Check if the data is a Blob
@@ -14,7 +16,7 @@ socket.onmessage = (event) => {
 
 
                 // Логирование полученного JSON
-                console.log('Message from server (parsed):', jsonData);
+                // console.log('Message from server (parsed):', jsonData);
 
                 // Получаем сохраненные данные из localStorage
                 let existingData = localStorage.getItem('savedObjects');
@@ -35,7 +37,7 @@ socket.onmessage = (event) => {
 
 
                 // Log the parsed JSON object
-                console.log('Message from server (parsed):', jsonData);
+                // console.log('Message from server (parsed):', jsonData);
 
                 // Access specific fields from the JSON
                 const mint = jsonData.mint;
@@ -46,17 +48,19 @@ socket.onmessage = (event) => {
                 const existingContent = document.getElementById('real-time-data').innerHTML;
                 document.getElementById('real-time-data').innerHTML = `${existingContent} <br> Mint: ${mint}, Name: ${name}, Symbol: ${symbol}`;
             } catch (error) {
-                console.error('Error parsing message as JSON:', error);
+                //  console.error('Error parsing message as JSON:', error);
             }
         };
 
         // Read the Blob as text
         reader.readAsText(event.data);
     } else {
-        console.log('Received non-Blob message:', event.data);
+        // console.log('Received non-Blob message:', event.data);
     }
 };
 
 socket.onerror = (error) => console.error('WebSocket Error:', error);
 
-socket.onclose = () => console.log('Disconnected from WebSocket server');
+socket.onclose = () => {
+    // console.log('Disconnected from WebSocket server');
+} 

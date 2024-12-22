@@ -5,7 +5,7 @@
 $sound_status = '';
 
 if (isset($_COOKIE['dex_paid_page_sound'])) {
-    $sound_status = $_COOKIE['dex_paid_page_sound'] === 'true' ? 'mod-enable' : 'mod-disable';
+	$sound_status = $_COOKIE['dex_paid_page_sound'] === 'true' ? 'mod-enable' : 'mod-disable';
 }
 ?>
 <!-- sct-3-form -->
@@ -38,13 +38,15 @@ if (isset($_COOKIE['dex_paid_page_sound'])) {
 							</div>
 						</div>
 
-						<div class="data-form-inner">
-							<div class="data-form-field">
-								<input type="text" name="mint" placeholder="Enter Contract Address" required>
-							</div>
+						<div class="data-form-out">
+							<div class="data-form-inner">
+								<div class="data-form-field">
+									<input type="text" name="mint" placeholder="Enter Contract Address" required>
+								</div>
 
-							<div class="data-form-submit">
-								<input type="submit" value="CHECK">
+								<div class="data-form-submit">
+									<input type="submit" value="CHECK">
+								</div>
 							</div>
 						</div>
 					</form>

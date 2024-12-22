@@ -137,14 +137,6 @@
                     }
                 }
 
-                &-icon {
-                    // background-color: #ED1B24;
-
-                    // img {
-                    //     width: 27px;
-                    // }
-                }
-
                 &-icon-2 {
                     width: 64px;
                 }
@@ -156,19 +148,6 @@
                 }
             }
         }
-
-        // @media (max-width: 1400px) {
-        //     .data {
-        //         &-b2 {
-        //             clip-path: polygon(0% 0, 100% 0, 100% 100%, 2.9% 100%);
-        //         }
-        //     }
-
-        //     .data-b2::after {
-        //         bottom: 10px;
-        //     }
-        // }
-
 
         @media (max-width: 1025px) {
             .data-b1-col:first-child {
@@ -193,17 +172,30 @@
                 &-b2 {
                     &-table {
                         clip-path: polygon(0 0, 95.9% 0, 100% 100%, 0 100%);
-                        //   clip-path: polygon(0 0, 461px 0, 100% 100%, 0 100%);
-                        //    min-height: 415px;
 
-                        &.mod-less-4 {
-                            clip-path: none;
-                            max-width: 460px;
-                        }
+
+                        
+        &.mod-items-3 {
+            max-width: 477px;
+            clip-path: polygon(0 0, 96.3% 0, 100% 100%, 0 100%);
+        }
+
+        &.mod-items-2 {
+            max-width: 473px;
+            clip-path: polygon(0 0, 97.3% 0, 100% 100%, 0 100%);
+        }
+
+        &.mod-items-1 {
+            max-width: 468px;
+            clip-path: polygon(0 0, 98.3% 0, 100% 100%, 0 100%);
+        }
+
+                        // &.mod-less-4 {
+                        //     clip-path: none;
+                        //     max-width: 460px;
+                        // }
 
                         th {
-
-                            // Image  
                             &:nth-child(3) {
                                 width: 95px;
                             }
@@ -261,11 +253,6 @@
                         &:nth-child(2) {
                             margin-right: auto !important;
                             padding-right: 15px;
-                        }
-
-                        &:nth-child(3) {
-
-                            //margin-left: auto;
                         }
                     }
                 }
@@ -509,6 +496,7 @@
             &-b2 {
                 &-table {
                     th {
+
                         // Image  
                         &:nth-child(1) {
                             width: 100px;
@@ -554,8 +542,8 @@
         }
 
 
-        @media (max-width: 1400px) and (min-width: 1025px){
-            .data-b2-item-name{
+        @media (max-width: 1400px) and (min-width: 1025px) {
+            .data-b2-item-name {
                 max-width: 100px;
             }
         }

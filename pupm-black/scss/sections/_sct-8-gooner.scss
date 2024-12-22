@@ -33,7 +33,29 @@
         display: block;
     }
 
+    
     .data {
+        &-b2 {
+            text-align: center;
+            width: 100%;
+
+            &-img {
+                max-width: 220px;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+
+            &-title {
+                font-size: 28px;
+            }
+
+            @media (max-width: 767px) {
+                &-title{
+                    font-size: 28px;
+                }
+            }
+        }
+
         &-notice {
             text-align: center;
 
@@ -68,15 +90,11 @@
             }
 
             &-img {
-                // width: 196px;
-                // height: 196px;
                 width: auto;
                 height: auto;
                 aspect-ratio: 1;
-                // width: 100%;
                 max-width: 196px;
                 width: 100%;
-                // background: #fcfcfc;
                 border-radius: 15px;
                 
                 img {
@@ -182,7 +200,6 @@
                     top: 5px;
                     border-radius: 12px;
                     background: linear-gradient(180deg, #465477 0%, #403E53 100%);
-                    // transition: all 0.2s ease;
                     opacity: 1;
                     z-index: 2;
                 }

@@ -4,7 +4,7 @@
 
 Ссылка на страницу: [Personal Brand Styling](https://www.avintagesplendor.com/personal-brand-styling/)
 
-Скриншоты:
+Скриншоты:   
  Главная страница - [Personal Brand Styling](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling.jpg) | [Мобильный вид](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor-personal-brand-styling-mobile)  
  Страница выбора даты встречи - [Calendly Event Booking.jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/calendly-event-booking.jpg)  
  Емейл тимплейт - [Virtual Styling Session + Shopping Links (Gift Card).jpg](https://github.com/DimaWide/wp-themes/blob/main/assets-data/screens/virtual-styling-session-shopping-links-gift-card.jpg)  

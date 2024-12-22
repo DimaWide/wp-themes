@@ -15,7 +15,7 @@ Theme development and modification.
 
 ---
 
-### Vintage Splendor
+### Vintage Splendor(Woocommerce)
 [Description](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/README.md) | [View Theme](https://vintage-splendor.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor) | [Webhook Integration](https://github.com/DimaWide/wp-themes/tree/main/vintage-splendor/Webhook.md)
 
 ---

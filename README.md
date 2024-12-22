@@ -4,7 +4,7 @@ Theme development and modification.
 
 ---
 
-### TC Budivelnik
+### TC Budivelnik (Woocommerce)
 
 [Description](https://github.com/DimaWide/wp-themes/tree/main/tc_budivelnik/README.md) | [View Theme](https://budmarket.org.ua/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/tc_budivelnik)
 

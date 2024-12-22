@@ -47,7 +47,7 @@ Theme development and modification.
 
 ---
 
-## Список примеров работ:
+## List of examples of work:
 
 ### Woocommerce:
 - budmarket.org.ua: [ссылка](https://budmarket.org.ua/)

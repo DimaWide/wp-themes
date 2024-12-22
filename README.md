@@ -31,19 +31,18 @@ Theme development and modification.
 
 ---
 
-### RMA Development
-[Description](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment/README.md) | [View Theme](https://rmadevelopment.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment)
-
----
-
 ### Crypto Group (Woocommerce)
 [Description](https://github.com/DimaWide/wp-themes/tree/main/crypto-group/README.md) | [View Theme](https://cryptogrupe.lt/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/crypto-group)
 
 ---
 
+### RMA Development
+[Description](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment/README.md) | [View Theme](https://rmadevelopment.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/rmadevelopment)
+
+---
+
 ### Reway
 [Description](https://github.com/DimaWide/wp-themes/tree/main/reway/README.md) | [View Theme](https://reway.webcomplete.io/) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/reway)
-
 
 ---
 

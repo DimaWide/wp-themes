@@ -80,7 +80,6 @@ Theme development and modification.
 - evrst.co.il/icfp/cfp: [ссылка](http://evrst.co.il/icfp/cfp/)
 - cobweb.co.il/conceptacademy: [ссылка](https://www.cobweb.co.il/conceptacademy/)
 - mag-soundclub.webcomplete.io: [ссылка](https://mag-soundclub.webcomplete.io/)
-- maxbrenner.com.au: [ссылка](https://maxbrenner.com.au/)
 - upwork.com/freelancers/: [ссылка](https://www.upwork.com/freelancers/~01dc368f5440123a2e?viewMode=1)
 
 

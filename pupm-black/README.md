@@ -75,7 +75,7 @@
 
 ### 6. Плагин интеграции оплаты через NowPayments.io
 - Был разработан пользовательский плагин для интеграции оплаты через криптовалюты через nowpayments.io.
-- Ссылка GitHub: [Плагин - NOWPayments Integration for WordPress](https://github.com/DimaWide/wp-plugins-new/tree/main/nowpayments-integration/README.md)
+- Ссылка GitHub: [Плагин - NOWPayments Integration for WordPress](https://github.com/DimaWide/wp-plugins/tree/main/nowpayments-integration/README.md)
 
 #### Особенности:
 - При покупке плана отправляется API-запрос на `https://api.nowpayments.io/v1/invoice` с деталями заказа, и создается инвойс для оплаты в SOL.

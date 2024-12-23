@@ -11,7 +11,7 @@ Theme development and modification.
 ---
 
 ### Pump Black
-[Description](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/README.md) | [View Theme](https://pump.black/)  | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/pupm-black) | [Using OOP ](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/Using-OOP.md)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/README.md) | [View Theme](https://pump.black/)  | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/pupm-black) 
 
 ---
 

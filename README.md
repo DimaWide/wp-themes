@@ -11,7 +11,7 @@ Theme development and modification.
 ---
 
 ### Pump Black
-[Description](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/README.md) | [View Theme](https://pump.black/)  | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/pupm-black) | [Using OOP ](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/Using-OOP.md)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/pupm-black/README.md) | [View Theme](https://pump.black/)  | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/pupm-black) 
 
 ---
 
@@ -54,21 +54,21 @@ Theme development and modification.
 - cryptogrupe.lt: [ссылка](https://cryptogrupe.lt/)
 
 ### WP:
+- reway.webcomplete.io: [ссылка](https://reway.webcomplete.io/)
+- themichelewang.com: [ссылка](https://themichelewang.com/)
+- nutroasters.com.au: [ссылка](https://www.nutroasters.com.au/)
 - pump.black: [ссылка](https://pump.black/)
 - a3hconsulting.com: [ссылка](https://www.a3hconsulting.com/)
+- rmadevelopment.webcomplete.io: [ссылка](https://rmadevelopment.webcomplete.io/)
 - banasa.com: [ссылка](https://banasa.com/)
 - med-deo.com.ua: [ссылка](https://www.med-deo.com.ua/)
-- rmadevelopment.webcomplete.io: [ссылка](https://rmadevelopment.webcomplete.io/)
-- reway.webcomplete.io: [ссылка](https://reway.webcomplete.io/)
 - lydia-millen.webcomplete.io: [ссылка](https://lydia-millen.webcomplete.io/)
 - tania.webcomplete.io: [ссылка](https://tania.webcomplete.io/)
-- themichelewang.com: [ссылка](https://themichelewang.com/)
 - web3recruitment.webcomplete.io: [ссылка](https://web3recruitment.webcomplete.io/)
 - nikole-beauty.webcomplete.io: [ссылка](https://nikole-beauty.webcomplete.io/)
 - chrisellelim.webcomplete.io: [ссылка](https://chrisellelim.webcomplete.io/)
 - ellee.webcomplete.io: [ссылка](https://ellee.webcomplete.io/)
 - bestofbali.webcomplete.io: [ссылка](https://bestofbali.webcomplete.io/)
-- nutroasters.com.au: [ссылка](https://www.nutroasters.com.au/)
 - kyffinsimpson.ky: [ссылка](https://www.kyffinsimpson.ky/)
 - thisisanon.com: [ссылка](https://thisisanon.com/)
 - cobweb.co.il/oneonone: [ссылка](http://www.cobweb.co.il/oneonone/)

@@ -1,0 +1,88 @@
+.wcl-2-columns,
+.wcl-3-columns,
+.wcl-4-columns,
+.wcl-5-columns,
+.wcl-6-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table {
+
+        display: flex;
+        flex-direction: column;
+
+        &>tbody {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            &>.acf-row .acf-fields {
+                width: 100% !important;
+            }
+
+        }
+
+    }
+
+}
+
+.wcl-2-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
+        width: 100%;
+        max-width: 50%;
+    }
+
+}
+
+
+.wcl-3-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
+        width: 100%;
+        max-width: 33%;
+    }
+
+}
+
+.wcl-4-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
+        width: 100%;
+        max-width: 25%;
+    }
+
+}
+
+.wcl-5-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
+        width: 100%;
+        max-width: 20%;
+    }
+
+}
+
+.wcl-6-columns {
+
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
+        width: 100%;
+        max-width: 16.66%;
+    }
+}
+
+/* Adjust the width of the Gutenberg editor */
+.editor-styles-wrapper .block-editor-writing-flow,
+.editor-styles-wrapper .wp-block {
+    max-width: 1108px;
+    /* Set your desired width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.acf-accordion .acf-accordion-content {
+    display: none !important;
+}
+
+.acf-accordion.-open .acf-accordion-content {
+    display: block !important;
+}

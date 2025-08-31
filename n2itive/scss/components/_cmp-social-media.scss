@@ -1,0 +1,23 @@
+.cmp-social-media {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+        list-style: none;
+        color: #FFF;
+
+        a {
+            text-decoration: none;
+            @include link_hover;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.sct-footer {
+    text-align: center;
+    margin-top: 105px;
+
+    .data {
+        &-block {
+            &-inner {
+                padding: 36px 50px;
+                border-radius: 10px;
+                border: 1px solid #252527;
+                background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+            }
+        }
+
+        &-logo {
+            margin-bottom: 25px;
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: center;
+            column-gap: 25px;
+            flex-wrap: wrap;
+            row-gap: 12px;
+            padding-left: 0;
+            margin-bottom: 20px;
+
+            li {
+                list-style: none;
+                color: #FFF;
+                font-weight: 700;
+
+                a {
+                    text-decoration: none;
+                    @include link_hover;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &-social {
+            &-item {}
+        }
+
+        &-copyright {
+            margin-top: 15px;
+            margin-bottom: 21px;
+
+            color: #666;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 155%;
+
+            a {
+                color: #666;
+                text-decoration: none;
+                @include link_hover;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 50px;
+
+        .data-copyright-text{
+            max-width: 390px;
+            margin: 0 auto;
+        }
+
+        .cmp-social-media {
+            margin-top: 20px;
+        }
+
+        .data {
+            &-block {
+                &-inner {
+                    padding: 45px 25px;
+                }
+            }
+
+            &-menu {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-menu {
+                flex-direction: column;
+            }
+
+            &-copyright {
+                &-text {
+                    max-width: 270px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

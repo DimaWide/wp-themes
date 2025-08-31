@@ -1,0 +1,275 @@
+.acf-4-faq {
+    margin-top: 60px;
+    margin-bottom: 124px;
+    background: #151515;
+    padding-top: 75px;
+    padding-bottom: 100px;
+    background-image: url('../img/acf-2-logo.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .data {
+        &-title {
+            color: #E10000;
+            font-size: 24px;
+            line-height: normal;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+
+        &-item {
+            margin-bottom: 18px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.active {
+                .data-item {
+                    &-question {
+                        color: #E10000;
+                    }
+
+                    &-answer {
+                        max-height: 300px;
+                    }
+
+                    &-arrow {
+                        img {
+                            &:nth-child(1) {
+                                opacity: 0;
+                            }
+
+                            &:nth-child(2) {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-arrow {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 5px;
+                right: 0;
+                flex-shrink: 0;
+                transition: all 0.25s ease;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 25px;
+                    height: 25px;
+
+                    &:nth-child(1) {}
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            &-question {
+                display: flex;
+                justify-content: space-between;
+                column-gap: 30px;
+                cursor: pointer;
+                position: relative;
+
+                color: #FFF;
+                font-size: 48px;
+                font-weight: 800;
+                line-height: normal;
+                text-transform: uppercase;
+                padding-left: 108px;
+                transition: all 0.25s ease;
+                padding-right: 80px;
+            }
+
+            &-index {
+                position: absolute;
+                left: 0;
+                top: -2px;
+            }
+
+            &-title {
+                font-size: 48px;
+                line-height: 130%;
+                font-weight: 800;
+                margin-bottom: 0;
+
+
+            }
+
+            &-answer {
+                padding-left: 108px;
+                padding-right: 140px;
+
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.35s ease;
+
+                font-size: 18px;
+                font-weight: 600;
+
+                &-inner {
+                    margin-top: 19px;
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1890px) {
+
+        .data {
+            &-item {
+                &-question {
+                    font-size: 2.5vw;
+                }
+
+                &-title {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 30px;
+            }
+
+            &-col {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+            }
+
+            &-cats {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                column-gap: 15px;
+                row-gap: 15px;
+
+                &-item {
+                    margin-bottom: 0;
+                    width: 100%;
+                    max-width: 200px;
+
+                    &-btn {
+                        padding: 6px 32px
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1025px) {
+        .data {
+            &-item {
+                &-question {
+                    font-size: 20px;
+                    padding-left: 52px;
+                }
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-answer {
+                    padding-left: 52px;
+                    font-size: 16px;
+
+                    &-inner {
+                        margin-top: 10px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                &-arrow {
+                    top: 1px;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        margin-bottom: 74px;
+
+        .data {
+            &-item {
+                margin-bottom: 15px;
+
+                &-index {
+                    top: 0;
+                }
+
+                &-question {
+                    font-size: 20px;
+                    padding-left: 45px;
+                }
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-answer {
+                    padding-left: 45px;
+                    padding-right: 20px;
+
+                    &-inner {
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-arrow {
+                    top: 1px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        background-size: 630px 630px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 50px;
+
+        .data {
+            &-title {
+                font-size: 20px;
+            }
+
+            &-item {
+                &-question {
+                    padding-left: 45px;
+                    padding-right: 50px;
+                }
+
+                &-arrow {
+                    top: 0px;
+                }
+            }
+        }
+    }
+}

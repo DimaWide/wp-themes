@@ -1,0 +1,143 @@
+/* 
+
+Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+Color names - http://name-of-color.com/
+
+==============================================
+    CONTENT OF THE FILE
+==============================================
+
+    1. Fonts
+    2. Variables
+
+*/
+
+
+
+
+
+/* 
+* 2. Variables
+*/
+
+
+$c-white: #fff;
+$c-black: #000;
+
+$btn-color: $c-white;
+$btn-background: $c-black;
+
+$animation-speed: 0.3s;
+
+
+
+/* 
+* 1. Fonts
+*/
+$f-open-sans: 'Open Sans', sans-serif;
+$f-integral-cf: 'Integral CF', sans-serif;
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Integral-CF-Oblique';
+    src: url('../fonts/IntegralCF-RegularOblique.eot');
+    src: url('../fonts/IntegralCF-RegularOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/IntegralCF-RegularOblique.woff2') format('woff2'),
+        url('../fonts/IntegralCF-RegularOblique.woff') format('woff'),
+        url('../fonts/IntegralCF-RegularOblique.ttf') format('truetype'),
+        url('../fonts/IntegralCF-RegularOblique.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('../fonts/IntegralCF-Regular.eot');
+    src: url('../fonts/IntegralCF-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/IntegralCF-Regular.woff2') format('woff2'),
+        url('../fonts/IntegralCF-Regular.woff') format('woff'),
+        url('../fonts/IntegralCF-Regular.ttf') format('truetype'),
+        url('../fonts/IntegralCF-Regular.svg#IntegralCF-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+// @font-face {
+//     font-family: 'Integral-CF-Oblique';
+//     src: url('../fonts/IntegralCF-RegularOblique.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// @font-face {
+//     font-family: 'Integral CF';
+//     src: url('../fonts/IntegralCF-Regular.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

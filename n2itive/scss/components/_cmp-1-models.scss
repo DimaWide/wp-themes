@@ -1,0 +1,163 @@
+.cmp-1-models {
+    width: 100%;
+    max-width: 562px;
+    padding: 35px 30px;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    border: 1px solid #252527;
+    background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+    position: relative;
+
+    .cmp1 {
+        &-title {
+            font-family: "Integral-CF-Oblique";
+            font-style: italic;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #252527;
+        }
+
+        &-item {
+            margin-bottom: 24px;
+
+            &.open {
+                .cmp1-item-years {
+                    display: flex;
+                }
+            }
+
+            &.active {
+                .cmp1-item-info {
+                    border: 1px solid #252527;
+                    background: #E10000;
+                }
+
+                .cmp1-item-name {
+                    color: #fff;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-img {
+                img {
+                    max-height: 42px;
+                }
+            }
+
+            &-info {
+                height: 52px;
+                padding: 2px 15px;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+
+                border-radius: 10px;
+                border: 1px solid #252527;
+                background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+
+                overflow: hidden;
+                cursor: pointer;
+
+                &.active {}
+            }
+
+            &-name {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: normal;
+                color: #666;
+            }
+
+            &-years {
+                margin-top: 10px;
+                column-gap: 10px;
+                display: none;
+
+                &-item {
+                    flex: 0 1 auto;
+
+                    &.active {
+                        border: 1px solid #252527;
+                        background: #E10000;
+                    }
+
+                    font-family: $f-open-sans;
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 800;
+                    line-height: normal;
+                    text-transform: uppercase;
+
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    border-radius: 10px;
+                    border: 1px solid #252527;
+                    background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+
+                    width: 100%;
+                    min-height: 51px;
+                    padding: 5px 17px;
+
+                    transition: all 0.25s ease;
+                }
+            }
+        }
+
+        &-submit {
+            margin-top: 24px;
+
+            &-btn {
+                border: 1px solid #252527;
+                background: #E10000;
+                color: #fff;
+
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .cmp-1-models .cmp1-title {
+        font-size: 20px;
+        margin: 0 -10px;
+        padding-bottom: 20px;
+        padding-right: 50px;
+        margin-bottom: 20px;
+    }
+
+    .cmp-1-models {
+        padding: 20px 35px 30px;
+    }
+
+    .cmp-4-popup .cmp4-close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .cmp-1-models .cmp1-item {
+        margin-bottom: 10px;
+    }
+
+    .cmp-1-models .cmp1-item-years-item {
+        font-size: 16px;
+    }
+
+    .cmp-1-models .cmp1-submit {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,249 @@
+.cmp-3-shipping-calculator {
+    border-radius: 10px;
+    border: 1px solid #252527;
+    background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+    max-width: 732px;
+    overflow: hidden;
+    padding: 23px 35px 35px;
+    position: relative;
+
+    &-out {
+        background-color: #fff;
+        padding: 10px;
+    }
+
+    .shipping-calculator-button {
+        display: none;
+    }
+
+    .shipping-calculator-form {
+        display: flex !important;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 24px;
+
+        .form-row {
+            width: calc(50% - 12px);
+            margin-bottom: 0;
+
+            >span {
+                display: block;
+            }
+        }
+    }
+
+    .woocommerce-shipping-calculator {
+
+        p {
+            &:nth-last-child(3) {
+                margin-bottom: 0;
+                width: 100%;
+            }
+        }
+
+        input,
+        select {
+            width: 100%;
+            height: 52px;
+            padding: 2px 20px;
+
+            border-radius: 10px;
+            border: 1px solid #252527;
+            background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+            overflow: hidden;
+
+            font-family: $f-open-sans;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            color: #252527;
+            color: #fff;
+
+            &::placeholder {
+                color: #666;
+            }
+
+            &:focus {}
+        }
+
+        button[type="submit"] {
+            font-family: $f-open-sans;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+
+            border-radius: 10px;
+            border: 1px solid #252527;
+            background: radial-gradient(50% 50% at 50% 50%, #1F1F1F 0%, #2E2E2E 100%);
+            overflow: hidden;
+
+            width: 148px;
+            min-height: 51px;
+            padding: 5px 17px;
+
+            transition: all 0.25s ease;
+
+            border: 1px solid #252527;
+            background: #e10000;
+            color: #fff;
+            width: 100%;
+
+            &:hover {
+                filter: brightness(1.5);
+                background: #e10000;
+            }
+        }
+    }
+
+    .cmp3 {
+        &-title {
+            font-family: "Integral-CF-Oblique";
+            font-style: italic;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #252527;
+        }
+    }
+
+
+	@media (max-width: 575px) {
+        padding: 20px 25px 35px;
+	}
+}
+
+.woocommerce-page table.cart td.actions {
+    display: none;
+}
+
+.select2-container--default .select2-selection--single {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 2px 20px;
+
+    border-radius: 10px;
+    border: 1px solid #252527;
+    background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+    overflow: hidden;
+
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    color: #666;
+    margin: 0;
+}
+
+.select2 .selection {
+    display: block;
+}
+
+.select2 {
+    .dropdown-wrapper {
+        display: none;
+    }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 20px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+
+    b {
+        width: 14px;
+        height: 14px;
+        background-image: url('../img/chevron-down.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+        border: none;
+        position: static;
+        display: block;
+        margin: 0;
+    }
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+    b {
+        transform: rotate(180deg);
+    }
+}
+
+.select2-container .select2-dropdown {
+
+    background: radial-gradient(50% 50% at 50% 50%, #111 0%, #161616 100%);
+    border-radius: 10px;
+    border: 1px solid #252527;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option[data-selected=true] {
+    background-color: #e10000;
+}
+
+.select2-container--default .select2-results__option--highlighted[data-selected=false] {
+    background-color: #262626;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background: #262626;
+    border-radius: 10px;
+    border: 1px solid #252527;
+    height: 40px;
+    padding: 5px 15px;
+
+    font-family: $f-open-sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+
+    &::placeholder {
+        color: #666;
+    }
+}
+
+.select2-search--dropdown {
+    padding: 10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    color: #666;
+}
+
+.select2-results__message {
+    display: block;
+    padding: 0 10px 10px;
+    text-align: center;
+}
+
+.select2-results__option {
+    padding: 6px 15px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #666;
+}
+
+
+
+.select2-container--default .select2-selection--single .select2-selection__rendered:not([title="Select a country / region…"]){
+    color: #fff;
+}

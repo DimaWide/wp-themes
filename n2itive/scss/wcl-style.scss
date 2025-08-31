@@ -1,0 +1,55 @@
+// Defaults
+@import 'defaults/reset';
+@import 'defaults/variables';
+@import 'defaults/mixings';
+@import 'defaults/functions';
+@import 'defaults/general';
+@import 'defaults/ui-elements';
+
+
+// Sections
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/single-product';
+@import 'sections/main';
+@import 'sections/single';
+@import 'sections/page';
+@import 'sections/404';
+
+
+// Components
+@import 'components/cmp-social-media';
+@import 'components/cmp-title';
+@import 'components/cmp-button';
+@import 'components/cmp-1-models';
+@import 'components/cmp-2-cart';
+@import 'components/cmp-3-shipping-calculator';
+@import 'components/cmp-4-popup';
+@import 'components/cmp-5-post';
+@import 'components/cmp-6-sidebar';
+@import 'components/cmp-7-car-info';
+
+
+// Acf Blcoks
+@import 'acf-blocks/acf-1-configurator';
+@import 'acf-blocks/acf-1-configurator-responsive';
+@import 'acf-blocks/acf-2-about-products';
+@import 'acf-blocks/acf-3-blog';
+@import 'acf-blocks/acf-4-faq';
+@import 'acf-blocks/acf-5-gallery';
+@import 'acf-blocks/acf-6-testimonials';
+@import 'acf-blocks/acf-7-about';
+@import 'acf-blocks/acf-8-our-team';
+@import 'acf-blocks/acf-9-contact-us';
+@import 'acf-blocks/acf-10-faq';
+@import 'acf-blocks/acf-11-instalation';
+@import 'acf-blocks/acf-12-blog';
+
+
+// Woocommerce
+@import 'woocommerce/main';
+@import 'woocommerce/single-product';
+@import 'woocommerce/shop';
+@import 'woocommerce/thank-you';
+@import 'woocommerce/cart';
+@import 'woocommerce/checkout';

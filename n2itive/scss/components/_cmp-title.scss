@@ -1,0 +1,28 @@
+.cmp-title {
+    padding-left: 50px;
+    position: relative;
+
+    color: #FFF;
+    font-family: 'Integral-CF-Oblique';
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    transform: translate(-14px, 0px);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url('../img/title-element.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 70px;
+        height: 70px;
+    }
+}

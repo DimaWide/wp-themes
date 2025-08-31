@@ -4,6 +4,12 @@ Theme development and modification.
 
 ---
 
+### Olbia (Elementor)
+
+[Description](https://github.com/DimaWide/wp-themes/blob/main/olbia/README.md) | [View Theme](https://themeforest.net/item/olbia-elegant-wordpress-theme-for-photographers/)
+
+---
+
 ### N2itive.me (Woocommerce)
 
 [Description](https://github.com/DimaWide/wp-themes/tree/main/n2itive/README.md) | [View Theme](https://n2itive.me) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/n2itive.me)

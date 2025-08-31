@@ -1,0 +1,9 @@
+# Olbia
+
+Link: [olbia](https://themeforest.net/item/olbia-elegant-wordpress-theme-for-photographers/27528379?srsltid=AfmBOorPCU6uEBibhaNDwNJ20-29C_hYAo9cTOszhSAEiT655UbMdAlc/)
+
+## Description
+
+Olbia - Elegant WordPress Theme for Photographers
+
+![Screenshot](https://github.com/DimaWide/wp-themes/blob/main/n2itive/img/screen.jpg)

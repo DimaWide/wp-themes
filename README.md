@@ -6,7 +6,7 @@ Theme development and modification.
 
 ### N2itive.me (Woocommerce)
 
-[Description](https://github.com/DimaWide/wp-themes/tree/main/n2itive.me/README.md) | [View Theme](https://n2itive.me) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/n2itive.me)
+[Description](https://github.com/DimaWide/wp-themes/tree/main/n2itive/README.md) | [View Theme](https://n2itive.me) | [Code - GitHub](https://github.com/DimaWide/wp-themes/tree/main/n2itive.me)
 
 ---
 

@@ -6,4 +6,4 @@ Link: [olbia](https://themeforest.net/item/olbia-elegant-wordpress-theme-for-pho
 
 Olbia - Elegant WordPress Theme for Photographers
 
-![Screenshot](https://github.com/DimaWide/wp-themes/blob/main/n2itive/img/screen.jpg)
+![Screenshot](https://github.com/DimaWide/wp-themes/blob/main/olbia/elementor-widget.jpg)

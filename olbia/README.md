@@ -2,7 +2,7 @@
 
 Tags: themeforest, elementor
 
-Link: [olbia](https://themeforest.net/item/olbia-elegant-wordpress-theme-for-photographers/27528379?srsltid=AfmBOorPCU6uEBibhaNDwNJ20-29C_hYAo9cTOszhSAEiT655UbMdAlc/)
+Link: [olbia](https://themeforest.net/item/olbia-elegant-wordpress-theme-for-photographers)
 
 ## Description
 

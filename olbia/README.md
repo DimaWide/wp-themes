@@ -10,4 +10,6 @@ Olbia - Elegant WordPress Theme for Photographers
 
 ---
 
+![Screenshot](https://github.com/DimaWide/wp-themes/blob/main/olbia/olbia.jpg)
+
 [Screen - Plugin elementor widgets](https://github.com/DimaWide/wp-themes/blob/main/olbia/elementor-widget.jpg)
